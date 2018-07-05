@@ -1,0 +1,302 @@
+
+$diagram-endpoint-handle-color: #046ae5 ;
+$diagram-endpoint-handle-connected-border: #0f0;
+$diagram-endpoint-handle-connected-color: #0f0;;
+$diagram-resize-handle-color: #046ae5 ;
+$diagram-resize-handle-stroke: #046ae5 ;
+$diagram-resize-handle-disable-color: #aaa;
+$diagram-resize-handle-disable-stroke: #aaa;
+$diagram-border-stroke-disabled: #aaa;
+$diagram-rotate-handle-color: #046ae5 ;
+$diagram-border-stroke: #000;
+$diagram-highlighter-stroke: #6a5acd ;
+$diagram-selected-region-stroke: #046ae5;
+$diagram-pivot-line-stroke: #ff8c00;
+$diagram-text-edit-color: #f00;
+$diagram-text-edit-selection-color: #fff;
+$diagram-text-edit-selection-background: #aaa;
+$diagram-text-edit-background: #ff0;
+$diagram-symbolpalette-hover: #f00;
+$diagram-symbolpalette-selected: #f00;
+$diagram-tooltip: none;
+$diagram-ruler-color: #979797 ;
+$diagram-ruler-font: Roboto-Regular;
+$diagram-ruler-font-size: 10px;
+$diagram-bezier-handle-color: #f00;
+$diagram-bezier-line-color: #00f;
+$diagram-ruler-marker-stroke: #0f0;
+$diagram-ruler-marker-background-color: #ffa500;
+$diagram-ruler-label-fill: #f00;
+$diagram-ruler-tick-stroke: #0f0;
+$diagram-editbox-background: #fff;
+$diagram-editbox-font-color: #000;
+$diagram-endpoint-handle-color: $brand-primary;
+$diagram-endpoint-handle-connected-border: $brand-primary;
+$diagram-endpoint-handle-connected-color: $brand-primary-font;
+
+$diagram-resize-handle-color: $brand-primary;
+$diagram-resize-handle-stroke: $brand-primary-font;
+$diagram-border-stroke: $brand-primary-darken-10;
+
+$diagram-resize-handle-disable-color: $grey-ad;
+$diagram-resize-handle-disable-stroke: $grey-dark-font;
+$diagram-border-stroke-disabled: $grey-ad;
+
+$diagram-rotate-handle-color: #000;
+
+$diagram-bezier-handle-color: $brand-primary;
+$diagram-bezier-line-color: $brand-primary-darken-10;
+
+$diagram-highlighter-stroke: $brand-primary-darken-10;
+$diagram-selected-region-stroke: $brand-primary;
+$diagram-pivot-line-stroke: $brand-primary-font;
+
+$diagram-text-edit-selection-color: $brand-primary-font;
+$diagram-text-edit-selection-background: $brand-primary-font;
+
+$diagram-symbolpalette-hover: $grey-e6;
+$diagram-symbolpalette-selected: $grey-ad;
+
+$diagram-tooltip: none;
+
+$diagram-ruler-color: $grey-8c;
+$diagram-ruler-font-size: 10px;
+$diagram-ruler-marker-stroke: $brand-primary;
+$diagram-ruler-marker-background-color: $grey-white;
+$diagram-ruler-label-fill: $grey-8c;
+$diagram-ruler-tick-stroke: $grey-ad;
+
+$diagram-background-color: transparent;
+
+$diagram-editbox-background: #fff;
+$diagram-editbox-fontcolor: #000;
+
+@include export-module('diagram-icons') {
+  /*! component icons */
+
+  #{&}.e-diagram,
+  .e-diagram-menu {
+    .e-bringforward::before { content: '\e5a1'; }
+    .e-bringfront::before { content: '\e5a2'; }
+    .e-sendback::before { content: '\e5a3'; }
+    .e-sendbackward::before { content: '\e5a4'; }
+    .e-delete::before { content: '\e5a5'; }
+    .e-ungroup::before { content: '\e5a6'; }
+    .e-group::before { content: '\e5a7'; }
+    .e-undo::before { content: '\e341'; }
+    .e-cut::before { content: '\e33b'; }
+    .e-save::before { content: '\e5b1'; }
+    .e-paste::before { content: '\e355'; }
+    .e-copy::before { content: '\e33d'; }
+    .e-redo::before { content: '\e354'; }
+    .e-zoomin::before { content: '\e5b5'; }
+    .e-italic::before { content: '\e5b6'; }
+    .e-close::before { content: '\e5b7'; }
+    .e-pan::before { content: '\e5b8'; }
+    .e-bold::before { content: '\e5c1'; }
+    .e-underline::before { content: '\e5c2'; }
+    .e-zoomout::before { content: '\e5c3'; }
+    .e-export::before { content: '\e5c4'; }
+    .e-print::before { content: '\e5c5'; }
+    .e-order::before { content: '\e4a4'; }
+    .e-inbocatchmessage::before { content: '\e5c6'; }
+    .e-noneend::before { content: '\e5c7'; }
+    .e-dataobjectcollection::before { content: '\e5c8'; }
+    .e-dataoutput::before { content: '\e5c9'; }
+    .e-escalationend::before { content: '\e5d1'; }
+    .e-activity::before { content: '\e5d2'; }
+    .e-eventbasedgateway::before { content: '\e5d3'; }
+    .e-catchparallelmultiple::before { content: '\e5d4'; }
+    .e-catchmultiplein::before { content: '\e5d5'; }
+    .e-bocatchcompensation::before { content: '\e5d6'; }
+    .e-timerintermediate::before { content: '\e5d7'; }
+    .e-usercall::before { content: '\e5d8'; }
+    .e-noninbocatchparallelmultiple::before { content: '\e5d9'; }
+    .e-noninbotimerintermediate::before { content: '\e6a1'; }
+    .e-paralleleventbasedgatewaytostart::before { content: '\e6a2'; }
+    .e-noninmultiple::before { content: '\e6a3'; }
+    .e-compensationend::before { content: '\e6a4'; }
+    .e-inerror::before { content: '\e6a5'; }
+    .e-noncatchmultiplein::before { content: '\e6a6'; }
+    .e-incompensation::before { content: '\e6a7'; }
+    .e-noninmessage::before { content: '\e6a8'; }
+    .e-noninescalation::before { content: '\e6a9'; }
+    .e-throwmultiplein::before { content: '\e6b1'; }
+    .e-inmessage::before { content: '\e6b2'; }
+    .e-noninthrowmessage::before { content: '\e6b3'; }
+    .e-evbasegatetostartprocess::before { content: '\e6b4'; }
+    .e-interruptingnone::before { content: '\e6b5'; }
+    .e-dataoutputcollection::before { content: '\e6b6'; }
+    .e-throwescalationin::before { content: '\e6b7'; }
+    .e-exclusivegatewaywithmarker::before { content: '\e6b8'; }
+    .e-errorend::before { content: '\e6b9'; }
+    .e-complexgateway::before { content: '\e6c1'; }
+    .e-noninparallelmultiple::before { content: '\e6c2'; }
+    .e-insignal::before { content: '\e6c3'; }
+    .e-noninbocatchescalation::before { content: '\e6c4'; }
+    .e-inclusivegateway::before { content: '\e6c5'; }
+    .e-multipleend::before { content: '\e6c6'; }
+    .e-throwlinkin::before { content: '\e6c7'; }
+    .e-parallelgateway::before { content: '\e6c8'; }
+    .e-signalend::before { content: '\e6c9'; }
+    .e-terminateend::before { content: '\e6d1'; }
+    .e-bocatchcompensationin::before { content: '\e6d2'; }
+    .e-intimer::before { content: '\e6d3'; }
+    .e-throwcompensationin::before { content: '\e6d4'; }
+    .e-inconditional::before { content: '\e6d5'; }
+    .e-scriptcall::before { content: '\e6d6'; }
+    .e-bocatchcancelin::before { content: '\e6d7'; }
+    .e-throwmessage::before { content: '\e6d8'; }
+    .e-catchlinkin::before { content: '\e6d9'; }
+    .e-gateway::before { content: '\e6e1'; }
+    .e-datainputcollection::before { content: '\e6e2'; }
+    .e-noninsignal::before { content: '\e6e3'; }
+    .e-datainput::before { content: '\e6e4'; }
+    .e-inmultiple::before { content: '\e6e5'; }
+    .e-inescalation::before { content: '\e6e6'; }
+    .e-cancelend::before { content: '\e6e7'; }
+    .e-dataobject::before { content: '\e6e8'; }
+    .e-noninbocatchmessage::before { content: '\e6e9'; }
+    .e-manualcall::before { content: '\e6f1'; }
+    .e-inparallelmultiple::before { content: '\e6f2'; }
+    .e-flow::before { content: '\e6f3'; }
+    .e-datastore::before { content: '\e6f4'; }
+    .e-nonestart::before { content: '\e6f5'; }
+    .e-servicetask::before { content: '\e6f6'; }
+    .e-inbocatchescalation::before { content: '\e6f7'; }
+    .e-noninconditional::before { content: '\e6f8'; }
+    .e-businessrule::before { content: '\e6f9'; }
+    .e-nonintimer::before { content: '\e4a1'; }
+    .e-messageend::before { content: '\e4a2'; }
+
+  }
+  }
+@include export-module('symbolpalette-icons') {
+
+
+  #{&}.e-symbolpalette {
+    .e-clear-searchtext::before { content: '\e5b7'; }
+  }
+  }
+@include export-module('diagram-theme') {
+
+  .e-diagram {
+    background-color: $diagram-background-color;
+    display: block;
+  }
+
+  .e-diagram-endpoint-handle {
+    fill: $diagram-endpoint-handle-color;
+    stroke: $diagram-resize-handle-stroke;
+  }
+
+  .e-diagram-endpoint-handle.e-disabled {
+    fill: $diagram-resize-handle-disable-color;
+    opacity: 1;
+    stroke: $diagram-resize-handle-disable-stroke;
+  }
+
+  .e-diagram-endpoint-handle.e-connected {
+    fill: $diagram-endpoint-handle-connected-color;
+    stroke: $diagram-endpoint-handle-connected-border;
+  }
+
+  .e-diagram-bezier-handle {
+    fill: $diagram-bezier-handle-color;
+    stroke: $diagram-resize-handle-stroke;
+  }
+
+  .e-diagram-bezier-line {
+    stroke: $diagram-bezier-line-color;
+  }
+
+  .e-diagram-resize-handle {
+    fill: $diagram-resize-handle-color;
+    stroke: $diagram-resize-handle-stroke;
+  }
+
+  .e-diagram-resize-handle.e-disabled {
+    fill: $diagram-resize-handle-disable-color;
+    opacity: 1;
+    stroke: $diagram-resize-handle-disable-stroke;
+  }
+
+  .e-diagram-rotate-handle {
+    fill: $diagram-rotate-handle-color;
+    stroke: $diagram-resize-handle-stroke;
+  }
+
+  .e-diagram-border {
+    stroke: $diagram-border-stroke;
+  }
+
+  .e-diagram-border.e-disabled {
+    opacity: 1;
+    stroke: $diagram-border-stroke-disabled;
+  }
+
+  .e-diagram-highlighter {
+    stroke: $diagram-highlighter-stroke;
+  }
+
+  .e-diagram-selected-region {
+    stroke: $diagram-selected-region-stroke;
+  }
+
+  .e-diagram-pivot-line {
+    stroke: $diagram-pivot-line-stroke;
+  }
+
+  .e-symbolpalette .e-symbol-hover:hover {
+    background: $diagram-symbolpalette-hover;
+  }
+
+  .e-symbolpalette .e-symbol-selected {
+    background: $diagram-symbolpalette-selected;
+  }
+
+  .e-diagram-tooltip {
+    pointer-events: $diagram-tooltip;
+  }
+
+  .e-diagram .e-ruler {
+    background-color: $diagram-ruler-marker-background-color;
+    color: $diagram-ruler-color;
+    font-size: $diagram-ruler-font-size;
+  }
+
+  .e-diagram .e-ruler-overlap {
+    background-color: $diagram-ruler-marker-background-color;
+  }
+
+  .e-diagram .e-d-ruler-marker {
+    stroke: $diagram-ruler-marker-stroke;
+  }
+
+  .e-diagram .e-diagram-text-edit {
+    background: $diagram-editbox-background;
+    border-color: $diagram-bezier-line-color;
+    border-style: dashed;
+    border-width: 1px;
+    box-sizing: content-box;
+    color: $diagram-editbox-fontcolor;
+    min-width: 50px;
+  }
+
+  .e-diagram-text-edit::selection {
+    background: $diagram-text-edit-selection-background;
+    color: $diagram-text-edit-selection-color;
+  }
+
+  .e-ruler-tick-label {
+    fill: $diagram-ruler-label-fill;
+  }
+
+  .e-ruler-tick {
+    stroke: $diagram-ruler-tick-stroke;
+  }
+
+  .e-menu-item e-blankicon {
+    padding-left: 28px;
+  }
+}
