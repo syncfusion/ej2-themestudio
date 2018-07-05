@@ -1,2 +1,5 @@
 # ej2-themestudio
-A web-based tool that can be used to customize the Essential JS 2 component themes. It supports importing and exporting customized themes, and filtering to select which components to change
+
+Theme Studio for Essential JS 2 can be used to customize a new theme from an existing theme. It doesn't support with Data visualization components like Chart, Diagram, Gauge, Range Navigator, Maps.
+
+Official theme studio hosted link: https://ej2.syncfusion.com/themestudio/
