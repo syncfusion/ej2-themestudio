@@ -1,0 +1,433 @@
+
+$listview-text-color: $default-font-color;
+$listview-text-disabled: $default-font-color;
+$listview-icon-color: $default-icon-color;
+$listview-icon-disabled: $default-icon-color;
+$listview-background: $default-bg-color;
+$listview-background-hover: $hover-bg-color;
+$listview-background-selection: $active-bg-color;
+$listview-line-color: $default-border-color;
+$listview-header-text-color: $header-font-color;
+$listview-header-text-disabled: $default-font-color;
+$listview-header-bg: $header-bg-color;
+$listview-header-icon-color: $header-icon-color;
+$listview-header-icon-disabled: $default-icon-color;
+$listview-header-border: $header-border-color;
+$listview-groupheader-text-color: $default-font-color;
+$listview-groupheader-bg: $default-bg-color;
+$listview-groupheader-border: $default-border-color;
+$listview-groupheader-icon: $default-icon-color;
+$listview-border-size: 1px;
+$listview-font-size: 15px;
+$listview-header-font-size: 20px;
+$listview-font-family: $font-family;
+$listview-text-color: rgba($grey-light-font, .87);
+$listview-text-disabled: $grey-light-font;
+$listview-icon-color: rgba($grey-light-font, .54);
+$listview-icon-disabled: $grey-light-font;
+$listview-icon-margin-right: 16px;
+$listview-icon-line-height: 34px;
+$listview-icon-collapsible: '\e844';
+$listview-icon-collapsible-rtl: '\e839';
+$listview-icon-back-rtl: '\e860';
+$listview-back-icon: '\e85b';
+$listview-background: $grey-white;
+$listview-line-color: $grey-black;
+$listview-item-hover-bg: $grey-200;
+$listview-item-height: 36px;
+$listview-item-line-height: 36px;
+$listview-item-padding: 0 16px;
+$listview-text-hover-color: rgba($grey-light-font, .87);
+$listview-item-active-bg: $grey-100;
+$listview-text-active-color: rgba($grey-light-font, .87);
+$listview-header-text-color: rgba($grey-light-font, .87);
+$listview-header-text-padding: 16px;
+$listview-header-text-disabled: $grey-light-font;
+$listview-header-bg: $grey-white;
+$listview-header-icon-color: $grey-light-font;
+$listview-header-icon-disabled: $grey-light-font;
+$listview-header-border: rgba($grey-black, .12);
+$listview-header-font-size: 20px;
+$listview-header-height: 48px;
+$listview-header-font-weight: bold;
+$listview-header-line-height: 15px;
+$listview-header-padding-bottom: 0;
+$listview-touch-back-icon-padding: 0;
+$checkmark-bgcolor: $accent;
+$checkmark-border-color: transparent;
+$checkmark-color: $accent-font;
+$listview-border-bottom: 0;
+$listview-border-top: 0;
+$listview-border-left: 0;
+$listview-border-right: 0;
+$listview-hover-border-color: transparent;
+$listview-border-bottom-color: transparent;
+$listview-border-top-color: transparent;
+$listview-border-right-color: transparent;
+$listview-border-left-color: transparent;
+$listview-group-first-border-bottom: 0;
+$listview-group-border-top: 1px;
+$listview-group-border-bottom: 0;
+$listview-groupheader-text-color: rgba($grey-light-font, .54);
+$listview-groupheader-bg: $grey-50;
+$listview-groupheader-border: $grey-black;
+$listview-groupheader-icon: $grey-light-font;
+$listview-groupheader-item-height: 36px;
+$listview-groupheader-item-line-height: 36px;
+$listview-groupheader-font-size: 15px;
+$listview-border-size: 0;
+$listview-font-size: 15px;
+$listview-back-padding-right: 30px;
+$listview-back-icon-height: 1px;
+$listview-back-icon-font-size: auto;
+$listview-touch-item-height: 48px;
+$listview-touch-item-line-height: 45px;
+$listview-touch-item-font-size: 15px;
+$listview-touch-groupheader-height: 48px;
+$listview-touch-groupheader-line-height: 45px;
+$listview-touch-header-height: 64px;
+$listview-touch-header-font-weight: bold;
+$listview-touch-header-font-size: 20px;
+$listview-touch-header-line-height: 30px;
+$listview-touch-header-icon-margin-top: 2px;
+$listview-checkbox-right-margin: -2px 0 0 10px;
+$listview-checkbox-left-margin: -2px 10px 0 0;
+$listview-rtl-checkbox-left-margin: -2px 0 0 10px;
+$listview-rtl-checkbox-right-margin: -2px 10px 0 0;
+
+@include export-module('listview-icons') {
+  /*! component icons */
+  #{&}.e-listview {
+
+    .e-icon-back::before {
+      content: $listview-back-icon;
+      font-size: $listview-back-icon-font-size;
+    }
+
+    .e-icon-collapsible::before {
+      content: $listview-icon-collapsible;
+    }
+
+    &.e-rtl {
+      & .e-icon-back::before {
+        content: $listview-icon-back-rtl;
+        font-size: $listview-back-icon-font-size;
+      }
+
+      & .e-icon-collapsible::before {
+        content: $listview-icon-collapsible-rtl;
+      }
+    }
+
+  }
+}
+@include export-module('listview-layout') {
+  .e-bigger #{&}.e-listview,
+  #{&}.e-listview.e-bigger {
+    .e-list-item {
+      border-bottom: $listview-border-bottom solid $listview-border-bottom-color;
+      border-left: $listview-border-left solid $listview-border-left-color;
+      border-right: $listview-border-right solid $listview-border-right-color;
+      border-top: $listview-border-top solid $listview-border-top-color;
+      height: $listview-touch-item-height;
+      line-height: $listview-touch-item-line-height;
+    }
+
+    .e-text-content {
+      font-size: $listview-touch-item-font-size;
+    }
+
+    .e-list-group-item {
+      height: $listview-touch-groupheader-height;
+      line-height: $listview-touch-groupheader-line-height;
+    }
+
+    .e-list-header {
+      display: block;
+      font-weight: $listview-touch-header-font-weight;
+      height: $listview-touch-header-height;
+    }
+
+    .e-list-header > * {
+      display: table-cell;
+    }
+
+    .e-list-header .e-text.header {
+      display: none;
+    }
+
+    .e-list-header .e-headertemplate-text.nested-header {
+      display: none;
+    }
+
+    .e-list-header .e-text {
+      font-size: $listview-touch-header-font-size;
+      line-height: $listview-touch-header-line-height;
+    }
+
+    .e-icons {
+      margin-top: $listview-touch-header-icon-margin-top;
+    }
+
+    .e-but-back {
+      padding-top: $listview-touch-back-icon-padding;
+    }
+
+    .e-icon-collapsible {
+      line-height: inherit;
+    }
+  }
+
+  #{&}.e-listview {
+    border: $listview-border-size solid;
+    display: block;
+    overflow: auto;
+    position: relative;
+    width: 100%;
+    @at-root {
+      & .e-list-item {
+        border-bottom: $listview-border-size solid;
+        height: $listview-item-height;
+        line-height: $listview-item-line-height;
+        padding: $listview-item-padding;
+      }
+
+      & .e-list-parent {
+        margin: 0;
+        padding: 0;
+      }
+
+      & .e-list-header .e-text.header {
+        display: none;
+      }
+
+      & .e-list-header .e-headertemplate-text.nested-header {
+        display: none;
+      }
+
+      & .e-list-header {
+        border-bottom: 1px solid;
+        display: block;
+        font-weight: $listview-header-font-weight;
+        height: $listview-header-height;
+        padding: $listview-header-text-padding;
+      }
+
+      & .e-has-header>.e-view {
+        top: 45px;
+      }
+
+      & .e-icons {
+        margin-top: 2px;
+      }
+
+      & .e-but-back {
+        cursor: pointer;
+        line-height: $listview-back-icon-height;
+        padding-bottom: $listview-header-padding-bottom;
+        padding-right: $listview-back-padding-right;
+        vertical-align: middle;
+        width: 20px;
+      }
+
+      & .e-list-group-item:first-child {
+        border: 0;
+        border-bottom: $listview-group-first-border-bottom solid $listview-border-bottom-color;
+      }
+
+      & .e-list-group-item {
+        border-bottom: $listview-group-border-bottom solid $listview-border-bottom-color;
+        border-top: $listview-group-border-top solid;
+        font-weight: 600;
+        height: $listview-groupheader-item-height;
+        line-height: $listview-groupheader-item-line-height;
+        padding: $listview-item-padding;
+      }
+
+      & .e-icon-collapsible {
+        cursor: pointer;
+        float: right;
+        font-size: 12px;
+        line-height: $listview-icon-line-height;
+      }
+
+      & .e-text-content {
+        height: 100%;
+        position: relative;
+        vertical-align: middle;
+      }
+
+      & .e-text-content * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      & .e-text-content.e-checkbox .e-list-text {
+        width: calc(100% - 40px);
+      }
+
+      & .e-text-content.e-checkbox.e-checkbox-left .e-list-icon + .e-list-text {
+        width: calc(100% - 90px);
+      }
+
+      & .e-text-content.e-checkbox.e-checkbox-right .e-list-icon + .e-list-text {
+        width: calc(100% - 80px);
+      }
+
+      & .e-list-item.e-checklist.e-has-child {
+        .e-text-content.e-checkbox.e-checkbox-right {
+          .e-list-icon + .e-list-text {
+            width: calc(100% - 92px);
+          }
+        }
+      }
+
+      & .e-checkbox .e-checkbox-left {
+        margin: $listview-checkbox-left-margin;
+      }
+
+      & .e-checkbox .e-checkbox-right {
+        margin: $listview-checkbox-right-margin;
+      }
+
+      & .e-list-text {
+        cursor: pointer;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: top;
+        white-space: nowrap;
+        width: 100%;
+      }
+
+      & .e-list-icon+.e-list-text {
+        width: calc(100% - 60px);
+      }
+
+      & .e-icon-wrapper .e-list-text {
+        width: calc(100% - 60px);
+      }
+
+      & .e-icon-wrapper.e-text-content.e-checkbox .e-list-text {
+        width: calc(100% - 60px);
+      }
+
+      & .e-list-icon {
+        height: 30px;
+        margin-right: $listview-icon-margin-right;
+        width: 30px;
+      }
+
+      & .e-content {
+        overflow: hidden;
+        position: relative;
+      }
+
+      & .e-list-header .e-text {
+        cursor: pointer;
+        line-height: $listview-header-line-height;
+        text-indent: 0;
+      }
+
+      & .e-text .e-headertext {
+        display: inline-block;
+      }
+
+      &.e-rtl {
+        & .e-list-icon {
+          margin-left: 16px;
+          margin-right: 0;
+        }
+
+        & .e-icon-collapsible {
+          float: left;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        & .e-but-back {
+          padding-left: $listview-back-padding-right;
+          padding-right: 0;
+        }
+
+        & .e-checkbox .e-checkbox-left {
+          margin: $listview-rtl-checkbox-left-margin;
+        }
+
+        & .e-checkbox .e-checkbox-right {
+          margin: $listview-rtl-checkbox-right-margin;
+        }
+      }
+    }
+  }
+}
+@include export-module('listview-theme') {
+  #{&}.e-listview {
+    border-color: $listview-line-color;
+    font-family: $listview-font-family;
+    font-size: $listview-font-size;
+    @at-root {
+      & .e-list-header {
+        background-color: $listview-header-bg;
+        border-color: $listview-header-border;
+        color: $listview-header-text-color;
+        display: block;
+        font-size: $listview-header-font-size;
+      }
+
+      & .e-list-header > * {
+        display: table-cell;
+      }
+
+      & .e-icons {
+        color: $listview-icon-color;
+      }
+
+      & .e-list-item {
+        background-color: $listview-background;
+        border-bottom: $listview-border-bottom solid $listview-border-bottom-color;
+        border-left: $listview-border-left solid $listview-border-left-color;
+        border-right: $listview-border-right solid $listview-border-right-color;
+        border-top: $listview-border-top solid $listview-border-top-color;
+        color: $listview-text-color;
+      }
+
+      & .e-list-item.e-hover,
+      & .e-list-item.e-hover.e-active.e-checklist {
+        background-color: $listview-item-hover-bg;
+        border-color: $listview-hover-border-color;
+        color: $listview-text-hover-color;
+      }
+
+      & .e-list-item.e-active {
+        background-color: $listview-item-active-bg;
+        color: $listview-text-active-color;
+      }
+
+      & .e-list-item.e-active.e-checklist {
+        background-color: $listview-background;
+        color: $listview-text-color;
+      }
+
+      & .e-list-item.e-focused ,
+      & .e-list-item.e-focused.e-active.e-checklist {
+        background-color: $listview-item-active-bg;
+        color: $listview-text-active-color;
+      }
+
+      & .e-list-item.e-focused .e-checkbox-wrapper .e-frame.e-check,
+      & .e-list-item.e-focused .e-css.e-checkbox-wrapper .e-frame.e-check {
+        background-color: $checkmark-bgcolor;
+        border-color: $checkmark-border-color;
+        color: $checkmark-color;
+      }
+
+      & .e-list-group-item {
+        background-color: $listview-groupheader-bg;
+        border-color: $listview-header-border;
+        color: $listview-groupheader-text-color;
+        font-size: $listview-groupheader-font-size;
+      }
+    }
+  }
+}

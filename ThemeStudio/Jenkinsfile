@@ -1,0 +1,39 @@
+#!groovy
+
+node('EJ2ASP') {
+    try {
+        deleteDir();
+        stage('Checkout') {
+            checkout scm
+        }
+
+        stage('Install') {
+            runShell('npm -v');
+            runShell('npm install');
+            runShell('git config --global user.email "essentialjs2@syncfusion.com"');
+            runShell('git config --global user.name "essentialjs2"');
+            runShell('git config --global core.longpaths true');
+        }
+
+        stage('Build') {    
+            runShell('gulp build-Configuration');
+            runShell('dotnet restore');
+            runShell('dotnet build');
+        }
+
+        
+    }
+    catch(Exception e) {
+        shared.throwError(e);
+        deleteDir();
+    }
+}
+
+def runShell(String command) {
+    if(isUnix()) {
+        sh command;
+    }
+    else {
+        bat command;
+    }
+}

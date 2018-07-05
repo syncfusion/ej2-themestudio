@@ -1,0 +1,283 @@
+
+/*! component's default definitions and variables */
+
+$hscroll-border-type: solid;
+$hscroll-border-size: $border-size;
+$hscroll-box-shadow:  0 0 2px $shadow-color;
+$hscroll-nav-nrml-minheight: 42px;
+$hscroll-nav-bgr-minheight: 56px;
+$hscroll-nav-nrml-width: 40px;
+$hscroll-nav-bgr-width: 50px;
+$hscroll-nrml-padding: 0 $hscroll-nav-nrml-width;
+$hscroll-bgr-padding: 0 $hscroll-nav-bgr-width;
+$hscroll-border-radius: $border-radius;
+$hscroll-default-bg: $default-bg-color  ;
+$hscroll-default-border: $default-border-color ;
+$hscroll-default-icon-color: $default-icon-color ;
+$hscroll-hover-bg:  $hover-bg-color;
+$hscroll-hover-font: $hover-font-color ;
+$hscroll-hover-border-color: $hover-border-color ;
+$hscroll-dash-border: 2px solid #fff;
+
+$hscroll-focus-border: '';
+$hscroll-active-border: '';
+$hscroll-hover-border: '';
+$hscroll-active-box-shadow: '';
+
+$hscroll-active-font-color: $active-font-color ;
+$hscroll-press-bg: $active-bg-color ;
+$hscroll-press-font: $active-font-color ;
+
+$hscroll-font-family: $font-family;
+$hscroll-left-arrow-icon: '\e913';
+$hscroll-right-arrow-icon: '\e904';
+
+@mixin hscroll-btn-animation {
+  content: '';
+}
+
+@mixin hscroll-btn-animation-after {
+  content: '';
+}
+$skin-name: 'fabric';
+$hscroll-default-bg: $neutral-white;
+$hscroll-press-bg: $theme-lighter;
+$hscroll-active-bg: $neutral-lighter;
+$hscroll-nav-nrml-minheight: 40px;
+$hscroll-nav-bgr-minheight: 50px;
+$hscroll-nav-nrml-width: 40px;
+$hscroll-nav-bgr-width: 50px;
+$hscroll-nrml-padding: 0 $hscroll-nav-nrml-width;
+$hscroll-bgr-padding: 0 $hscroll-nav-bgr-width;
+$hscroll-border-size: 1px;
+$hscroll-default-border: $neutral-tertiary;
+$hscroll-box-shadow: none;
+$hscroll-hover-bg: $neutral-lighter;
+$hscroll-hover-border-color: '';
+$hscroll-focus-border: '';
+$hscroll-active-border: '';
+$hscroll-hover-border: '';
+$hscroll-active-box-shadow: '';
+$hscroll-default-icon-color: $theme-light-font;
+
+$hscroll-left-arrow-icon: '\e830';
+$hscroll-right-arrow-icon: '\e829';
+
+@include export-module('hscroll-icons') {
+  /*! hscroll icons */
+  #{&}.e-hscroll {
+
+    &.e-rtl {
+
+      .e-nav-left-arrow::before {
+        content: $hscroll-left-arrow-icon;
+         }
+
+      .e-nav-right-arrow::before {
+        content: $hscroll-right-arrow-icon;
+        }
+    }
+
+    .e-nav-left-arrow::before {
+      content: $hscroll-right-arrow-icon;
+      line-height: normal;
+    }
+
+    .e-nav-right-arrow::before {
+      content: $hscroll-left-arrow-icon;
+      line-height: normal;
+    }
+}
+}
+@include export-module('h-scroll') {
+  /*! h-scroll layout */
+
+  .e-bigger #{&}.e-hscroll,
+  #{&}.e-hscroll.e-bigger {
+    min-height: $hscroll-nav-bgr-minheight;
+
+    &:not(.e-scroll-device) {
+      padding: $hscroll-bgr-padding;
+    }
+
+    .e-icons {
+      font-size: 18px;
+     }
+
+    .e-scroll-nav {
+      min-height: $hscroll-nav-bgr-minheight;
+      width: $hscroll-nav-bgr-width;
+    }
+
+  }
+
+  #{&}.e-hscroll {
+    display: block;
+    position: relative;
+    width: inherit;
+
+    &:not(.e-scroll-device) {
+      padding: $hscroll-nrml-padding;
+    }
+
+    > * {
+      height: inherit;
+     }
+
+    .e-hscroll-content {
+      display: inline-block;
+      height: inherit;
+      position: relative;
+      touch-action: none;
+ }
+
+    &.e-rtl {
+
+      .e-scroll-nav  {
+
+        &.e-scroll-right-nav {
+          left: 0;
+          right: auto;
+        }
+
+        &.e-scroll-left-nav {
+          left: auto;
+          right: 0;
+        }
+    }
+    }
+
+    .e-scroll-nav  {
+      align-items: center;
+      bottom: 0;
+      cursor: pointer;
+      display: flex;
+      height: 100%;
+      min-height: $hscroll-nav-nrml-minheight;
+      position: absolute;
+      top: 0;
+      width: $hscroll-nav-nrml-width;
+
+      &.e-scroll-left-nav {
+        left: 0;
+      }
+
+      &.e-scroll-right-nav {
+        right: 0;
+      }
+
+      &.e-ie-align {
+        display: table;
+        }
+    }
+
+    .e-nav-arrow {
+      position: relative;
+  }
+
+    .e-nav-arrow.e-icons {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      width: 100%;
+      }
+   }
+}
+@include export-module('h-scroll-theme') {
+  /*! h-scroll theme */
+  #{&}.e-hscroll {
+
+    .e-icons {
+      color: $hscroll-default-icon-color;
+    }
+
+    &.e-rtl {
+
+      .e-scroll-nav  {
+        background: $hscroll-default-bg;
+
+        &.e-scroll-left-nav {
+          border-left: $hscroll-border-size $hscroll-border-type $hscroll-default-border;
+          border-right: 0;
+        }
+
+        &.e-scroll-right-nav {
+          border-left: 0;
+          border-right: $hscroll-border-size $hscroll-border-type $hscroll-default-border;
+        }
+
+        &:hover {
+          background: $hscroll-hover-bg;
+          border: $hscroll-hover-border;
+          border-color: $hscroll-hover-border-color;
+          color: $hscroll-hover-font;
+
+          @if $skin-name == 'highcontrast' {
+
+            &:active {
+              background: $hscroll-press-bg;
+            }
+          }
+        }
+      }
+    }
+
+    .e-scroll-nav  {
+      background: $hscroll-default-bg;
+
+      &.e-scroll-left-nav {
+        border-right: $hscroll-border-size $hscroll-border-type $hscroll-default-border;
+      }
+
+      &.e-scroll-right-nav {
+        border-left: $hscroll-border-size $hscroll-border-type $hscroll-default-border;
+      }
+
+      &:focus {
+        background: $hscroll-hover-bg;
+        border: $hscroll-focus-border;
+        border-color: $hscroll-hover-border-color;
+        color: $hscroll-hover-font;
+
+        @if $skin-name == 'highcontrast' {
+          background: inherit;
+          border: $hscroll-dash-border;
+        }
+      }
+
+      &::after {
+        @include hscroll-btn-animation;
+      }
+
+      &:active::after {
+        @include hscroll-btn-animation-after;
+     }
+
+      &:hover {
+        background: $hscroll-hover-bg;
+        border: $hscroll-hover-border;
+        color: $hscroll-hover-font;
+
+        @if $skin-name == 'highcontrast' {
+          border: 2px solid $hover-border;
+
+          &:active {
+            border: 0;
+          }
+        }
+      }
+
+      &:active {
+        background: $hscroll-press-bg;
+        border: $hscroll-active-border;
+        box-shadow: $hscroll-active-box-shadow;
+        color: $hscroll-active-font-color;
+        @if $skin-name == 'highcontrast' {
+          .e-icons {
+            color: $selection-font;
+          }
+        }
+      }
+    }
+  }
+}

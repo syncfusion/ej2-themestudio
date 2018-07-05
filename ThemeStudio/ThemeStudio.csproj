@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA61A215-E41A-4EF4-A43B-DF1C8584DF76}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ThemeStudio</RootNamespace>
+    <AssemblyName>ThemeStudio</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LibSass.NET, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\libsassnet.3.3.7\lib\net40\LibSass.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ej2\bootstrap.css" />
+    <Content Include="Content\ej2\fabric.css" />
+    <Content Include="Content\ej2\highcontrast.css" />
+    <Content Include="Content\ej2\material.css" />
+    <Content Include="Content\filter.css" />
+    <Content Include="Content\Fonts\TS icon Font.svg" />
+    <Content Include="Content\images\colorpicker.svg" />
+    <Content Include="Content\images\Preview tag.svg" />
+    <Content Include="Content\index.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\combine.js" />
+    <Content Include="Scripts\datasource.js" />
+    <Content Include="Scripts\ej1\ej.widget.all.min.map" />
+    <Content Include="Content\Fonts\TS icon Font.eot" />
+    <Content Include="Content\Fonts\TS icon Font.ttf" />
+    <Content Include="Content\Fonts\TS icon Font.woff" />
+    <Content Include="ej2-resource\resources.json" />
+    <Content Include="ej2-resource\styles.json" />
+    <Content Include="ej2-resource\styles\allbootstrap.scss" />
+    <Content Include="ej2-resource\styles\allfabric.scss" />
+    <Content Include="ej2-resource\styles\allhighcontrast.scss" />
+    <Content Include="ej2-resource\styles\allmaterial.scss" />
+    <Content Include="ej2-resource\styles\base\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\base\fabric.scss" />
+    <Content Include="ej2-resource\styles\base\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\base\material.scss" />
+    <Content Include="ej2-resource\styles\buttons\button\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\buttons\button\fabric.scss" />
+    <Content Include="ej2-resource\styles\buttons\button\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\buttons\button\material.scss" />
+    <Content Include="ej2-resource\styles\buttons\check-box\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\buttons\check-box\fabric.scss" />
+    <Content Include="ej2-resource\styles\buttons\check-box\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\buttons\check-box\material.scss" />
+    <Content Include="ej2-resource\styles\buttons\radio-button\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\buttons\radio-button\fabric.scss" />
+    <Content Include="ej2-resource\styles\buttons\radio-button\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\buttons\radio-button\material.scss" />
+    <Content Include="ej2-resource\styles\calendars\calendar\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\calendars\calendar\fabric.scss" />
+    <Content Include="ej2-resource\styles\calendars\calendar\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\calendars\calendar\material.scss" />
+    <Content Include="ej2-resource\styles\calendars\datepicker\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\calendars\datepicker\fabric.scss" />
+    <Content Include="ej2-resource\styles\calendars\datepicker\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\calendars\datepicker\material.scss" />
+    <Content Include="ej2-resource\styles\calendars\daterangepicker\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\calendars\daterangepicker\fabric.scss" />
+    <Content Include="ej2-resource\styles\calendars\daterangepicker\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\calendars\daterangepicker\material.scss" />
+    <Content Include="ej2-resource\styles\calendars\datetimepicker\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\calendars\datetimepicker\fabric.scss" />
+    <Content Include="ej2-resource\styles\calendars\datetimepicker\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\calendars\datetimepicker\material.scss" />
+    <Content Include="ej2-resource\styles\calendars\timepicker\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\calendars\timepicker\fabric.scss" />
+    <Content Include="ej2-resource\styles\calendars\timepicker\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\calendars\timepicker\material.scss" />
+    <Content Include="ej2-resource\styles\cards\card\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\cards\card\fabric.scss" />
+    <Content Include="ej2-resource\styles\cards\card\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\cards\card\material.scss" />
+    <Content Include="ej2-resource\styles\charts\accumulation-chart\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\charts\accumulation-chart\fabric.scss" />
+    <Content Include="ej2-resource\styles\charts\accumulation-chart\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\charts\accumulation-chart\material.scss" />
+    <Content Include="ej2-resource\styles\circulargauge\circular-gauge\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\circulargauge\circular-gauge\fabric.scss" />
+    <Content Include="ej2-resource\styles\circulargauge\circular-gauge\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\circulargauge\circular-gauge\material.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\auto-complete\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\auto-complete\fabric.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\auto-complete\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\auto-complete\material.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\combo-box\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\combo-box\fabric.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\combo-box\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\combo-box\material.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\drop-down-base\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\drop-down-base\fabric.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\drop-down-base\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\drop-down-base\material.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\drop-down-list\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\drop-down-list\fabric.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\drop-down-list\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\drop-down-list\material.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\multi-select\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\multi-select\fabric.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\multi-select\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\dropdowns\multi-select\material.scss" />
+    <Content Include="ej2-resource\styles\grids\grid\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\grids\grid\fabric.scss" />
+    <Content Include="ej2-resource\styles\grids\grid\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\grids\grid\material.scss" />
+    <Content Include="ej2-resource\styles\grids\pager\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\grids\pager\fabric.scss" />
+    <Content Include="ej2-resource\styles\grids\pager\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\grids\pager\material.scss" />
+    <Content Include="ej2-resource\styles\inputs\input\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\inputs\input\fabric.scss" />
+    <Content Include="ej2-resource\styles\inputs\input\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\inputs\input\material.scss" />
+    <Content Include="ej2-resource\styles\inputs\maskedtextbox\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\inputs\maskedtextbox\fabric.scss" />
+    <Content Include="ej2-resource\styles\inputs\maskedtextbox\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\inputs\maskedtextbox\material.scss" />
+    <Content Include="ej2-resource\styles\inputs\numerictextbox\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\inputs\numerictextbox\fabric.scss" />
+    <Content Include="ej2-resource\styles\inputs\numerictextbox\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\inputs\numerictextbox\material.scss" />
+    <Content Include="ej2-resource\styles\inputs\slider\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\inputs\slider\fabric.scss" />
+    <Content Include="ej2-resource\styles\inputs\slider\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\inputs\slider\material.scss" />
+    <Content Include="ej2-resource\styles\inputs\uploader\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\inputs\uploader\fabric.scss" />
+    <Content Include="ej2-resource\styles\inputs\uploader\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\inputs\uploader\material.scss" />
+    <Content Include="ej2-resource\styles\lineargauge\linear-gauge\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\lineargauge\linear-gauge\fabric.scss" />
+    <Content Include="ej2-resource\styles\lineargauge\linear-gauge\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\lineargauge\linear-gauge\material.scss" />
+    <Content Include="ej2-resource\styles\lists\list-view\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\lists\list-view\fabric.scss" />
+    <Content Include="ej2-resource\styles\lists\list-view\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\lists\list-view\material.scss" />
+    <Content Include="ej2-resource\styles\maps\maps\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\maps\maps\fabric.scss" />
+    <Content Include="ej2-resource\styles\maps\maps\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\maps\maps\material.scss" />
+    <Content Include="ej2-resource\styles\navigations\accordion\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\navigations\accordion\fabric.scss" />
+    <Content Include="ej2-resource\styles\navigations\accordion\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\navigations\accordion\material.scss" />
+    <Content Include="ej2-resource\styles\navigations\context-menu\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\navigations\context-menu\fabric.scss" />
+    <Content Include="ej2-resource\styles\navigations\context-menu\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\navigations\context-menu\material.scss" />
+    <Content Include="ej2-resource\styles\navigations\h-scroll\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\navigations\h-scroll\fabric.scss" />
+    <Content Include="ej2-resource\styles\navigations\h-scroll\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\navigations\h-scroll\material.scss" />
+    <Content Include="ej2-resource\styles\navigations\sidebar\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\navigations\sidebar\fabric.scss" />
+    <Content Include="ej2-resource\styles\navigations\sidebar\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\navigations\sidebar\material.scss" />
+    <Content Include="ej2-resource\styles\navigations\tab\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\navigations\tab\fabric.scss" />
+    <Content Include="ej2-resource\styles\navigations\tab\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\navigations\tab\material.scss" />
+    <Content Include="ej2-resource\styles\navigations\toolbar\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\navigations\toolbar\fabric.scss" />
+    <Content Include="ej2-resource\styles\navigations\toolbar\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\navigations\toolbar\material.scss" />
+    <Content Include="ej2-resource\styles\navigations\treeview\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\navigations\treeview\fabric.scss" />
+    <Content Include="ej2-resource\styles\navigations\treeview\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\navigations\treeview\material.scss" />
+    <Content Include="ej2-resource\styles\popups\dialog\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\popups\dialog\fabric.scss" />
+    <Content Include="ej2-resource\styles\popups\dialog\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\popups\dialog\material.scss" />
+    <Content Include="ej2-resource\styles\popups\popup\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\popups\popup\fabric.scss" />
+    <Content Include="ej2-resource\styles\popups\popup\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\popups\popup\material.scss" />
+    <Content Include="ej2-resource\styles\popups\spinner\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\popups\spinner\fabric.scss" />
+    <Content Include="ej2-resource\styles\popups\spinner\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\popups\spinner\material.scss" />
+    <Content Include="ej2-resource\styles\popups\tooltip\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\popups\tooltip\fabric.scss" />
+    <Content Include="ej2-resource\styles\popups\tooltip\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\popups\tooltip\material.scss" />
+    <Content Include="ej2-resource\styles\schedule\recurrence-editor\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\schedule\recurrence-editor\fabric.scss" />
+    <Content Include="ej2-resource\styles\schedule\recurrence-editor\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\schedule\recurrence-editor\material.scss" />
+    <Content Include="ej2-resource\styles\schedule\schedule\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\schedule\schedule\fabric.scss" />
+    <Content Include="ej2-resource\styles\schedule\schedule\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\schedule\schedule\material.scss" />
+    <Content Include="ej2-resource\styles\splitbuttons\drop-down-button\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\splitbuttons\drop-down-button\fabric.scss" />
+    <Content Include="ej2-resource\styles\splitbuttons\drop-down-button\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\splitbuttons\drop-down-button\material.scss" />
+    <Content Include="ej2-resource\styles\splitbuttons\split-button\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\splitbuttons\split-button\fabric.scss" />
+    <Content Include="ej2-resource\styles\splitbuttons\split-button\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\splitbuttons\split-button\material.scss" />
+    <Content Include="ej2-resource\styles\buttons\switch\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\buttons\switch\fabric.scss" />
+    <Content Include="ej2-resource\styles\buttons\switch\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\buttons\switch\material.scss" />
+    <Content Include="ej2-resource\styles\layouts\avatar\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\layouts\avatar\fabric.scss" />
+    <Content Include="ej2-resource\styles\layouts\avatar\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\layouts\avatar\material.scss" />
+    <Content Include="ej2-resource\styles\layouts\card\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\layouts\card\fabric.scss" />
+    <Content Include="ej2-resource\styles\layouts\card\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\layouts\card\material.scss" />
+    <Content Include="ej2-resource\styles\notifications\badge\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\notifications\badge\fabric.scss" />
+    <Content Include="ej2-resource\styles\notifications\badge\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\notifications\badge\material.scss" />
+    <Content Include="ej2-resource\styles\smithchart\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\smithchart\fabric.scss" />
+    <Content Include="ej2-resource\styles\smithchart\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\smithchart\material.scss" />
+    <Content Include="ej2-resource\styles\sparkline\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\sparkline\fabric.scss" />
+    <Content Include="ej2-resource\styles\sparkline\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\sparkline\material.scss" />
+    <Content Include="ej2-resource\styles\splitbuttons\button-group\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\splitbuttons\button-group\fabric.scss" />
+    <Content Include="ej2-resource\styles\splitbuttons\button-group\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\splitbuttons\button-group\material.scss" />
+    <Content Include="ej2-resource\styles\treemap\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\treemap\fabric.scss" />
+    <Content Include="ej2-resource\styles\treemap\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\treemap\material.scss" />
+    <Content Include="ej2-resource\styles\inputs\color-picker\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\inputs\color-picker\fabric.scss" />
+    <Content Include="ej2-resource\styles\inputs\color-picker\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\inputs\color-picker\material.scss" />
+    <Content Include="ej2-resource\styles\charts\scrollbar\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\charts\scrollbar\fabric.scss" />
+    <Content Include="ej2-resource\styles\charts\scrollbar\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\charts\scrollbar\material.scss" />
+    <Content Include="ej2-resource\styles\diagrams\diagram\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\diagrams\diagram\fabric.scss" />
+    <Content Include="ej2-resource\styles\diagrams\diagram\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\diagrams\diagram\material.scss" />
+    <Content Include="ej2-resource\styles\notifications\toast\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\notifications\toast\fabric.scss" />
+    <Content Include="ej2-resource\styles\notifications\toast\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\notifications\toast\material.scss" />
+    <Content Include="ej2-resource\styles\documenteditor\document-editor\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\documenteditor\document-editor\fabric.scss" />
+    <Content Include="ej2-resource\styles\documenteditor\document-editor\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\documenteditor\document-editor\material.scss" />
+    <Content Include="ej2-resource\styles\richtexteditor\rich-text-editor\bootstrap.scss" />
+    <Content Include="ej2-resource\styles\richtexteditor\rich-text-editor\fabric.scss" />
+    <Content Include="ej2-resource\styles\richtexteditor\rich-text-editor\highcontrast.scss" />
+    <Content Include="ej2-resource\styles\richtexteditor\rich-text-editor\material.scss" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile2.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\ej1\ej.widget.all.min.js" />
+    <Content Include="Scripts\index.js" />
+    <Content Include="Scripts\ej2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="template\bootstrap.txt" />
+    <Content Include="template\fabric.txt" />
+    <Content Include="template\highcontrast.txt" />
+    <Content Include="template\material.txt" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="styleDeps.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63634</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63634/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\libsassnet.3.3.7\build\libsassnet.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libsassnet.3.3.7\build\libsassnet.targets'))" />
+  </Target>
+  <Import Project="..\packages\libsassnet.3.3.7\build\libsassnet.targets" Condition="Exists('..\packages\libsassnet.3.3.7\build\libsassnet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
