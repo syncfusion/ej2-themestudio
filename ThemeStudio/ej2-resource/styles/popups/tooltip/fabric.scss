@@ -1,80 +1,67 @@
 
-/*! component's default definitions and variables */
-$tooltip-drop-shadow: none;
-$tooltip-content-bg-color: $content-bg-color;
-$tooltip-content-border-color: $content-border-color;
-$tooltip-content-font-color: $content-font-color;
-$tooltip-default-icon-color: $default-icon-color;
-$tooltip-icon-bg-normal: $default-bg-color;
-$tooltip-hover-icon-color: $hover-icon-color;
-$tooltip-icon-bg-hover: $hover-bg-color;
-$tooltip-font-size: 11px;
-$tooltip-mobile-font-size: 14px;
-$tooltip-border-radius: 0;
-$tooltip-opacity: 1;
-$tooltip-arrow-outer-border: 8px;
-$tooltip-arrow-inner-border: 7px;
-$tooltip-horizontal-padding: 3px;
-$tooltip-vertical-padding: 6px;
-$tooltip-mobile-horizontal-padding: 5px;
-$tooltip-mobile-vertical-padding: 8px;
-$tooltip-line-height: 16px;
-$skin-name: 'fabric';
-$tooltip-shadow-color: rgba(0, 0, 0, .25);
-$tooltip-drop-shadow: drop-shadow(1px 1px 3px $tooltip-shadow-color);
-$tooltip-content-bg-color: $neutral-white;
-$tooltip-content-border-color: $neutral-light;
-$tooltip-content-font-color:  $neutral-light-font;
-$tooltip-default-icon-color: $neutral-white;
-$tooltip-icon-bg-normal: $base-font;
-$tooltip-hover-icon-color: $neutral-light;
-$tooltip-icon-bg-hover: $neutral-light-font;
-$tooltip-font-size: 11px;
-$tooltip-mobile-font-size: 12px;
-$tooltip-border-radius: 0;
-$tooltip-opacity: 1;
-$tooltip-arrow-outer-border: 8px;
-$tooltip-arrow-inner-border: 7px;
-$tooltip-horizontal-padding: 12px;
-$tooltip-vertical-padding: 12px;
-$tooltip-mobile-horizontal-padding: 15px;
-$tooltip-mobile-vertical-padding: 15px;
-$tooltip-line-height: 16px;
-$tooltip-arrow-icon-font-size: 16px;
+$tooltip-shadow-color: rgba(0, 0, 0, .25) !default;
+$tooltip-drop-shadow: drop-shadow(1px 1px 3px $tooltip-shadow-color) !default;
+$tooltip-content-bg-color: $neutral-white !default;
+$tooltip-content-border-color: $neutral-light !default;
+$tooltip-content-font-color:  $neutral-light-font !default;
+$tooltip-default-icon-color: $neutral-white !default;
+$tooltip-icon-bg-normal: $base-font !default;
+$tooltip-hover-icon-color: $neutral-light !default;
+$tooltip-icon-bg-hover: $neutral-light-font !default;
+$tooltip-font-size: 11px !default;
+$tooltip-mobile-font-size: 12px !default;
+$tooltip-border-radius: 0 !default;
+$tooltip-opacity: 1 !default;
+$tooltip-arrow-outer-border: 8px !default;
+$tooltip-arrow-inner-border: 7px !default;
+$tooltip-horizontal-padding: 12px !default;
+$tooltip-vertical-padding: 12px !default;
+$tooltip-mobile-horizontal-padding: 15px !default;
+$tooltip-mobile-vertical-padding: 15px !default;
+$tooltip-line-height: 16px !default;
+$tooltip-arrow-icon-font-size: 16px !default;
+$tooltip-icon-border-color: transparent !default;
 
-@include export-module('tooltip-icons') {
-  /*! component icons */
-  .e-tooltip-close::before {
-    @if $skin-name == 'highcontrast' {
-      color: $tooltip-content-font-color;
-      content: '\e953';
-      font-size: 8px;
-      left: calc(50% - 4px);
-      position: absolute;
-      top: calc(50% - 4px);
-    }
-    @else {
-      content: '\e7e9';
-      font-size: 16px;
-    }
-  }
+$tooltip-tip-bottom-height: 8px !default;
+$tooltip-tip-bottom-left: 50% !default;
+$tooltip-tip-bottom-top: 100% !default;
+$tooltip-tip-bottom-width: 16px !default;
 
-  .e-arrow-tip-inner.e-tip-right::before {
-    content: '\e848';
-  }
+$tooltip-tip-top-height: 8px !default;
+$tooltip-tip-top-left: 50% !default;
+$tooltip-tip-top-top: -9px !default;
+$tooltip-tip-top-width: 16px !default;
 
-  .e-arrow-tip-inner.e-tip-top::before {
-    content: '\e918';
-  }
+$tooltip-tip-left-height: 16px !default;
+$tooltip-tip-left-left: -9px !default;
+$tooltip-tip-left-top: 48% !default;
+$tooltip-tip-left-width: 8px !default;
 
-  .e-arrow-tip-inner.e-tip-bottom::before {
-    content: '\e919';
-  }
-
-  .e-arrow-tip-inner.e-tip-left::before {
-    content: '\e84b';
-  }
+$tooltip-tip-right-height: 16px !default;
+$tooltip-tip-right-left: 100% !default;
+$tooltip-tip-right-top: 50% !default;
+$tooltip-tip-right-width: 8px !default;
+.e-tooltip-close::before {
+  content: '\e7e9';
+  font-size: 16px;
 }
+
+.e-arrow-tip-inner.e-tip-right::before {
+  content: '\e848';
+}
+
+.e-arrow-tip-inner.e-tip-top::before {
+  content: '\e918';
+}
+
+.e-arrow-tip-inner.e-tip-bottom::before {
+  content: '\e919';
+}
+
+.e-arrow-tip-inner.e-tip-left::before {
+  content: '\e84b';
+}
+
 @include export-module('tooltip-layout') {
   /*! tooltip layout */
   #{&}.e-tooltip-wrap {
@@ -90,31 +77,31 @@ $tooltip-arrow-icon-font-size: 16px;
       position: absolute;
 
       &.e-tip-bottom {
-        height: 8px;
-        left: 50%;
-        top: 100%;
-        width: 16px;
+        height: $tooltip-tip-bottom-height;
+        left: $tooltip-tip-bottom-left;
+        top: $tooltip-tip-bottom-top;
+        width: $tooltip-tip-bottom-width;
       }
 
       &.e-tip-top {
-        height: 8px;
-        left: 50%;
-        top: -9px;
-        width: 16px;
+        height: $tooltip-tip-top-height;
+        left: $tooltip-tip-top-left;
+        top: $tooltip-tip-top-top;
+        width: $tooltip-tip-top-width;
       }
 
       &.e-tip-left {
-        height: 16px;
-        left: -9px;
-        top: 48%;
-        width: 8px;
+        height: $tooltip-tip-left-height;
+        left: $tooltip-tip-left-left;
+        top: $tooltip-tip-left-top;
+        width: $tooltip-tip-left-width;
       }
 
       &.e-tip-right {
-        height: 16px;
-        left: 100%;
-        top: 50%;
-        width: 8px;
+        height: $tooltip-tip-right-height;
+        left: $tooltip-tip-right-left;
+        top: $tooltip-tip-right-top;
+        width: $tooltip-tip-right-width;
       }
     }
 
@@ -124,6 +111,7 @@ $tooltip-arrow-icon-font-size: 16px;
       position: absolute;
       right: -9px;
       top: -9px;
+      z-index: inherit;
     }
 
     /*! tooltip content area */
@@ -131,21 +119,29 @@ $tooltip-arrow-icon-font-size: 16px;
       background-color: inherit;
       height: 100%;
       line-height: $tooltip-line-height;
+      overflow-wrap: break-word;
       overflow-x: hidden;
       padding: $tooltip-horizontal-padding $tooltip-vertical-padding;
       position: relative;
       white-space: normal;
       width: 100%;
+      word-break: break-word;
+      z-index: 1;
+      @if $skin-name == 'bootstrap4' {
+        border-radius: inherit;
+      }
     }
   }
 
   /*! Bigger Style */
   .e-bigger #{&}.e-tooltip-wrap .e-tip-content,
-  &#{&}.e-tooltip-wrap.e-bigger .e-tip-content {
+  #{&}.e-tooltip-wrap.e-bigger .e-tip-content {
     line-height: 20px;
     padding: $tooltip-mobile-horizontal-padding $tooltip-mobile-vertical-padding;
+    @if $skin-name == 'bootstrap4' {
+      line-height: 1.5;
+    }
   }
-
 }
 @include export-module('tooltip-theme') {
   /*! Tooltip theme */
@@ -211,17 +207,22 @@ $tooltip-arrow-icon-font-size: 16px;
         line-height: 1;
         text-transform: none;
       }
-  }
+    }
 
     /*! tooltip sticky mode close icon */
     .e-tooltip-close {
       background-color: $tooltip-icon-bg-normal;
+      border-color: $tooltip-icon-border-color;
       border-radius: 8px;
       color: $tooltip-default-icon-color;
-      @if $skin-name == 'highcontrast' {
-        border: 1px solid $tooltip-hover-icon-color;
+      @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
+        border-style: solid;
+        border-width: 1px;
         height: 16px;
         width: 16px;
+      }
+      @if $skin-name == 'bootstrap4' {
+        border: $tooltip-close-icon-border;
       }
     }
 
@@ -235,12 +236,15 @@ $tooltip-arrow-icon-font-size: 16px;
       color: $tooltip-content-font-color;
       font-family: $font-family;
       font-size: $tooltip-font-size;
+      @if $skin-name == 'bootstrap4' {
+        line-height: 1.5;
+      }
     }
   }
 
   /*! bigger style */
   .e-bigger #{&}.e-tooltip-wrap .e-tip-content,
-  &#{&}.e-tooltip-wrap.e-bigger .e-tip-content {
+  #{&}.e-tooltip-wrap.e-bigger .e-tip-content {
     font-size: $tooltip-mobile-font-size;
   }
 }

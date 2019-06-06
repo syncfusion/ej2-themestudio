@@ -6,7 +6,7 @@ var shelljs = require("shelljs");
 
 
 gulp.task("style-deps-json", function () {
-    var style = JSON.parse(fs.readFileSync("./ej2-resources/styles.json", "utf8"));
+    var style = JSON.parse(fs.readFileSync("./ej2-resource/styles.json", "utf8"));
     var packs = Object.keys(style);
     var tStyle = {};
     var compName = "";
@@ -28,9 +28,9 @@ function themeName(name) {
     return name.slice(0, -5);
 }
 gulp.task("allscss", function () {
-    var themes = ['material','bootstrap','fabric','highcontrast'];
+    var themes = ['material','fabric','bootstrap','bootstrap4','highcontrast'];
     for(var i =0 ;i<themes.length;i++){
-        var styleFiles = glob.sync("./ej2-resources/styles/**/"+themes[i]+".scss");
+        var styleFiles = glob.sync("./ej2-resource/styles/**/"+themes[i]+".scss");
         var styles = {};
         var content = "";
         var pathArray = [];
@@ -63,7 +63,7 @@ gulp.task("copy-file", function () {
 })
 gulp.task("combine-json", function () {
     var style = JSON.parse(fs.readFileSync("styleDeps.json", "utf8"));
-    var resource = JSON.parse(fs.readFileSync("./ej2-resources/resources.json", "utf8"));
+    var resource = JSON.parse(fs.readFileSync("./ej2-resource/resources.json", "utf8"));
     var combine = {styles:style, resources:resource }; 
     fs.writeFileSync("Scripts/combine.js","window.dependentCollection="+ JSON.stringify(combine), "utf8")
 });
@@ -72,3 +72,24 @@ gulp.task("combine-json", function () {
 gulp.task("build-Configuration", function(){
     shelljs.exec('gulp copy-file  style-deps-json allscss   combine-json');
 });
+gulp.task('themestudio-publish', function (done) {
+    if (fs.existsSync('./third-party/asp-core')) {
+        var user = process.env.GITLAB_USER;
+        var token = process.env.GITLAB_TOKEN;
+        var stageBranch = common.isMasterBranch ? 'master' : 'development';
+        stageBranch = common.isReleaseBranch ? process.env.BRANCH_NAME : stageBranch;
+        var ej2aspRepo = 'https://' + user + ':' + token + '@gitlab.syncfusion.com/essential-studio/ej2-asp-core.git';
+
+        simpleGit('./third-party/asp-core').init()
+            .add('.')
+            .commit('(EJ2-000): ' + currentPackage + ' aspcore properties published')
+            .push(ej2aspRepo, stageBranch, function () {
+                console.log(currentPackage + ' - package published in github');
+                done();
+            });
+
+    } else {
+        done();
+    }
+});
+

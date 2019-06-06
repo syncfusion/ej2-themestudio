@@ -1,137 +1,75 @@
 
-$background-color: #fff;
-$border: 2px solid;
-$border-color: #ccc;
-$bigger-font-size: 14px;
-$bigger-height: 22px;
-$bigger-line-height: 23px;
-$bigger-padding: 36px;
-$bigger-ripple-position: -11px;
-$bigger-ripple-size: 48px;
-$bigger-small-ripple-size: 36px;
-$bigger-small-height: 22px;
-$bigger-small-line-height: 20px;
-$bigger-small-padding: 34px;
-$bigger-small-width: 22px;
-$bigger-width: 22px;
-$checked-border-color: #ff4081;
-$checked-color: #ff4081;
-$checked-ripple-bgcolor: #ff4081;
-$check-transition: none;
-$disabled-border-color: #bdbdbd;
-$disabled-checked-color: #bdbdbd;
-$disabled-color: #bdbdbd;
-$focus-ripple-bgcolor: #000;
-$focussed-bgcolor: rgba(48, 48, 48, .12);
-$focussed-border-color: #767676;
-$focussed-box-shadow: none;
-$font-color: #000;
-$font-size: 13px;
-$hover-bgcolor: #fff;
-$hover-border-color: #757575;
-$hover-check-bg-color: #ff4081;
-$hover-check-border-color: #ff4081;
-$height: 18px;
-$width: 18px;
-$small-height: 14px;
-$small-width: 14px;
-$icon-left: 5px;
-$icon-top: 5px;
-$icon-right: 5px;
-$small-icon-left: 4px;
-$small-icon-top: 4px;
-$small-icon-right: 4px;
-$bigger-icon-left: 6px;
-$bigger-icon-top: 6px;
-$bigger-icon-right: 6px;
-$bigger-small-icon-left: 6px;
-$bigger-small-icon-top: 6px;
-$bigger-small-icon-right: 6px;
-$icon-height: 8px;
-$icon-width: 8px;
-$small-icon-height: 6px;
-$small-icon-width: 6px;
-$bigger-icon-height: 10px;
-$bigger-icon-width: 10px;
-$bigger-small-icon-height: 8px;
-$bigger-small-icon-width: 8px;
-$line-height: 20px;
-$padding: 31px;
-$ripple-bgcolor:  rgba(0, 0, 0, .3);
-$ripple-position: -8px;
-$ripple-size: 34px;
-$small-line-height: 13px;
-$small-padding: 26px;
-$small-ripple-position: -10px;
-$focus-check-bg-color: $hover-check-bg-color;
-$focus-check-border-color: $hover-check-border-color;
-$focus-outline: $background-color 0 solid;
-$focus-outline-offset: 0;
-$background-color: $grey-white;
-$border: 2px solid;
-$border-color: $grey-600;
-$bigger-font-size: 14px;
-$bigger-height: 22px;
-$bigger-line-height: 22px;
-$bigger-padding: 34px;
-$bigger-ripple-position: -10px;
-$bigger-ripple-size: 42px;
-$bigger-small-ripple-size: 40px;
-$bigger-small-height: 20px;
-$bigger-small-line-height: 20px;
-$bigger-small-padding: 32px;
-$bigger-small-width: 20px;
-$bigger-width: 22px;
-$checked-border-color: $accent;
-$checked-color: $accent;
-$checked-ripple-bgcolor: rgba($accent, .26);
-$check-transition: transform ease 280ms, background-color ease 280ms;
-$disabled-border-color: $grey-400;
-$disabled-checked-color: $grey-400;
-$disabled-color: $grey-400;
-$focus-ripple-bgcolor: rgba($grey-black, .12);
-$focussed-box-shadow: none;
-$font-color: rgba($grey-light-font, .87);
-$font-size: 13px;
-$focussed-box-shadow: none;
-$hover-bgcolor: $accent-font;
-$hover-border-color: $grey-600;
-$hover-check-bg-color: $accent;
-$hover-check-border-color: $accent;
-$height: 18px;
-$width: 18px;
-$small-height: 14px;
-$small-width: 14px;
-$icon-left: 5px;
-$icon-top: 5px;
-$icon-right: 5px;
-$small-icon-left: 4px;
-$small-icon-top: 4px;
-$small-icon-right: 4px;
-$bigger-icon-left: 6px;
-$bigger-icon-top: 6px;
-$bigger-icon-right: 6px;
-$bigger-small-icon-left: 6px;
-$bigger-small-icon-top: 6px;
-$bigger-small-icon-right: 6px;
-$icon-height: 8px;
-$icon-width: 8px;
-$small-icon-height: 6px;
-$small-icon-width: 6px;
-$bigger-icon-height: 10px;
-$bigger-icon-width: 10px;
-$bigger-small-icon-height: 8px;
-$bigger-small-icon-width: 8px;
-$line-height: 18px;
-$padding: 28px;
-$ripple-bgcolor: rgba($grey-black, .12);
-$ripple-position: -8px;
-$ripple-size: 34px;
-$small-line-height: 14px;
-$small-padding: 24px;
-$small-ripple-position: -10px;
-$focus-check-bg-color: $hover-check-bg-color;
-$focus-check-border-color: $hover-check-border-color;
+$radio-btn-background-color: $grey-white !default;
+$radio-btn-border: 2px solid !default;
+$radio-btn-border-color: $grey-600 !default;
+$radio-btn-bigger-font-size: 14px !default;
+$radio-btn-bigger-height: 22px !default;
+$radio-btn-bigger-line-height: 22px !default;
+$radio-btn-bigger-padding: 34px !default;
+$radio-btn-bigger-ripple-position: -10px !default;
+$radio-btn-bigger-ripple-size: 42px !default;
+$radio-btn-bigger-small-ripple-size: 40px !default;
+$radio-btn-bigger-small-height: 20px !default;
+$radio-btn-bigger-small-line-height: 20px !default;
+$radio-btn-bigger-small-padding: 32px !default;
+$radio-btn-bigger-small-width: 20px !default;
+$radio-btn-bigger-width: 22px !default;
+$radio-btn-checked-border-color: $accent !default;
+$radio-btn-checked-color: $accent !default;
+$radio-btn-checked-background-color: $radio-btn-background-color !default;
+$radio-btn-checked-ripple-bgcolor: rgba($accent, .26) !default;
+$radio-btn-check-transition: transform ease 280ms, background-color ease 280ms !default;
+$radio-btn-disabled-border-color: $grey-400 !default;
+$radio-btn-disabled-checked-color: $grey-400 !default;
+$radio-btn-disabled-checked-border-color: $radio-btn-disabled-border-color !default;
+$radio-btn-disabled-background-color: transparent !default;
+$radio-btn-disabled-color: $grey-400 !default;
+$radio-btn-focus-ripple-bgcolor: rgba($grey-black, .12) !default;
+$radio-btn-focussed-box-shadow: none !default;
+$radio-btn-font-color: rgba($grey-light-font, .87) !default;
+$radio-btn-font-size: 13px !default;
+$radio-btn-focussed-box-shadow: none !default;
+$radio-btn-hover-bgcolor: $accent-font !default;
+$radio-btn-hover-border-color: $grey-600 !default;
+$radio-btn-hover-check-bg-color: $accent !default;
+$radio-btn-hover-check-border-color: $accent !default;
+$radio-btn-height: 18px !default;
+$radio-btn-width: 18px !default;
+$radio-btn-small-height: 14px !default;
+$radio-btn-small-width: 14px !default;
+$radio-btn-icon-left: 5px !default;
+$radio-btn-icon-top: 5px !default;
+$radio-btn-icon-right: 5px !default;
+$radio-btn-small-icon-left: 4px !default;
+$radio-btn-small-icon-top: 4px !default;
+$radio-btn-small-icon-right: 4px !default;
+$radio-btn-bigger-icon-left: 6px !default;
+$radio-btn-bigger-icon-top: 6px !default;
+$radio-btn-bigger-icon-right: 6px !default;
+$radio-btn-bigger-small-icon-left: 6px !default;
+$radio-btn-bigger-small-icon-top: 6px !default;
+$radio-btn-bigger-small-icon-right: 6px !default;
+$radio-btn-icon-height: 8px !default;
+$radio-btn-icon-width: 8px !default;
+$radio-btn-small-icon-height: 6px !default;
+$radio-btn-small-icon-width: 6px !default;
+$radio-btn-bigger-icon-height: 10px !default;
+$radio-btn-bigger-icon-width: 10px !default;
+$radio-btn-bigger-small-icon-height: 8px !default;
+$radio-btn-bigger-small-icon-width: 8px !default;
+$radio-btn-line-height: 18px !default;
+$radio-btn-padding-left: 28px !default;
+$radio-btn-ripple-bgcolor: rgba($grey-black, .12) !default;
+$radio-btn-ripple-position: -8px !default;
+$radio-btn-ripple-size: 34px !default;
+$radio-btn-ripple-size: 34px !default;
+$radio-btn-small-line-height: 14px !default;
+$radio-btn-small-padding: 24px !default;
+$radio-btn-small-ripple-position: -10px !default;
+$radio-btn-focus-check-bg-color: $radio-btn-hover-check-bg-color !default;
+$radio-btn-focus-check-border-color: $radio-btn-hover-check-border-color !default;
+$radio-btn-focus-outline: $radio-btn-background-color 0 solid !default;
+$radio-btn-focus-outline-offset: 0 !default;
 
 @include export-module('radiobutton-layout') {
   /*! radiobutton layout */
@@ -162,29 +100,29 @@ $focus-check-border-color: $hover-check-border-color;
       & .e-label {
         display: inline-block;
         font-family: $font-family;
-        font-size: $font-size;
+        font-size: $radio-btn-font-size;
         font-weight: normal;
-        line-height: $line-height;
-        padding-left: $padding;
+        line-height: $radio-btn-line-height;
+        padding-left: $radio-btn-padding-left;
         vertical-align: text-top;
         white-space: normal;
       }
 
       &::before {
-        border: $border;
+        border: $radio-btn-border;
         border-radius: 50%;
         box-sizing: border-box;
         content: '';
-        height: $height;
+        height: $radio-btn-height;
         left: 0;
         position: absolute;
         top: 0;
-        width: $width;
+        width: $radio-btn-width;
       }
 
       &:focus {
         &::before {
-          box-shadow: $focussed-box-shadow;
+          box-shadow: $radio-btn-focussed-box-shadow;
         }
       }
 
@@ -193,21 +131,21 @@ $focus-check-border-color: $hover-check-border-color;
         border-radius: 50%;
         box-sizing: border-box;
         content: '';
-        height: $icon-height;
-        left: $icon-left;
+        height: $radio-btn-icon-height;
+        left: $radio-btn-icon-left;
         position: absolute;
-        top: $icon-top;
+        top: $radio-btn-icon-top;
         transform: scale(0);
-        width: $icon-width;
+        width: $radio-btn-icon-width;
       }
 
       & .e-ripple-container {
         border-radius: 50%;
-        height: $ripple-size;
-        left: $ripple-position;
+        height: $radio-btn-ripple-size;
+        left: $radio-btn-ripple-position;
         position: absolute;
-        top:  $ripple-position;
-        width: $ripple-size;
+        top:  $radio-btn-ripple-position;
+        width: $radio-btn-ripple-size;
         z-index: 1;
       }
 
@@ -215,7 +153,7 @@ $focus-check-border-color: $hover-check-border-color;
       &.e-rtl {
         & .e-label {
           padding-left: 0;
-          padding-right: $padding;
+          padding-right: $radio-btn-padding-left;
         }
 
         &::before {
@@ -225,19 +163,19 @@ $focus-check-border-color: $hover-check-border-color;
 
         &::after {
           left: auto;
-          right: $icon-right;
+          right: $radio-btn-icon-right;
         }
 
         & .e-ripple-container {
           left: auto;
-          right: $ripple-position;
+          right: $radio-btn-ripple-position;
         }
       }
 
       &.e-right {
         &.e-rtl {
           & .e-label {
-            padding-left: $padding;
+            padding-left: $radio-btn-padding-left;
             padding-right: 0;
           }
 
@@ -247,7 +185,7 @@ $focus-check-border-color: $hover-check-border-color;
           }
 
           &::after {
-            left: $icon-right;
+            left: $radio-btn-icon-right;
             right: auto;
           }
 
@@ -261,54 +199,54 @@ $focus-check-border-color: $hover-check-border-color;
       &.e-small {
 
         & .e-label {
-          line-height: $small-line-height;
-          padding-left: $small-padding;
+          line-height: $radio-btn-small-line-height;
+          padding-left: $radio-btn-small-padding;
         }
 
         &::before {
-          height: $small-height;
-          width: $small-width;
+          height: $radio-btn-small-height;
+          width: $radio-btn-small-width;
         }
 
         &::after {
-          height: $small-icon-height;
-          left: $small-icon-left;
-          top: $small-icon-top;
-          width: $small-icon-width;
+          height: $radio-btn-small-icon-height;
+          left: $radio-btn-small-icon-left;
+          top: $radio-btn-small-icon-top;
+          width: $radio-btn-small-icon-width;
         }
 
         & .e-ripple-container {
-          left: $small-ripple-position;
-          top: $small-ripple-position;
+          left: $radio-btn-small-ripple-position;
+          top: $radio-btn-small-ripple-position;
         }
 
         &.e-right,
         &.e-rtl {
           & .e-label {
             padding-left: 0;
-            padding-right: $small-padding;
+            padding-right: $radio-btn-small-padding;
           }
 
           &::after {
             left: auto;
-            right: $small-icon-right;
+            right: $radio-btn-small-icon-right;
           }
 
           & .e-ripple-container {
             left: auto;
-            right: $small-ripple-position;
+            right: $radio-btn-small-ripple-position;
           }
         }
 
         &.e-right {
           &.e-rtl {
             & .e-label {
-              padding-left: $small-padding;
+              padding-left: $radio-btn-small-padding;
               padding-right: 0;
             }
 
             &::after {
-              left: $small-icon-right;
+              left: $radio-btn-small-icon-right;
               right: auto;
             }
 
@@ -325,7 +263,7 @@ $focus-check-border-color: $hover-check-border-color;
       +label {
         &::after {
           transform: scale(1);
-          transition: $check-transition;
+          transition: $radio-btn-check-transition;
         }
       }
     }
@@ -335,57 +273,57 @@ $focus-check-border-color: $hover-check-border-color;
   #{&}.e-radio+label.e-bigger {
 
     & .e-label {
-      font-size: $bigger-font-size;
-      line-height: $bigger-line-height;
-      padding-left: $bigger-padding;
+      font-size: $radio-btn-bigger-font-size;
+      line-height: $radio-btn-bigger-line-height;
+      padding-left: $radio-btn-bigger-padding;
     }
 
     &::before {
-      height: $bigger-height;
-      width: $bigger-width;
+      height: $radio-btn-bigger-height;
+      width: $radio-btn-bigger-width;
     }
 
     &::after {
-      height: $bigger-icon-height;
-      left: $bigger-icon-left;
-      top: $bigger-icon-top;
-      width: $bigger-icon-width;
+      height: $radio-btn-bigger-icon-height;
+      left: $radio-btn-bigger-icon-left;
+      top: $radio-btn-bigger-icon-top;
+      width: $radio-btn-bigger-icon-width;
     }
 
     & .e-ripple-container {
-      height: $bigger-ripple-size;
-      left: $bigger-ripple-position;
-      top: $bigger-ripple-position;
-      width: $bigger-ripple-size;
+      height: $radio-btn-bigger-ripple-size;
+      left: $radio-btn-bigger-ripple-position;
+      top: $radio-btn-bigger-ripple-position;
+      width: $radio-btn-bigger-ripple-size;
     }
 
     &.e-right,
     &.e-rtl {
       & .e-label {
         padding-left: 0;
-        padding-right: $bigger-padding;
+        padding-right: $radio-btn-bigger-padding;
       }
 
       &::after {
         left: auto;
-        right: $bigger-icon-right;
+        right: $radio-btn-bigger-icon-right;
       }
 
       & .e-ripple-container {
         left: auto;
-        right: $bigger-ripple-position;
+        right: $radio-btn-bigger-ripple-position;
       }
     }
 
     &.e-right {
       &.e-rtl {
         & .e-label {
-          padding-left: $bigger-padding;
+          padding-left: $radio-btn-bigger-padding;
           padding-right: 0;
         }
 
         &::after {
-          left: $bigger-icon-right;
+          left: $radio-btn-bigger-icon-right;
           right: auto;
         }
 
@@ -399,56 +337,56 @@ $focus-check-border-color: $hover-check-border-color;
     &.e-small {
 
       & .e-label {
-        line-height: $bigger-small-line-height;
-        padding-left: $bigger-small-padding;
+        line-height: $radio-btn-bigger-small-line-height;
+        padding-left: $radio-btn-bigger-small-padding;
       }
 
       &::before {
-        height: $bigger-small-height;
-        width: $bigger-small-width;
+        height: $radio-btn-bigger-small-height;
+        width: $radio-btn-bigger-small-width;
       }
 
       &::after {
-        height: $bigger-small-icon-height;
-        left: $bigger-small-icon-left;
-        top: $bigger-small-icon-top;
-        width: $bigger-small-icon-width;
+        height: $radio-btn-bigger-small-icon-height;
+        left: $radio-btn-bigger-small-icon-left;
+        top: $radio-btn-bigger-small-icon-top;
+        width: $radio-btn-bigger-small-icon-width;
       }
 
       & .e-ripple-container {
-        height: $bigger-small-ripple-size;
-        left: $bigger-ripple-position;
-        top: $bigger-ripple-position;
-        width: $bigger-small-ripple-size;
+        height: $radio-btn-bigger-small-ripple-size;
+        left: $radio-btn-bigger-ripple-position;
+        top: $radio-btn-bigger-ripple-position;
+        width: $radio-btn-bigger-small-ripple-size;
       }
 
       &.e-right,
       &.e-rtl {
         & .e-label {
           padding-left: 0;
-          padding-right: $bigger-small-padding;
+          padding-right: $radio-btn-bigger-small-padding;
         }
 
         &::after {
           left: auto;
-          right: $bigger-small-icon-right;
+          right: $radio-btn-bigger-small-icon-right;
         }
 
         & .e-ripple-container {
           left: auto;
-          right: $small-ripple-position;
+          right: $radio-btn-small-ripple-position;
         }
       }
 
       &.e-right {
         &.e-rtl {
           & .e-label {
-            padding-left: $bigger-small-padding;
+            padding-left: $radio-btn-bigger-small-padding;
             padding-right: 0;
           }
 
           &::after {
-            left: $bigger-small-icon-right;
+            left: $radio-btn-bigger-small-icon-right;
             right: auto;
           }
 
@@ -467,27 +405,27 @@ $focus-check-border-color: $hover-check-border-color;
   #{&}.e-radio {
     +label {
       &::before {
-        background-color: $background-color;
-        border-color: $border-color;
+        background-color: $radio-btn-background-color;
+        border-color: $radio-btn-border-color;
       }
 
       &.e-focus {
         & .e-ripple-container {
-          background-color: $focus-ripple-bgcolor;
+          background-color: $radio-btn-focus-ripple-bgcolor;
         }
       }
 
       & .e-label {
-        color: $font-color;
+        color: $radio-btn-font-color;
       }
 
       & .e-ripple-element {
-        background-color: $checked-ripple-bgcolor;
+        background-color: $radio-btn-checked-ripple-bgcolor;
       }
 
       &:active {
         & .e-ripple-element {
-          background-color: $ripple-bgcolor;
+          background-color: $radio-btn-ripple-bgcolor;
         }
       }
     }
@@ -495,8 +433,8 @@ $focus-check-border-color: $hover-check-border-color;
     &:focus {
       +label {
         &::before {
-          border-color: $hover-border-color;
-          box-shadow: $focussed-box-shadow;
+          border-color: $radio-btn-hover-border-color;
+          box-shadow: $radio-btn-focussed-box-shadow;
         }
       }
     }
@@ -504,7 +442,7 @@ $focus-check-border-color: $hover-check-border-color;
     &:hover {
       +label {
         &::before {
-          border-color: $hover-border-color;
+          border-color: $radio-btn-hover-border-color;
         }
       }
     }
@@ -512,29 +450,30 @@ $focus-check-border-color: $hover-check-border-color;
     &:checked {
       +label {
         &::before {
-          border-color: $checked-border-color;
+          background-color: $radio-btn-checked-background-color;
+          border-color: $radio-btn-checked-border-color;
         }
 
         &::after {
-          background-color: $checked-color;
-          color: $checked-color;
+          background-color: $radio-btn-checked-color;
+          color: $radio-btn-checked-color;
         }
 
         &:active {
           & .e-ripple-element {
-            background-color: $checked-ripple-bgcolor;
+            background-color: $radio-btn-checked-ripple-bgcolor;
           }
         }
       }
 
       +.e-focus {
         & .e-ripple-container {
-          background-color: $checked-ripple-bgcolor;
+          background-color: $radio-btn-checked-ripple-bgcolor;
         }
 
         &::before {
-          outline: $focus-outline;
-          outline-offset: $focus-outline-offset;
+          outline: $radio-btn-focus-outline;
+          outline-offset: $radio-btn-focus-outline-offset;
         }
       }
     }
@@ -543,11 +482,11 @@ $focus-check-border-color: $hover-check-border-color;
       &:focus {
         +label {
           &::before {
-            border-color: $focus-check-border-color;
+            border-color: $radio-btn-focus-check-border-color;
           }
 
           &::after {
-            background-color: $focus-check-bg-color;
+            background-color: $radio-btn-focus-check-bg-color;
           }
         }
       }
@@ -555,11 +494,11 @@ $focus-check-border-color: $hover-check-border-color;
       +label {
         &:hover {
           &::before {
-            border-color: $hover-check-border-color;
+            border-color: $radio-btn-hover-check-border-color;
           }
 
           &::after {
-            background-color: $hover-check-bg-color;
+            background-color: $radio-btn-hover-check-bg-color;
           }
         }
       }
@@ -571,7 +510,7 @@ $focus-check-border-color: $hover-check-border-color;
         pointer-events: none;
 
         &::before {
-          border-color: $disabled-border-color;
+          border-color: $radio-btn-disabled-border-color;
           cursor: default;
         }
 
@@ -585,14 +524,20 @@ $focus-check-border-color: $hover-check-border-color;
         }
 
         & .e-label {
-          color: $disabled-color;
+          color: $radio-btn-disabled-color;
         }
       }
 
       &:checked {
         +label {
+          &::before {
+            background-color: $radio-btn-disabled-background-color;
+            border-color: $radio-btn-disabled-checked-border-color;
+          }
+
           &::after {
-            background-color: $disabled-checked-color;
+            background-color: $radio-btn-disabled-checked-color;
+            border-color: $radio-btn-disabled-checked-color;
             cursor: default;
           }
 

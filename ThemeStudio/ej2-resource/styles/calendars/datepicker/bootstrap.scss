@@ -1,86 +1,76 @@
 
-$datepicker-icon-hover-bg-color: none;
-$datepicker-icon-color: none;
-$popup-box-shadow: none;
-$datepicker-input-border-style: none;
-$datepicker-icon: '\e7b5';
-$datepicker-overlay: rgba(0, 0, 0, .6);
-$date-icon-margin: 0;
-$date-icon-hover-color: $hover-bg-color;
-$date-icon-border-radius: 100%;
-$popup-border-radius: 0;
-$box-sizing: border-box;
-$datepicker-icon-hover-bg-color: '';
-$datepicker-icon-color: none;
-$datepicker-active-icon-color: $datepicker-icon-color;
-$popup-box-shadow: 0 6px 12px rgba($grey-base, .175);
-$datepicker-input-border-style: none;
-$popup-border-radius: 4px;
-$calendar-border-style: none;
-$datepicker-icon: '\e960';
-$popup-border: 1px solid $grey-cc;
-$date-icon-font-size: 16px;
-$date-icon-container-min-height: 32px;
-$date-icon-container-min-width: 32px;
-$date-bigger-icon-container-min-height: 38px;
-$date-bigger-icon-container-min-width: 38px;
-$date-bigger-icon-font-size: 20px;
-$datepicker-overlay: rgba($grey-base, .6);
-$date-icon-normal-margin: 0;
-$date-icon-bigger-margin: 0;
-$date-icon-hover-color: $grey-e6;
-$date-icon-border-radius: 0;
-$box-sizing: border-box;
-$datepicker-othermonth-row: table-row;
-$date-model-header-bg: none;
-$date-model-header-color: none;
-$date-modal-header-display: none;
-$calendar-tbody-landscape-height: 150px;
-
-@include export-module('datepicker-icons') {
+$datepicker-icon-hover-bg-color: '' !default;
+$datepicker-icon-color: none !default;
+$datepicker-active-icon-color: $datepicker-icon-color !default;
+$datepicker-popup-box-shadow: 0 6px 12px rgba($grey-base, .175) !default;
+$datepicker-input-border-style: none !default;
+$datepicker-popup-bg-color: $grey-white !default;
+$datepicker-popup-border-radius: 4px !default;
+$datepicker-calendar-border-style: none !default;
+$datepicker-icon: '\e960' !default;
+$datepicker-popup-border: 1px solid $grey-cc !default;
+$datepicker-icon-font-size: 16px !default;
+$datepicker-icon-container-min-height: 32px !default;
+$datepicker-icon-container-min-width: 32px !default;
+$datepicker-bigger-icon-container-min-height: 38px !default;
+$datepicker-bigger-icon-container-min-width: 38px !default;
+$datepicker-bigger-icon-font-size: 20px !default;
+$datepicker-overlay: rgba($grey-base, .6) !default;
+$datepicker-icon-normal-margin: 0 !default;
+$datepicker-icon-bigger-margin: 0 !default;
+$datepicker-icon-hover-color: $grey-e6 !default;
+$datepicker-icon-border-radius: 0 !default;
+$datepicker-box-sizing: border-box !default;
+$datepicker-othermonth-row: table-row !default;
+$datepicker-modal-header-bg: none !default;
+$datepicker-modal-header-color: none !default;
+$datepicker-modal-header-display: none !default;
+$datepicker-calendar-tbody-landscape-height: 150px !default;
+@include export-module('datepicker-bootstrap-icons') {
   /*! component icons */
   .e-input-group-icon.e-date-icon,
-  &.e-control-wrapper .e-input-group-icon.e-date-icon {
-    font-size: $date-icon-font-size;
-    margin: $date-icon-normal-margin;
-    min-height: $date-icon-container-min-height;
-    min-width: $date-icon-container-min-width;
+  .e-control-wrapper .e-input-group-icon.e-date-icon {
+    font-size: $datepicker-icon-font-size;
+    margin: $datepicker-icon-normal-margin;
+    min-height: $datepicker-icon-container-min-height;
+    min-width: $datepicker-icon-container-min-width;
     outline: none;
 
     &::before {
-      content: $datepicker-icon;
+      content: '\e960';
       font-family: 'e-icons';
   }
 
     &:focus {
-      background: $date-icon-hover-color;
-      border-radius: $date-icon-border-radius;
+      background: $datepicker-icon-hover-color;
+      border-radius: $datepicker-icon-border-radius;
 	}
 }
 
   .e-bigger .e-input-group-icon.e-date-icon,
-  &.e-control-wrapper.e-bigger .e-input-group-icon.e-date-icon,
-  &.e-bigger .e-control-wrapper .e-input-group-icon.e-date-icon {
-    font-size: $date-bigger-icon-font-size;
-    margin: $date-icon-bigger-margin;
-    min-height: $date-bigger-icon-container-min-height;
-    min-width: $date-bigger-icon-container-min-width;
+  .e-control-wrapper.e-bigger .e-input-group-icon.e-date-icon,
+  .e-bigger .e-control-wrapper .e-input-group-icon.e-date-icon {
+    font-size: $datepicker-bigger-icon-font-size;
+    margin: $datepicker-icon-bigger-margin;
+    min-height: $datepicker-bigger-icon-container-min-height;
+    min-width: $datepicker-bigger-icon-container-min-width;
 
     &::before {
-      content: $datepicker-icon;
+      content: '\e960';
       font-family: 'e-icons';
   }
 
     &:focus {
-      background: $date-icon-hover-color;
-      border-radius: $date-icon-border-radius;
+      background: $datepicker-icon-hover-color;
+      border-radius: $datepicker-icon-border-radius;
 	}
 }
 }
+
 @include export-module('datepicker-layout') {
   .e-date-wrapper {
     & .e-date-icon.e-icons {
-      box-sizing: $box-sizing;
+      box-sizing: $datepicker-box-sizing;
     }
   }
 
@@ -94,7 +84,7 @@ $calendar-tbody-landscape-height: 150px;
     }
 
     &.e-popup-wrapper {
-      border-radius: $popup-border-radius;
+      border-radius: $datepicker-popup-border-radius;
       overflow-y: hidden;
       pointer-events: auto;
     }
@@ -112,10 +102,10 @@ $calendar-tbody-landscape-height: 150px;
 	}
 
     & .e-model-header {
-      background-color: $date-model-header-bg;
-      color: $date-model-header-color;
+      background-color: $datepicker-modal-header-bg;
+      color: $datepicker-modal-header-color;
       cursor: default;
-      display: $date-modal-header-display;
+      display: $datepicker-modal-header-display;
       padding: 10px 10px 10px 15px;
 
       & .e-model-year {
@@ -147,24 +137,25 @@ $calendar-tbody-landscape-height: 150px;
 
   .e-datepicker .e-calendar .e-month table tbody {
     display: inline-block;
-    height: $calendar-tbody-landscape-height;
+    height: $datepicker-calendar-tbody-landscape-height;
     overflow: auto;
 }
 }
 @include export-module('datepicker-theme') {
   #{&}.e-datepicker {
     &.e-popup-wrapper {
-      border: $popup-border;
-      box-shadow: $popup-box-shadow;
+      border: $datepicker-popup-border;
+      box-shadow: $datepicker-popup-box-shadow;
    }
 
     & .e-calendar {
-      border: $calendar-border-style;
+      background-color: $datepicker-popup-bg-color;
+      border: $datepicker-calendar-border-style;
    }
 
   }
 
-  &.e-input-group {
+  .e-input-group {
     &.e-date-wrapper.e-dateinput-active:active:not(.e-success):not(.e-warning):not(.e-error) {
       border: $datepicker-input-border-style;
 	  }

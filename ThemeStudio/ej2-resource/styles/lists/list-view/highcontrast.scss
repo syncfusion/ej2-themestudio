@@ -1,136 +1,138 @@
 
-$listview-text-color: $default-font-color;
-$listview-text-disabled: $default-font-color;
-$listview-icon-color: $default-icon-color;
-$listview-icon-disabled: $default-icon-color;
-$listview-background: $default-bg-color;
-$listview-background-hover: $hover-bg-color;
-$listview-background-selection: $active-bg-color;
-$listview-line-color: $default-border-color;
-$listview-header-text-color: $header-font-color;
-$listview-header-text-disabled: $default-font-color;
-$listview-header-bg: $header-bg-color;
-$listview-header-icon-color: $header-icon-color;
-$listview-header-icon-disabled: $default-icon-color;
-$listview-header-border: $header-border-color;
-$listview-groupheader-text-color: $default-font-color;
-$listview-groupheader-bg: $default-bg-color;
-$listview-groupheader-border: $default-border-color;
-$listview-groupheader-icon: $default-icon-color;
-$listview-border-size: 1px;
-$listview-font-size: 15px;
-$listview-header-font-size: 20px;
-$listview-font-family: $font-family;
-$listview-text-color: $content-font;
-$listview-text-disabled: rgba($disable, .54);
-$listview-icon-color: $content-font;
-$listview-icon-disabled: rgba($disable, .54);
-$listview-icon-margin-right: 16px;
-$listview-icon-line-height: 28px;
-$listview-icon-collapsible: '\e85c';
-$listview-icon-collapsible-rtl: '\e98f';
-$listview-icon-back-rtl: '\e830';
-$listview-back-icon: '\e85b';
-$listview-background: $default-bg-color;
-$listview-line-color: $default-bg-color;
-$listview-item-hover-bg: $hover-bg;
-$listview-item-height: 36px;
-$listview-item-line-height: 30px;
-$listview-item-padding: 0 12px;
-$listview-text-hover-color: $hover-font;
-$listview-item-active-bg: $selection-bg;
-$listview-text-active-color: $selection-font;
-$listview-header-text-color: $header-font-color;
-$listview-header-text-padding: 16px;
-$listview-header-text-disabled: $disable;
-$listview-header-bg: $header-bg-color;
-$listview-header-icon-color: $header-icon-color;
-$listview-header-icon-disabled: $disable;
-$listview-header-border: $border-default;
-$listview-header-font-size: 14px;
-$listview-header-height: 36px;
-$listview-header-font-weight: 600;
-$listview-header-line-height: 0;
-$listview-header-padding-bottom: 0;
-$listview-group-first-border-bottom: 0;
-$listview-group-border-top: 1px;
-$listview-group-border-bottom: 0;
-$listview-groupheader-text-color: $header-font;
-$listview-groupheader-bg: $header-bg-color;
-$listview-groupheader-border: $header-bg-color;
-$listview-groupheader-icon: $header-icon-color;
-$listview-groupheader-item-height: 36px;
-$listview-groupheader-item-line-height: 30px;
-$listview-groupheader-font-size: 14px;
-$listview-border-size: 0;
-$listview-font-size: 13px;
-$checkmark-bgcolor: $bg-base-0;
-$checkmark-border-color: $bg-base-0;
-$checkmark-color: $header-font;
-$listview-border-bottom: 2px;
-$listview-border-top: 2px;
-$listview-border-left: 2px;
-$listview-border-right: 2px;
-$listview-hover-border-color: $hover-border;
-$listview-border-bottom-color: transparent;
-$listview-border-top-color: transparent;
-$listview-border-right-color: transparent;
-$listview-border-left-color: transparent;
-$listview-back-padding-right: 20px;
-$listview-back-icon-height: 0;
-$listview-back-icon-font-size: 18px;
-$listview-touch-item-height: 45px;
-$listview-touch-item-line-height: 38px;
-$listview-touch-item-font-size: 15px;
-$listview-touch-back-icon-padding: 0;
-$listview-touch-groupheader-height: 45px;
-$listview-touch-groupheader-line-height: 45px;
-$listview-touch-header-height: 45px;
-$listview-touch-header-font-weight: 600;
-$listview-touch-header-font-size: 15px;
-$listview-touch-header-line-height: 11px;
-$listview-touch-header-icon-margin-top: 0;
-$listview-checkbox-right-margin: -2px 0 0 10px;
-$listview-checkbox-left-margin: -2px 10px 0 0;
-$listview-rtl-checkbox-left-margin: -2px 0 0 10px;
-$listview-rtl-checkbox-right-margin: -2px 10px 0 0;
-
-@include export-module('listview-icons') {
-  /*! component icons */
-  #{&}.e-listview {
-
-    .e-icon-back::before {
-      content: $listview-back-icon;
-      font-size: $listview-back-icon-font-size;
-    }
-
-    .e-icon-collapsible::before {
-      content: $listview-icon-collapsible;
-    }
-
-    &.e-rtl {
-      & .e-icon-back::before {
-        content: $listview-icon-back-rtl;
-        font-size: $listview-back-icon-font-size;
-      }
-
-      & .e-icon-collapsible::before {
-        content: $listview-icon-collapsible-rtl;
-      }
-    }
-
-  }
+$listview-font-family: $font-family !default;
+$listview-text-color: $content-font !default;
+$listview-text-disabled: rgba($disable, .54) !default;
+$listview-icon-color: $content-font !default;
+$listview-icon-disabled: rgba($disable, .54) !default;
+$listview-icon-margin-right: 16px !default;
+$listview-icon-line-height: 28px !default;
+$listview-icon-back-margin: 2px !default;
+$listview-rtl-icon-back-margin: 1px !default;
+$listview-background: $bg-base-0 !default;
+$listview-line-color: $default-bg-color !default;
+$listview-item-hover-bg: $hover-bg !default;
+$listview-item-height: 36px !default;
+$listview-item-line-height: 30px !default;
+$listview-item-padding: 0 12px !default;
+$listview-root-border-color: none;
+$listview-root-border-radius: 0;
+$listview-nested-icon-collapsible: 12px;
+$listview-text-hover-color: $hover-font !default;
+$listview-item-active-bg: $selection-bg !default;
+$listview-text-active-color: $selection-font !default;
+$listview-header-text-color: $selection-bg !default;
+$listview-header-text-padding: 16px !default;
+$listview-header-text-disabled: $disable !default;
+$listview-header-bg: $bg-base-0 !default;
+$listview-header-icon-color: $header-icon-color !default;
+$listview-header-icon-disabled: $disable !default;
+$listview-header-border: $border-default !default;
+$listview-header-font-size: 14px !default;
+$listview-header-height: 36px !default;
+$listview-header-font-weight: 600 !default;
+$listview-header-line-height: 21px !default;
+$listview-header-padding-bottom: 0 !default;
+$listview-group-first-border-bottom: 0 !default;
+$listview-group-border-top: 1px !default;
+$listview-group-border-bottom: 0 !default;
+$listview-groupheader-text-color: $header-font !default;
+$listview-groupheader-bg: $bg-base-0 !default;
+$listview-groupheader-border: $header-bg-color !default;
+$listview-groupheader-icon: $header-icon-color !default;
+$listview-groupheader-item-height: 36px !default;
+$listview-groupheader-item-line-height: 30px !default;
+$listview-groupheader-font-size: 14px !default;
+$listview-border-size: 0 !default;
+$listview-font-size: 13px !default;
+$checkmark-bgcolor: $bg-base-0 !default;
+$checkmark-border-color: $bg-base-0 !default;
+$checkmark-color: $header-font !default;
+$listview-border-bottom: 2px !default;
+$listview-border-top: 2px !default;
+$listview-border-left: 2px !default;
+$listview-border-right: 2px !default;
+$listview-hover-border-color: $hover-border !default;
+$listview-border-bottom-color: transparent !default;
+$listview-border-top-color: transparent !default;
+$listview-border-right-color: transparent !default;
+$listview-border-left-color: transparent !default;
+$listview-back-padding-right: 20px !default;
+$listview-back-icon-height: 0 !default;
+$listview-back-icon-font-size: 18px !default;
+$listview-touch-item-height: 45px !default;
+$listview-touch-item-line-height: 38px !default;
+$listview-touch-item-font-size: 15px !default;
+$listview-touch-back-icon-padding: 0 !default;
+$listview-touch-groupheader-height: 45px !default;
+$listview-touch-groupheader-line-height: 45px !default;
+$listview-touch-header-height: 45px !default;
+$listview-touch-header-font-weight: 600 !default;
+$listview-touch-header-font-size: 15px !default;
+$listview-touch-header-line-height: 11px !default;
+$listview-touch-header-icon-margin-top: 0 !default;
+$listview-checkbox-right-margin: -2px 0 0 10px !default;
+$listview-checkbox-left-margin: -2px 10px 0 0 !default;
+$listview-rtl-checkbox-left-margin: -2px 0 0 10px !default;
+$listview-rtl-checkbox-right-margin: -2px 10px 0 0 !default;
+//ListView In-built template variables
+$listview-template-padding: .6153em .923em !default;
+$listview-template-avatar-padding-right: .923em !default;
+$listview-template-avatar-padding-left: 4.923em !default;
+$listview-template-avatar-rightposition-padding-right: 4.923em !default;
+$listview-template-avatar-rightposition-padding-left: .923em !default;
+$listview-template-avatar-size: 3.0769em !default;
+$listview-template-avatar-top: .6153em !default;
+$listview-template-avatar-left: .923em !default;
+$listview-template-avatar-rightposition-right: .923em !default;
+$listview-template-badge-height: 1.5384em !default;
+$listview-template-badge-width: 1.5384em !default;
+$listview-template-badge-line-height: 1.3384em !default;
+$listview-template-badge-font-size: 13px !default;
+$listview-template-badge-right: .923em !default;
+$listview-template-avatar-badge-padding-right: 3.3846em !default;
+$listview-template-avatar-badge-padding-left: 4.923em !default;
+$listview-template-badgewithoutavatar-padding-right: 3.3846em !default;
+$listview-template-badgewithoutavatar-padding-left: .923em !default;
+$listview-template-item-padding: .867em 0 !default;
+$listview-template-multiline-header-color: $content-font !default;
+$listview-template-multiline-content-color: $content-font !default;
+$listview-template-multiline-header-padding: .093em 0 !default;
+$listview-template-multiline-content-padding: .093em 0 !default;
+$listview-template-multiline-header-font-size: 13px !default;
+$listview-template-multiline-padding: .6153em .923em !default;
+$listview-template-multiline-content-font-size: 13px !default;
+$listview-template-multiline-avatar-top: .6153em !default;
+.e-icon-collapsible::before {
+  content: '\e85c';
 }
+
+.e-icon-back::before {
+  content: '\e85b';
+  font-size: $listview-back-icon-font-size;
+}
+
 @include export-module('listview-layout') {
+  // sass-lint:disable no-vendor-prefixes
   .e-bigger #{&}.e-listview,
   #{&}.e-listview.e-bigger {
+    @if ($skin-name == 'bootstrap4') {
+      font-size: 16px;
+    }
+
     .e-list-item {
       border-bottom: $listview-border-bottom solid $listview-border-bottom-color;
       border-left: $listview-border-left solid $listview-border-left-color;
       border-right: $listview-border-right solid $listview-border-right-color;
       border-top: $listview-border-top solid $listview-border-top-color;
+    }
+
+    &:not(.e-list-template) .e-list-item {
       height: $listview-touch-item-height;
       line-height: $listview-touch-item-line-height;
+      position: relative;
+      @if ($skin-name == 'bootstrap4') {
+        padding: 12px 20px;
+      }
     }
 
     .e-text-content {
@@ -140,16 +142,22 @@ $listview-rtl-checkbox-right-margin: -2px 10px 0 0;
     .e-list-group-item {
       height: $listview-touch-groupheader-height;
       line-height: $listview-touch-groupheader-line-height;
+      @if ($skin-name == 'bootstrap4') {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
     }
 
     .e-list-header {
-      display: block;
+      align-items: center;
+      display: flex;
       font-weight: $listview-touch-header-font-weight;
       height: $listview-touch-header-height;
-    }
-
-    .e-list-header > * {
-      display: table-cell;
+      @if ($skin-name == 'bootstrap4') {
+        font-size: 20px;
+        line-height: 1.2;
+        padding: 0 0 0 20px;
+      }
     }
 
     .e-list-header .e-text.header {
@@ -162,34 +170,78 @@ $listview-rtl-checkbox-right-margin: -2px 10px 0 0;
 
     .e-list-header .e-text {
       font-size: $listview-touch-header-font-size;
-      line-height: $listview-touch-header-line-height;
-    }
-
-    .e-icons {
-      margin-top: $listview-touch-header-icon-margin-top;
     }
 
     .e-but-back {
-      padding-top: $listview-touch-back-icon-padding;
+      @if ($skin-name == 'bootstrap4') {
+        margin-top: -3px;
+        padding-right: 12px;
+      }
+    }
+
+    .e-list-icon {
+      @if ($skin-name == 'bootstrap4') {
+        margin-right: 12px;
+      }
     }
 
     .e-icon-collapsible {
-      line-height: inherit;
+      @if ($skin-name == 'bootstrap4') {
+        font-size: 12px;
+      }
+    }
+
+    .e-listview-checkbox {
+      &.e-checkbox-left {
+        @if ($skin-name == 'bootstrap4') {
+          margin: 0 12px 0 0;
+        }
+      }
+
+      &.e-checkbox-right {
+        @if ($skin-name == 'bootstrap4') {
+          margin: 0 0 0 12px;
+        }
+      }
+    }
+
+    &.e-rtl {
+      .e-listview-checkbox {
+        &.e-checkbox-right {
+          @if ($skin-name == 'bootstrap4') {
+            margin: 0 12px 0 0;
+          }
+        }
+
+        &.e-checkbox-left {
+          @if ($skin-name == 'bootstrap4') {
+            margin: 0 0 0 12px;
+          }
+        }
+      }
     }
   }
 
   #{&}.e-listview {
+    -webkit-overflow-scrolling: touch;
     border: $listview-border-size solid;
+    border-color: $listview-root-border-color;
+    border-radius: $listview-root-border-radius;
     display: block;
     overflow: auto;
     position: relative;
     width: 100%;
+
+    &:not(.e-list-template) .e-list-item {
+      height: $listview-item-height;
+      line-height: $listview-item-line-height;
+      padding: $listview-item-padding;
+      position: relative;
+    }
+
     @at-root {
       & .e-list-item {
         border-bottom: $listview-border-size solid;
-        height: $listview-item-height;
-        line-height: $listview-item-line-height;
-        padding: $listview-item-padding;
       }
 
       & .e-list-parent {
@@ -201,33 +253,30 @@ $listview-rtl-checkbox-right-margin: -2px 10px 0 0;
         display: none;
       }
 
+      & .e-icon-back {
+        margin-top: $listview-icon-back-margin;
+      }
+
       & .e-list-header .e-headertemplate-text.nested-header {
         display: none;
       }
 
       & .e-list-header {
+        align-items: center;
         border-bottom: 1px solid;
-        display: block;
+        display: flex;
         font-weight: $listview-header-font-weight;
         height: $listview-header-height;
-        padding: $listview-header-text-padding;
+        padding: 0 $listview-header-text-padding;
       }
 
-      & .e-has-header>.e-view {
+      & .e-has-header > .e-view {
         top: 45px;
-      }
-
-      & .e-icons {
-        margin-top: 2px;
       }
 
       & .e-but-back {
         cursor: pointer;
-        line-height: $listview-back-icon-height;
-        padding-bottom: $listview-header-padding-bottom;
         padding-right: $listview-back-padding-right;
-        vertical-align: middle;
-        width: 20px;
       }
 
       & .e-list-group-item:first-child {
@@ -246,9 +295,11 @@ $listview-rtl-checkbox-right-margin: -2px 10px 0 0;
 
       & .e-icon-collapsible {
         cursor: pointer;
-        float: right;
-        font-size: 12px;
-        line-height: $listview-icon-line-height;
+        font-size: $listview-nested-icon-collapsible;
+        position: absolute;
+        right: 0%;
+        top: 50%;
+        transform: translateY(-50%);
       }
 
       & .e-text-content {
@@ -300,7 +351,7 @@ $listview-rtl-checkbox-right-margin: -2px 10px 0 0;
         width: 100%;
       }
 
-      & .e-list-icon+.e-list-text {
+      & .e-list-icon + .e-list-text {
         width: calc(100% - 60px);
       }
 
@@ -325,29 +376,39 @@ $listview-rtl-checkbox-right-margin: -2px 10px 0 0;
 
       & .e-list-header .e-text {
         cursor: pointer;
-        line-height: $listview-header-line-height;
         text-indent: 0;
       }
 
       & .e-text .e-headertext {
         display: inline-block;
+        line-height: $listview-header-line-height;
       }
 
       &.e-rtl {
+        direction: rtl;
+
         & .e-list-icon {
           margin-left: 16px;
           margin-right: 0;
         }
 
         & .e-icon-collapsible {
-          float: left;
-          margin-left: auto;
-          margin-right: auto;
+          left: 0%;
+          right: initial;
+          top: 50%;
+          transform: translateY(-50%) rotate(180deg);
+        }
+
+        & .e-list-header .e-text {
+          cursor: pointer;
         }
 
         & .e-but-back {
-          padding-left: $listview-back-padding-right;
-          padding-right: 0;
+          transform: rotate(180deg);
+        }
+
+        & .e-icon-back {
+          margin-top: $listview-rtl-icon-back-margin;
         }
 
         & .e-checkbox .e-checkbox-left {
@@ -371,12 +432,7 @@ $listview-rtl-checkbox-right-margin: -2px 10px 0 0;
         background-color: $listview-header-bg;
         border-color: $listview-header-border;
         color: $listview-header-text-color;
-        display: block;
         font-size: $listview-header-font-size;
-      }
-
-      & .e-list-header > * {
-        display: table-cell;
       }
 
       & .e-icons {
@@ -409,7 +465,7 @@ $listview-rtl-checkbox-right-margin: -2px 10px 0 0;
         color: $listview-text-color;
       }
 
-      & .e-list-item.e-focused ,
+      & .e-list-item.e-focused,
       & .e-list-item.e-focused.e-active.e-checklist {
         background-color: $listview-item-active-bg;
         color: $listview-text-active-color;
@@ -427,6 +483,190 @@ $listview-rtl-checkbox-right-margin: -2px 10px 0 0;
         border-color: $listview-header-border;
         color: $listview-groupheader-text-color;
         font-size: $listview-groupheader-font-size;
+      }
+
+      @if ($skin-name == 'bootstrap4') {
+        & .e-list-item.e-focused .e-icon-wrapper .e-icon-collapsible {
+          color: $listview-focused-collapsible-color;
+        }
+      }
+    }
+
+    &.e-list-template {
+      .e-list-wrapper {
+        height: inherit;
+        position: relative;
+
+        &:not(.e-list-multi-line) {
+          padding: $listview-template-padding;
+        }
+
+        &.e-list-multi-line {
+          padding: $listview-template-multiline-padding;
+
+          .e-list-item-header {
+            color: $listview-template-multiline-header-color;
+            display: block;
+            font-size: $listview-template-multiline-header-font-size;
+            font-weight: 500;
+            margin: 0;
+            overflow: hidden;
+            padding: $listview-template-multiline-header-padding;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          .e-list-content {
+            color: $listview-template-multiline-content-color;
+            display: block;
+            font-size: $listview-template-multiline-content-font-size;
+            margin: 0;
+            padding: $listview-template-multiline-content-padding;
+            word-wrap: break-word;
+          }
+
+          .e-list-content:not(.e-text-overflow) {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+
+        &.e-list-avatar {
+          .e-avatar {
+            height: $listview-template-avatar-size;
+            left: $listview-template-avatar-left;
+            position: absolute;
+            top: $listview-template-avatar-top;
+            width: $listview-template-avatar-size;
+          }
+        }
+
+        &.e-list-avatar:not(.e-list-badge) {
+          padding-left: $listview-template-avatar-padding-left;
+          padding-right: $listview-template-avatar-padding-right;
+        }
+
+        &.e-list-avatar-right:not(.e-list-badge) {
+          padding-left: $listview-template-avatar-rightposition-padding-left;
+          padding-right: $listview-template-avatar-rightposition-padding-right;
+
+          .e-avatar {
+            height: $listview-template-avatar-size;
+            position: absolute;
+            right: $listview-template-avatar-rightposition-right;
+            top: $listview-template-avatar-top;
+            width: $listview-template-avatar-size;
+          }
+        }
+
+        &.e-list-multi-line.e-list-avatar {
+          .e-avatar {
+            top: $listview-template-multiline-avatar-top;
+          }
+        }
+
+        &.e-list-multi-line.e-list-avatar-right:not(.e-list-badge) {
+          .e-avatar {
+            top: $listview-template-multiline-avatar-top;
+          }
+        }
+
+        &.e-list-badge {
+          .e-badge {
+            font-size: $listview-template-badge-font-size;
+            height: $listview-template-badge-height;
+            line-height: $listview-template-badge-line-height;
+            padding: 0;
+            position: absolute;
+            right: $listview-template-badge-right;
+            top: 50%;
+            transform: translateY(-50%);
+            width: $listview-template-badge-width;
+          }
+        }
+
+        &.e-list-badge.e-list-avatar {
+          padding-left: $listview-template-avatar-badge-padding-left;
+          padding-right: $listview-template-avatar-badge-padding-right;
+        }
+
+        &.e-list-badge:not(.e-list-avatar) {
+          padding-left: $listview-template-badgewithoutavatar-padding-left;
+          padding-right: $listview-template-badgewithoutavatar-padding-right;
+        }
+
+        &:not(.e-list-multi-line) {
+          .e-list-content {
+            display: block;
+            margin: 0;
+            overflow: hidden;
+            padding: $listview-template-item-padding;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      .e-list-item {
+        &.e-hover .e-list-item-header {
+          color: $listview-text-hover-color;
+        }
+
+        &.e-hover .e-list-content {
+          color: $listview-text-hover-color;
+        }
+
+        &.e-active .e-list-item-header {
+          color: $listview-text-active-color;
+        }
+
+        &.e-active .e-list-content {
+          color: $listview-text-active-color;
+        }
+      }
+    }
+
+    &.e-rtl {
+      &.e-list-template .e-list-wrapper {
+        &.e-list-avatar {
+          .e-avatar {
+            left: inherit;
+            right: $listview-template-avatar-left;
+          }
+        }
+
+        &.e-list-avatar:not(.e-list-badge) {
+          padding-left: $listview-template-avatar-padding-right;
+          padding-right: $listview-template-avatar-padding-left;
+        }
+
+        &.e-list-avatar-right:not(.e-list-badge) {
+          padding-left: $listview-template-avatar-rightposition-padding-right;
+          padding-right: $listview-template-avatar-rightposition-padding-left;
+
+          .e-avatar {
+            left: $listview-template-avatar-rightposition-right;
+            right: inherit;
+          }
+        }
+
+        &.e-list-badge {
+          .e-badge {
+            left: $listview-template-badge-right;
+            right: inherit;
+          }
+        }
+
+        &.e-list-badge.e-list-avatar {
+          padding-left: $listview-template-avatar-badge-padding-right;
+          padding-right: $listview-template-avatar-badge-padding-left;
+        }
+
+        &.e-list-badge:not(.e-list-avatar) {
+          padding-left: $listview-template-badgewithoutavatar-padding-right;
+          padding-right: $listview-template-badgewithoutavatar-padding-left;
+        }
       }
     }
   }

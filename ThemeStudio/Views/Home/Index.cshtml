@@ -21,10 +21,19 @@
             <span class="sb-theme-select theme-header-icon theme-icon-select"></span>
             <span class="switch-text">Bootstrap</span>
         </li>
+        <li class="e-list" id="bootstrap4" role="listitem">
+            <span class="sb-theme-select theme-header-icon theme-icon-select"></span>
+            <span class="switch-text">Bootstrap v4</span>
+        </li>
         <li class="e-list" id="highcontrast">
             <span class="sb-theme-select theme-header-icon theme-icon-select"></span>
             <span class="switch-text">High Contrast</span>
         </li>
+        <li class="e-list" id="fusion" role="listitem">
+            <span class="sb-theme-select theme-header-icon theme-icon-select"></span>
+            <span class="switch-text">Fusion </span>
+        </li>
+       
     </ul>
 </div>
 <div class="filterTemplate-wrapper theme-hide">
@@ -48,6 +57,8 @@
             </div>
             <div class="comp-chbx" data="f-cat-grids">
                 <input type="checkbox" id="comp-grid" value="Grid">
+                <input type="checkbox" id="comp-pivotview" value="PivotTable">
+                <input type="checkbox" id="comp-treegrid" value="Treegrid">
             </div>
             <div class="theme-div-sep"></div>
             <div class="cat-chbx">
@@ -56,6 +67,7 @@
             <div class="comp-chbx" data="f-cat-calendar">
                 <input type="checkbox" id="comp-calendar" value="Calendar">
                 <input type="checkbox" id="comp-schedule" value="Schedule">
+                <input type="checkbox" id="comp-gantt" value="Gantt">
             </div>
             <div class="theme-div-sep"></div>
             <div class="cat-chbx">
@@ -67,6 +79,7 @@
                 <input type="checkbox" id="comp-drop-down-button" value="DropDownButton">
                 <input type="checkbox" id="comp-split-button" value="SplitButton">
                 <input type="checkbox" id="comp-button-group" value="ButtonGroup">
+                <input type="checkbox" id="comp-progress-button" value="ProgressButton" />
                 <input type="checkbox" id="comp-switch" value="Switch">
                 <input type="checkbox" id="comp-drop-down-list" value="DropDownList">
                 <input type="checkbox" id="comp-combo-box" value="ComboBox">
@@ -83,6 +96,17 @@
                 <input type="checkbox" id="comp-color-picker" value="ColorPicker">
                 <input type="checkbox" id="comp-slider" value="Slider">
                 <input type="checkbox" id="comp-check-box" value="CheckBox">
+                <input type="checkbox" id="comp-rich-text-editor" value="RichTextEditor">
+                <input type="checkbox" id="comp-chips" value="Chips">
+                <input type="checkbox" id="comp-inplace-editor" value="Inplace Editor">
+                <input type="checkbox" id="comp-list-box" value="List Box">
+            </div>
+            <div class="theme-div-sep"></div>
+            <div class="cat-chbx">
+                <input type="checkbox" id="f-cat-forums" value="Forums">
+            </div>
+            <div class="comp-chbx" data="f-cat-forums">
+                <input type="checkbox" id="comp-query-builder" value="Query Builder">
             </div>
             <div class="theme-div-sep"></div>
             <div class="cat-chbx">
@@ -92,6 +116,7 @@
                 <input type="checkbox" id="comp-dialog" value="Dialog">
                 <input type="checkbox" id="comp-listview" value="ListView">
                 <input type="checkbox" id="comp-tooltip" value="Tooltip" />
+                <input type="checkbox" id="comp-splitter" value="Splitter" />
             </div>
             <div class="theme-div-sep"></div>
             <div class="cat-chbx">
@@ -111,6 +136,8 @@
                 <input type="checkbox" id="comp-tab" value="Tab">
                 <input type="checkbox" id="comp-accordion" value="Accordion">
                 <input type="checkbox" id="comp-context-menu" value="ContextMenu" />
+                <input type="checkbox" id="comp-menu" value="Menu" />
+                <input type="checkbox" id="comp-file-manager" value="FileManager">
 
             </div>
             <div class="theme-div-sep"></div>
@@ -181,6 +208,10 @@
                                 <span class="component-name">Slider</span>
                                 <div id="component-slider"></div>
                             </div>
+                            <div class='control-area' id='inplace-editor'>
+                                <span class="component-name">Inplace Editor</span>
+                                <div id="component-inplace-editor"></div>
+                            </div>
                         </div>
                     </div>
 
@@ -248,33 +279,56 @@
                             <div class='control-area' id="button-group">
                                 <span class="component-name">ButtonGroup</span>
                                 <div class="frame">
-                                  
-                                            <div class="grpbtn">
-                                                <div class="e-btn-group" role="group">
-                                                    <input type="radio" id="left" name="align" />
-                                                    <label class="e-btn" for="left">Left</label>
-                                                    <input type="radio" id="center" name="align" />
-                                                    <label class="e-btn" for="center">Center</label>
-                                                    <input type="radio" id="right" name="align" />
-                                                    <label class="e-btn" for="right">Right</label>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="grpbtn">
-                                                <div class="e-btn-group e-outline" role="group">
-                                                    <input type="checkbox" id="bold" name="fontstyle" />
-                                                    <label class="e-btn e-outline e-primary" for="bold">Bold</label>
-                                                    <input type="checkbox" id="italic" name="fontstyle" />
-                                                    <label class="e-btn e-outline e-primary" for="italic">Italic</label>
-                                                    <input type="checkbox" id="underline" name="fontstyle" />
-                                                    <label class="e-btn e-outline e-primary" for="underline">Underline</label>
-                                                </div>
-                                            </div>
-                                        
-                                       
+
+                                    <div class="grpbtn">
+                                        <div class="e-btn-group" role="group">
+                                            <input type="radio" id="left" name="align" />
+                                            <label class="e-btn" for="left">Left</label>
+                                            <input type="radio" id="center" name="align" />
+                                            <label class="e-btn" for="center">Center</label>
+                                            <input type="radio" id="right" name="align" />
+                                            <label class="e-btn" for="right">Right</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="grpbtn">
+                                        <div class="e-btn-group e-outline" role="group">
+                                            <input type="checkbox" id="bold" name="fontstyle" />
+                                            <label class="e-btn e-outline e-primary" for="bold">Bold</label>
+                                            <input type="checkbox" id="italic" name="fontstyle" />
+                                            <label class="e-btn e-outline e-primary" for="italic">Italic</label>
+                                            <input type="checkbox" id="underline" name="fontstyle" />
+                                            <label class="e-btn e-outline e-primary" for="underline">Underline</label>
+                                        </div>
+                                    </div>
+
+
                                 </div>
                             </div>
-                        </div>
+                            <div class='control-area' id="progress-button">
+                                <span class="component-name">ProgressButton</span>
+                                <div class="row">
+                                    <div class="col">
+                                        <button id="spinleft"></button>
+                                    </div>
+
+                                    <div class="col">
+                                        <button id="spinright"></button>
+                                    </div>
+                                    <div class="col">
+                                        <button id="download"></button>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <button id="disabled"></button>
+                                    
+
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
                     </div>
 
                     <div class="e-card cat-accordion layout-card theme-comp" id="accordion">
@@ -293,14 +347,14 @@
                                     <span class="e-acrdn-icons e-content-icon javelin"></span> Javelin Throw
                                 </li>
                                 @*<li>
-                                        <span class="e-acrdn-icons e-content-icon discus"></span> Discus Throw
-                                    </li>
-                                    <li>
-                                        <span class="e-acrdn-icons e-content-icon highjump"></span> High Jump
-                                    </li>
-                                    <li>
-                                        <span class="e-acrdn-icons e-content-icon longjump"></span> Long Jump
-                                    </li>*@
+                        <span class="e-acrdn-icons e-content-icon discus"></span> Discus Throw
+                    </li>
+                    <li>
+                        <span class="e-acrdn-icons e-content-icon highjump"></span> High Jump
+                    </li>
+                    <li>
+                        <span class="e-acrdn-icons e-content-icon longjump"></span> Long Jump
+                    </li>*@
                             </div>
                             <div id="water_games" style="display:none">
                                 <li>
@@ -310,49 +364,49 @@
                                     <span class="e-acrdn-icons e-content-icon swimming"></span> Swimming
                                 </li>
                                 @*<li>
-                                        <span class="e-acrdn-icons e-content-icon marathan_swim"></span> Marathon Swimming
-                                    </li>
-                                    <li>
-                                        <span class="e-acrdn-icons e-content-icon sync_swim"></span> Synchronized Swimming
-                                    </li>
-                                    <li>
-                                        <span class="e-acrdn-icons e-content-icon waterpolo"></span> Water Polo
-                                    </li>*@
+                        <span class="e-acrdn-icons e-content-icon marathan_swim"></span> Marathon Swimming
+                    </li>
+                    <li>
+                        <span class="e-acrdn-icons e-content-icon sync_swim"></span> Synchronized Swimming
+                    </li>
+                    <li>
+                        <span class="e-acrdn-icons e-content-icon waterpolo"></span> Water Polo
+                    </li>*@
                             </div>
                             @*<div id="racing_games" style="display:none">
-                                    <li>
-                                        <span class="e-acrdn-icons e-content-icon cycle_BMX"></span> Cycling BMX
-                                    </li>
-                                    <li>
-                                        <span class="e-acrdn-icons e-content-icon cycle_Mountain"></span> Cycling Mountain Bike
-                                    </li>
-                                    <li>
-                                        <span class="e-acrdn-icons e-content-icon cycle"></span> Cycle Racing
-                                    </li>
-                                    <li>
-                                        <span class="e-acrdn-icons e-content-icon sailing"></span> Sailing
-                                    </li>
-                                    <li>
-                                        <span class="e-acrdn-icons e-content-icon rowing"></span> Rowing
-                                    </li>
-                                </div>
-                                <div id="indoor_games" style="display:none">
-                                    <li>
-                                        <span class="e-acrdn-icons e-content-icon tennis"></span> Table Tennis
-                                    </li>
-                                    <li>
-                                        <span class="e-acrdn-icons e-content-icon badminton"></span> Badminton
-                                    </li>
-                                    <li>
-                                        <span class="e-acrdn-icons e-content-icon volleyball"></span> Volleyball
-                                    </li>
-                                    <li>
-                                        <span class="e-acrdn-icons e-content-icon boxing"></span> Boxing
-                                    </li>
-                                    <li>
-                                        <span class="e-acrdn-icons e-content-icon swimming_In"></span> Swimming
-                                    </li>
-                                </div>*@
+                    <li>
+                        <span class="e-acrdn-icons e-content-icon cycle_BMX"></span> Cycling BMX
+                    </li>
+                    <li>
+                        <span class="e-acrdn-icons e-content-icon cycle_Mountain"></span> Cycling Mountain Bike
+                    </li>
+                    <li>
+                        <span class="e-acrdn-icons e-content-icon cycle"></span> Cycle Racing
+                    </li>
+                    <li>
+                        <span class="e-acrdn-icons e-content-icon sailing"></span> Sailing
+                    </li>
+                    <li>
+                        <span class="e-acrdn-icons e-content-icon rowing"></span> Rowing
+                    </li>
+                </div>
+                <div id="indoor_games" style="display:none">
+                    <li>
+                        <span class="e-acrdn-icons e-content-icon tennis"></span> Table Tennis
+                    </li>
+                    <li>
+                        <span class="e-acrdn-icons e-content-icon badminton"></span> Badminton
+                    </li>
+                    <li>
+                        <span class="e-acrdn-icons e-content-icon volleyball"></span> Volleyball
+                    </li>
+                    <li>
+                        <span class="e-acrdn-icons e-content-icon boxing"></span> Boxing
+                    </li>
+                    <li>
+                        <span class="e-acrdn-icons e-content-icon swimming_In"></span> Swimming
+                    </li>
+                </div>*@
                         </div>
                     </div>
                     <div class="e-card cat-listview layout-card theme-comp" id="listview">
@@ -378,7 +432,16 @@
                             <div id="treeviewComponent"></div>
                         </div>
                     </div>
-
+                    <div class="e-card cat-treeview layout-card theme-comp" id="menu">
+                        <div class="e-card-header theme-category-text">
+                            <div class="e-card-header-caption">
+                                <div class="e-card-header-title">Menu</div>
+                            </div>
+                        </div>
+                        <div class="e-card-content">
+                            <ul id="MenuComponent"></ul>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -401,7 +464,7 @@
                         </div>
                         <div class="e-card-content">
                             <div id="colorpicker-control">
-                                <h4>Choose a color</h4>
+                                <label>Choose a color</label>
                                 <input id="component-color-picker" type="color">
                             </div>
                         </div>
@@ -502,7 +565,37 @@
 
                         </div>
                     </div>
-                    
+                    <div class="e-card  cat-badge layout-card theme-comp" id="badge">
+                        <div class="e-card-header theme-category-text">
+                            <div class="e-card-header-caption">
+                                <div class="e-card-header-title">Badge</div>
+                            </div>
+                        </div>
+                        <div class="e-card-content">
+                            <div class="badge-sample-container">
+                                <div class="badge-block-sample">
+                                    <div class="badge-whatsapp badge-svg_icons"></div>
+                                    <span class="e-badge e-badge-primary e-badge-notification e-badge-overlap">99+</span>
+                                </div>
+
+                                <div class="badge-block-sample">
+                                    <div class="badge-twitter badge-svg_icons"></div>
+                                    <span class="e-badge e-badge-secondary e-badge-circle e-badge-notification e-badge-overlap">66</span>
+                                </div>
+
+                                <div class="badge-block-sample">
+                                    <div class="badge-facebook badge-svg_icons"></div>
+                                    <span class="e-badge e-badge-primary e-badge-notification e-badge-overlap">99+</span>
+                                </div>
+
+                                <div class="badge-block-sample">
+                                    <div class="badge-skype badge-svg_icons"></div>
+                                    <span class="e-badge e-badge-secondary e-badge-circle e-badge-notification e-badge-overlap">66</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
 
                     <div class="e-card cat-tab layout-card theme-comp two-column" id="tab">
                         <div class="e-card-header theme-category-text">
@@ -598,6 +691,10 @@
                                 <span class="component-name">ComboBox</span>
                                 <input type="text" id="component-combobox">
                             </div>
+                            <div class='control-area' id='list-box'>
+                                <span class="component-name">List Box</span>
+                                <input  id="component-list-box">
+                            </div>
                         </div>
                     </div>
                     <div class="e-card cat-uploader layout-card theme-comp" id="uploader">
@@ -626,37 +723,7 @@
                             <ul id="contextmenu"></ul>
                         </div>
                     </div>
-                    <div class="e-card  cat-badge layout-card theme-comp" id="badge">
-                        <div class="e-card-header theme-category-text">
-                            <div class="e-card-header-caption">
-                                <div class="e-card-header-title">Badge</div>
-                            </div>
-                        </div>
-                        <div class="e-card-content">
-                            <div class="badge-sample-container">
-                                <div class="badge-block-sample">
-                                    <div class="badge-whatsapp badge-svg_icons"></div>
-                                    <span class="e-badge e-badge-primary e-badge-notification e-badge-overlap">99+</span>
-                                </div>
-
-                                <div class="badge-block-sample">
-                                    <div class="badge-twitter badge-svg_icons"></div>
-                                    <span class="e-badge e-badge-secondary e-badge-circle e-badge-notification e-badge-overlap">66</span>
-                                </div>
-
-                                <div class="badge-block-sample">
-                                    <div class="badge-facebook badge-svg_icons"></div>
-                                    <span class="e-badge e-badge-primary e-badge-notification e-badge-overlap">99+</span>
-                                </div>
-
-                                <div class="badge-block-sample">
-                                    <div class="badge-skype badge-svg_icons"></div>
-                                    <span class="e-badge e-badge-secondary e-badge-circle e-badge-notification e-badge-overlap">66</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                    
 
                 </div>
 
@@ -691,8 +758,150 @@
 
                     </div>
                 </div>
+                <div class="e-card cat-tab layout-card theme-comp" id="rich-text-editor">
+                    <div class="e-card-header theme-category-text">
+                        <div class="e-card-header-caption">
+                            <div class="e-card-header-title">RichTextEditor</div>
+                        </div>
+                    </div>
+                    <div class="e-card-content">
+                        <div id="Component-rich-text-editor">
+                            <p>
+                                The rich text editor component is WYSIWYG ("what you see is what you get") editor that provides the best user experience to create and update the content.
+                                Users can format their content using standard toolbar commands.
+                            </p>
 
+                            <p><b>Key features:</b></p>
+
+                            <ul>
+                                <li>
+                                    <p>Provides &lt;IFRAME&gt; and &lt;DIV&gt; modes</p>
+                                </li>
+                                <li>
+                                    <p>Capable of handling markdown editing.</p>
+                                </li>
+                                <li>
+                                    <p>Contains a modular library to load the necessary functionality on demand.</p>
+                                </li>
+                                <li>
+                                    <p>Provides a fully customizable toolbar.</p>
+                                </li>
+                                <li>
+                                    <p>Provides HTML view to edit the source directly for developers.</p>
+                                </li>
+                                <li>
+                                    <p>Supports third-party library integration.</p>
+                                </li>
+                                <li>
+                                    <p>Allows preview of modified content before saving it.</p>
+                                </li>
+                                <li>
+                                    <p>Handles images, hyperlinks, video, hyperlinks, uploads, etc.</p>
+                                </li>
+                                <li>
+                                    <p>Contains undo/redo manager.</p>
+                                </li>
+                                <li>
+                                    <p>Creates bulleted and numbered lists.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="e-card cat-tab layout-card theme-comp" id="pivotview">
+                    <div class="e-card-header theme-category-text">
+                        <div class="e-card-header-caption">
+                            <div class="e-card-header-title">Pivot Table</div>
+                        </div>
+                    </div>
+                    <div class="e-card-content">
+                        <div id="Component-pivotview" style="height:100%;"></div>
+                    </div>
+                </div>
+                <div class="e-card cat-tab layout-card theme-comp" id="treegrid">
+                    <div class="e-card-header theme-category-text">
+                        <div class="e-card-header-caption">
+                            <div class="e-card-header-title">Tree Grid</div>
+                        </div>
+                    </div>
+                    <div class="e-card-content">
+                        <div id="Component-treegrid"></div>
+                    </div>
+                </div>
+                <div class="e-card cat-tab layout-card theme-comp" id="splitter">
+                    <div class="e-card-header theme-category-text">
+                        <div class="e-card-header-caption">
+                            <div class="e-card-header-title">Splitter</div>
+                        </div>
+                    </div>
+                    <div class="e-card-content">
+                        <div id="Component-splitter">
+                            <div class="splitter-content">
+                                <div>Left pane<div id='panetext'>size: 25%</div><div id='panetext'>min: 60px</div></div>
+                            </div>
+                            <div class="splitter-content">
+                                <span>Middle pane<div id='panetext'>size: 50%</div><div id='panetext'>min: 60px</div></span>
+                            </div>
+                            <div class="splitter-content">
+                                <span>Right pane<div id='panetext'>size: 25%</div><div id='panetext'>min: 60px</div></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="e-card cat-tab layout-card theme-comp" id="query-builder">
+                    <div class="e-card-header theme-category-text">
+                        <div class="e-card-header-caption">
+                            <div class="e-card-header-title">Query builder</div>
+                        </div>
+                    </div>
+                    <div class="e-card-content">
+                        <div id="Component-query-builder"></div>
+                    </div>
+                </div>
+                <div class="e-card cat-tab layout-card theme-comp" id="chips">
+                    <div class="e-card-header theme-category-text">
+                        <div class="e-card-header-caption">
+                            <div class="e-card-header-title">Chips</div>
+                        </div>
+                    </div>
+                    <div class="e-card-content">
+                        <div id="Component-chips"></div>
+                    </div>
+                </div>
+                @*<div class="e-card cat-tab layout-card theme-comp" id="diagram">
+        <div class="e-card-header theme-category-text">
+            <div class="e-card-header-caption">
+                <div class="e-card-header-title">Diagram</div>
             </div>
+        </div>
+        <div class="e-card-content">
+            <div id="diagram-space" class="sb-mobile-diagram">
+                <div id="Component-diagram"></div>
+            </diV>
+            </div>
+        </div>*@
+                <div class="e-card cat-tab layout-card theme-comp" id="gantt">
+                    <div class="e-card-header theme-category-text">
+                        <div class="e-card-header-caption">
+                            <div class="e-card-header-title">Gannt</div>
+                        </div>
+                    </div>
+                    <div class="e-card-content">
+                        <div id="Component-gantt"></div>
+                    </div>
+                </div>
+                <div class="e-card cat-tab layout-card theme-comp" id="file-manager">
+                    <div class="e-card-header theme-category-text">
+                        <div class="e-card-header-caption">
+                            <div class="e-card-header-title">File Manager</div>
+                        </div>
+                    </div>
+                    <div class="e-card-content">
+                        <div id="Component-file-manager"></div>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
 

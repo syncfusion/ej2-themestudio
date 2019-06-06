@@ -1,4 +1,5 @@
 
+
 /*! component's default definitions and variables */
 $field-list-active-color: $active-font-color;
 $field-list-default-bg-color: $default-bg-color;
@@ -95,6 +96,12 @@ $field-list-static-header-icon-wrapper-padding: 1px;
 $field-list-static-bigger-header-icon-wrapper-padding: 2px;
 $field-list-tree-header-padding: 7px;
 $field-list-bigger-tree-header-padding: 8px;
+$field-list-excel-member-filter-height: 147px;
+$field-list-excel-filter-height: 248px;
+$field-list-excel-member-filter-bigger-height: 100px;
+$field-list-excel-filter-bigger-height: 220px;
+$field-list-clear-filter-icon: '\ea82';
+$field-list-bigger-excel-dialog-min-width: 280px;
 
 /*! component's adaptive definitions and variables */
 $field-list-adaptive-content-padding-size: 20px;
@@ -128,74 +135,45 @@ $field-list-calc-formula-font-size: 12px;
 $field-list-calc-bigger-formula-font-size: 13px;
 $field-list-bigger-button-line-height: 1em;
 $error-font-color: #f44336;
-/*! component's theme wise override definitions and variables */
-$field-list-active-color: $brand-primary;
-$field-list-default-font-color: $grey-light-font;
-$field-list-default-border-color: $grey-e6;
-$field-list-toggle-border-color: $grey-cc;
-$field-list-border-type: $border-type;
-$field-list-border-size: $border-size;
-$field-list-table-background-color: $grey-white;
-$field-list-default-bg-color: $default-bg-color;
-$field-list-default-padding-size: 8px;
-$field-list-title-padding-size: 20px;
-$field-list-title-font-size: 18px;
-$field-list-content-font-size: $font-size;
-$field-list-button-font-weight: bold;
-$field-list-font-family: $font-family;
-$field-list-header-background-color: $grey-lighter;
-$field-list-default-fill-color: $grey-white;
-$field-list-default-border-radius: 0;
-$field-list-drop-hover-color: $grey-99;
-$field-list-toggle-bg-color: #f5f5f5;
-$field-list-button-font-color: $grey-light-font;
-$field-list-button-border-color: $grey-d4;
-$field-list-button-back-color: #f5f5f5;
-$field-list-drag-clone-text-color: $grey-light-font;
-$field-list-drag-clone-border-radius: 4px;
-$field-list-editor-dialog-footer-padding: 15px;
-$field-list-member-filter-list-height: 150px;
-$field-list-member-filter-list-bigger-height: 133px;
-$field-list-drag-clone-font-size: 14px;
-$field-list-button-font-size: 13px;
-$field-list-toggle-icon-bigger-size: 20px;
-$field-list-toggle-padding-size: 10px;
-$field-list-toggle-size: 38px;
-$field-list-toggle-bigger-size: 40px;
-$field-list-toggle-hover-color: $grey-99;
-$pivot-formula-background: $grey-white;
-$pivot-formula-border: $grey-e6;
-$pivot-text-area-background: $grey-light-font;
-$pivotgrid-filter-icon: '\ea77';
-$pivotgrid-sorting-icon: '\ea79';
-$pivotgrid-remove-icon: '\ea7b';
-$pivotgrid-filtered-icon: '\ea78';
-$pivot-calculated-header-opacity: 1;
-$pivot-dialog-font-weight: bold;
-$pivot-dialog-content-opacity: 1;
-$pivot-dialog-content-padding: auto;
-$pivot-dialog-footer-padding: auto;
-$pivot-dialog-footer-paddingright: auto;
-$field-list-header-content-line-height: 1.5em;
-$field-list-bigger-header-content-line-height: 1.6em;
-$field-list-header-icon-wrapper-padding: 4px;
-$field-list-bigger-header-icon-wrapper-padding: 7px;
-$field-list-static-header-icon-wrapper-padding: 4px;
-$field-list-static-bigger-header-icon-wrapper-padding: 7px;
-$field-list-default-header-font-color: $grey-light-font;
-$field-list-default-header-icon-font-color: $grey;
-$field-list-button-hover-color: $grey-f9;
-$field-list-button-focus-color: $grey-e6;
-$pivotgrid-button-icon-color: $grey-light-font;
-$pivotgrid-icon-hover-color: $grey-light-font;
-$field-list-treeview-font-weight: bold;
-$error-font-color: #a94442;
+$format-label-font-size: 13px;
+$format-label-bigger-font-size: 14px;
+$format-label-font-opacity: .87;
+$format-label-font-color: #000;
+$format-label-font-weight: 500;
+$format-preview-height: 28px;
+$format-preview-bigger-height: 30px;
+$format-preview-width: 80px;
+$format-preview-border-color: #e0e0e0;
+$format-delete-icon: '\e5a5';
+$format-outer-border-color: #e0e0e0;
+$format-outer-fill-color: #fff;
+$format-outer-border-radius: 4px;
+$format-dialog-width: 628px;
+$format-dialog-bigger-width: 665px;
 
 @include export-module('field-list-icons') {
   /*! field-list component icons */
   #{&}.e-pivotfieldlist {
     .e-select-table::before {
       content: $field-list-toggle-icon;
+    }
+  }
+
+  #{&}.e-pivot-formatting-dialog {
+    .e-format-delete-icon::before {
+      content: '\ea7f';
+    }
+
+    .e-add-icon::before {
+      content: '\e823';
+    }
+
+    .e-colorpicker-wrapper .e-format-back-color+.e-split-btn-wrapper .e-split-btn .e-selected-color::before {
+      content: '\e35c';
+    }
+
+    .e-colorpicker-wrapper .e-format-font-color+.e-split-btn-wrapper .e-split-btn .e-selected-color::before {
+      content: '\e35f';
     }
   }
 
@@ -257,6 +235,14 @@ $error-font-color: #a94442;
     .e-axis-filters::before {
       content: '\ea77';
     }
+
+    .e-selected-option-icon::before {
+      content: '\ea84';
+    }
+
+    .e-clear-filter-icon::before {
+      content: $field-list-clear-filter-icon;
+    }
   }
 }
 @include export-module('field-list-layout') {
@@ -270,6 +256,199 @@ $error-font-color: #a94442;
 
     .e-hide {
       visibility: hidden;
+    }
+  }
+
+  #{&}.e-pivot-formatting-dialog {
+    // sass-lint:disable-all
+    max-height: 480px !important;
+    min-width: $format-dialog-width !important;
+    width: $format-dialog-width !important;
+    // sass-lint:enable-all
+    .e-format-table tr:nth-child(odd) {
+      td {
+        padding-bottom: 10px;
+      }
+    }
+
+    .e-format-delete-icon {
+      font-weight: normal;
+
+      &:hover {
+        font-weight: 600;
+      }
+    }
+
+    .e-format-table tr:nth-child(even) {
+      td {
+        padding-bottom: 14px;
+        padding-right: 18px;
+      }
+    }
+
+    .e-format-value-span {
+      vertical-align: bottom;
+    }
+
+    .e-format-value1,
+    .e-format-value2,
+    .e-format-value-span {
+      margin-right: 10px;
+    }
+
+    .e-format-color-picker {
+      margin-right: 18px;
+    }
+
+    .e-format-inner-div {
+      padding-left: 14px;
+      padding-top: 14px;
+    }
+
+    .e-format-outer-div {
+      background-color: $format-outer-fill-color;
+      border: 1px solid $format-outer-border-color;
+      border-radius: $format-outer-border-radius;
+      margin-bottom: 14px;
+    }
+
+    .e-format-condition-button {
+      float: left;
+    }
+
+    .e-format-delete-button {
+      background-color: transparent;
+      border-color: transparent;
+      float: right;
+      padding-right: 12px;
+      padding-top: 12px;
+    }
+
+    .e-format-delete-button:hover,
+    .e-format-delete-button:focus,
+    .e-format-delete-button:active {
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: 0 0 0 transparent;
+    }
+
+    .e-format-delete-icon {
+      font-size: 10px;
+    }
+
+    .e-format-label,
+    .e-format-value-label {
+      color: $format-label-font-color;
+      font-size: $format-label-font-size;
+      font-weight: $format-label-font-weight;
+      opacity: $format-label-font-opacity;
+    }
+
+    .e-format-value-preview {
+      border: 1px solid $format-preview-border-color;
+      height: $format-preview-height;
+      // sass-lint:disable-all
+      margin: 0 !important;
+      // sass-lint:enable-all
+      padding-left: 6px;
+      padding-top: 6px;
+      width: $format-preview-width;
+    }
+
+    .e-colorpicker-wrapper .e-split-btn-wrapper .e-split-btn .e-selected-color {
+      background: none;
+      margin: 0 2px;
+      width: 14px;
+    }
+
+    .e-split-preview,
+    .e-tip-transparent {
+      border: 1px solid $format-preview-border-color;
+      // sass-lint:disable-all
+      border-radius: 0 !important;
+      // sass-lint:enable-all
+      height: 40%;
+      left: -3px;
+      position: absolute;
+      top: 16px;
+      width: 150%;
+    }
+
+    &.e-device {
+      // sass-lint:disable-all
+      min-width: 320px !important;
+      width: 100%  !important;
+      // sass-lint:enable-all
+
+      .e-format-color-picker {
+        width: 33%;
+      }
+
+      .e-format-delete-button {
+        font-size: 12px;
+        padding-right: 16px;
+        padding-top: 16px;
+      }
+    }
+  }
+
+  .e-bigger#{&}.e-pivot-formatting-dialog,
+  .e-bigger#{&} .e-pivot-formatting-dialog,
+  .e-bigger.e-pivot-formatting-dialog,
+  .e-bigger .e-pivot-formatting-dialog {
+    // sass-lint:disable-all
+    min-width: $format-dialog-bigger-width !important;
+    width: $format-dialog-bigger-width !important;
+    // sass-lint:enable-all
+
+    .e-format-label,
+    .e-format-value-label {
+      font-size: $format-label-bigger-font-size;
+    }
+
+    // sass-lint:disable-all
+    .e-format-value1, .e-format-value2 {
+        margin-bottom: 3px !important;
+    }
+    // sass-lint:enable-all
+
+    .e-format-inner-div {
+      padding-left: 16px;
+      padding-top: 16px;
+    }
+
+    .e-format-outer-div {
+      margin-bottom: 16px;
+    }
+
+    .e-format-table tr:nth-child(odd) td {
+      padding-bottom: 12px;
+    }
+
+    .e-format-table tr:nth-child(even) td {
+      padding-bottom: 16px;
+      padding-right: 20px;
+    }
+
+    .e-format-color-picker {
+      margin-right: 20px;
+    }
+
+    &.e-device {
+      // sass-lint:disable-all
+      min-width: 320px !important;
+      width: 100%  !important;
+      // sass-lint:enable-all
+
+      .e-format-color-picker {
+        width: 33%;
+      }
+
+      .e-format-delete-button {
+        font-size: 12px;
+        padding-right: 16px;
+        padding-top: 16px;
+      }
     }
   }
 
@@ -487,6 +666,14 @@ $error-font-color: #a94442;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         padding-top: $field-list-editor-dialog-footer-padding;
+
+        .e-clear-filter-button {
+          float: left;
+
+          &.e-disable {
+            display: none;
+          }
+        }
       }
 
       .e-dlg-content {
@@ -508,9 +695,11 @@ $error-font-color: #a94442;
             height: $field-list-member-filter-list-height;
             max-width: 400px;
             overflow: auto;
+            overflow-x: hidden;
           }
 
-          ul {
+          .e-select-all-wrapper ul,
+          .e-member-editor-container ul {
             margin-left: $field-list-member-filter-list-padding-size;
             overflow: hidden;
           }
@@ -519,6 +708,77 @@ $error-font-color: #a94442;
             display: none;
           }
         }
+
+        // sass-lint:disable-all
+        .e-filter-tab-wrapper {
+          border: none;
+          // sass-lint:enable-all
+
+          .e-tab-header {
+            .e-toolbar-item .e-icon-left + .e-tab-text {
+              margin: 0 0 0 6px;
+            }
+
+            .e-text-wrap {
+              .e-tab-icon {
+                height: 14px;
+                min-width: 14px;
+                width: 14px;
+
+                &::before {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+
+          &.e-rtl {
+            .e-tab-header {
+              .e-toolbar-item .e-icon-left + .e-tab-text {
+                margin: 0 6px 0 0;
+              }
+            }
+          }
+        }
+
+        .e-excelfilter {
+          padding-top: 20px;
+
+          .e-member-editor-container {
+            height: $field-list-excel-member-filter-height;
+          }
+        }
+
+        .e-label-filter,
+        .e-value-filter {
+          height: $field-list-excel-filter-height;
+          overflow: auto;
+          padding: 20px;
+          padding-bottom: 0;
+
+          .e-filter-text-div {
+            font-size: 13px;
+            font-weight: 500;
+          }
+
+          .e-filter-option-wrapper-1,
+          .e-filter-option-wrapper-2,
+          .e-separator-div {
+            padding-top: 20px;
+          }
+
+          .e-between-text-div {
+            padding: 8px 0;
+          }
+
+          .e-disable {
+            display: none;
+          }
+        }
+      }
+
+      &.e-excel-filter {
+        min-width: 280px;
       }
 
       &.e-rtl {
@@ -528,7 +788,17 @@ $error-font-color: #a94442;
             margin-right: $field-list-member-filter-list-padding-size;
           }
         }
+
+        .e-footer-content {
+          .e-clear-filter-button {
+            float: right;
+          }
+        }
       }
+    }
+
+    .e-member-editor-dialog {
+      max-width: 400px;
     }
 
     .e-adaptive-field-list-dialog {
@@ -576,6 +846,62 @@ $error-font-color: #a94442;
       }
     }
   }
+
+  // sass-lint:disable-all
+  #{&}.e-filtermenu-options {
+    ul {
+      z-index: 1000000 !important;
+
+      .e-emptyicon {
+        opacity: 0;
+      }
+
+      .e-separator {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  #{&}.e-label-filter,
+  #{&}.e-value-filter {
+    max-height: 300px !important;
+    width: auto;
+
+    .e-filter-div-content {
+      .e-filter-option-wrapper-1,
+      .e-filter-option-wrapper-2 {
+        display: flex;
+        padding-top: 20px;
+
+        .e-disable {
+          display: none;
+        }
+      }
+
+      .e-filter-option-wrapper-1 {
+        .e-separator-div {
+          width: 20px;
+        }
+
+        .e-filter-operator {
+          flex: auto;
+        }
+      }
+
+      .e-filter-option-wrapper-2 {
+        .e-filter-input-div-1,
+        .e-filter-input-div-2 {
+          width: 100%;
+        }
+
+        .e-between-text-div {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+  // sass-lint:enable-all
 
   .e-bigger #{&}.e-field-list-tree.e-drag-item.e-treeview,
   .e-bigger #{&}.e-pivot-calc.e-drag-item.e-treeview,
@@ -654,6 +980,63 @@ $error-font-color: #a94442;
     .e-adaptive-field-list-dialog .e-dlg-content .e-member-editor-wrapper .e-member-editor-container ,
     .e-member-editor-dialog .e-dlg-content .e-member-editor-wrapper .e-member-editor-container {
       height: $field-list-member-filter-list-bigger-height;
+    }
+
+    .e-adaptive-field-list-dialog,
+    .e-member-editor-dialog {
+      .e-dlg-header-content {
+        .e-clear-filter-button.e-small {
+          font-size: 14px;
+          top: 0;
+        }
+      }
+
+      .e-dlg-content {
+        .e-filter-tab-wrapper {
+          .e-tab-header {
+            .e-toolbar-item .e-icon-left + .e-tab-text {
+              margin: 0 0 0 6px;
+            }
+          }
+
+          &.e-rtl {
+            .e-tab-header {
+              .e-toolbar-item .e-icon-left + .e-tab-text {
+                margin: 0 6px 0 0;
+              }
+            }
+          }
+        }
+
+        .e-excelfilter {
+          .e-member-editor-container {
+            height: $field-list-excel-member-filter-bigger-height;
+          }
+        }
+
+        .e-label-filter,
+        .e-value-filter {
+          height: $field-list-excel-filter-bigger-height;
+
+          .e-filter-text-div {
+            font-size: 14px;
+          }
+
+          .e-filter-option-wrapper-1,
+          .e-filter-option-wrapper-2,
+          .e-separator-div {
+            padding-top: 24px;
+          }
+
+          .e-between-text-div {
+            padding: 10px 0;
+          }
+        }
+      }
+
+      &.e-excel-filter {
+        min-width: $field-list-bigger-excel-dialog-min-width;
+      }
     }
   }
 }
@@ -1133,8 +1516,7 @@ $error-font-color: #a94442;
         }
 
         .e-center-div {
-          border: $field-list-border-size $field-list-border-type $field-list-default-border-color;
-          width: 100%;
+          display: none;
         }
 
         .e-center-title {

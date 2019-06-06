@@ -1,142 +1,88 @@
 
-/*! component's default definitions and variables */
-$skin-name: 'material';
-$acrdn-tab-highlight-color:  rgba(0, 0, 0, 0);
-$acrdn-nrml-header-minheight: 36px;
-$acrdn-bgr-header-minheight: 48px;
-$acrdn-nrml-header-lineheight: 35px;
-$acrdn-bgr-header-lineheight: 47px;
-
-$acrdn-nrml-header-paddingpix: 16px;
-$acrdn-bgr-header-paddingpix: 16px;
-
-// Header, Nested header and RTL mode Padding
-$acrdn-nest-nrml-header-padding: 0 40px 0 32px;
-$acrdn-nest-bgr-header-padding: 0 46px 0 32px;
-$acrdn-nest-second-nrml-header-padding: 0 40px 0 48px;
-$acrdn-nest-second-bgr-header-padding: 0 46px 0 48px;
-$acrdn-nrml-header-padding: 0 40px 0 16px;
-$acrdn-bgr-header-padding: 0 46px 0 16px;
-$acrdn-rtl-nrml-header-padding: 0 16px 0 40px;
-$acrdn-rtl-bgr-header-padding: 0 16px 0 46px;
-$acrdn-rtl-nest-nrml-header-padding: 0 32px 0 40px;
-$acrdn-rtl-nest-bgr-header-padding: 0 32px 0 46px;
-$acrdn-rtl-nest-second-nrml-header-padding: 0 48px 0 40px;
-$acrdn-rtl-nest-second-bgr-header-padding: 0 48px 0 46px;
-
-// Content, Nested content and RTL mode Padding
-$acrdn-nrml-content-padding: 16px;
-$acrdn-bgr-content-padding: 16px;
-$acrdn-nest-nrml-content-padding: 5px 16px 5px 32px;
-$acrdn-nest-bgr-content-padding: 5px 16px 5px 32px;
-$acrdn-nest-second-nrml-content-padding: 5px 16px 5px 48px;
-$acrdn-nest-second-bgr-content-padding: 5px 16px 5px 48px;
-$acrdn-rtl-nest-nrml-content-padding: 5px 32px 5px 16px;
-$acrdn-rtl-nest-bgr-content-padding: 5px 32px 5px 16px;
-$acrdn-rtl-nest-second-nrml-content-padding: 5px 48px 5px 16px;
-$acrdn-rtl-nest-second-bgr-content-padding: 5px 48px 5px 16px;
-
-$acrdn-nrml-header-icon-padding: 8px;
-$acrdn-bgr-header-icon-padding: 14px;
-$acrdn-active-bg: $default-bg-color;
-$acrdn-bg-color: $default-bg-color;
-$acrdn-nrml-icn-minwidth: 24px;
-$acrdn-bgr-icn-minwidth: 30px;
-$acrdn-font-family: $font-family;
-$acrdn-selected-header-font-color: $header-font-color;
-$acrdn-selected-header-color: $header-bg-color;
-$acrdn-icon-color: $header-icon-color;
-$acrdn-selected-icon-color: $header-icon-color;
-$acrdn-content-color: $content-font-color;
-$acrdn-header-font-size: 15px;
-$acrdn-nest-header-font-size: 14px;
-$acrdn-content-font-size: 13px;
-$acrdn-header-font-bgr-size: 16px;
-$acrdn-content-font-bgr-size: 14px;
-$acrdn-content-line-height: 1.5;
-$acrdn-icon-font-size: $font-size;
-$acrdn-header-font-weight: normal;
-$acrdn-slct-header-font-weight: normal;
-$acrdn-selected-border-size: $border-size;
-$acrdn-item-padding-size: $acrdn-selected-border-size;
-$acrdn-selected-border-type: $border-type;
-$acrdn-selected-border-color: $default-border-color;
-$acrdn-header-focus-bg:  $hover-bg-color;
-$acrdn-header-hover-bg: '';
-$acrdn-header-active-bg: '';
-$acrdn-header-font: $header-font-color;
-$acrdn-nested-header-font: $header-font-color;
-
-
-$acrdn-border-type: $border-type;
-$acrdn-border-size: $border-size;
-$acrdn-default-border: $default-border-color;
-
-$acrd-expand-collapse-icon: '\e857';
+//default 
 /*! component's theme wise override fabric-definitions and variables */
-$skin-name: 'bootstrap';
-$acrdn-nrml-header-minheight: 40px;
-$acrdn-bgr-header-minheight: 50px;
-$acrdn-nrml-header-lineheight: 39px;
-$acrdn-bgr-header-lineheight: 48px;
+$acrdn-skin: 'bootstrap' !default;
+$acrdn-header-font-weight: normal !default;
+$acrdn-icon-font-size: $font-size !default;
+$acrdn-content-line-height: 1.5 !default;
+$acrdn-tab-highlight-color:  rgba(0, 0, 0, 0) !default;
+$acrdn-bg-color: $default-bg-color !default;
+$acrdn-border-size: $border-size !default;
+$acrdn-active-bg: $default-bg-color !default;
+$acrdn-header-font: $header-font-color !default;
+$acrdn-content-color: $content-font-color !default;
+$acrdn-icon-color: $header-icon-color !default;
+$acrdn-header-hover-bg: '' !default;
+$acrdn-header-active-bg: '' !default;
+$acrdn-selected-icon-color: $header-icon-color !default;
+$acrdn-selected-header-font-color: $header-font-color !default;
+$acrdn-selected-border-size: $border-size !default;
+$acrdn-selected-border-color: $default-border-color !default;
+$acrdn-nested-header-font: $header-font-color !default;
 
-$acrdn-nrml-header-paddingpix: 15px;
-$acrdn-bgr-header-paddingpix: 15px;
+$acrdn-nrml-header-minheight: 40px !default;
+$acrdn-bgr-header-minheight: 50px !default;
+$acrdn-nrml-header-lineheight: 39px !default;
+$acrdn-bgr-header-lineheight: 48px !default;
+
+$acrdn-nrml-header-paddingpix: 15px !default;
+$acrdn-bgr-header-paddingpix: 15px !default;
 
 // Header, Nested header and RTL mode Padding
-$acrdn-nrml-header-padding: 0 30px 0 15px;
-$acrdn-bgr-header-padding: 0 30px 0 15px;
-$acrdn-nest-nrml-header-padding: 0 30px;
-$acrdn-nest-bgr-header-padding: 0 30px;
-$acrdn-nest-second-nrml-header-padding: 0 30px 0 45px;
-$acrdn-nest-second-bgr-header-padding: 0 30px 0 45px;
-$acrdn-rtl-nrml-header-padding: 0 15px 0 30px;
-$acrdn-rtl-bgr-header-padding: $acrdn-rtl-nrml-header-padding;
-$acrdn-rtl-nest-nrml-header-padding: 0 30px;
-$acrdn-rtl-nest-bgr-header-padding: $acrdn-rtl-nest-nrml-header-padding;
-$acrdn-rtl-nest-second-nrml-header-padding: 0  45px 0 30px ;
-$acrdn-rtl-nest-second-bgr-header-padding: $acrdn-rtl-nest-second-nrml-header-padding;
+$acrdn-nrml-header-padding: 0 30px 0 15px !default;
+$acrdn-bgr-header-padding: 0 30px 0 15px !default;
+$acrdn-nest-nrml-header-padding: 0 30px !default;
+$acrdn-nest-bgr-header-padding: 0 30px !default;
+$acrdn-nest-second-nrml-header-padding: 0 30px 0 45px !default;
+$acrdn-nest-second-bgr-header-padding: 0 30px 0 45px !default;
+$acrdn-rtl-nrml-header-padding: 0 15px 0 30px !default;
+$acrdn-rtl-bgr-header-padding: $acrdn-rtl-nrml-header-padding !default;
+$acrdn-rtl-nest-nrml-header-padding: 0 30px !default;
+$acrdn-rtl-nest-bgr-header-padding: $acrdn-rtl-nest-nrml-header-padding !default;
+$acrdn-rtl-nest-second-nrml-header-padding: 0  45px 0 30px  !default;
+$acrdn-rtl-nest-second-bgr-header-padding: $acrdn-rtl-nest-second-nrml-header-padding !default;
 
 // Content, Nested content and RTL mode Padding
-$acrdn-nrml-content-padding: 15px;
-$acrdn-bgr-content-padding: 15px;
-$acrdn-nest-nrml-content-padding: 15px 15px 15px 45px;
-$acrdn-nest-bgr-content-padding: $acrdn-nest-nrml-content-padding;
-$acrdn-nest-second-nrml-content-padding: 15px 15px 15px 60px;
-$acrdn-nest-second-bgr-content-padding: $acrdn-nest-second-nrml-content-padding;
-$acrdn-rtl-nest-nrml-content-padding: 15px 45px 15px 15px;
-$acrdn-rtl-nest-bgr-content-padding: $acrdn-rtl-nest-nrml-content-padding;
-$acrdn-rtl-nest-second-nrml-content-padding: 15px 60px 15px 15px;
-$acrdn-rtl-nest-second-bgr-content-padding: $acrdn-rtl-nest-second-nrml-content-padding;
+$acrdn-nrml-content-padding: 15px !default;
+$acrdn-bgr-content-padding: 15px !default;
+$acrdn-nest-nrml-content-padding: 15px 15px 15px 45px !default;
+$acrdn-nest-bgr-content-padding: $acrdn-nest-nrml-content-padding !default;
+$acrdn-nest-second-nrml-content-padding: 15px 15px 15px 60px !default;
+$acrdn-nest-second-bgr-content-padding: $acrdn-nest-second-nrml-content-padding !default;
+$acrdn-rtl-nest-nrml-content-padding: 15px 45px 15px 15px !default;
+$acrdn-rtl-nest-bgr-content-padding: $acrdn-rtl-nest-nrml-content-padding !default;
+$acrdn-rtl-nest-second-nrml-content-padding: 15px 60px 15px 15px !default;
+$acrdn-rtl-nest-second-bgr-content-padding: $acrdn-rtl-nest-second-nrml-content-padding !default;
 
 
-$acrdn-nrml-icn-minwidth: 24px;
-$acrdn-bgr-icn-minwidth: 24px;
-$acrdn-header-font-size: 16px;
-$acrdn-nest-header-font-size: 14px;
-$acrdn-content-font-size: 14px;
-$acrdn-header-font-bgr-size: 16px;
-$acrdn-content-font-bgr-size: 14px;
-$acrdn-nrml-header-icon-padding: 10px;
-$acrdn-bgr-header-icon-padding: 10px;
-$acrdn-item-padding-size: '';
-$acrdn-border-type: none;
-$acrdn-selected-border-type: none;
-$acrdn-slct-header-font-weight: normal;
-$acrdn-font-family: 'Helvetica Neue' , 'Helvetica' , 'Arial' , 'sans-serif';
-$acrdn-default-border: $grey-light;
-$acrdn-selected-header-color: $grey-f5;
-$acrdn-default-border: $grey-dd;
-$acrdn-header-focus-bg: '';
+$acrdn-nrml-icn-minwidth: 24px !default;
+$acrdn-bgr-icn-minwidth: 24px !default;
+$acrdn-header-font-size: 16px !default;
+$acrdn-nest-header-font-size: 14px !default;
+$acrdn-content-font-size: 14px !default;
+$acrdn-header-font-bgr-size: 16px !default;
+$acrdn-content-font-bgr-size: 14px !default;
+$acrdn-nrml-header-icon-padding: 10px !default;
+$acrdn-bgr-header-icon-padding: 10px !default;
+$acrdn-item-padding-size: '' !default;
+$acrdn-border-type: none !default;
+$acrdn-selected-border-type: none !default;
+$acrdn-slct-header-font-weight: normal !default;
+$acrdn-font-family: 'Helvetica Neue' , 'Helvetica' , 'Arial' , 'sans-serif' !default;
+$acrdn-selected-header-color: $grey-f5 !default;
+$acrdn-default-border: $grey-dd !default;
+$acrdn-header-focus-bg: transparent !default;
 
-@include export-module('accordion-icons') {
+$acrdn-item-select-bg: $grey-f5 !default;
+//enddefault
+@include export-module('accordion-bootstrap-icons') {
   /*! accordion icons */
   #{&}.e-accordion {
 
     .e-tgl-collapse-icon {
 
       &::before {
-        content: $acrd-expand-collapse-icon;
+        content: '\e916';
       }
 
       &.e-expand-icon {
@@ -145,6 +91,7 @@ $acrdn-header-focus-bg: '';
   }
   }
 }
+
 @include export-module('accordion-layout') {
   /*! accordion layout */
   .e-bigger #{&}.e-accordion,
@@ -155,7 +102,12 @@ $acrdn-header-focus-bg: '';
       .e-acrdn-header .e-acrdn-header-content {
         font-size: $acrdn-header-font-bgr-size;
 
-        @if $skin-name == 'highcontrast' {
+        @if $acrdn-skin == 'bootstrap4' {
+          line-height: $acrdn-bgr-item-header-content-line-height;
+          vertical-align: middle;
+        }
+
+        @if $acrdn-skin == 'highcontrast' {
           font-size: 14px;
         }
       }
@@ -197,18 +149,33 @@ $acrdn-header-focus-bg: '';
           min-height: $acrdn-bgr-header-minheight;
           min-width: $acrdn-bgr-icn-minwidth;
           right: $acrdn-bgr-header-paddingpix;
+
+          @if $acrdn-skin == 'bootstrap4' {
+            font-size: $acrdn-bgr-arrow-icon-font-size;
+          }
         }
 
         .e-acrdn-header-icon {
           display: inline-block;
           padding: 0 $acrdn-bgr-header-icon-padding 0 0;
+
+          @if $acrdn-skin == 'bootstrap4' {
+            .e-acrdn-icons.e-icons {
+              font-size: $acrdn-bgr-icon-font-size;
+            }
+          }
         }
       }
 
       .e-acrdn-panel .e-acrdn-content {
         padding: $acrdn-bgr-content-padding;
 
-        @if $skin-name == 'highcontrast' {
+        @if $acrdn-skin == 'bootstrap4' {
+          font-size: $acrdn-bgr-item-header-content-font-size;
+          line-height: $acrdn-bgr-item-header-content-line-height;
+        }
+
+        @if $acrdn-skin == 'highcontrast' {
           font-size: 13px;
         }
 
@@ -292,7 +259,7 @@ $acrdn-header-focus-bg: '';
 
     .e-acrdn-item {
 
-      @if $skin-name == 'material' {
+      @if $acrdn-skin == 'material' {
         &.e-select.e-selected:first-child {
           border-top: 0;
         }
@@ -301,7 +268,7 @@ $acrdn-header-focus-bg: '';
           border-bottom: 0;
         }
       }
-      @if $skin-name == 'bootstrap' {
+      @if $acrdn-skin == 'bootstrap' {
         border-radius: 4px;
         margin-top: 5px;
 
@@ -325,12 +292,12 @@ $acrdn-header-focus-bg: '';
 
       .e-acrdn-panel.e-nested .e-acrdn-header {
 
-        @if $skin-name == 'bootstrap' {
+        @if $acrdn-skin == 'bootstrap' {
           border: 0;
         }
       }
 
-      @if $skin-name == 'bootstrap' {
+      @if $acrdn-skin == 'bootstrap' {
         .e-acrdn-panel.e-nested .e-acrdn-item.e-select {
           margin: 2px;
        }
@@ -346,7 +313,7 @@ $acrdn-header-focus-bg: '';
         > .e-acrdn-header .e-acrdn-header-content {
           font-weight: $acrdn-slct-header-font-weight;
 
-          @if $skin-name == 'highcontrast' {
+          @if $acrdn-skin == 'highcontrast' {
             font-weight: 600;
           }
         }
@@ -378,7 +345,7 @@ $acrdn-header-focus-bg: '';
           &:hover,
           &:focus {
             .e-acrdn-header-content {
-              @if $skin-name == 'bootstrap' {
+              @if $acrdn-skin == 'bootstrap' or $acrdn-skin == 'bootstrap4'  {
                 text-decoration: underline;
               }
             }
@@ -387,7 +354,7 @@ $acrdn-header-focus-bg: '';
       }
 
       .e-acrdn-header {
-        @if $skin-name == 'bootstrap' {
+        @if $acrdn-skin == 'bootstrap' {
           border-radius: 4px;
         }
         line-height: $acrdn-nrml-header-lineheight;
@@ -402,8 +369,14 @@ $acrdn-header-focus-bg: '';
           display: inline-block;
         }
 
+        @if $acrdn-skin == 'bootstrap4' {
+          .e-acrdn-header-content {
+            line-height: $acrdn-content-line-height;
+          }
+        }
+
         .e-toggle-icon {
-          @if $skin-name == 'bootstrap' {
+          @if $acrdn-skin == 'bootstrap' {
             display: none;
           }
           @else {
@@ -431,6 +404,12 @@ $acrdn-header-focus-bg: '';
         .e-acrdn-header-icon {
           display: inline-block;
           padding: 0 $acrdn-nrml-header-icon-padding 0 0;
+
+          @if $acrdn-skin == 'bootstrap4' {
+            .e-acrdn-icons.e-icons {
+              font-size: $acrdn-bgr-arrow-icon-font-size;
+            }
+          }
         }
       }
 
@@ -461,7 +440,7 @@ $acrdn-header-focus-bg: '';
           .e-acrdn-item.e-select.e-selected .e-acrdn-header > .e-acrdn-header-content {
             font-weight: normal;
 
-            @if $skin-name == 'highcontrast' {
+            @if $acrdn-skin == 'highcontrast' {
               font-weight: 600;
             }
           }
@@ -502,6 +481,10 @@ $acrdn-header-focus-bg: '';
 
           .e-acrdn-header-content {
             font-size: $acrdn-nest-header-font-size;
+
+            @if $acrdn-skin == 'bootstrap4' {
+              font-size: $acrdn-content-font-size;
+            }
           }
         }
       }
@@ -564,53 +547,67 @@ $acrdn-header-focus-bg: '';
     background: $acrdn-bg-color;
     border: $acrdn-border-size $acrdn-border-type $acrdn-default-border;
 
-    @if $skin-name == 'highcontrast' {
-      background: $bg-base-0;
+    @if $acrdn-skin == 'bootstrap4' {
+      border-radius: $acrdn-border-radius;
+    }
+
+    @if $acrdn-skin == 'highcontrast' {
+      background: $acrdn-bg;
     }
 
     .e-active {
       background: $acrdn-active-bg;
-      @if $skin-name == 'highcontrast' {
-        background: $bg-base-0;
+      @if $acrdn-skin == 'highcontrast' {
+        background: $acrdn-active-item-bg;
       }
     }
 
     .e-acrdn-item {
-      @if $skin-name == 'fabric' {
-        border-bottom: 1px solid $neutral-white;
-        border-top: 1px solid $neutral-white;
+      @if $acrdn-skin == 'fabric' {
+        border-bottom: 1px solid $acrdn-item-border-color;
+        border-top: 1px solid $acrdn-item-border-color;
+      }
+
+      @if $acrdn-skin == 'bootstrap4' {
+        border-bottom: $acrdn-border-size $acrdn-border-type $acrdn-default-border;
+        border-radius: 4px 4px 0 0;
+
+        &.e-select:last-child {
+          border-bottom: 0;
+          border-radius: 0 0 4px 4px;
+        }
       }
 
       &.e-item-focus {
-        @if $skin-name == 'fabric' {
+        @if $acrdn-skin == 'fabric' {
           border-bottom: 1px solid $acrdn-header-focus-bg;
           border-top: 1px solid $acrdn-header-focus-bg;
         }
 
-        @if $skin-name == 'highcontrast' {
+        @if $acrdn-skin == 'highcontrast' {
           .e-acrdn-header:focus {
-            border-color: $bg-base-100;
+            border-color: $acrdn-focus-hdr-focus-border-color;
           }
         }
       }
 
       &.e-item-focus.e-select.e-selected.e-expand-state {
-        @if $skin-name == 'fabric' or $skin-name == 'material' {
+        @if $acrdn-skin == 'fabric' or $acrdn-skin == 'material' {
           border-top: 1px solid $acrdn-selected-header-color;
         }
 
-        @if $skin-name == 'highcontrast' {
+        @if $acrdn-skin == 'highcontrast' {
           .e-acrdn-header:focus {
-            border: 2px dashed $bg-base-100;
+            border: 2px dashed $acrdn-focus-exp-hdr-focus-border-color;
           }
 
           .e-acrdn-header:hover:focus {
-            background: $selection-bg;
-            border-color: $bg-base-100;
+            background: $acrdn-focus-exp-hdr-hover-focus-bg-color;
+            border-color: $acrdn-focus-exp-hdr-hover-focus-border-color;
 
             .e-icons,
             .e-acrdn-header-content {
-              color: $selection-font;
+              color: $acrdn-focus-exp-hdr-hover-focus-color;
             }
           }
         }
@@ -618,33 +615,48 @@ $acrdn-header-focus-bg: '';
 
       &.e-item-focus.e-expand-state.e-select,
       &.e-item-focus.e-select.e-selected.e-expand-state  {
-        @if $skin-name == 'material' {
+        @if $acrdn-skin == 'material' {
           border-color: $acrdn-header-focus-bg;
         }
       }
 
       &.e-expand-state.e-select {
-        @if $skin-name == 'fabric' or $skin-name == 'material' {
+        @if $acrdn-skin == 'fabric' or $acrdn-skin == 'material' {
           border-bottom: 1px solid $acrdn-selected-header-color;
           border-top: 1px solid $acrdn-selected-header-color;
         }
       }
 
       .e-acrdn-header {
-        @if $skin-name == 'fabric' {
-          border: 1px solid $neutral-white;
+        @if $acrdn-skin == 'fabric' {
+          border: 1px solid $acrdn-item-header-border-color;
+        }
+      }
+
+      @if $acrdn-skin == 'bootstrap4' {
+        &.e-overlay.e-select.e-expand-state {
+          .e-acrdn-header {
+            .e-icons,
+            .e-acrdn-header-content {
+              color: $acrdn-disable-color;
+            }
+          }
         }
       }
 
       &.e-overlay {
         background: $acrdn-bg-color;
 
-        @if $skin-name == 'highcontrast' {
+        @if $acrdn-skin == 'bootstrap4' {
+          opacity: $acrdn-opacity;
+        }
+
+        @if $acrdn-skin == 'highcontrast' or $acrdn-skin == 'bootstrap4' {
           .e-acrdn-header {
 
             .e-icons,
             .e-acrdn-header-content {
-              color: $disable;
+              color: $acrdn-disable-color;
             }
           }
         }
@@ -653,11 +665,11 @@ $acrdn-header-focus-bg: '';
       &.e-selected.e-select.e-expand-state > .e-acrdn-header {
 
         &:focus {
-          @if $skin-name == 'fabric' {
-            border: 1px solid $neutral-secondary;
+          @if $acrdn-skin == 'fabric' {
+            border: 1px solid $acrdn-item-exp-hdr-focus-border-color;
           }
-          @else if $skin-name == 'highcontrast' {
-            border: 2px dashed $bg-base-100;
+          @else if $acrdn-skin == 'highcontrast' {
+            border: 2px dashed $acrdn-item-exp-hdr-focus-border-color;
           }
           @else {
             background: $acrdn-header-focus-bg;
@@ -667,15 +679,21 @@ $acrdn-header-focus-bg: '';
 
       .e-acrdn-panel.e-nested {
 
+        @if $acrdn-skin == 'bootstrap4' {
+          .e-acrdn-content .e-acrdn-item:last-child {
+            border-bottom: $acrdn-border-size $acrdn-selected-border-type $acrdn-default-border;
+          }
+        }
+
         .e-acrdn-header .e-acrdn-header-content {
           color: $acrdn-header-font;
         }
 
-        @if $skin-name == 'highcontrast' {
+        @if $acrdn-skin == 'highcontrast' {
           .e-expand-state {
             > .e-icons,
             > .e-acrdn-header-content {
-              color: $selection-font;
+              color: $acrdn-nested-exp-color;
             }
           }
         }
@@ -683,20 +701,25 @@ $acrdn-header-focus-bg: '';
 
       &.e-select {
 
-        @if $skin-name == 'bootstrap' {
-          background: $grey-f5;
+        @if $acrdn-skin == 'bootstrap' {
+          background: $acrdn-item-select-bg;
           border: $acrdn-border-size solid $acrdn-default-border;
         }
 
         .e-acrdn-panel .e-acrdn-content {
           color: $acrdn-content-color;
 
-          @if $skin-name == 'highcontrast' {
-            background: $bg-base-0;
+          @if $acrdn-skin == 'bootstrap4' {
+            background: $acrdn-item-panel-content-select-bg;
+            border-top: $acrdn-border-size $acrdn-border-type $acrdn-default-border;
+          }
+
+          @if $acrdn-skin == 'highcontrast' {
+            background: $acrdn-selected-item-content-color;
           }
         }
 
-        @if $skin-name == 'material' {
+        @if $acrdn-skin == 'material' {
           .e-acrdn-panel .e-acrdn-content .e-content-icon {
             color: $acrdn-icon-color;
           }
@@ -717,11 +740,11 @@ $acrdn-header-focus-bg: '';
       &.e-expand-state.e-select:not(.e-selected) > .e-acrdn-header {
 
         &:focus {
-          @if $skin-name == 'fabric' {
-            border: 1px solid $neutral-secondary;
+          @if $acrdn-skin == 'fabric' {
+            border: 1px solid $acrdn-item-exp-hdr-focus-border-color;
           }
-          @else if $skin-name == 'highcontrast' {
-            border-color: $bg-base-100;
+          @else if $acrdn-skin == 'highcontrast' {
+            border-color: $acrdn-item-exp-hdr-focus-border-color;
           }
           @else {
             background: $acrdn-header-focus-bg;
@@ -731,45 +754,45 @@ $acrdn-header-focus-bg: '';
 
       .e-acrdn-header {
 
-        @if $skin-name == 'highcontrast' {
-          border: 1px solid $bg-base-0;
+        @if $acrdn-skin == 'highcontrast' {
+          border: 1px solid $acrdn-item-header-border-color;
         }
 
         &:hover {
-          @if $skin-name == 'fabric' {
+          @if $acrdn-skin == 'fabric' {
             border: 1px solid $acrdn-header-hover-bg;
           }
           background: $acrdn-header-hover-bg;
-          @if $skin-name == 'highcontrast' {
-            border-color: $hover-border;
+          @if $acrdn-skin == 'highcontrast' {
+            border-color: $acrdn-item-header-hover-border-color;
           }
         }
 
         &:active {
-          @if $skin-name == 'fabric' {
+          @if $acrdn-skin == 'fabric' {
             border: 1px solid $acrdn-header-active-bg;
           }
           background: $acrdn-header-active-bg;
-          @if $skin-name == 'highcontrast' {
-            border-color: $selection-bg;
+          @if $acrdn-skin == 'highcontrast' {
+            border-color: $acrdn-item-header-active-border-color;
           }
         }
 
         &:focus {
-          @if $skin-name == 'fabric' {
+          @if $acrdn-skin == 'fabric' {
             border: 1px solid $acrdn-header-focus-bg;
           }
           background: $acrdn-header-focus-bg;
-          @if $skin-name == 'highcontrast' {
-            background: inherit;
-            border: 2px dashed $bg-base-100;
+          @if $acrdn-skin == 'highcontrast' {
+            background: $acrdn-item-header-focus-bg-color;
+            border: 2px dashed $acrdn-item-header-focus-border-color;
 
             &:active {
 
               .e-icons,
               .e-acrdn-header-content,
               .e-toggle-icon {
-                color: $content-font;
+                color: $acrdn-item-header-focus-active-color;
               }
             }
           }
@@ -778,33 +801,67 @@ $acrdn-header-focus-bg: '';
 
       &.e-select {
 
-        &.e-selected.e-expand-state > .e-acrdn-header,
-        &.e-expand-state > .e-acrdn-header {
-          @if $skin-name == 'fabric' {
-            border: 1px solid $acrdn-selected-header-color;
-          }
-          background: $acrdn-selected-header-color;
-
-          @if $skin-name == 'highcontrast' {
-            background: $selection-bg;
-            border-color: $selection-bg;
-
-            .e-acrdn-header-icon {
-              color: $selection-font;
-            }
-
+        @if $acrdn-skin == 'bootstrap4' {
+          &.e-acrdn-item > .e-acrdn-header {
             &:hover {
-              background: $hover-bg;
-              border-color: $hover-border;
-
               .e-icons,
               .e-acrdn-header-content {
-                color: $hover-font;
+                color: $acrdn-exp-hdr-hover-color;
               }
 
               &:focus .e-icons,
               &:focus .e-acrdn-header-content {
-                color: $selection-font;
+                color: $acrdn-exp-hdr-hover-focus-hdr-color;
+              }
+            }
+          }
+
+          &.e-selected > .e-acrdn-header {
+            background: $acrdn-selected-header-color;
+          }
+        }
+
+        &.e-selected.e-expand-state > .e-acrdn-header,
+        &.e-expand-state > .e-acrdn-header {
+          @if $acrdn-skin == 'fabric' {
+            border: 1px solid $acrdn-selected-header-color;
+          }
+          background: $acrdn-selected-header-color;
+
+          @if $acrdn-skin == 'bootstrap4' {
+            &:hover {
+              .e-icons,
+              .e-acrdn-header-content {
+                color: $acrdn-exp-hdr-hover-color;
+              }
+
+              &:focus .e-icons,
+              &:focus .e-acrdn-header-content {
+                color: $acrdn-exp-hdr-hover-focus-hdr-color;
+              }
+            }
+          }
+
+          @if $acrdn-skin == 'highcontrast' {
+            background: $acrdn-exp-hdr-bg-color;
+            border-color: $acrdn-exp-hdr-border-color;
+
+            .e-acrdn-header-icon {
+              color: $acrdn-exp-hdr-icon-color;
+            }
+
+            &:hover {
+              background: $acrdn-exp-hdr-hover-bg-color;
+              border-color: $acrdn-exp-hdr-hover-border-color;
+
+              .e-icons,
+              .e-acrdn-header-content {
+                color: $acrdn-exp-hdr-hover-color;
+              }
+
+              &:focus .e-icons,
+              &:focus .e-acrdn-header-content {
+                color: $acrdn-exp-hdr-hover-focus-hdr-color;
               }
             }
           }
@@ -820,108 +877,120 @@ $acrdn-header-focus-bg: '';
         }
 
         &.e-expand-state > .e-acrdn-header:hover:focus {
-          @if $skin-name == 'highcontrast' {
+          @if $acrdn-skin == 'highcontrast' {
             .e-icons,
             .e-acrdn-header-content {
-              color: $hover-font;
+              color: $acrdn-exp-hdr-hover-focus-color;
             }
           }
         }
       }
 
       &.e-select {
-        @if $skin-name == 'material' {
-          border-bottom: $acrdn-selected-border-size $acrdn-selected-border-type  transparent;
-          border-top: $acrdn-selected-border-size $acrdn-selected-border-type  transparent;
+        @if $acrdn-skin == 'material' {
+          border-bottom: $acrdn-selected-border-size $acrdn-selected-border-type transparent;
+          border-top: $acrdn-selected-border-size $acrdn-selected-border-type transparent;
 
           &.e-item-focus {
             border-color: $acrdn-header-focus-bg;
           }
         }
 
-        @if $skin-name == 'highcontrast' {
+        @if $acrdn-skin == 'highcontrast' {
           &.e-expand-state .e-acrdn-header:hover {
-            border-color: $hover-border;
+            border-color: $acrdn-exp-hdr-hover-border-color;
 
             .e-icons,
             .e-acrdn-header-content {
-              color: $hover-font;
+              color: $acrdn-exp-hdr-hover-color;
             }
           }
         }
       }
 
       &.e-selected {
-        @if $skin-name == 'bootstrap' {
+        @if $acrdn-skin == 'bootstrap' {
           border:  $acrdn-border-size solid $acrdn-default-border;
         }
         @else {
           &.e-select {
             border-bottom: $acrdn-selected-border-size $acrdn-selected-border-type  $acrdn-selected-border-color;
             border-top: $acrdn-selected-border-size $acrdn-selected-border-type  $acrdn-selected-border-color;
+
+            @if $acrdn-skin == 'bootstrap4' {
+              border-bottom: $acrdn-border-size $acrdn-border-type $acrdn-default-border;
+
+              &.e-select:last-child {
+                border-bottom: $acrdn-border-size $acrdn-selected-border-type $acrdn-default-border;
+              }
+            }
           }
         }
 
         + .e-selected {
-          @if $skin-name == 'bootstrap' {
+          @if $acrdn-skin == 'bootstrap' {
             border:  $acrdn-border-size solid $acrdn-default-border;
           }
-          @if $skin-name == 'material' {
+          @if $acrdn-skin == 'material' {
             border-top: $acrdn-selected-border-size solid  transparent;
           }
           @else {
             border-top: $acrdn-selected-border-size none  $acrdn-selected-border-color;
           }
         }
-        @if $skin-name != 'bootstrap' {
+        @if $acrdn-skin != 'bootstrap' {
           .e-selected:last-child {
             border-bottom: $acrdn-selected-border-size none  $acrdn-selected-border-color;
           }
         }
 
-        @if $skin-name == 'highcontrast' {
+        @if $acrdn-skin == 'highcontrast' {
           .e-acrdn-item.e-selected:not(.e-expand-state) {
             > .e-acrdn-header .e-icons,
             > .e-acrdn-header .e-acrdn-header-content {
-              color: $content-font;
+              color: $acrdn-nested-selected-item-hdr-color;
             }
           }
 
           .e-acrdn-item.e-selected.e-expand-state {
             > .e-acrdn-header .e-icons,
             > .e-acrdn-header .e-acrdn-header-content {
-              color: $selection-font;
+              color: $acrdn-nested-selected-exp-item-hdr-color;
             }
 
             &:hover {
               > .e-acrdn-header .e-icons,
               > .e-acrdn-header .e-acrdn-header-content {
-                color: $hover-font;
+                color: $acrdn-nested-selected-exp-hover-item-hdr-color;
               }
             }
           }
         }
 
         &.e-select > .e-acrdn-header {
-          @if $skin-name == 'bootstrap' {
+          @if $acrdn-skin == 'bootstrap' {
             background: $acrdn-selected-header-color;
             border: 0;
             border-bottom:  $acrdn-border-size solid $acrdn-default-border;
             border-radius: 0;
           }
 
-          @if $skin-name == 'highcontrast' {
+          @if $acrdn-skin == 'bootstrap4' {
+            border-radius: 4px;
+          }
+
+          @if $acrdn-skin == 'highcontrast' {
 
             &:focus {
-              border: 2px dashed $bg-base-100;
+              border: 2px dashed $acrdn-selected-hdr-focus-border-color;
             }
 
             &:hover {
-              border-color: $hover-border;
+              border-color: $acrdn-selected-hdr-hover-border-color;
 
               .e-icons,
               .e-acrdn-header-content {
-                color: $hover-font;
+                color: $acrdn-selected-hdr-hover-color;
               }
             }
           }

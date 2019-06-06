@@ -2,7 +2,7 @@
 var defaultVal = {};
 var themeColors = {};
 var exportDialog, importDialog, filterDialog;
-var themes = ['material', 'fabric', 'bootstrap', 'highcontrast'];
+var themes = ['material', 'fabric', 'bootstrap', 'highcontrast', 'fabricdark', 'materialdark', 'bootstrapdark', 'highcontrastlight','bootstrap4','fusion'];
 var curTheme = 'material';
 var controlContent;
 var colorchange = {};
@@ -13,6 +13,9 @@ var themeDropDownText = document.getElementById('themeDropText');
 var componentsId = [];
 var clrpkrWrapper;
 var checking = [];
+var curThemeName = 'material';
+var queryRegex = /\?+[^>]+/g;
+var googleAngRegex = /\&+[^>]+/g;
 //var element = document.getElementById("controls");
 var themeProps = {
     material: {
@@ -100,6 +103,194 @@ var themeProps = {
             ]
         }
     },
+    fusion: {
+        "Primary Color": {
+            id: "brand-primary",
+            default: "#0565ff",
+            palettes: [
+                "#0565ff", "#6610F2", "#6F42C1", "#E83E8B", "#DC3243", "#845454",
+                "#218739", "#128260", "#108193", "#6C7A00", "#B12EF1", "#0178C9",
+                "#74588B", "#C34143", "#5866B6", "#0178C9", "#A459A1", "#C639AE",
+                "#437584", "#6B6D7F", "#333333"
+            ]
+        },
+        "Primary Font": {
+            id: "brand-primary-font",
+            default: "#fff",
+            palettes: [
+                "#ffffff", "#F2F2F2", "#D8D8D8", "#BFBFBF", "#A5A5A5", "#7F7F7F",
+                "#6E6E6E", "#595959", "#3F3F3F", "#262626", "#0C0C0C", "#000000"
+            ]
+        }
+    },
+    bootstrap4: {
+        "Primary Color": {
+            id: "primary",
+            default: "#007bff",
+            palettes: [
+                "#0070F0", "#6610F2", "#6F42C1", "#E83E8B", "#DC3243", "#845454",
+                "#218739", "#128260", "#108193", "#6C7A00", "#B12EF1", "#0178C9",
+                "#74588B", "#C34143", "#5866B6", "#0178C9", "#A459A1", "#C639AE",
+                "#437584", "#6B6D7F", "#333333"
+            ]
+        },
+        "Primary Font": {
+            id: "primary-font",
+            default: "#fff",
+            palettes: [
+                "#ffffff", "#F2F2F2", "#D8D8D8", "#BFBFBF", "#A5A5A5", "#7F7F7F",
+                "#6E6E6E", "#595959", "#3F3F3F", "#262626", "#0C0C0C", "#000000"
+            ]
+        }
+    },
+    highcontrastlight: {
+        "Selection BG": {
+            id: "selection-bg",
+            default: "#23726C",
+            palettes: ["#3aca4d", "#ffd939", "#cc76f6", "#18d2eb", "#fe8aeb", "#5b94ff",
+                "#ff82aa", "#7D8DFF", "#00D8AE", "#FF7C7E", "#7AA8FF", "#FF8860",
+                "#00CBF1", "#7ED321", "#FD852F", "#E0FF00", "#CDE6F7", "#C09EF7",
+                "#35D283", "#7FCBFE", "#DBE782", "#FFFFFF"
+            ]
+        },
+        "Selection Border": {
+            id: "selection-border",
+            default: "#23726c",
+            palettes: ["#3aca4d", "#ffd939", "#cc76f6", "#18d2eb", "#fe8aeb", "#5b94ff",
+                "#ff82aa", "#7D8DFF", "#00D8AE", "#FF7C7E", "#7AA8FF", "#FF8860",
+                "#00CBF1", "#7ED321", "#FD852F", "#E0FF00", "#CDE6F7", "#C09EF7",
+                "#35D283", "#7FCBFE", "#DBE782", "#FFFFFF"
+            ]
+        },
+        "Selection Font": {
+            id: "selection-font",
+            default: "#FFFFFF",
+            palettes: [
+                "#FFFFFF", "#F2F2F2", "#D8D8D8", "#BFBFBF", "#A5A5A5", "#7F7F7F",
+                "#6E6E6E", "#595959", "#3F3F3F", "#262626", "#0C0C0C", "#000000"
+            ]
+        },
+        "Hover BG": {
+            id: "hover-bg",
+            default: "#C9EDEB",
+            palettes: ["#3aca4d", "#ffd939", "#cc76f6", "#18d2eb", "#fe8aeb", "#5b94ff",
+                "#ff82aa", "#7D8DFF", "#00D8AE", "#FF7C7E", "#7AA8FF", "#FF8860",
+                "#00CBF1", "#7ED321", "#FD852F", "#E0FF00", "#CDE6F7", "#C09EF7",
+                "#35D283", "#7FCBFE", "#DBE782", "#FFFFFF"
+            ]
+        },
+        "Hover Border": {
+            id: "hover-border",
+            default: "#000000",
+            palettes: ["#3aca4d", "#ffd939", "#cc76f6", "#18d2eb", "#fe8aeb", "#5b94ff",
+                "#ff82aa", "#7D8DFF", "#00D8AE", "#FF7C7E", "#7AA8FF", "#FF8860",
+                "#00CBF1", "#7ED321", "#FD852F", "#E0FF00", "#CDE6F7", "#C09EF7",
+                "#35D283", "#7FCBFE", "#DBE782", "#FFFFFF"
+            ]
+        },
+        "Hover Font": {
+            id: "hover-font",
+            default: "#000000",
+            palettes: [
+                "#FFFFFF", "#F2F2F2", "#D8D8D8", "#BFBFBF", "#A5A5A5", "#7F7F7F",
+                "#6E6E6E", "#595959", "#3F3F3F", "#262626", "#0C0C0C", "#000000"
+            ]
+        },
+        "Disable": {
+            id: "disable",
+            default: "#757575",
+            palettes: ["#3aca4d", "#ffd939", "#cc76f6", "#18d2eb", "#fe8aeb", "#5b94ff",
+                "#ff82aa", "#7D8DFF", "#00D8AE", "#FF7C7E", "#7AA8FF", "#FF8860",
+                "#00CBF1", "#7ED321", "#FD852F", "#E0FF00", "#CDE6F7", "#C09EF7",
+                "#35D283", "#7FCBFE", "#DBE782", "#FFFFFF"
+            ]
+        }
+    },
+    materialdark: {
+        "Primary Color": {
+            id: "primary",
+            default: "#3F51B5",
+            palettes: [
+                "#f34235", "#e81d62", "#9b26af", "#6639b6", "#3e50b4", "#2095f2",
+                "#02a8f3", "#00bbd3", "#009587", "#4bae4f", "#8ac249", "#ccdb38",
+                "#ffea3a", "#ffc006", "#ff9700", "#ff5621", "#9d9d9d", "#5f7c8a",
+                "#785447", "#000000", "#ffffff"
+            ]
+        },
+        "Primary Font": {
+            id: "primary-font",
+            default: "#fff",
+            palettes: [
+                "#ffffff", "#F2F2F2", "#D8D8D8", "#BFBFBF", "#A5A5A5", "#7F7F7F",
+                "#6E6E6E", "#595959", "#3F3F3F", "#262626", "#0C0C0C", "#000000"
+            ]
+        },
+        "Accent Color": {
+            id: "accent",
+            default: "#00b0ff",
+            palettes: [
+                "#ff8A80", "#ff5252", "#ff1744", "#d50000", "#ff80ab", "#ff4081", "#f50057", "#c51162",
+                "#ea80fc", "#e040fb", "#d500f9", "#aa00ff", "#b388ff", "#7c4dff", "#651fff", "#6200ea",
+                "#8c9eff", "#536dfe", "#3d5afe", "#304ffe", "#82b1fc", "#448aff", "#2979ff", "#2962ff",
+                "#80d8ff", "#40c4ff", "#00b0ff", "#0091ea", "#84ffff", "#18ffff", "#00e5ff", "#00b8d4",
+                "#a7ffeb", "#64ffda", "#1de986", "#00bfa5", "#b9fbca", "#69f0ae", "#00e676", "#00c853",
+                "#ccff90", "#b2ff59", "#76ff03", "#64dd17", "#f4ff81", "#eeff41", "#c6ff00", "#aeea00",
+                "#ffff8d", "#ffff00", "#ffea00", "#ffd600", "#ffe57f", "#ffd740", "#ffc400", "#ffa600",
+                "#ffd1b0", "#ffab40", "#ff9100", "#ff6d00", "#ff9e80", "#ff6e40", "#ff3d00", "#dd2c00",
+                "#000000", "#ffffff"
+            ]
+        },
+        "Accent Font": {
+            id: "accent-font",
+            default: "#000000",
+            palettes: [
+                "#ffffff", "#F2F2F2", "#D8D8D8", "#BFBFBF", "#A5A5A5", "#7F7F7F",
+                "#6E6E6E", "#595959", "#3F3F3F", "#262626", "#0C0C0C", "#000000"
+            ]
+        }
+
+
+    },
+    fabricdark: {
+        "Primary Color": {
+            id: "theme-primary",
+            default: "#0074CC",
+            palettes: [
+                "#0070F0", "#2F4AD0", "#2972AE", "#886CE5", "#00BCF2", "#309AEF",
+                "#0A8A0A", "#027E2F", "#538014", "#028172 ", "#FFC906", "#F26F25",
+                "#BD3281", "#BF463B", "#6B4A96", "#BA455A", "#AD1CF8", "#6BBD12",
+                "#C62F2F", "#D93F02", "#AC4AA3", "#AA7A2B", "#FFEF22", "#00D085"
+            ]
+        },
+        "Primary font": {
+            id: "theme-primary-font",
+            default: "#fff",
+            palettes: [
+                "#ffffff", "#F2F2F2", "#D8D8D8", "#BFBFBF", "#A5A5A5", "#7F7F7F",
+                "#6E6E6E", "#595959", "#3F3F3F", "#262626", "#0C0C0C", "#000000"
+            ]
+        }
+    },
+    bootstrapdark: {
+        "Primary Color": {
+            id: "brand-primary",
+            default: "#0070f0",
+            palettes: [
+                "#0070F0", "#2F4AD0", "#2972AE", "#886CE5", "#00BCF2", "#309AEF",
+                "#0A8A0A", "#027E2F", "#538014", "#028172 ", "#FFC906", "#F26F25",
+                "#BD3281", "#BF463B", "#6B4A96", "#BA455A", "#AD1CF8", "#6BBD12",
+                "#C62F2F", "#D93F02", "#AC4AA3", "#AA7A2B", "#FFEF22", "#00D085"
+            ]
+        },
+        "Primary Font": {
+            id: "brand-primary-font",
+            default: "#fff",
+            palettes: [
+                "#ffffff", "#F2F2F2", "#D8D8D8", "#BFBFBF", "#A5A5A5", "#7F7F7F",
+                "#6E6E6E", "#595959", "#3F3F3F", "#262626", "#0C0C0C", "#000000"
+            ]
+        }
+    },
     highcontrast: {
         "Selection BG": {
             id: "selection-bg",
@@ -162,14 +353,25 @@ var themeProps = {
                 "#35D283", "#7FCBFE", "#DBE782", "#FFFFFF"
             ]
         }
-    }
+    },
 }
 
 function loadJson() {
     getThemeColors();
     renderDialogs();
     //renderRightPane();
-    loadDefaultThemes('material', false);
+    
+    var queystring = window.location.search;
+    if (queystring.indexOf("?theme=") !== -1) {
+        queystring = queystring.replace(googleAngRegex, "");
+        queystring = queystring.replace("?theme=", "");
+        queystring = queystring.trim();
+        loadTheme(queystring, false);
+        renderRightPane();
+    } else {
+        loadDefaultThemes('material', false);
+    }
+    
 }
 loadJson();
 
@@ -190,6 +392,7 @@ function getThemeColors() {
 // Render the right pane components
 function renderRightPane() {
     // theme switcher datasource
+    
     themeSwitherPopup = new ej.popups.Popup(document.getElementById('theme-switcher-popup'), {
 
         relateTo: themeDropDown,
@@ -214,7 +417,7 @@ function renderRightPane() {
     document.addEventListener('click', function () { togglePopup(true) });
     document.getElementById('themelist').addEventListener('click', function (e) {
         var parent = e.target.closest('li');
-        var theme = parent.id;
+        var theme= parent.id;
         if (theme === curTheme) {
             return;
         }
@@ -223,19 +426,77 @@ function renderRightPane() {
         document.querySelector('#themelist>#' + theme).classList.add('active');
         themeDropDownText.innerHTML = text;
         curTheme = theme;
+        //window.location.href = window.location.origin;
         themeSwitherPopup.hide();
+        var isDark = document.getElementById("dark").ej2_instances[0].checked; 
+        if (isDark) {
+            if (theme !== "highcontrast" && theme !== "bootstrap4"  && theme !== "fusion") {
+                theme = theme + "-dark";
+            }
+        } else {
+            //if (theme === "highcontrast") {
+            //    theme = theme + "-light";
+                
+            //}
+            theme = theme;
+        }
         renderProperties(theme);
-        loadTheme(theme);
+        loadTheme(theme,true);
     });
+
+    var queystring = window.location.search;
+    if (queystring) {
+        queystring = queystring.replace("?theme=", "");
+        queystring = queystring.trim();
+        renderProperties(queystring);
+        if (queystring.indexOf('-') !== -1) {
+            curThemeName = queystring.replace("-dark", '');
+            curThemeName = curThemeName.trim();
+        } else {
+            curThemeName = queystring;
+        }
+
+        themeDropDownText.innerHTML = curThemeName;
+        document.querySelector('#themelist>.active').classList.remove('active');
+        document.querySelector('#themelist>#' + curThemeName).classList.add('active');
+    } else {
+        renderProperties('material');
+    }
     // rendering theme mode light/dark
-    var themeMode = new ej.buttons.RadioButton({ label: 'Light', name: 'theme-mode', value: 'Light', checked: true });
+    var themeMode = new ej.buttons.RadioButton({
+        label: 'Light', name: 'theme-mode', value: 'Light', checked: true,
+        change: function (e) {
+            var themes = curTheme;
+            if (themes === "highcontrast") {
+                themes = themes + "-light";
+                renderProperties(themes);
+                loadTheme(themes,true);
+            } else {
+                renderProperties(themes);
+                loadTheme(themes,true);
+            }
+        }
+       });
     themeMode.appendTo('#light');
 
-    themeMode = new ej.buttons.RadioButton({ label: 'Dark', name: 'theme-mode', value: 'Dark' });
+    themeMode = new ej.buttons.RadioButton({
+        label: 'Dark', name: 'theme-mode', value: 'Dark',
+        change: function (e) {
+            var themes = curTheme;
+            if (themes !== "highcontrast") {
+                themes = themes + "-dark";
+                renderProperties(themes);
+                loadTheme(themes,true);
+            } else {
+                renderProperties(themes);
+                loadTheme(themes,true);
+            }
+        }
+    });
     themeMode.appendTo('#dark');
 
-    // render default theme properties
-    renderProperties('material');
+
+    //renderProperties('material');
     colorpicker();
 }
 
@@ -244,6 +505,16 @@ function loadDefaultThemes(theme, isRightpanerender) {
     window.themes = theme;
     var themeObj = {};
     themeObj['theme'] = theme;
+    var baseurl = window.location.href;
+    if (baseurl.match(queryRegex)) {
+        baseurl = baseurl.replace(queryRegex, "");
+        baseurl = baseurl.trim();
+    }
+    var str = "";
+    str = "?theme=" + theme;
+    history.replaceState({}, '', baseurl + str);
+
+    curTheme = theme;
     themeColors = ej.base.extend({}, defaultVal, {}, true);
     var ajax = new ej.base.Ajax({
         type: "POST",
@@ -286,7 +557,7 @@ var themeBodyLeftOverlay = ej.base.select('.theme-body-left-ovelay');
 
 function renderComponents() {
     //ej.base.select('.sb-body-overlay').classList.remove('sb-hide');
-    var isMaterial = curTheme === 'material';
+    var isMaterial = curTheme === 'material' ||  curTheme === 'material-dark';
     ej.base.enableRipple(isMaterial);
     if (!controlContent) {
         cardelements = $('.layout-card');
@@ -327,18 +598,28 @@ function renderComponents() {
         var grid = new ej.grids.Grid({
             dataSource: window.gridData,
             allowPaging: true,
-            allowGrouping: true,
+           
             groupSettings: { columns: ['OrderID'] },
             allowFiltering: true,
             filterSettings: { type: 'Menu' },
+            pageSettings: { pageCount: 3, pageSize: 3 },
+            actionComplete:function(args) {
+                if (args.requestType === 'grouping') {
+                    grid.pageSettings.pageSize = 3;
+                }
+                if (args.requestType === 'ungrouping') {
+                    grid.pageSettings.pageSize = 6;
+                }
+
+            },
+            allowGrouping: true,
             columns: [
-                { field: 'OrderID', headerText: 'Order ID', width: 120, },
+                { field: 'OrderID', headerText: 'Order ID', width: 120 },
                 { field: 'OrderDate', headerText: 'Order Date', format: 'yMd', width: 120 },
                 { field: 'Freight', width: 120, format: 'C2', width: 130 },
                 { field: 'ShippedDate', headerText: 'Shipped Date', format: 'yMd', width: 180 },
                 { field: 'ShipCountry', headerText: 'Ship Country', width: 150 }
-            ],
-            pageSettings: { pageCount: 4, pageSize: 5 }
+            ]
         });
         grid.appendTo('#component-grid');
     }
@@ -476,16 +757,16 @@ function renderComponents() {
     }
 
     if ($("#togglebtn").length) {
-        var toggleBtn = new ej.buttons.Button({ iconCss: 'e-icons e-play-icon', cssClass: 'e-flat e-primary', isToggle: true });
+        var toggleBtn = new ej.buttons.Button({ iconCss: 'e-btn-sb-icons e-play-icon', cssClass: 'e-flat e-primary', isToggle: true });
         toggleBtn.appendTo('#togglebtn');
         //Toggle button click event handler
         toggleBtn.element.onclick = function () {
             if (toggleBtn.element.classList.contains('e-active')) {
                 toggleBtn.content = 'Pause';
-                toggleBtn.iconCss = 'e-icons e-pause-icon';
+                toggleBtn.iconCss = 'e-btn-sb-icons e-pause-icon';
             } else {
                 toggleBtn.content = 'Play';
-                toggleBtn.iconCss = 'e-icons e-play-icon';
+                toggleBtn.iconCss = 'e-btn-sb-icons e-play-icon';
             }
         };
     }
@@ -600,28 +881,28 @@ function renderComponents() {
                 {
                     header: { 'text': 'Twitter' },
                     content: 'Twitter is an online social networking service that enables users to send and read short 140-character ' +
-                    'messages called "tweets". Registered users can read and post tweets, but those who are unregistered can only read ' +
-                    'them. Users access Twitter through the website interface, SMS or mobile device app Twitter Inc. is based in San ' +
-                    'Francisco and has more than 25 offices around the world. Twitter was created in March 2006 by Jack Dorsey, ' +
-                    'Evan Williams, Biz Stone, and Noah Glass and launched in July 2006. The service rapidly gained worldwide popularity, ' +
-                    'with more than 100 million users posting 340 million tweets a day in 2012.The service also handled 1.6 billion ' +
-                    'search queries per day.'
+                        'messages called "tweets". Registered users can read and post tweets, but those who are unregistered can only read ' +
+                        'them. Users access Twitter through the website interface, SMS or mobile device app Twitter Inc. is based in San ' +
+                        'Francisco and has more than 25 offices around the world. Twitter was created in March 2006 by Jack Dorsey, ' +
+                        'Evan Williams, Biz Stone, and Noah Glass and launched in July 2006. The service rapidly gained worldwide popularity, ' +
+                        'with more than 100 million users posting 340 million tweets a day in 2012.The service also handled 1.6 billion ' +
+                        'search queries per day.'
                 },
                 {
                     header: { 'text': 'Facebook' },
                     content: 'Facebook is an online social networking service headquartered in Menlo Park, California. Its website was ' +
-                    'launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo ' +
-                    'Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes.The founders had initially limited the website\'\s ' +
-                    'membership to Harvard students, but later expanded it to colleges in the Boston area, the Ivy League, and Stanford ' +
-                    'University. It gradually added support for students at various other universities and later to high-school students.'
+                        'launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo ' +
+                        'Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes.The founders had initially limited the website\'\s ' +
+                        'membership to Harvard students, but later expanded it to colleges in the Boston area, the Ivy League, and Stanford ' +
+                        'University. It gradually added support for students at various other universities and later to high-school students.'
                 },
                 {
                     header: { 'text': 'WhatsApp' },
                     content: 'WhatsApp Messenger is a proprietary cross-platform instant messaging client for smartphones that operates ' +
-                    'under a subscription business model. It uses the Internet to send text messages, images, video, user location and ' +
-                    'audio media messages to other users using standard cellular mobile numbers. As of February 2016, WhatsApp had a user ' +
-                    'base of up to one billion,[10] making it the most globally popular messaging application. WhatsApp Inc., based in ' +
-                    'Mountain View, California, was acquired by Facebook Inc. on February 19, 2014, for approximately US$19.3 billion.'
+                        'under a subscription business model. It uses the Internet to send text messages, images, video, user location and ' +
+                        'audio media messages to other users using standard cellular mobile numbers. As of February 2016, WhatsApp had a user ' +
+                        'base of up to one billion,[10] making it the most globally popular messaging application. WhatsApp Inc., based in ' +
+                        'Mountain View, California, was acquired by Facebook Inc. on February 19, 2014, for approximately US$19.3 billion.'
                 }
             ]
         });
@@ -921,7 +1202,7 @@ function renderComponents() {
     var next = new ej.popups.Tooltip({
         content: "If  include compatibility css option is checked, it will generate compatiblity  css files.  " +
 
-        "Using these compatiblity theme files you can render both Essential JS 1 and Essential JS 2 components in a single page."
+            "Using these compatiblity theme files you can render both Essential JS 1 and Essential JS 2 components in a single page."
     });
     next.appendTo('#import');
     //render colorpicker components
@@ -943,17 +1224,17 @@ function renderComponents() {
         let prevDuplicates = false;
         var toastObj = new ej.notifications.Toast({
             title: 'Anjolie Stokes',
-            content: '<p><img src="http://npmci.syncfusion.com/production/documentation/samples/toast/actionBtn-cs1/laura.png"></p>',
+            content: '<p><img src="http://npmci.syncfusion.com.s3-website.ap-south-1.amazonaws.com/production/documentation/samples/toast/actionBtn-cs1/laura.png"></p>',
             position: { X: "Center", Y: "Bottom" },
             width: 230,
             height: 250,
-            maxcount:1,
+            maxcount: 1,
             target: '#element',
             buttons: [{
                 model: { content: "Ignore" }, click: btnClick
             }, {
                 model: { content: "reply" }
-                }],
+            }],
             beforeOpen: onBeforeOpen
         });
 
@@ -963,9 +1244,9 @@ function renderComponents() {
         ele = document.getElementById('toastBtnShow');
 
         ele.onclick = function () {
-            
-            
-                toastObj.show();
+
+
+            toastObj.show();
         };
 
         function btnClick(e) {
@@ -986,7 +1267,608 @@ function renderComponents() {
             return false;
         }
     }
-    
+    if ($('#Component-rich-text-editor')) {
+        var defaultRTE = new ej.richtexteditor.RichTextEditor({
+            
+            toolbarSettings: {
+                items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
+                    'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
+                    'LowerCase', 'UpperCase', '|',
+                    'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
+                    'Outdent', 'Indent', '|',
+                    'CreateLink', 'Image', '|', 'ClearFormat', 'Print',
+                    'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
+            }
+        });
+        defaultRTE.appendTo('#Component-rich-text-editor');
+    }
+    if ($("#spinleft").length) {
+        var progressButton = new ej.splitbuttons.ProgressButton({
+            content: 'Spin Left', isPrimary: true
+        });
+        progressButton.appendTo('#spinleft');
+    }
+   
+    if ($("#spinright").length) {
+        progressButton = new ej.splitbuttons.ProgressButton({
+            content: 'Spin Right', spinSettings: { position: 'Right' }, isPrimary: true
+        });
+        progressButton.appendTo('#spinright');
+    }
+    if ($("#download").length) {
+        progressButton = new ej.splitbuttons.ProgressButton({
+            content: 'Download', duration: 4000, enableProgress: true,
+            cssClass: 'e-hide-spinner e-progress-top', iconCss: 'e-btn-sb-icons e-download-icon'
+        });
+        progressButton.appendTo('#download');
+    }
+    if ($("#disabled").length) {
+        progressButton = new ej.splitbuttons.ProgressButton({ content: 'Disabled', disabled: true });
+        progressButton.appendTo('#disabled');
+    }
+    if ($('#MenuComponent')) {
+         menuItems = [
+            {
+                text: 'File',
+                iconCss: 'em-icons e-file',
+                items: [
+                    { text: 'Open', iconCss: 'em-icons e-open' },
+                    { text: 'Save', iconCss: 'e-icons e-save' },
+                    { separator: true },
+                    { text: 'Exit' }
+                ]
+            },
+            {
+                text: 'Edit',
+                iconCss: 'em-icons e-edit',
+                items: [
+                    { text: 'Cut', iconCss: 'em-icons e-cut' },
+                    { text: 'Copy', iconCss: 'em-icons e-copy' },
+                    { text: 'Paste', iconCss: 'em-icons e-paste' }
+                ]
+            },
+            {
+                text: 'View',
+                items: [
+                    {
+                        text: 'Toolbars',
+                        items: [
+                            { text: 'Menu Bar' },
+                            { text: 'Bookmarks Toolbar' },
+                            { text: 'Customize' },
+                        ]
+                    },
+                    {
+                        text: 'Zoom',
+                        items: [
+                            { text: 'Zoom In' },
+                            { text: 'Zoom Out' },
+                            { text: 'Reset' },
+                        ]
+                    },
+                    { text: 'Full Screen' }
+                ]
+            },
+            {
+                text: 'Tools',
+                items: [
+                    { text: 'Spelling & Grammar' },
+                    { text: 'Customize' },
+                    { separator: true },
+                    { text: 'Options' }
+                ]
+            },
+            {
+                text: 'Help'
+            }
+        ];
+
+        //Menu model definition 
+        menuOptions = {
+            items: menuItems
+        };
+
+        //Menu initialization
+        menuObj = new ej.navigations.Menu(menuOptions, '#MenuComponent');
+    }
+    if ($('#Component-pivotview')) {
+        var pivotGridObj = new ej.pivotview.PivotView({
+            dataSource: {
+                enableSorting: true,
+                columns: [{ name: 'Year' }, { name: 'Quarter' }],
+                valueSortSettings: { headerDelimiter: ' - ' },
+                values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }],
+                data: getPivotData(),
+                rows: [{ name: 'Country' }, { name: 'Products' }],
+                formatSettings: [{ name: 'Amount', format: 'C0' }],
+                expandAll: false,
+                filters: []
+            },
+            width: '100%',
+            height: 300,
+            gridSettings: { columnWidth: 140 }
+        });
+        pivotGridObj.appendTo('#Component-pivotview');
+        function getPivotData() {
+            var pivotData = [
+                { 'Sold': 25, 'Amount': 42600, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q4' },
+                { 'Sold': 27, 'Amount': 46008, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q1' },
+                { 'Sold': 49, 'Amount': 83496, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q2' },
+                { 'Sold': 31, 'Amount': 52824, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q1' },
+                { 'Sold': 51, 'Amount': 86904, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q2' },
+                { 'Sold': 90, 'Amount': 153360, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2017', 'Quarter': 'Q4' },
+                { 'Sold': 95, 'Amount': 161880, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q3' },
+                { 'Sold': 67, 'Amount': 114168, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q4' },
+                { 'Sold': 90, 'Amount': 153360, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q3' },
+                { 'Sold': 67, 'Amount': 114168, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2017', 'Quarter': 'Q2' },
+                { 'Sold': 93, 'Amount': 139412, 'Country': 'France', 'Products': 'Road Bikes', 'Year': 'FY 2015', 'Quarter': 'Q4' },
+                { 'Sold': 35, 'Amount': 52470, 'Country': 'France', 'Products': 'Road Bikes', 'Year': 'FY 2016', 'Quarter': 'Q1' },
+                { 'Sold': 16, 'Amount': 27264, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2018', 'Quarter': 'Q1' },
+                { 'Sold': 69, 'Amount': 117576, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2017', 'Quarter': 'Q3' },
+                { 'Sold': 75, 'Amount': 127800, 'Country': 'France', 'Products': 'Mountain Bikes', 'Year': 'FY 2017', 'Quarter': 'Q1' },
+                { 'Sold': 20, 'Amount': 29985, 'Country': 'France', 'Products': 'Road Bikes', 'Year': 'FY 2015', 'Quarter': 'Q3' },
+                { 'Sold': 83, 'Amount': 124422, 'Country': 'France', 'Products': 'Road Bikes', 'Year': 'FY 2015', 'Quarter': 'Q1' },
+                { 'Sold': 16, 'Amount': 23989, 'Country': 'France', 'Products': 'Road Bikes', 'Year': 'FY 2017', 'Quarter': 'Q3' },
+                { 'Sold': 28, 'Amount': 41977, 'Country': 'France', 'Products': 'Road Bikes', 'Year': 'FY 2016', 'Quarter': 'Q2' },
+                { 'Sold': 48, 'Amount': 71957, 'Country': 'France', 'Products': 'Road Bikes', 'Year': 'FY 2016', 'Quarter': 'Q3' },
+                { 'Sold': 57, 'Amount': 85448, 'Country': 'France', 'Products': 'Road Bikes', 'Year': 'FY 2015', 'Quarter': 'Q2' },
+                { 'Sold': 25, 'Amount': 37480, 'Country': 'France', 'Products': 'Road Bikes', 'Year': 'FY 2017', 'Quarter': 'Q1' },
+                { 'Sold': 69, 'Amount': 103436, 'Country': 'France', 'Products': 'Road Bikes', 'Year': 'FY 2017', 'Quarter': 'Q2' },
+                { 'Sold': 36, 'Amount': 53969, 'Country': 'France', 'Products': 'Road Bikes', 'Year': 'FY 2016', 'Quarter': 'Q4' },
+                { 'Sold': 75, 'Amount': 119662.5, 'Country': 'France', 'Products': 'Touring Bikes', 'Year': 'FY 2015', 'Quarter': 'Q4' },
+                { 'Sold': 28, 'Amount': 41977, 'Country': 'France', 'Products': 'Road Bikes', 'Year': 'FY 2017', 'Quarter': 'Q4' },
+                { 'Sold': 19, 'Amount': 28486, 'Country': 'France', 'Products': 'Road Bikes', 'Year': 'FY 2018', 'Quarter': 'Q1' },
+                { 'Sold': 91, 'Amount': 145190.5, 'Country': 'France', 'Products': 'Touring Bikes', 'Year': 'FY 2015', 'Quarter': 'Q2' },
+                { 'Sold': 24, 'Amount': 38292, 'Country': 'France', 'Products': 'Touring Bikes', 'Year': 'FY 2015', 'Quarter': 'Q3' },
+                { 'Sold': 94, 'Amount': 149977, 'Country': 'France', 'Products': 'Touring Bikes', 'Year': 'FY 2017', 'Quarter': 'Q2' },
+                { 'Sold': 100, 'Amount': 159550, 'Country': 'France', 'Products': 'Touring Bikes', 'Year': 'FY 2016', 'Quarter': 'Q1' },
+                { 'Sold': 30, 'Amount': 47865, 'Country': 'France', 'Products': 'Touring Bikes', 'Year': 'FY 2016', 'Quarter': 'Q2' },
+                { 'Sold': 89, 'Amount': 141999.5, 'Country': 'France', 'Products': 'Touring Bikes', 'Year': 'FY 2015', 'Quarter': 'Q1' },
+                { 'Sold': 25, 'Amount': 39887.5, 'Country': 'France', 'Products': 'Touring Bikes', 'Year': 'FY 2016', 'Quarter': 'Q4' },
+                { 'Sold': 42, 'Amount': 67011, 'Country': 'France', 'Products': 'Touring Bikes', 'Year': 'FY 2017', 'Quarter': 'Q1' },
+                { 'Sold': 21, 'Amount': 33505.5, 'Country': 'Germany', 'Products': 'Touring Bikes', 'Year': 'FY 2015', 'Quarter': 'Q1' },
+                { 'Sold': 74, 'Amount': 126096, 'Country': 'Germany', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q1' },
+                { 'Sold': 76, 'Amount': 121258, 'Country': 'France', 'Products': 'Touring Bikes', 'Year': 'FY 2017', 'Quarter': 'Q3' },
+                { 'Sold': 69, 'Amount': 110089.5, 'Country': 'France', 'Products': 'Touring Bikes', 'Year': 'FY 2016', 'Quarter': 'Q3' },
+                { 'Sold': 16, 'Amount': 23989, 'Country': 'Germany', 'Products': 'Road Bikes', 'Year': 'FY 2015', 'Quarter': 'Q1' },
+                { 'Sold': 52, 'Amount': 82966, 'Country': 'France', 'Products': 'Touring Bikes', 'Year': 'FY 2017', 'Quarter': 'Q4' },
+                { 'Sold': 85, 'Amount': 144840, 'Country': 'Germany', 'Products': 'Mountain Bikes', 'Year': 'FY 2017', 'Quarter': 'Q1' },
+                { 'Sold': 99, 'Amount': 148406, 'Country': 'Germany', 'Products': 'Road Bikes', 'Year': 'FY 2016', 'Quarter': 'Q1' },
+                { 'Sold': 31, 'Amount': 49460.5, 'Country': 'Germany', 'Products': 'Touring Bikes', 'Year': 'FY 2016', 'Quarter': 'Q1' },
+                { 'Sold': 33, 'Amount': 52651.5, 'Country': 'France', 'Products': 'Touring Bikes', 'Year': 'FY 2018', 'Quarter': 'Q1' },
+                { 'Sold': 41, 'Amount': 61464, 'Country': 'Germany', 'Products': 'Road Bikes', 'Year': 'FY 2017', 'Quarter': 'Q1' },
+                { 'Sold': 64, 'Amount': 102112, 'Country': 'Germany', 'Products': 'Touring Bikes', 'Year': 'FY 2017', 'Quarter': 'Q1' },
+                { 'Sold': 57, 'Amount': 97128, 'Country': 'Germany', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q1' },
+                { 'Sold': 39, 'Amount': 66456, 'Country': 'Germany', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q3' },
+                { 'Sold': 76, 'Amount': 129504, 'Country': 'Germany', 'Products': 'Mountain Bikes', 'Year': 'FY 2018', 'Quarter': 'Q1' },
+                { 'Sold': 33, 'Amount': 56232, 'Country': 'Germany', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q2' },
+                { 'Sold': 81, 'Amount': 138024, 'Country': 'Germany', 'Products': 'Mountain Bikes', 'Year': 'FY 2017', 'Quarter': 'Q2' },
+                { 'Sold': 65, 'Amount': 110760, 'Country': 'Germany', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q3' },
+                { 'Sold': 47, 'Amount': 70458, 'Country': 'Germany', 'Products': 'Road Bikes', 'Year': 'FY 2015', 'Quarter': 'Q2' },
+                { 'Sold': 91, 'Amount': 155064, 'Country': 'Germany', 'Products': 'Mountain Bikes', 'Year': 'FY 2017', 'Quarter': 'Q3' },
+                { 'Sold': 16, 'Amount': 27264, 'Country': 'Germany', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q4' },
+                { 'Sold': 71, 'Amount': 120984, 'Country': 'Germany', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q2' },
+                { 'Sold': 36, 'Amount': 61344, 'Country': 'Germany', 'Products': 'Mountain Bikes', 'Year': 'FY 2017', 'Quarter': 'Q4' },
+                { 'Sold': 39, 'Amount': 58466, 'Country': 'Germany', 'Products': 'Road Bikes', 'Year': 'FY 2018', 'Quarter': 'Q1' },
+                { 'Sold': 59, 'Amount': 100536, 'Country': 'Germany', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q4' },
+                { 'Sold': 83, 'Amount': 124422, 'Country': 'Germany', 'Products': 'Road Bikes', 'Year': 'FY 2015', 'Quarter': 'Q4' },
+                { 'Sold': 19, 'Amount': 28486, 'Country': 'Germany', 'Products': 'Road Bikes', 'Year': 'FY 2016', 'Quarter': 'Q2' },
+                { 'Sold': 34, 'Amount': 50971, 'Country': 'Germany', 'Products': 'Road Bikes', 'Year': 'FY 2017', 'Quarter': 'Q2' },
+                { 'Sold': 26, 'Amount': 38979, 'Country': 'Germany', 'Products': 'Road Bikes', 'Year': 'FY 2016', 'Quarter': 'Q3' },
+                { 'Sold': 15, 'Amount': 22490, 'Country': 'Germany', 'Products': 'Road Bikes', 'Year': 'FY 2017', 'Quarter': 'Q3' },
+                { 'Sold': 13, 'Amount': 20741.5, 'Country': 'Germany', 'Products': 'Touring Bikes', 'Year': 'FY 2017', 'Quarter': 'Q2' },
+                { 'Sold': 79, 'Amount': 118426, 'Country': 'Germany', 'Products': 'Road Bikes', 'Year': 'FY 2016', 'Quarter': 'Q4' },
+                { 'Sold': 14, 'Amount': 20991, 'Country': 'Germany', 'Products': 'Road Bikes', 'Year': 'FY 2017', 'Quarter': 'Q4' },
+                { 'Sold': 34, 'Amount': 50971, 'Country': 'Germany', 'Products': 'Road Bikes', 'Year': 'FY 2015', 'Quarter': 'Q3' },
+                { 'Sold': 47, 'Amount': 74988.5, 'Country': 'Germany', 'Products': 'Touring Bikes', 'Year': 'FY 2015', 'Quarter': 'Q2' },
+                { 'Sold': 93, 'Amount': 148381.5, 'Country': 'Germany', 'Products': 'Touring Bikes', 'Year': 'FY 2016', 'Quarter': 'Q2' },
+                { 'Sold': 15, 'Amount': 23932.5, 'Country': 'Germany', 'Products': 'Touring Bikes', 'Year': 'FY 2018', 'Quarter': 'Q1' },
+                { 'Sold': 48, 'Amount': 76584, 'Country': 'Germany', 'Products': 'Touring Bikes', 'Year': 'FY 2015', 'Quarter': 'Q4' },
+                { 'Sold': 44, 'Amount': 70202, 'Country': 'Germany', 'Products': 'Touring Bikes', 'Year': 'FY 2015', 'Quarter': 'Q3' },
+                { 'Sold': 59, 'Amount': 94134.5, 'Country': 'Germany', 'Products': 'Touring Bikes', 'Year': 'FY 2016', 'Quarter': 'Q3' },
+                { 'Sold': 77, 'Amount': 131208, 'Country': 'United Kingdom', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q1' },
+                { 'Sold': 84, 'Amount': 143136, 'Country': 'United Kingdom', 'Products': 'Mountain Bikes', 'Year': 'FY 2017', 'Quarter': 'Q3' },
+                { 'Sold': 34, 'Amount': 54247, 'Country': 'Germany', 'Products': 'Touring Bikes', 'Year': 'FY 2017', 'Quarter': 'Q3' },
+                { 'Sold': 56, 'Amount': 95424, 'Country': 'United Kingdom', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q2' },
+                { 'Sold': 35, 'Amount': 55842.5, 'Country': 'Germany', 'Products': 'Touring Bikes', 'Year': 'FY 2016', 'Quarter': 'Q4' },
+                { 'Sold': 71, 'Amount': 113280.5, 'Country': 'Germany', 'Products': 'Touring Bikes', 'Year': 'FY 2017', 'Quarter': 'Q4' },
+                { 'Sold': 91, 'Amount': 155064, 'Country': 'United Kingdom', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q4' },
+                { 'Sold': 90, 'Amount': 153360, 'Country': 'United Kingdom', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q1' },
+                { 'Sold': 40, 'Amount': 68160, 'Country': 'United Kingdom', 'Products': 'Mountain Bikes', 'Year': 'FY 2017', 'Quarter': 'Q4' },
+                { 'Sold': 24, 'Amount': 40896, 'Country': 'United Kingdom', 'Products': 'Mountain Bikes', 'Year': 'FY 2017', 'Quarter': 'Q1' },
+                { 'Sold': 31, 'Amount': 46474, 'Country': 'United Kingdom', 'Products': 'Road Bikes', 'Year': 'FY 2015', 'Quarter': 'Q2' },
+                { 'Sold': 92, 'Amount': 156768, 'Country': 'United Kingdom', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q2' },
+                { 'Sold': 14, 'Amount': 23856, 'Country': 'United Kingdom', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q3' },
+                { 'Sold': 95, 'Amount': 161880, 'Country': 'United Kingdom', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q4' },
+                { 'Sold': 51, 'Amount': 86904, 'Country': 'United Kingdom', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q3' },
+                { 'Sold': 39, 'Amount': 66456, 'Country': 'United Kingdom', 'Products': 'Mountain Bikes', 'Year': 'FY 2017', 'Quarter': 'Q2' },
+                { 'Sold': 36, 'Amount': 53969, 'Country': 'United States', 'Products': 'Road Bikes', 'Year': 'FY 2015', 'Quarter': 'Q2' },
+                { 'Sold': 86, 'Amount': 128919, 'Country': 'United States', 'Products': 'Road Bikes', 'Year': 'FY 2015', 'Quarter': 'Q1' },
+                { 'Sold': 40, 'Amount': 59965, 'Country': 'United Kingdom', 'Products': 'Road Bikes', 'Year': 'FY 2015', 'Quarter': 'Q3' },
+                { 'Sold': 96, 'Amount': 163584, 'Country': 'United Kingdom', 'Products': 'Mountain Bikes', 'Year': 'FY 2018', 'Quarter': 'Q1' },
+                { 'Sold': 24, 'Amount': 35981, 'Country': 'United Kingdom', 'Products': 'Road Bikes', 'Year': 'FY 2015', 'Quarter': 'Q1' },
+                { 'Sold': 97, 'Amount': 145408, 'Country': 'United Kingdom', 'Products': 'Road Bikes', 'Year': 'FY 2016', 'Quarter': 'Q2' },
+                { 'Sold': 69, 'Amount': 103436, 'Country': 'United States', 'Products': 'Road Bikes', 'Year': 'FY 2015', 'Quarter': 'Q3' },
+                { 'Sold': 95, 'Amount': 142410, 'Country': 'United Kingdom', 'Products': 'Road Bikes', 'Year': 'FY 2015', 'Quarter': 'Q4' },
+                { 'Sold': 30, 'Amount': 44975, 'Country': 'United Kingdom', 'Products': 'Road Bikes', 'Year': 'FY 2016', 'Quarter': 'Q1' },
+                { 'Sold': 11, 'Amount': 16494, 'Country': 'United States', 'Products': 'Road Bikes', 'Year': 'FY 2016', 'Quarter': 'Q1' },
+                { 'Sold': 95, 'Amount': 142410, 'Country': 'United States', 'Products': 'Road Bikes', 'Year': 'FY 2015', 'Quarter': 'Q4' },
+                { 'Sold': 11, 'Amount': 16494, 'Country': 'United Kingdom', 'Products': 'Road Bikes', 'Year': 'FY 2016', 'Quarter': 'Q4' },
+                { 'Sold': 27, 'Amount': 40478, 'Country': 'United States', 'Products': 'Road Bikes', 'Year': 'FY 2016', 'Quarter': 'Q4' },
+                { 'Sold': 68, 'Amount': 101937, 'Country': 'United States', 'Products': 'Road Bikes', 'Year': 'FY 2016', 'Quarter': 'Q3' },
+                { 'Sold': 100, 'Amount': 149905, 'Country': 'United Kingdom', 'Products': 'Road Bikes', 'Year': 'FY 2017', 'Quarter': 'Q3' },
+                { 'Sold': 45, 'Amount': 67460, 'Country': 'United Kingdom', 'Products': 'Road Bikes', 'Year': 'FY 2017', 'Quarter': 'Q1' },
+                { 'Sold': 16, 'Amount': 23989, 'Country': 'United States', 'Products': 'Road Bikes', 'Year': 'FY 2016', 'Quarter': 'Q2' },
+                { 'Sold': 40, 'Amount': 59965, 'Country': 'United Kingdom', 'Products': 'Road Bikes', 'Year': 'FY 2016', 'Quarter': 'Q3' },
+                { 'Sold': 18, 'Amount': 26987, 'Country': 'United States', 'Products': 'Road Bikes', 'Year': 'FY 2017', 'Quarter': 'Q3' },
+                { 'Sold': 70, 'Amount': 104935, 'Country': 'United Kingdom', 'Products': 'Road Bikes', 'Year': 'FY 2017', 'Quarter': 'Q4' },
+                { 'Sold': 43, 'Amount': 73272, 'Country': 'United States', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q1' },
+                { 'Sold': 43, 'Amount': 73272, 'Country': 'United States', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q2' },
+                { 'Sold': 83, 'Amount': 124422, 'Country': 'United States', 'Products': 'Road Bikes', 'Year': 'FY 2017', 'Quarter': 'Q2' },
+                { 'Sold': 52, 'Amount': 88608, 'Country': 'United States', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q3' },
+                { 'Sold': 91, 'Amount': 155064, 'Country': 'United States', 'Products': 'Mountain Bikes', 'Year': 'FY 2015', 'Quarter': 'Q4' },
+                { 'Sold': 100, 'Amount': 149905, 'Country': 'United States', 'Products': 'Road Bikes', 'Year': 'FY 2017', 'Quarter': 'Q1' },
+                { 'Sold': 70, 'Amount': 104935, 'Country': 'United Kingdom', 'Products': 'Road Bikes', 'Year': 'FY 2017', 'Quarter': 'Q2' },
+                { 'Sold': 37, 'Amount': 63048, 'Country': 'United States', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q1' },
+                { 'Sold': 41, 'Amount': 69864, 'Country': 'United States', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q2' },
+                { 'Sold': 99, 'Amount': 148406, 'Country': 'United States', 'Products': 'Road Bikes', 'Year': 'FY 2018', 'Quarter': 'Q1' },
+                { 'Sold': 67, 'Amount': 114168, 'Country': 'United States', 'Products': 'Mountain Bikes', 'Year': 'FY 2017', 'Quarter': 'Q1' },
+                { 'Sold': 41, 'Amount': 65415.5, 'Country': 'United States', 'Products': 'Touring Bikes', 'Year': 'FY 2015', 'Quarter': 'Q1' },
+                { 'Sold': 81, 'Amount': 121424, 'Country': 'United States', 'Products': 'Road Bikes', 'Year': 'FY 2017', 'Quarter': 'Q4' },
+                { 'Sold': 20, 'Amount': 29985, 'Country': 'United Kingdom', 'Products': 'Road Bikes', 'Year': 'FY 2018', 'Quarter': 'Q1' },
+                { 'Sold': 85, 'Amount': 144840, 'Country': 'United States', 'Products': 'Mountain Bikes', 'Year': 'FY 2017', 'Quarter': 'Q2' },
+                { 'Sold': 49, 'Amount': 83496, 'Country': 'United States', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q3' },
+                { 'Sold': 23, 'Amount': 39192, 'Country': 'United States', 'Products': 'Mountain Bikes', 'Year': 'FY 2016', 'Quarter': 'Q4' },
+                { 'Sold': 34, 'Amount': 54247, 'Country': 'United States', 'Products': 'Touring Bikes', 'Year': 'FY 2015', 'Quarter': 'Q4' },
+                { 'Sold': 53, 'Amount': 90312, 'Country': 'United States', 'Products': 'Mountain Bikes', 'Year': 'FY 2018', 'Quarter': 'Q1' },
+                { 'Sold': 82, 'Amount': 130831, 'Country': 'United Kingdom', 'Products': 'Touring Bikes', 'Year': 'FY 2015', 'Quarter': 'Q1' },
+                { 'Sold': 60, 'Amount': 95730, 'Country': 'United Kingdom', 'Products': 'Touring Bikes', 'Year': 'FY 2015', 'Quarter': 'Q2' },
+                { 'Sold': 71, 'Amount': 113280.5, 'Country': 'United States', 'Products': 'Touring Bikes', 'Year': 'FY 2015', 'Quarter': 'Q2' },
+                { 'Sold': 25, 'Amount': 42600, 'Country': 'United States', 'Products': 'Mountain Bikes', 'Year': 'FY 2017', 'Quarter': 'Q3' },
+                { 'Sold': 28, 'Amount': 47712, 'Country': 'United States', 'Products': 'Mountain Bikes', 'Year': 'FY 2017', 'Quarter': 'Q4' },
+                { 'Sold': 21, 'Amount': 33505.5, 'Country': 'United States', 'Products': 'Touring Bikes', 'Year': 'FY 2015', 'Quarter': 'Q3' },
+                { 'Sold': 94, 'Amount': 149977, 'Country': 'United Kingdom', 'Products': 'Touring Bikes', 'Year': 'FY 2015', 'Quarter': 'Q4' },
+                { 'Sold': 45, 'Amount': 71797.5, 'Country': 'United Kingdom', 'Products': 'Touring Bikes', 'Year': 'FY 2015', 'Quarter': 'Q3' },
+                { 'Sold': 75, 'Amount': 119662.5, 'Country': 'United States', 'Products': 'Touring Bikes', 'Year': 'FY 2016', 'Quarter': 'Q2' },
+                { 'Sold': 49, 'Amount': 78179.5, 'Country': 'United Kingdom', 'Products': 'Touring Bikes', 'Year': 'FY 2016', 'Quarter': 'Q3' },
+                { 'Sold': 50, 'Amount': 79775, 'Country': 'United Kingdom', 'Products': 'Touring Bikes', 'Year': 'FY 2016', 'Quarter': 'Q2' },
+                { 'Sold': 56, 'Amount': 89348, 'Country': 'United States', 'Products': 'Touring Bikes', 'Year': 'FY 2017', 'Quarter': 'Q1' },
+                { 'Sold': 40, 'Amount': 63820, 'Country': 'United States', 'Products': 'Touring Bikes', 'Year': 'FY 2016', 'Quarter': 'Q3' },
+                { 'Sold': 14, 'Amount': 22337, 'Country': 'United Kingdom', 'Products': 'Touring Bikes', 'Year': 'FY 2016', 'Quarter': 'Q1' },
+                { 'Sold': 76, 'Amount': 121258, 'Country': 'United States', 'Products': 'Touring Bikes', 'Year': 'FY 2016', 'Quarter': 'Q1' },
+                { 'Sold': 75, 'Amount': 119662.5, 'Country': 'United Kingdom', 'Products': 'Touring Bikes', 'Year': 'FY 2017', 'Quarter': 'Q2' },
+                { 'Sold': 11, 'Amount': 17550.5, 'Country': 'United States', 'Products': 'Touring Bikes', 'Year': 'FY 2017', 'Quarter': 'Q2' },
+                { 'Sold': 94, 'Amount': 149977, 'Country': 'United Kingdom', 'Products': 'Touring Bikes', 'Year': 'FY 2016', 'Quarter': 'Q4' },
+                { 'Sold': 80, 'Amount': 127640, 'Country': 'United States', 'Products': 'Touring Bikes', 'Year': 'FY 2018', 'Quarter': 'Q1' },
+                { 'Sold': 54, 'Amount': 86157, 'Country': 'United Kingdom', 'Products': 'Touring Bikes', 'Year': 'FY 2017', 'Quarter': 'Q3' },
+                { 'Sold': 14, 'Amount': 22337, 'Country': 'United States', 'Products': 'Touring Bikes', 'Year': 'FY 2017', 'Quarter': 'Q3' },
+                { 'Sold': 17, 'Amount': 27123.5, 'Country': 'United States', 'Products': 'Touring Bikes', 'Year': 'FY 2016', 'Quarter': 'Q4' },
+                { 'Sold': 45, 'Amount': 71797.5, 'Country': 'United Kingdom', 'Products': 'Touring Bikes', 'Year': 'FY 2017', 'Quarter': 'Q1' },
+                { 'Sold': 76, 'Amount': 121258, 'Country': 'United States', 'Products': 'Touring Bikes', 'Year': 'FY 2017', 'Quarter': 'Q4' },
+                { 'Sold': 45, 'Amount': 71797.5, 'Country': 'United Kingdom', 'Products': 'Touring Bikes', 'Year': 'FY 2018', 'Quarter': 'Q1' },
+                { 'Sold': 11, 'Amount': 17550.5, 'Country': 'United Kingdom', 'Products': 'Touring Bikes', 'Year': 'FY 2017', 'Quarter': 'Q4' }];
+
+            return pivotData;
+        }
+    }
+    if ($('#Component-treegrid')) {
+        var treeGridObj = new ej.treegrid.TreeGrid({
+            dataSource: window.TreegridData,
+            childMapping: 'subtasks',
+            treeColumnIndex: 1,
+            height: 380,
+            columns: [
+                { field: 'taskID', headerText: 'Task ID', width: 80, textAlign: 'Right' },
+                { field: 'taskName', headerText: 'Task Name', width: 200, textAlign: 'Left' },
+                { field: 'startDate', headerText: 'Start Date', width: 90, textAlign: 'Right', type: 'date', format: 'yMd' },
+                { field: 'endDate', headerText: 'End Date', width: 90, textAlign: 'Right', type: 'date', format: 'yMd' },
+                { field: 'duration', headerText: 'Duration', width: 90, textAlign: 'Right' },
+                { field: 'progress', headerText: 'Progress', width: 90, textAlign: 'Right' },
+            ]
+        });
+        treeGridObj.appendTo('#Component-treegrid');
+    }
+    if ($('#component-inplace-editor')) {
+        var editObj = new ej.inplaceeditor.InPlaceEditor({
+            mode: 'Inline',
+            type: 'Text',
+            value: 'Andrew',
+            submitOnEnter: true,
+            model: {
+                placeholder: 'Enter employee name'
+            }
+        });
+        editObj.appendTo('#component-inplace-editor');
+    }
+    if ($('#Component-splitter')) {
+        var splitObj1 = new ej.layouts.Splitter({
+            height: '110px',
+            paneSettings: [
+                { size: '25%', min: '60px' },
+                { size: '50%', min: '60px' },
+                { size: '25%', min: '60px' }
+            ],
+            width: '100%',
+            separatorSize: 4
+        });
+        splitObj1.appendTo('#Component-splitter');
+    }
+    if ($('#Component-pdf-viewer')) {
+        var viewer = new ej.pdfviewer.PdfViewer({
+            documentPath: "PDF_Succinctly.pdf",
+            serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/pdfviewer'
+        });
+        ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation);
+        viewer.appendTo('#Component-pdf-viewer');
+    }
+    if ($('#Component-query-builder')) {
+        var columnData = [
+            { field: 'EmployeeID', label: 'Employee ID', type: 'number' },
+            { field: 'FirstName', label: 'First Name', type: 'string' },
+            { field: 'TitleOfCourtesy', label: 'Title Of Courtesy', type: 'boolean', values: ['Mr.', 'Mrs.'] },
+            { field: 'Title', label: 'Title', type: 'string' },
+            { field: 'HireDate', label: 'Hire Date', type: 'date', format: 'dd/MM/yyyy' },
+            { field: 'Country', label: 'Country', type: 'string' },
+            { field: 'City', label: 'City', type: 'string' }
+        ];
+        var importRules = {
+            'condition': 'and',
+            'rules': [{
+                'label': 'Employee ID',
+                'field': 'EmployeeID',
+                'type': 'number',
+                'operator': 'equal',
+                'value': 1
+            },
+            {
+                'label': 'Title',
+                'field': 'Title',
+                'type': 'string',
+                'operator': 'equal',
+                'value': 'Sales Manager'
+            }
+            ]
+        };
+        var qryBldrObj = new ej.querybuilder.QueryBuilder({
+            width: '100%',
+            dataSource: window.querybuilderemployeeData,
+            columns: columnData,
+            rule: importRules,
+        });
+        qryBldrObj.appendTo('#Component-query-builder');
+       
+    }
+    if ($('#Component-chips')) {
+        new ej.buttons.ChipList({ chips: window.chipsData.defaultData }, '#Component-chips');
+    }
+    //if ($('#Component-diagram')) {
+
+
+    //    ej.diagrams.Diagram.Inject(ej.diagrams.UndoRedo);
+
+    //    //Create and add ports for node.
+    //    function getNodePorts(obj) {
+    //        var ports = [
+    //            { id: 'nport1', shape: 'Circle', offset: { x: 0, y: 0.5 } },
+    //            { id: 'nport2', shape: 'Circle', offset: { x: 0.5, y: 1 } },
+    //            { id: 'nport3', shape: 'Circle', offset: { x: 1, y: 0.5 } },
+    //            { id: 'nport4', shape: 'Circle', offset: { x: 0.5, y: 0 } }
+    //        ];
+    //        return ports;
+    //    }
+    //    var bounds = document.getElementById('diagram-space').getBoundingClientRect();
+    //    var centerX = bounds.width / 2;
+    //    //Initializes the nodes for the diagram
+    //    var nodes = [{
+    //        id: 'NewIdea', height: 60, offsetX: centerX - 50, offsetY: 80,
+    //        shape: { type: 'Flow', shape: 'Terminator' },
+    //        annotations: [{
+    //            content: 'Place Order'
+    //        }]
+    //    }, {
+    //        id: 'Meeting', height: 60, offsetX: centerX - 50, offsetY: 160,
+    //        shape: { type: 'Flow', shape: 'Process' },
+    //        annotations: [{
+    //            content: 'Start Transaction'
+    //        }]
+    //    }, {
+    //        id: 'BoardDecision', height: 60, offsetX: centerX - 50, offsetY: 240,
+    //        shape: { type: 'Flow', shape: 'Process' },
+    //        annotations: [{
+    //            content: 'Verification'
+    //        }]
+    //    }, {
+    //        id: 'Project', height: 60, offsetX: centerX - 50, offsetY: 330,
+    //        shape: { type: 'Flow', shape: 'Decision' },
+    //        annotations: [{
+    //            content: 'Credit card valid?'
+    //        }]
+    //    }, {
+    //        id: 'End', height: 60, offsetX: centerX - 50, offsetY: 430,
+    //        shape: { type: 'Flow', shape: 'Decision' },
+    //        annotations: [{
+    //            content: 'Funds available?'
+    //        }]
+    //    }, {
+    //        id: 'node11', height: 60, offsetX: (centerX - 50) + 230, offsetY: 330,
+    //        shape: { type: 'Flow', shape: 'Process' },
+    //        annotations: [{
+    //            content: 'Enter payment method'
+    //        }]
+    //    }, {
+    //        id: 'transaction_entered', height: 60, offsetX: (centerX - 50), offsetY: 630,
+    //        shape: { type: 'Flow', shape: 'Terminator' },
+    //        annotations: [{
+    //            content: 'Log transaction'
+    //        }]
+    //    }, {
+    //        id: 'node12', height: 60, offsetX: (centerX - 50) + 180, offsetY: 630,
+    //        shape: { type: 'Flow', shape: 'Process' },
+    //        annotations: [{
+    //            content: 'Reconcile the entries'
+    //        }]
+    //    }, {
+    //        id: 'transaction_completed', height: 60, offsetX: (centerX - 50), offsetY: 530,
+    //        shape: { type: 'Flow', shape: 'Process' },
+    //        annotations: [{
+    //            content: 'Complete Transaction'
+    //        }]
+    //    }, {
+    //        id: 'data', height: 45, offsetX: (centerX - 50) - 190, offsetY: 530,
+    //        shape: { type: 'Flow', shape: 'Data' },
+    //        annotations: [{
+    //            content: 'Send e-mail', margin: { left: 25, right: 25 }
+    //        }]
+    //    }, {
+    //        id: 'node10', height: 70, offsetX: (centerX - 50) + 175, offsetY: 530,
+    //        shape: { type: 'Flow', shape: 'DirectData' },
+    //        annotations: [{ content: 'Customer Database', margin: { left: 25, right: 25 } }]
+    //    }];
+    //    //Initializes the Connectors for the diagram
+    //    var connectors = [
+    //        {
+    //            id: 'connector1', sourceID: 'NewIdea', targetID: 'Meeting'
+    //        },
+    //        { id: 'connector2', sourceID: 'Meeting', targetID: 'BoardDecision' },
+    //        { id: 'connector3', sourceID: 'BoardDecision', targetID: 'Project' },
+    //        {
+    //            id: 'connector4', sourceID: 'Project',
+    //            annotations: [{ content: 'Yes', style: { fill: 'white' } }], targetID: 'End'
+    //        },
+    //        {
+    //            id: 'connector5', sourceID: 'End',
+    //            annotations: [{ content: 'Yes', style: { fill: 'white' } }], targetID: 'transaction_completed'
+    //        },
+    //        { id: 'connector6', sourceID: 'transaction_completed', targetID: 'transaction_entered' },
+    //        { id: 'connector7', sourceID: 'transaction_completed', targetID: 'data' },
+    //        { id: 'connector8', sourceID: 'transaction_completed', targetID: 'node10' },
+    //        {
+    //            id: 'connector9', sourceID: 'node11', targetID: 'Meeting',
+    //            segments: [{ direction: 'Top', type: 'Orthogonal', length: 120 }]
+    //        },
+    //        {
+    //            id: 'connector10', sourceID: 'End', annotations: [{ content: 'No', style: { fill: 'white' } }],
+    //            targetID: 'node11', segments: [{ direction: 'Right', type: 'Orthogonal', length: 100 }]
+    //        },
+    //        {
+    //            id: 'connector11', sourceID: 'Project', annotations: [{ content: 'No', style: { fill: 'white' } }],
+    //            targetID: 'node11'
+    //        },
+    //        {
+    //            id: 'connector12', style: { strokeDashArray: '2,2' },
+    //            sourceID: 'transaction_entered', targetID: 'node12'
+    //        }
+    //    ];
+    //    var interval = [1, 9, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75, 0.25, 9.75];
+    //    var gridlines = { lineColor: '#e0e0e0', lineIntervals: interval };
+    //    //Initializes diagram control
+    //    var diagram = new ej.diagrams.Diagram({
+    //        width: '100%', height: '700px', nodes: nodes, connectors: connectors,
+    //        snapSettings: { horizontalGridlines: gridlines, verticalGridlines: gridlines },
+    //        //Sets the default values of a node
+    //        getNodeDefaults: function (node) {
+    //            var obj = {};
+    //            if (obj.width === undefined) {
+    //                obj.width = 145;
+    //            } else {
+    //                var ratio = 100 / obj.width;
+    //                obj.width = 100;
+    //                obj.height *= ratio;
+    //            }
+    //            obj.style = { fill: '#357BD2', strokeColor: 'white' };
+    //            obj.annotations = [{ style: { color: 'white', fill: 'transparent' } }];
+    //            obj.ports = getNodePorts(node);
+    //            return obj;
+    //        },
+    //        //Sets the default values of a Connector.
+    //        getConnectorDefaults: function (obj) {
+    //            if (obj.id.indexOf('connector') !== -1) {
+    //                obj.type = 'Orthogonal';
+    //                obj.targetDecorator = { shape: 'Arrow', width: 10, height: 10 };
+    //            }
+    //        },
+    //        //Sets the Node style for DragEnter element.
+    //        dragEnter: function (args) {
+    //            var obj = args.element;
+    //            if (obj instanceof ej.diagrams.Node) {
+    //                var oWidth = obj.width;
+    //                var oHeight = obj.height;
+    //                var ratio = 100 / obj.width;
+    //                obj.width = 100;
+    //                obj.height *= ratio;
+    //                obj.offsetX += (obj.width - oWidth) / 2;
+    //                obj.offsetY += (obj.height - oHeight) / 2;
+    //                obj.style = { fill: '#357BD2', strokeColor: 'white' };
+    //            }
+    //        }
+    //    });
+    //    diagram.appendTo('#Component-diagram')
+    //}
+    if ($('#component-list-box')) {
+        var listBoxObj = new ej.dropdowns.ListBox({
+            // Set the dataSource property.
+            dataSource: window.info,
+
+            fields: { text: 'text', value: 'id' },
+            // Set the selection settings with type as `CheckBox`.
+
+            selectionSettings: { type: 'CheckBox' }
+
+        });
+
+        listBoxObj.appendTo('#component-list-box');
+    }
+    if ($('#Component-file-manager')) {
+        var hostUrl = 'https://ej2services.syncfusion.com/production/web-services/';
+        var fileObject = new ej.filemanager.FileManager({
+            ajaxSettings: {
+                url: hostUrl + 'api/FileManager/FileOperations',
+                getImageUrl: hostUrl + 'api/FileManager/GetImage',
+                uploadUrl: hostUrl + 'api/FileManager/Upload',
+                downloadUrl: hostUrl + 'api/FileManager/Download'
+            },
+            view: 'Details'
+        });
+       
+
+        fileObject.appendTo('#Component-file-manager');
+    }
+    if ($('#Component-gantt')) {
+        var ganttChart = new ej.gantt.Gantt({
+            dataSource: projectNewData,
+            height: '450px',
+            highlightWeekends: true,
+            taskFields: {
+                id: 'TaskID',
+                name: 'TaskName',
+                startDate: 'StartDate',
+                endDate: 'EndDate',
+                duration: 'Duration',
+                progress: 'Progress',
+                dependency: 'Predecessor',
+                child: 'subtasks'
+            },
+            eventMarkers: [
+                {
+                    day: new Date('04/09/2019'),
+                    label: 'Research phase'
+                }, {
+                    day: new Date('04/30/2019'),
+                    label: 'Design phase'
+                }, {
+                    day: new Date('05/23/2019'),
+                    label: 'Production phase'
+                }, {
+                    day: new Date('06/20/2019'),
+                    label: 'Sales and marketing phase'
+                }
+            ],
+            labelSettings: {
+                leftLabel: 'TaskName'
+            },
+        });
+        ganttChart.appendTo('#Component-gantt');
+    }
 }
 
 function overlay(IsThemeSwitch) {
@@ -1169,8 +2051,17 @@ function exporting(boolean) {
 
         if (colorchange) {
             colorchange['theme'] = window.themes;
+            var themes_var;
+            if (window.themes.indexOf('-') !== 1) {
+               
+             themes_var = window.themes.replace("-", "");
+                
+                themes_var = themes_var.trim();
+            } else {
+                themes_var = window.themes;
+            }
             colorchange['file'] = filename;
-            colorchange.properties = themeColors[window.themes];
+            colorchange.properties = themeColors[themes_var];
             colorchange['components'] = componentsId;
             colorchange['compatiblity'] = compatibility;
         }
@@ -1192,7 +2083,7 @@ function exporting(boolean) {
             removeOverlay(false);
             themeBodyLeftOverlay.style.backgroundColor = "transparent";
 
-        }
+        };
 
     }
     exportDialog.hide();
@@ -1201,96 +2092,310 @@ function exporting(boolean) {
 // Rendering theme properties elements
 function renderProperties(themeName) {
     ej.base.enableRipple(false);
+    if (themeName.indexOf('-') !== -1) {
+        themeName = themeName.replace('-', "");
+        themeName = themeName.trim();
+    }
     var properties = window.themeProps[themeName];
-    var keys = Object.keys(properties);
-    document.getElementById('theme-properties').innerHTML = "";
-    for (var i = 0; i < keys.length; i++) {
-        var property = properties[keys[i]];
-        var wrapper = new ej.base.createElement('div', { className: 'theme-prop-wrapper', attrs: { 'data-id': property.id } });
-        var labelElement = new ej.base.createElement('div', { className: 'f-left theme-property', innerHTML: '<span>' + keys[i] + '</span' });
-        clrpkrWrapper = new ej.base.createElement('div', { className: 'f-right theme-value', innerHTML: `<input type="color" class="color-picker ${property.id}" />` });
-        wrapper.appendChild(labelElement);
-        wrapper.appendChild(clrpkrWrapper);
-        document.getElementById('theme-properties').appendChild(wrapper);
-        var obj = new ej.inputs.ColorPicker({
-            mode: 'Palette',
-            value: property.default,
-            inline: false,
-            showButtons: true,
-            cssClass: 'e-themestudio-colorpicker',
-            modeSwitcher: true,
-            columns: 6,
-            presetColors: {
-                'custom': property.palettes
-            },
-            beforeTileRender: (args) => {
-                args.element.classList.add('e-circle-palette');
-                args.element.appendChild(new ej.base.createElement('span', { className: 'e-circle-selection' }));
-                var value = args.element.getAttribute("aria-label");
-                if (value === "#ffffff") {
-                    args.element.classList.add('white-colorpattle')
-                }
-            },
-            beforeOpen: function (args) {
-            },
-            open: function (args) {
-                
-            },
-           
-            change: function (args) {
-                var element = this.element.closest('.theme-prop-wrapper');
-                var value = args.currentValue.rgba;
-                var colorEle = this.getWrapper().querySelector('.theme-color');
-                var colorchange = change(themeName, element.getAttribute('data-id'), value);
-                var controlSection = document.getElementById('control-section');
-                var scrollTop = controlSection.scrollTop;
-                themeBodyLeftOverlay.style.backgroundColor = "#383838";
-                overlay(false);
-                var ajax = new ej.base.Ajax({
-                    type: "POST",
-                    url: "Home/ThemeChange",
-                    contentType: 'application/json; charset=utf-8',
-                    processData: false,
-                    data: JSON.stringify({ color: colorchange }) // Note it is important
-                }, 'POST', true);
-                ajax.send();
-                ajax.onSuccess = function (data) {
-                    var styles = document.getElementById('custom-theme');
-                    styles.innerHTML = data;
-                    colorEle.style.backgroundColor = value;
+    if (properties !== undefined) {
+        var keys = Object.keys(properties);
+        document.getElementById('theme-properties').innerHTML = "";
+        for (var i = 0; i < keys.length; i++) {
+            var property = properties[keys[i]];
+            var wrapper = new ej.base.createElement('div', { className: 'theme-prop-wrapper', attrs: { 'data-id': property.id } });
+            var labelElement = new ej.base.createElement('div', { className: 'f-left theme-property', innerHTML: '<span>' + keys[i] + '</span' });
+            clrpkrWrapper = new ej.base.createElement('div', { className: 'f-right theme-value', innerHTML: `<input type="color" class="color-picker ${property.id}" />` });
+            wrapper.appendChild(labelElement);
+            wrapper.appendChild(clrpkrWrapper);
+            document.getElementById('theme-properties').appendChild(wrapper);
+            var obj = new ej.inputs.ColorPicker({
+                mode: 'Palette',
+                value: property.default,
+                inline: false,
+                showButtons: true,
+                cssClass: 'e-themestudio-colorpicker',
+                modeSwitcher: true,
+                columns: 6,
+                presetColors: {
+                    'custom': property.palettes
+                },
+                beforeTileRender: (args) => {
+                    args.element.classList.add('e-circle-palette');
+                    args.element.appendChild(new ej.base.createElement('span', { className: 'e-circle-selection' }));
+                    var value = args.element.getAttribute("aria-label");
+                    if (value === "#ffffff") {
+                        args.element.classList.add('white-colorpattle')
+                    }
+                },
+                beforeOpen: function (args) {
+                },
+                open: function (args) {
 
-                    removeOverlay(false);
-                    themeBodyLeftOverlay.style.backgroundColor = "transparent";
-                    controlSection.scrollTop = scrollTop;
+                },
+
+                change: function (args) {
+                    var element = this.element.closest('.theme-prop-wrapper');
+                    var value = args.currentValue.rgba;
+                    var colorEle = this.getWrapper().querySelector('.theme-color');
+                    var colorchange = change(themeName, element.getAttribute('data-id'), value);
+                    var controlSection = document.getElementById('control-section');
+                    var scrollTop = controlSection.scrollTop;
+                    themeBodyLeftOverlay.style.backgroundColor = "#383838";
+                    overlay(false);
+                    if (themeName.indexOf('dark') === -1 && themeName.indexOf('light') === -1) {
+                        var ajax = new ej.base.Ajax({
+                            type: "POST",
+                            url: "Home/ThemeChange",
+                            contentType: 'application/json; charset=utf-8',
+                            processData: false,
+                            data: JSON.stringify({ color: colorchange }) // Note it is important
+                        }, 'POST', true);
+                        ajax.send();
+                        ajax.onSuccess = function (data) {
+                            var styles = document.getElementById('custom-theme');
+                            styles.innerHTML = data;
+                            colorEle.style.backgroundColor = value;
+
+                            removeOverlay(false);
+                            themeBodyLeftOverlay.style.backgroundColor = "transparent";
+                            controlSection.scrollTop = scrollTop;
+                        };
+                    } else {
+                        window.dependency_arr.push("layouts/card");
+                        colorchange["dependency"] = window.dependency_arr;
+                        colorchange.theme = colorchange.theme.replace('light', '');
+                        var ajax1 = new ej.base.Ajax({
+                            type: "POST",
+                            url: "Home/DarkThemeChange",
+                            contentType: 'application/json; charset=utf-8',
+                            processData: false,
+                            data: JSON.stringify({ color: colorchange }) // Note it is important
+                        }, 'POST', true);
+                        ajax1.send();
+                        ajax1.onSuccess = function (data) {
+                            var styles = document.getElementById('custom-theme');
+                            styles.innerHTML = data;
+                            colorEle.style.backgroundColor = value;
+
+                            removeOverlay(false);
+                            themeBodyLeftOverlay.style.backgroundColor = "transparent";
+                            controlSection.scrollTop = scrollTop;
+                        };
+                    }
+
                 }
-            }
-        }, '.color-picker.' + property.id);
+            }, '.color-picker.' + property.id);
+        }
+        if (themeName === 'material' || themeName === 'materialdark') {
+            ej.base.enableRipple(true);
+        }
     }
-    if (themeName === 'material') {
-        ej.base.enableRipple(true);
-    }
+    //else {
+    //    var properties = window.themeProps["material"];
+    //        var keys = Object.keys(properties);
+    //        document.getElementById('theme-properties').innerHTML = "";
+    //        for (var i = 0; i < keys.length; i++) {
+    //            var property = properties[keys[i]];
+    //            var wrapper = new ej.base.createElement('div', { className: 'theme-prop-wrapper', attrs: { 'data-id': property.id } });
+    //            var labelElement = new ej.base.createElement('div', { className: 'f-left theme-property', innerHTML: '<span>' + keys[i] + '</span' });
+    //            clrpkrWrapper = new ej.base.createElement('div', { className: 'f-right theme-value', innerHTML: `<input type="color" class="color-picker ${property.id}" />` });
+    //            wrapper.appendChild(labelElement);
+    //            wrapper.appendChild(clrpkrWrapper);
+    //            document.getElementById('theme-properties').appendChild(wrapper);
+    //            var obj = new ej.inputs.ColorPicker({
+    //                mode: 'Palette',
+    //                value: property.default,
+    //                inline: false,
+    //                showButtons: true,
+    //                cssClass: 'e-themestudio-colorpicker',
+    //                modeSwitcher: true,
+    //                columns: 6,
+    //                presetColors: {
+    //                    'custom': property.palettes
+    //                },
+    //                beforeTileRender: (args) => {
+    //                    args.element.classList.add('e-circle-palette');
+    //                    args.element.appendChild(new ej.base.createElement('span', { className: 'e-circle-selection' }));
+    //                    var value = args.element.getAttribute("aria-label");
+    //                    if (value === "#ffffff") {
+    //                        args.element.classList.add('white-colorpattle')
+    //                    }
+    //                },
+    //                beforeOpen: function (args) {
+    //                },
+    //                open: function (args) {
+
+    //                }
+    //            }, '.color-picker.' + property.id);
+    //        }
+    //        if (themeName === 'material') {
+    //            ej.base.enableRipple(true);
+    //        }
+    //}
 }
 
 /* change the color values */
 function change(theme, property, color) {
     var colorObj = {};
-    colorObj['theme'] = theme;
     colorObj.properties = themeColors[theme];
     colorObj.properties['$' + property] = color;
+    if (theme.indexOf('dark') !== -1) {
+        theme = theme.replace('dark', '-dark');
+        theme = theme.trim();
+        colorObj['theme'] = theme;
+    } else {
+        colorObj['theme'] = theme;
+    }
+
     return colorObj;
 }
 
 /* load theme */
-function loadTheme(theme) {
-    overlay(true);
+function loadTheme(theme, isOverylay) {
+    if (isOverylay) {
+        overlay(true);
+    }
+    
     if (theme === 'highcontrast') {
+        document.body.classList.remove('themestudio-bootstrap');
+        document.body.classList.remove('themestudio-fabric');
+        document.body.classList.remove('themestudio-material');
+        document.body.classList.remove('themestudio-bootstrap-dark');
+        document.body.classList.remove('themestudio-material-dark');
+        document.body.classList.remove('themestudio-fabric-dark');
         document.body.classList.add('themestudio-highcontrast');
-    } else {
+        document.body.classList.remove('themestudio-highcontrast-light');
+        document.body.classList.remove('themestudio-bootstrp4');
+        document.body.classList.remove('themestudio-fusion');
+    }
+    else if (theme === "bootstrap-dark") {
+        document.body.classList.remove('themestudio-bootstrap');
+        document.body.classList.remove('themestudio-fabric');
+        document.body.classList.remove('themestudio-material');
         document.body.classList.remove('themestudio-highcontrast');
+        document.body.classList.remove('themestudio-material-dark');
+        document.body.classList.remove('themestudio-fabric-dark');
+        document.body.classList.add('themestudio-bootstrap-dark');
+        document.body.classList.remove('themestudio-highcontrast-light');
+        document.body.classList.remove('themestudio-bootstrap4');
+        document.body.classList.remove('themestudio-fusion');
+    }
+    else if (theme === 'material-dark') {
+        document.body.classList.remove('themestudio-bootstrap');
+        document.body.classList.remove('themestudio-fabric');
+        document.body.classList.remove('themestudio-material');
+        document.body.classList.remove('themestudio-highcontrast');
+        document.body.classList.add('themestudio-material-dark');
+        document.body.classList.remove('themestudio-fabric-dark');
+        document.body.classList.remove('themestudio-bootstrap-dark');
+        document.body.classList.remove('themestudio-highcontrast-light');
+        document.body.classList.remove('themestudio-bootstrap4');
+        document.body.classList.remove('themestudio-fusion');
+    }
+    else if (theme === 'fabric-dark') {
+        document.body.classList.remove('themestudio-bootstrap');
+        document.body.classList.remove('themestudio-fabric');
+        document.body.classList.remove('themestudio-material');
+        document.body.classList.remove('themestudio-highcontrast');
+        document.body.classList.remove('themestudio-material-dark');
+        document.body.classList.add('themestudio-fabric-dark');
+        document.body.classList.remove('themestudio-bootstrap-dark');
+        document.body.classList.remove('themestudio-highcontrast-light');
+        document.body.classList.remove('themestudio-bootstrap4');
+        document.body.classList.remove('themestudio-fusion');
+    } else if (theme === 'highcontrast-light') {
+        document.body.classList.remove('themestudio-bootstrap');
+        document.body.classList.remove('themestudio-fabric');
+        document.body.classList.remove('themestudio-material');
+        document.body.classList.remove('themestudio-bootstrap-dark');
+        document.body.classList.remove('themestudio-highcontrast');
+        document.body.classList.remove('themestudio-material-dark');
+        document.body.classList.remove('themestudio-fabric-dark');
+        document.body.classList.add('themestudio-highcontrast-light');
+        document.body.classList.remove('themestudio-bootstrp4');
+        document.body.classList.remove('themestudio-fusion');
+        document.body.classList.remove('themestudio-fusion');
+    }
+    else if (theme === 'bootstrap4') {
+        document.body.classList.remove('themestudio-bootstrap');
+        document.body.classList.remove('themestudio-fabric');
+        document.body.classList.remove('themestudio-material');
+        document.body.classList.remove('themestudio-bootstrap-dark');
+        document.body.classList.remove('themestudio-highcontrast');
+        document.body.classList.remove('themestudio-material-dark');
+        document.body.classList.remove('themestudio-fabric-dark');
+        document.body.classList.remove('themestudio-highcontrast-light');
+        document.body.classList.add('themestudio-bootstrap4');
+        document.body.classList.remove('themestudio-fusion');
+        
+    }
+    else if (theme === 'fusion') {
+        document.body.classList.remove('themestudio-bootstrap');
+        document.body.classList.remove('themestudio-fabric');
+        document.body.classList.remove('themestudio-material');
+        document.body.classList.remove('themestudio-bootstrap-dark');
+        document.body.classList.remove('themestudio-highcontrast');
+        document.body.classList.remove('themestudio-material-dark');
+        document.body.classList.remove('themestudio-fabric-dark');
+        document.body.classList.remove('themestudio-highcontrast-light');
+        document.body.classList.remove('themestudio-bootstrap4');
+        document.body.classList.add('themestudio-fusion');
+        
+    }
+    else {
+        document.body.classList.remove('themestudio-bootstrap-dark');
+        document.body.classList.remove('themestudio-highcontrast');
+        document.body.classList.remove('themestudio-material-dark');
+        document.body.classList.remove('themestudio-fabric-dark');
+        document.body.classList.remove('themestudio-highcontrast-light');
+        document.body.classList.remove('themestudio-bootstrap4');
+        document.body.classList.remove('themestudio-fusion');
+        if (theme === 'material') {
+            document.body.classList.remove('themestudio-bootstrap');
+            document.body.classList.remove('themestudio-fabric');
+            document.body.classList.add('themestudio-material');
+        }
+        else if (theme === 'bootstrap') {
+            document.body.classList.add('themestudio-bootstrap');
+            document.body.classList.remove('themestudio-fabric');
+            document.body.classList.remove('themestudio-material');
+        }
+        else if (theme === 'fabric') {
+            document.body.classList.remove('themestudio-bootstrap');
+            document.body.classList.add('themestudio-fabric');
+            document.body.classList.remove('themestudio-material');
+        }
     }
     document.getElementById("inputdefault").value = theme;
-    loadDefaultThemes(theme, true);
-    colorpicker();
+
+    if (theme === 'material' || theme === 'fabric' || theme === 'bootstrap' || theme === 'highcontrast' || theme === 'bootstrap4' || theme === 'fusion') {
+        colorpicker();
+        loadDefaultThemes(theme, true);
+    }
+    else {
+        setTimeout(function () {
+            colorpicker();
+            var components = [];
+            componentsId = [];
+            var checked = ej.base.selectAll('.theme-filter-body input:checked');
+            for (var comp of checked) {
+                if (comp.id.indexOf('cat') == -1) {
+                    var compName = comp.id;
+                    componentsId.push(compName);
+                    compName = compName.replace("comp-", "");
+                    compName = compName === 'textbox' ? 'input' : compName;
+                    components.push(compName);
+                }
+
+
+            }
+            getdependency(components);
+            document.getElementById("dark").ej2_instances[0].checked = true;
+            loadDefaultThemes1(theme, true);
+        }, 500);
+
+       
+    }
 
 }
 
@@ -1544,25 +2649,31 @@ for (var comp of checked) {
 var catCard = {
     'grids': {
         'col-cards': { 'grid': null },
-        'big-cards': {}
+        'big-cards': { 'pivotview': null, "treegrid": null }
     },
     'calendar': {
         'col-cards': { 'calendar': null },
-        'big-cards': { 'schedule': null }
+        'big-cards': {
+            'schedule': null,
+            'gantt': null
+        }
     },
     'editors': {
         'col-cards': {
-            'cat-editors': ['textbox', 'numerictextbox', 'maskedtextbox', 'slider'],
+            'cat-editors': ['textbox', 'numerictextbox', 'maskedtextbox', 'slider', 'inplace-editor'],
             'cat-pickers': ['datepicker', 'timepicker', 'datetimepicker', 'daterangepicker'],
-            'cat-dropdown': ['auto-complete', 'drop-down-list', 'multi-select', 'combo-box'],
-            'cat-button': ['button', 'drop-down-button', 'split-button','button-group'],
+            'cat-dropdown': ['auto-complete', 'drop-down-list', 'multi-select', 'combo-box','list-box'],
+            'cat-button': ['button', 'drop-down-button', 'split-button', 'button-group', 'progress-button'],
             'check-box': null,
             'radio-button': null,
             'uploader': null,
             'color-picker': null,
-            'switch':null
+            'switch': null
         },
-        'big-cards': []
+        'big-cards': {
+            'rich-text-editor': null,
+            'chips': null
+        }
     },
     'layout': {
         'col-cards': {
@@ -1570,7 +2681,18 @@ var catCard = {
             'tooltip': null
         },
         'big-cards': {
-            'dialog': null
+            'dialog': null,
+            'splitter': null
+        }
+    },
+    'forums': {
+        'col-cards': {
+
+
+        },
+        'big-cards': {
+            'query-builder': null
+
         }
     },
     'notification': {
@@ -1589,11 +2711,15 @@ var catCard = {
             'accordion': null,
             'context-menu': null,
             'tab': null,
+            'menu': null
         },
-        'big-cards': []
+        'big-cards': {
+
+            'file-manager': null
+        }
 
     }
-}
+};
 
 
 var selectedComp = {};
@@ -1709,7 +2835,7 @@ function getCheckedCategories(categories, comps, ischecked) {
 }
 
 function generatefilterhtml() {
-    var twocolumnCollection = ['grid', 'tab', 'toolbar']
+    var twocolumnCollection = ['grid', 'tab', 'toolbar'];
     var count = 1;
     var smallhtml = {
         col1: '', col2: '', col3: ''
@@ -1754,36 +2880,46 @@ function getdependency(comp_array) {
     window.dependency_arr = [];
     theme = themeDeps(comp_array, window.dependentCollection["styles"], window.dependentCollection["resources"]);
     var packs = Object.keys(theme.compPack);
-    dependency_arr = ['base'];
+    dependency_arr = ['base','buttons/button'];
     var selectComparray = [];
     var colorpickercomponent = [];
+    var filecomponent = [];
     for (var pack of packs) {
 
         for (var comp of theme.compPack[pack]) {
-            if (comp_array.indexOf(comp) !== -1) {
-                var styledependency = pack + '/' + (comp === 'listview' ? 'list-view' : comp);
-                selectComparray.push(styledependency)
+            if (comp_array.indexOf(comp) !== -1 || dependency_arr.indexOf(comp) !== -1  ) {
+               
+                    var styledependency = pack + '/' + (comp === 'listview' ? 'list-view' : comp);
+                selectComparray.push(styledependency);
+                
             }
             else {
-                if (comp === "color-picker" && window.dependency_arr.indexOf('button') === -1) {
+                if (((comp === "color-picker") && window.dependency_arr.indexOf('button') === -1) && comp !== "file-manager") {
                     var styledependency = pack + '/' + comp;
                     colorpickercomponent.push(styledependency);
+                } else if (comp !== "file-manager") {
+                    var styledependencys = pack + '/' + (comp === 'listview' ? 'list-view' : comp);
+                    window.dependency_arr.push(styledependencys);
                 } else {
-                    var styledependency = pack + '/' + (comp === 'listview' ? 'list-view' : comp);
-                    window.dependency_arr.push(styledependency);
+                    var styledependency = pack + '/' + comp;
+                    filecomponent.push(styledependency);
                 }
 
-            }
+                }
+               
 
         }
+       
     }
+    window.dependency_arr.push('layouts/dashboardlayout');
     window.dependency_arr = window.dependency_arr.concat(selectComparray);
     window.dependency_arr = window.dependency_arr.concat(colorpickercomponent);
+    window.dependency_arr = window.dependency_arr.concat(filecomponent);
 
 
 
 }
-var packMapper = { "listview": "lists", "tooltip": "popups", "badge": "notifications", "toast": "notifications", "button-group": "splitbuttons","input":"inputs"};
+var packMapper = { "listview": "lists", "tooltip": "popups", "badge": "notifications", "toast": "notifications", "button-group": "splitbuttons", "input": "inputs" };
 function themeDeps(comps, styles, resources) {
     var theme = {
         packs: [],
@@ -1892,31 +3028,88 @@ function importing(boolean) {
                     componentChbx.click();
                 }
             }
-
+            //var baseurl = window.location.href;
+            //if (baseurl.match(queryRegex)) {
+            //    baseurl = baseurl.replace(queryRegex, "");
+            //    baseurl = baseurl.trim();
+            //}
+            //var str = "";
+            //str = "?theme=" + filecontents.theme;
+            //history.replaceState({}, '', baseurl + str);
             filtering(true);
             filecontents["properties"] = properties;
             var controlSection = document.getElementById('control-section');
             var scrollTop = controlSection.scrollTop;
             themeBodyLeftOverlay.style.backgroundColor = "#383838";
             overlay(false);
-            var ajax = new ej.base.Ajax({
-                type: "POST",
-                url: "Home/ThemeChange",
-                contentType: 'application/json; charset=utf-8',
-                processData: false,
-                data: JSON.stringify({ color: filecontents }) // Note it is important
-            }, 'POST', true);
-            ajax.send();
-            ajax.onSuccess = function (data) {
-                var styles = document.getElementById('custom-theme');
-                styles.innerHTML = data;
-                for (i = 0; i < colorElement.length; i++) {
-                    colorElement[i].style.backgroundColor = properties[key[i]];
+            if (filecontents.theme.indexOf("-") === -1) {
+                var ajax = new ej.base.Ajax({
+                    type: "POST",
+                    url: "Home/ThemeChange",
+                    contentType: 'application/json; charset=utf-8',
+                    processData: false,
+                    data: JSON.stringify({ color: filecontents }) // Note it is important
+                }, 'POST', true);
+                ajax.send();
+                ajax.onSuccess = function (data) {
+                    var styles = document.getElementById('custom-theme');
+                    styles.innerHTML = data;
+                    //renderProperties(filecontents.theme);
+                    //colorpicker();
+                    for (i = 0; i < colorElement.length; i++) {
+                        colorElement[i].style.backgroundColor = properties[key[i]];
+                    }
+                    //document.querySelector('#themelist>.active').classList.remove('active');
+                    //document.querySelector('#themelist>#' + filecontents.theme).classList.add('active');
+                    //themeDropDownText.innerHTML = filecontents.theme;
+                    removeOverlay(false);
+                    themeBodyLeftOverlay.style.backgroundColor = "transparent";
+                    controlSection.scrollTop = scrollTop;
                 }
-                removeOverlay(false);
-                themeBodyLeftOverlay.style.backgroundColor = "transparent";
-                controlSection.scrollTop = scrollTop;
             }
+            else {
+                //if (filecontents.theme.indexOf('-light') !== -1) {
+                //    filecontents.theme = filecontents.theme.replace('-light', '');
+                //} else {
+                //        filecontents.theme = filecontents.theme.replace('-dark', '');
+                //}
+                var components = [];
+                componentsId = [];
+                var checked = ej.base.selectAll('.theme-filter-body input:checked');
+                for (var comp of checked) {
+                    if (comp.id.indexOf('cat') == -1) {
+                        var compName = comp.id;
+                        componentsId.push(compName);
+                        compName = compName.replace("comp-", "");
+                        compName = compName === 'textbox' ? 'input' : compName;
+                        components.push(compName);
+                    }
+
+
+                }
+                getdependency(components);
+                window.dependency_arr.push("layouts/card");
+                filecontents["dependency"] = window.dependency_arr;
+                var ajax2 = new ej.base.Ajax({
+                    type: "POST",
+                    url: "Home/DarkThemeChange",
+                    contentType: 'application/json; charset=utf-8',
+                    processData: false,
+                    data: JSON.stringify({ color: filecontents }) // Note it is important
+                }, 'POST', true);
+                ajax2.send();
+                ajax2.onSuccess = function (data) {
+                    var styles = document.getElementById('custom-theme');
+                    styles.innerHTML = data;
+                    for (i = 0; i < colorElement.length; i++) {
+                        colorElement[i].style.backgroundColor = properties[key[i]];
+                    }
+                    removeOverlay(false);
+                    themeBodyLeftOverlay.style.backgroundColor = "transparent";
+                    controlSection.scrollTop = scrollTop;
+                }
+            }
+            
         }
 
     }
@@ -1939,7 +3132,7 @@ function twocolumn_layout() {
             var secondcolumComponentId = col2_element[i].id;
             var id = '#' + secondcolumComponentId;
             var secondColumnheight = $(id).height();
-            var height = secondColumnheight + 30;
+            var height = secondColumnheight + 40;
             height = height + 'px';
 
             if (i < col3_element.length) {
@@ -1948,7 +3141,7 @@ function twocolumn_layout() {
                 document.getElementById(thirdColumnelementId).style.marginTop = height;
                 k = 1;
             }
-          
+
         }
         else {
             j++;
@@ -1975,4 +3168,60 @@ function colorpicker() {
         var colorele = element[i].querySelector('input');
         cl.children[0].style.backgroundColor = colorele.ej2_instances[0].value;
     }
+}
+function loadDefaultThemes1(theme, rendered) {
+    window.themes = theme;
+    var darktheme = theme;
+    var themeObj = {};
+    var baseurl = window.location.href;
+    if (baseurl.match(queryRegex)) {
+        baseurl = baseurl.replace(queryRegex, "");
+        baseurl = baseurl.trim();
+    }
+    var str = "";
+    str = "?theme=" + theme;
+    history.replaceState({}, '', baseurl + str);
+    theme = theme.trim();
+    themeObj['theme'] = theme;
+    window.dependency_arr.push("layouts/card");
+    themeObj["dependency"] = window.dependency_arr;
+    var ajax = new ej.base.Ajax({
+        type: "POST",
+        url: "Home/dark",
+        contentType: 'application/json; charset=utf-8',
+        processData: false,
+        data: JSON.stringify({ themes: themeObj }) // Note it is important
+    }, 'POST', true);
+    ajax.send();
+    ajax.onSuccess = function (data) {
+        var styles = document.getElementById('custom-theme');
+        styles.innerHTML = data;
+        destroyControls();
+        renderComponents();
+        
+        renderRightPane1(darktheme);
+        
+
+
+
+        setTimeout(function () {
+            removeOverlay(true);
+            twocolumn_layout();
+        }, 500);
+
+        $('.theme-filter-header').show();
+        setTimeout(function () {
+            window.dispatchEvent(new Event('resize'));
+        }, 500);
+    };
+}
+function renderRightPane1(theme) {
+    // theme switcher datasource
+   
+        
+        renderProperties(theme);
+        
+    
+    // rendering theme mode light/dark
+    colorpicker();
 }

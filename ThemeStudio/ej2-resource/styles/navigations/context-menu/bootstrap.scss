@@ -1,355 +1,423 @@
 
-$back-icon: '\e977';
-$back-icon-margin: 16px;
-$bigger-caret-font-size: 12px;
-$bigger-font-size: 15px;
-$bigger-li-height: 48px;
-$bigger-max-width: 280px;
-$bigger-min-width: 112px;
-$blank-icon: 40px;
-$blank-icon-bigger: 42px;
-$caret-blank-icon: 16px;
-$caret-font-size: 10px;
-$caret-color: rgba(0, 0, 0, .54);
-$caret-icon: '\e977';
-$caret-icon-rtl: '\e937';
-$caret-li-padding: 36px;
-$caret-right: 8px;
-$color: rgba(0, 0, 0, .87);
-$disable-text: rgba(0, 0, 0, .38);
-$font-size: 14px;
-$font-weight: normal;
-$icon-margin-right: 10px;
-$li-bgcolor: #808080;
-$li-border-color: rgba(0, 0, 0, .12);
-$li-border-style: solid;
-$li-border-width: 1px;
-$li-height: 36px;
-$li-padding: 0 16px;
-$li-right-padding: 16px;
-$li-selection-bgcolor: #808080;
-$li-selection-font-color: rgba(0, 0, 0, .87);
-$max-width: 240px;
-$menu-icon-color: rgba(0, 0, 0, .54);
-$menu-icon-disabled-color: rgba(0, 0, 0, .38);
-$menu-icon-font-size: 14px;
-$menu-icon-bigger-font-size: 16px;
-$min-width: 120px;
-$parent-ul-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .26);
-$selected-color: rgba(0, 0, 0, .87);
-$seperator-padding: 8px 0;
-$seperator-bigger-padding: 8px 0;
-$sub-ul-box-shadow: 0 8px 10px 0 rgba(0, 0, 0, .24);
-$ul-bgcolor: #fff;
-$ul-border: none;
-$ul-border-radius: 0;
-$ul-padding: 8px 0;
-$ul-bigger-padding: 8px 0;
-$li-hover-outline: 0 solid $li-border-color;
-$caret-hover-color: $caret-color;
-$menu-hover-icon-color: $menu-icon-color;
-$li-hover-outline-offset: 0;
-$li-selected-outline: 0 solid $li-selection-bgcolor;
-$li-selected-outline-offset: 0;
-$back-icon: '\e94b';
-$back-icon-margin: 12px;
-$bigger-caret-font-size: 12px;
-$bigger-font-size: 15px;
-$bigger-li-height: 40px;
-$bigger-max-width: 280px;
-$bigger-min-width: 112px;
-$blank-icon: 42px;
-$blank-icon-bigger: 42px;
-$caret-blank-icon: 14px;
-$caret-font-size: 12px;
-$caret-color: $grey-light-font;
-$caret-icon: '\e207';
-$caret-icon-rtl: '\e990';
-$caret-li-padding: 36px;
-$caret-right: 7px;
-$color: $grey;
-$disable-text: rgba($grey, .65);
-$font-size: 14px;
-$font-weight: normal;
-$icon-margin-right: 12px;
-$li-bgcolor: $grey-f5;
-$li-border-color: $grey-e6;
-$li-border-style: solid;
-$li-border-width: 1px;
-$li-height: 26px;
-$li-padding: 0 14px;
-$li-right-padding: 14px;
-$li-selection-bgcolor: $grey-e6;
-$li-selection-font-color: $grey;
-$max-width: 240px;
-$menu-icon-color: $grey-light-font;
-$menu-icon-disabled-color: rgba($grey-light-font, .65);
-$menu-icon-font-size: 16px;
-$menu-icon-bigger-font-size: 16px;
-$min-width: 120px;
-$parent-ul-box-shadow: 0 6px 12px rgba($grey-base, .175);
-$seperator-bigger-padding: 5px 0;
-$seperator-padding: 3px 0;
-$selected-color: $grey;
-$sub-ul-box-shadow: 0 6px 12px rgba($grey-base, .175);
-$ul-bgcolor: $grey-white;
-$ul-border: 1px solid $grey-cc;
-$ul-border-radius: 4px;
-$ul-padding: 3px 0;
-$ul-bigger-padding: 5px 0;
-$li-hover-outline: 0 solid $li-border-color;
-$caret-hover-color: $caret-color;
-$menu-hover-icon-color: $menu-icon-color;
-
-@include export-module('contextmenu-layout') {
+$cmenu-back-icon: '\e94b' !default;
+$cmenu-back-icon-margin: 12px !default;
+$cmenu-bigger-caret-font-size: 12px !default;
+$cmenu-bigger-font-size: 15px !default;
+$cmenu-bigger-li-height: 40px !default;
+$cmenu-bigger-max-width: 280px !default;
+$cmenu-bigger-min-width: 112px !default;
+$cmenu-blank-icon: 42px !default;
+$cmenu-blank-icon-bigger: 42px !default;
+$cmenu-caret-blank-icon: 14px !default;
+$cmenu-caret-font-size: 12px !default;
+$cmenu-caret-color: $grey-light-font !default;
+$cmenu-caret-icon: '\e207' !default;
+$cmenu-caret-icon-rtl: '\e990' !default;
+$cmenu-caret-li-padding: 36px !default;
+$cmenu-caret-right: 7px !default;
+$cmenu-color: $grey !default;
+$cmenu-disable-text: rgba($grey, .65) !default;
+$cmenu-font-size: 14px !default;
+$cmenu-font-weight: normal !default;
+$cmenu-icon-margin-right: 12px !default;
+$cmenu-li-bgcolor: $grey-f5 !default;
+$cmenu-li-border-color: $grey-e6 !default;
+$cmenu-li-border-style: solid !default;
+$cmenu-li-border-width: 1px !default;
+$cmenu-li-height: 26px !default;
+$cmenu-li-padding: 0 14px !default;
+$cmenu-li-right-padding: 14px !default;
+$cmenu-li-selection-bgcolor: $grey-e6 !default;
+$cmenu-li-selection-font-color: $grey !default;
+$cmenu-li-hover-outline-offset: 0 !default;
+$cmenu-li-selected-outline: 0 solid $cmenu-li-selection-bgcolor !default;
+$cmenu-li-selected-outline-offset: 0 !default;
+$cmenu-max-width: 240px !default;
+$cmenu-icon-color: $grey-light-font !default;
+$cmenu-icon-disabled-color: rgba($grey-light-font, .65) !default;
+$cmenu-icon-font-size: 16px !default;
+$cmenu-icon-bigger-font-size: 16px !default;
+$cmenu-min-width: 120px !default;
+$cmenu-parent-ul-box-shadow: 0 6px 12px rgba($grey-base, .175) !default;
+$cmenu-seperator-bigger-padding: 5px 0 !default;
+$cmenu-seperator-padding: 3px 0 !default;
+$cmenu-selected-color: $grey !default;
+$cmenu-sub-ul-box-shadow: 0 6px 12px rgba($grey-base, .175) !default;
+$cmenu-ul-bgcolor: $grey-white !default;
+$cmenu-ul-border: 1px solid $grey-cc !default;
+$cmenu-ul-border-radius: 4px !default;
+$cmenu-ul-padding: 3px 0 !default;
+$cmenu-ul-bigger-padding: 5px 0 !default;
+$cmenu-li-hover-outline: 0 solid $cmenu-li-border-color !default;
+$cmenu-caret-hover-color: $cmenu-caret-color !default;
+$cmenu-hover-icon-color: $cmenu-icon-color !default;
+@include export-module('context-menu-bootstrap-icons') {
   /*! contextmenu layout */
   .e-contextmenu-wrapper {
     @at-root {
       & ul {
-        border: $ul-border;
-        border-radius: $ul-border-radius;
-        box-shadow: $sub-ul-box-shadow;
-        display: none;
-        font-size: $font-size;
-        font-weight: $font-weight;
-        list-style-image: none;
-        list-style-position: outside;
-        list-style-type: none;
-        margin: 0;
-        min-width: $min-width;
-        overflow: hidden;
-        padding: $ul-padding;
-        position: absolute;
-        user-select: none;
-
-        &.e-contextmenu {
-          box-shadow: $parent-ul-box-shadow;
-        }
-
         & .e-menu-item  {
-          cursor: pointer;
-          height: $li-height;
-          line-height: $li-height;
-          padding: $li-padding;
-          position: relative;
-
-          &.e-menu-hide {
-            display: none;
-          }
-
-          &.e-menu-header {
-            border-bottom-style: $li-border-style;
-            border-bottom-width: $li-border-width;
-          }
-
-          & .e-menu-url {
-            display: inline-block;
-            text-decoration: none;
-          }
-
-          & .e-menu-icon {
-            float: left;
-            line-height: $li-height;
-            margin-right: $icon-margin-right;
-          }
-
           & .e-previous {
-            margin-right: $back-icon-margin;
-
             &::before {
-              content: $back-icon;
+              content: '\e94b';
             }
           }
 
           & .e-caret {
-            font-size: $caret-font-size;
-            line-height: $li-height;
-            margin-left: 16px;
-            margin-right: 0;
-            position: absolute;
-            right: $caret-right;
-
             &::before {
-              content: $caret-icon;
+              content: '\e207';
             }
           }
-
-          &.e-disabled {
-            cursor: auto;
-            pointer-events: none;
-          }
-
-          &.e-menu-caret-icon {
-            padding-right: $caret-li-padding;
-          }
-
-          & .e-menu-icon {
-            font-size: $menu-icon-font-size;
-            vertical-align: middle;
-          }
-
-          &.e-separator {
-            border-bottom-style: $li-border-style;
-            border-bottom-width: $li-border-width;
-            cursor: auto;
-            height: auto;
-            line-height: normal;
-            margin: $seperator-padding;
-            pointer-events: none;
-          }
-        }
-
-        & .e-blankicon {
-          padding-left: $blank-icon;
         }
       }
     }
   }
 
   .e-rtl.e-contextmenu-wrapper .e-menu-item {
+    & .e-caret {
+      &::before {
+        content: '\e990';
+      }
+    }
+  }
+}
+
+
+@mixin ul-layout {
+  font-weight: $cmenu-font-weight;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  user-select: none;
+
+  &.e-ul,
+  &.e-ul * {
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@mixin ul-size {
+  font-size: $cmenu-font-size;
+  padding: $cmenu-ul-padding;
+}
+
+@mixin li-layout {
+  cursor: pointer;
+  position: relative;
+
+  &.e-menu-hide {
+    display: none;
+  }
+
+  &.e-menu-header {
+    border-bottom-style: $cmenu-li-border-style;
+    border-bottom-width: $cmenu-li-border-width;
+  }
+
+  & .e-menu-url {
+    text-decoration: none;
+  }
+
+  & .e-menu-icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &.e-separator {
+    cursor: auto;
+    line-height: normal;
+    pointer-events: none;
+  }
+}
+
+@mixin li-size {
+  height: $cmenu-li-height;
+  line-height: $cmenu-li-height;
+  padding: $cmenu-li-padding;
+
+  & .e-menu-url {
+    display: inline-block;
+  }
+
+  & .e-menu-icon {
+    font-size: $cmenu-icon-font-size;
+    line-height: $cmenu-li-height;
+    margin-right: $cmenu-icon-margin-right;
+  }
+
+  & .e-caret {
+    line-height: $cmenu-li-height;
+    margin-left: 16px;
+    margin-right: 0;
+    position: absolute;
+    right: $cmenu-caret-right;
+  }
+
+  &.e-menu-caret-icon {
+    padding-right: $cmenu-caret-li-padding;
+  }
+
+  &.e-separator {
+    @include separator-size;
+    margin: $cmenu-seperator-padding;
+  }
+
+  &.e-blankicon {
+    padding-left: $cmenu-blank-icon;
+  }
+}
+
+@mixin separator-size {
+  border-bottom-style: $cmenu-li-border-style;
+  border-bottom-width: $cmenu-li-border-width;
+  height: auto;
+}
+
+@mixin separator-bigger-size {
+  height: auto;
+  line-height: normal;
+}
+
+@mixin rtl-li-layout {
+  & .e-menu-icon {
+    float: right;
+    margin-right: 0;
+  }
+
+  & .e-caret {
+    margin-left: 0;
+    right: auto;
+  }
+}
+
+@mixin rtl-li-size {
+  & .e-menu-icon {
+    margin-left: $cmenu-icon-margin-right;
+  }
+
+  & .e-caret {
+    left: $cmenu-caret-right;
+  }
+
+  &.e-menu-caret-icon {
+    padding-left: $cmenu-caret-li-padding;
+    padding-right: $cmenu-li-right-padding;
+  }
+
+  &.e-blankicon {
+    padding-left: $cmenu-caret-blank-icon;
+    padding-right: $cmenu-blank-icon;
+
+    &.e-menu-caret-icon {
+      padding-left: $cmenu-caret-li-padding;
+    }
+  }
+}
+
+
+@mixin bigger-ul-size {
+  font-size: $cmenu-bigger-font-size;
+  padding: $cmenu-ul-bigger-padding;
+  white-space: nowrap;
+}
+
+@mixin bigger-li-size {
+  height: $cmenu-bigger-li-height;
+  line-height: $cmenu-bigger-li-height;
+
+  & .e-menu-icon {
+    font-size: $cmenu-icon-bigger-font-size;
+    line-height: $cmenu-bigger-li-height;
+  }
+
+  & .e-caret {
+    line-height: $cmenu-bigger-li-height;
+  }
+
+  &.e-separator {
+    @include separator-bigger-size;
+  }
+
+  &.e-blankicon {
+    padding-left: $cmenu-blank-icon-bigger;
+  }
+}
+
+@mixin bigger-rtl-blank-icon {
+  padding-left: $cmenu-caret-blank-icon;
+  padding-right: $cmenu-blank-icon-bigger;
+
+  &.e-menu-caret-icon {
+    padding-left: $cmenu-caret-li-padding;
+  }
+}
+@include export-module('contextmenu-layout') {
+    /*! contextmenu layout */
+    .e-contextmenu-wrapper {
+        @at-root {
+            & ul {
+                @include ul-layout;
+                @include ul-size;
+                border: $cmenu-ul-border;
+                border-radius: $cmenu-ul-border-radius;
+                box-shadow: $cmenu-sub-ul-box-shadow;
+                display: none;
+                min-width: $cmenu-min-width;
+                position: absolute;
+
+                &.e-contextmenu {
+                    box-shadow: $cmenu-parent-ul-box-shadow;
+                }
+
+                &.e-ul {
+                    font-family: $font-family;
+                }
+
+                & .e-menu-item {
+                    @include li-layout;
+                    @include li-size;
+
+                    & .e-caret {
+                        font-size: $cmenu-caret-font-size;
+                    }
+
+                    & .e-previous {
+                        margin-right: $cmenu-back-icon-margin;
+                    }
+
+                    &.e-disabled {
+                        cursor: auto;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .e-rtl.e-contextmenu-wrapper .e-menu-item {
+        @include rtl-li-layout;
+        @include rtl-li-size;
+    }
+
+    .e-bigger .e-contextmenu-wrapper ul,
+    .e-bigger.e-contextmenu-wrapper ul {
+        @include bigger-ul-size;
+        box-shadow: $cmenu-parent-ul-box-shadow;
+        max-width: $cmenu-bigger-max-width;
+        min-width: $cmenu-bigger-min-width;
+
+        & .e-menu-item {
+            @include bigger-li-size;
+
+            & .e-caret {
+                font-size: $cmenu-bigger-caret-font-size;
+            }
+        }
+    }
+
+    .e-bigger .e-contextmenu-wrapper.e-rtl ul .e-blankicon,
+    .e-bigger.e-contextmenu-wrapper.e-rtl ul .e-blankicon {
+        @include bigger-rtl-blank-icon;
+    }
+}
+
+@mixin focused-icon-color {
+  & .e-caret {
+    color: $cmenu-caret-color;
+  }
+
+  & .e-menu-icon {
+    color: $cmenu-icon-color;
+  }
+}
+
+@mixin selected-icon-color {
+  & .e-caret {
+    color: $cmenu-caret-hover-color;
+  }
+
+  & .e-menu-icon {
+    color: $cmenu-hover-icon-color;
+  }
+}
+
+@mixin icon-color {
+  &.e-menu-header {
+    border-bottom-color: $cmenu-li-border-color;
+  }
+  @include focused-icon-color;
+}
+
+@mixin focused-color {
+  background-color: $cmenu-li-bgcolor;
+  color: $cmenu-li-selection-font-color;
+  outline: $cmenu-li-hover-outline;
+  outline-offset: $cmenu-li-hover-outline-offset;
+}
+
+@mixin selected-color {
+  background-color: $cmenu-li-selection-bgcolor;
+  color: $cmenu-selected-color;
+  outline: $cmenu-li-selected-outline;
+  outline-offset: $cmenu-li-selected-outline-offset;
+}
+
+@mixin disabled-color {
+  & .e-disabled {
+    color: $cmenu-disable-text;
+    opacity: 1;
+
     & .e-menu-icon {
-      float: right;
-      margin-left: $icon-margin-right;
-      margin-right: 0;
+      color: $cmenu-icon-disabled-color;
     }
 
     & .e-caret {
-      left: $caret-right;
-      margin-left: 0;
-      right: auto;
-
-      &::before {
-        content: $caret-icon-rtl;
-      }
+      color: $cmenu-icon-disabled-color;
     }
 
-    &.e-menu-caret-icon {
-      padding-left: $caret-li-padding;
-      padding-right: $li-right-padding;
-    }
-  }
-
-  .e-rtl.e-contextmenu-wrapper .e-blankicon {
-    padding-left: $caret-blank-icon;
-    padding-right: $blank-icon;
-
-    &.e-menu-caret-icon {
-      padding-left: $caret-li-padding;
-      padding-right: $blank-icon;
-    }
-  }
-
-  .e-bigger .e-contextmenu-wrapper ul,
-  .e-bigger.e-contextmenu-wrapper ul {
-    box-shadow: $parent-ul-box-shadow;
-    font-size: $bigger-font-size;
-    max-width: $bigger-max-width;
-    min-width: $bigger-min-width;
-    padding: $ul-bigger-padding;
-    white-space: nowrap;
-
-    & .e-menu-item  {
-      height: $bigger-li-height;
-      line-height: $bigger-li-height;
-
-      & .e-menu-icon {
-        font-size: $menu-icon-bigger-font-size;
-        line-height: $bigger-li-height;
-      }
-
-      & .e-caret {
-        font-size: $bigger-caret-font-size;
-        line-height: $bigger-li-height;
-      }
-
-      &.e-separator {
-        height: auto;
-        line-height: normal;
-      }
-    }
-
-    & .e-blankicon {
-      padding-left: $blank-icon-bigger;
+    & .e-menu-url {
+      color: $cmenu-disable-text;
     }
   }
 }
 @include export-module('contextmenu-theme') {
-  /*! contextmenu theme */
-  .e-contextmenu-wrapper {
-    @at-root {
-      & ul {
-        background-color: $ul-bgcolor;
-        color: $color;
+    /*! contextmenu theme */
+    .e-contextmenu-wrapper {
+        @at-root {
+            & ul {
+                background-color: $cmenu-ul-bgcolor;
+                color: $cmenu-color;
 
-        & .e-menu-item  {
+                & .e-menu-item {
+                    @include icon-color;
 
-          & .e-menu-url {
-            color: $color;
-          }
+                    & .e-menu-url {
+                        color: $cmenu-color;
+                    }
 
-          &.e-focused {
-            background-color: $li-bgcolor;
-            color: $li-selection-font-color;
-            outline: $li-hover-outline;
-            outline-offset: $li-hover-outline-offset;
+                    &.e-focused {
+                        @include focused-color;
+                        @include focused-icon-color;
+                    }
 
-            & .e-caret {
-              color: $caret-color;
-             }
+                    &.e-selected {
+                        @include selected-color;
+                        @include selected-icon-color;
+                    }
+                }
 
-            & .e-menu-icon {
-              color: $menu-icon-color;
+                @include disabled-color;
+
+                & .e-separator {
+                    border-bottom-color: $cmenu-li-border-color;
+                }
             }
-          }
-
-          &.e-selected {
-            background-color: $li-selection-bgcolor;
-            color: $selected-color;
-            outline: $li-selected-outline;
-            outline-offset: $li-selected-outline-offset;
-
-            & .e-caret {
-              color: $caret-hover-color;
-            }
-
-            & .e-menu-icon {
-              color: $menu-hover-icon-color;
-            }
-          }
-
-          &.e-menu-header {
-            border-bottom-color: $li-border-color;
-          }
-
-          & .e-menu-icon {
-            color: $menu-icon-color;
-          }
-
-          & .e-caret {
-            color: $caret-color;
-          }
         }
-
-        & .e-separator {
-          border-bottom-color: $li-border-color;
-        }
-
-        & .e-disable {
-          color: $disable-text;
-
-          & .e-menu-icon {
-            color: $menu-icon-disabled-color;
-          }
-
-          & .e-caret {
-            color: $menu-icon-disabled-color;
-          }
-
-          & .e-menu-url {
-            color: $disable-text;
-          }
-        }
-      }
     }
-  }
 }

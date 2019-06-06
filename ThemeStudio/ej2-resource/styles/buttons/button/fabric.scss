@@ -1,567 +1,307 @@
 
-$btn-font-weight: 500;
-$btn-font-size: 14px;
-$btn-color: rgba(0, 0, 0, .87);
-$btn-bgcolor: #fafafa;
-$btn-border: 1px solid;
-$btn-border-color: transparent;
-$btn-disabled-border: $btn-border;
-$btn-border-radius: 2px;
-$btn-hover-border-color: $btn-border-color;
-$btn-active-border-color: $btn-border-color;
-$btn-hover-color: $btn-color;
-$btn-focus-color: $btn-color;
-$btn-focus-bgcolor: $btn-color;
-$btn-active-color: $btn-color;
-$btn-icon-margin-top: -2px;
-$btn-focus-border-color: $btn-border-color;
-$btn-text-transform: none;
-$btn-small-font-size: 12px;
-$btn-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
-$btn-hover-focus-box-shadow: 0 2px 7px 0 rgba(0, 0, 0, .26);
-$btn-hover-bgcolor: rgba(0, 0, 0, .12);
-$btn-active-bgcolor: rgba(255, 255, 255, .12);
-$btn-active-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2);
-$btn-disabled-color: rgba(0, 0, 0, .26);
-$btn-disabled-bgcolor: $btn-hover-bgcolor;
-$btn-disabled-border-color: $btn-border-color;
-$brand-success-darken-10: #449d44;
-$brand-success-darken-15: #3d8b3d;
-$brand-success-darken-25: #2d672d;
-$brand-success-darken-35: #1e441e;
-$brand-info-darken-10: #31b0d5;
-$brand-info-darken-15: #28a1c5;
-$brand-info-darken-25: #1f7e9a;
-$brand-info-darken-35: #175b70;
-$brand-warning-darken-10: #ec971f;
-$brand-warning-darken-15: #df8a13;
-$brand-warning-darken-25: #b06d0f;
-$brand-warning-darken-35: #81500b;
-$brand-danger-darken-10: #c9302c;
-$brand-danger-darken-15: #b42b27;
-$brand-danger-darken-25: #8b211e;
-$brand-danger-darken-35: #611715;
-$btn-primary-color: #fff;
-$btn-primary-bgcolor: #ff4081;
-$btn-primary-hover-color: #fff;
-$btn-primary-focus-color: #fff;
-$btn-primary-focus-bgcolor: $btn-primary-hover-color;
-$btn-primary-active-color: #fff;
-$btn-primary-hover-bgcolor: #e03872;
-$btn-primary-active-bgcolor: #ff5790;
-$btn-primary-border-color: $btn-border-color;
-$btn-primary-hover-border-color: $btn-border-color;
-$btn-primary-focus-border-color: $btn-border-color;
-$btn-primary-active-border-color: $btn-border-color;
-$btn-success-border-color: $btn-border-color;
-$btn-success-hover-border-color: $btn-border-color;
-$btn-success-focus-border-color: $btn-border-color;
-$btn-success-active-border-color: $btn-border-color;
-$btn-info-border-color: $btn-border-color;
-$btn-info-hover-border-color: $btn-border-color;
-$btn-info-focus-border-color: $btn-border-color;
-$btn-info-active-border-color: $btn-border-color;
-$btn-warning-border-color: $btn-border-color;
-$btn-warning-hover-border-color: $btn-border-color;
-$btn-warning-focus-border-color: $btn-border-color;
-$btn-warning-active-border-color: $btn-border-color;
-$btn-danger-border-color: $btn-border-color;
-$btn-danger-hover-border-color: $btn-border-color;
-$btn-danger-focus-border-color: $btn-border-color;
-$btn-danger-active-border-color: $btn-border-color;
-$btn-flat-color: #ff4081;
-$btn-flat-border: $btn-border;
-$btn-flat-border-color: transparent;
-$btn-flat-hover-color: $btn-flat-color;
-$btn-flat-focus-color: $btn-flat-color;
-$btn-flat-active-color: $btn-flat-color;
-$btn-flat-bgcolor: transparent;
-$btn-flat-hover-bgcolor: $btn-hover-bgcolor;
-$btn-flat-focus-bgcolor: $btn-flat-hover-bgcolor;
-$btn-flat-primary-hover-bgcolor: $btn-hover-bgcolor;
-$btn-flat-success-hover-bgcolor: $btn-hover-bgcolor;
-$btn-flat-info-hover-bgcolor: $btn-hover-bgcolor;
-$btn-flat-warning-hover-bgcolor: $btn-hover-bgcolor;
-$btn-flat-danger-hover-bgcolor: $btn-hover-bgcolor;
-$btn-flat-box-shadow: none;
-$btn-flat-active-bgcolor: rgba(255, 87, 144, .12);
-$btn-flat-primary-active-bgcolor: rgba(255, 87, 144, .12);
-$btn-flat-success-active-bgcolor: rgba(0, 77, 68, .12);
-$btn-flat-info-active-bgcolor: rgba(11, 125, 218, .12);
-$btn-flat-warning-active-bgcolor: rgba(204, 92, 0, .12);
-$btn-flat-danger-active-bgcolor: rgba(154, 24, 24, .12);
-$btn-flat-success-focus-bgcolor: $btn-flat-success-hover-bgcolor;
-$btn-flat-info-focus-bgcolor: $btn-flat-info-hover-bgcolor;
-$btn-flat-warning-focus-bgcolor: $btn-flat-warning-hover-bgcolor;
-$btn-flat-danger-focus-bgcolor: $btn-flat-danger-hover-bgcolor;
-$btn-outline-bgcolor: transparent;
-$btn-outline-hover-bgcolor: rgba(0, 0, 0, .12);
-$btn-outline-active-bgcolor: rgba(0, 0, 0, .12);
-$btn-outline-border-color: #adadad;
-$btn-success-color: #fff;
-$btn-success-bgcolor: #4d841d;
-$btn-success-hover-color: #fff;
-$btn-success-hover-bgcolor:  #449d44;
-$btn-success-active-color: $btn-success-color;
-$btn-info-color: #fff;
-$btn-info-bgcolor: #0378d5;
-$btn-info-hover-color: #fff;
-$btn-info-hover-bgcolor: #0b7dda;
-$btn-warning-color: #fff;
-$btn-warning-bgcolor: #c15700;
-$btn-warning-hover-color: #fff;
-$btn-warning-hover-bgcolor: #cc5c00;
-$btn-warning-active-color: $btn-warning-color;
-$btn-danger-color: #fff;
-$btn-danger-active-color: $btn-danger-color;
-$btn-danger-bgcolor: #d64113;
-$btn-danger-hover-color: #fff;
-$btn-danger-hover-bgcolor: #ba3912;
-$btn-link-color: #0d47a1;
-$btn-link-bgcolor: transparent;
-$btn-link-border-color: transparent;
-$btn-link-hover-color: #0a3576;
-$btn-outline-color: $btn-color;
-$btn-outline-hover-color: $btn-color;
-$btn-outline-focus-color: $btn-color;
-$btn-outline-active-color: $btn-color;
-$btn-outline-focus-bgcolor: $btn-outline-hover-bgcolor;
-$btn-bigger-font-size: $btn-font-size;
-$btn-bigger-small-font-size: $btn-font-size;
-$btn-icon-font-size: 11px;
-$btn-small-icon-font-size: 11px;
-$btn-bigger-icon-font-size: 11px;
-$btn-bigger-small-icon-font-size: 11px;
-$btn-round-bgcolor: $btn-bgcolor;
-$btn-round-color: $btn-color;
-$btn-round-border-color: $btn-border-color;
-$btn-round-hover-bgcolor: $btn-hover-bgcolor;
-$btn-round-hover-color: $btn-color;
-$btn-round-height: 42px;
-$btn-round-width: 42px;
-$btn-round-bigger-height: 56px;
-$btn-round-bigger-width: 56px;
-$btn-round-font-size: 14px;
-$btn-small-round-font-size: 12px;
-$btn-bigger-round-font-size: 16px;
-$btn-bigger-small-round-font-size: 14px;
-$btn-success-focus-bgcolor: $btn-success-hover-bgcolor;
-$btn-success-focus-color: $btn-success-hover-color;
-$btn-success-active-bgcolor: $btn-success-hover-bgcolor;
-$btn-info-focus-bgcolor: $btn-info-hover-bgcolor;
-$btn-info-active-bgcolor: $btn-info-hover-bgcolor;
-$btn-warning-focus-bgcolor: $btn-warning-hover-bgcolor;
-$btn-warning-active-bgcolor: $btn-warning-hover-bgcolor;
-$btn-danger-focus-bgcolor: $btn-danger-hover-bgcolor;
-$btn-danger-active-bgcolor: $btn-danger-hover-bgcolor;
-$btn-flat-primary-color: $btn-primary-bgcolor;
-$btn-flat-success-color: $btn-success-bgcolor;
-$btn-flat-info-color: $btn-info-bgcolor;
-$btn-flat-warning-color: $btn-warning-bgcolor;
-$btn-flat-danger-color: $btn-danger-bgcolor;
-$btn-flat-primary-hover-color: $btn-primary-bgcolor;
-$btn-flat-success-hover-color: $btn-success-bgcolor;
-$btn-flat-info-hover-color: $btn-info-bgcolor;
-$btn-flat-warning-hover-color: $btn-warning-bgcolor;
-$btn-flat-danger-hover-color: $btn-danger-bgcolor;
-$btn-flat-primary-focus-color: $btn-primary-bgcolor;
-$btn-flat-success-focus-color: $btn-success-bgcolor;
-$btn-flat-info-focus-color: $btn-info-bgcolor;
-$btn-flat-warning-focus-color: $btn-warning-bgcolor;
-$btn-flat-danger-focus-color: $btn-danger-bgcolor;
-$btn-flat-primary-active-color: $btn-primary-bgcolor;
-$btn-flat-success-active-color: $btn-success-bgcolor;
-$btn-flat-info-active-color: $btn-info-bgcolor;
-$btn-flat-warning-active-color: $btn-warning-bgcolor;
-$btn-flat-danger-active-color: $btn-danger-bgcolor;
-$btn-icon-margin: -.73em;
-$btn-small-icon-margin: -.667em;
-$btn-bigger-icon-margin: -1.091em;
-$btn-bigger-small-icon-margin: -1.091em;
-$btn-icon-width: 2.45456em;
-$icon-btn-width: 1em;
-$icon-small-btn-width: 1em;
-$icon-bigger-btn-width: 1em;
-$icon-bigger-small-btn-width: 1em;
-$btn-small-icon-width: 2.182em;
-$btn-bigger-icon-width: 3.273em;
-$btn-bigger-small-icon-width: 2.91em;
-$btn-round-icon-line-height: 40px;
-$btn-small-round-icon-line-height: 28px;
-$btn-bigger-round-icon-line-height: 54px;
-$btn-bigger-small-round-icon-line-height: 38px;
-$btn-text-line-height: 25px;
-$btn-small-text-line-height: 22px;
-$btn-bigger-small-text-line-height: 30px;
-$btn-bigger-text-line-height: 35px;
-$btn-padding: 5px 12px;
-$btn-small-padding: 5px 12px;
-$btn-bigger-padding: 10px 16px;
-$btn-bigger-small-padding: 8px 16px;
-$btn-icon-padding: 5px 7px;
-$btn-small-icon-padding: 4px 5px;
-$btn-bigger-icon-padding: 10px 8px 9px;
-$btn-bigger-small-icon-padding: 8px 7px 7px;
-$btn-primary-disabled-bgcolor: transparent;
-$btn-success-disabled-bgcolor: #00695c;
-$btn-info-disabled-bgcolor: #2196f3;
-$btn-warning-disabled-bgcolor: #ef6c00;
-$btn-danger-disabled-bgcolor: #b71c1c;
-$btn-primary-disabled-color: transparent;
-$btn-success-disabled-color: #00695c;
-$btn-info-disabled-color: #2196f3;
-$btn-warning-disabled-color: #ef6c00;
-$btn-danger-disabled-color: #b71c1c;
-$btn-primary-disabled-border-color: transparent;
-$btn-success-disabled-border-color: #00695c;
-$btn-info-disabled-border-color: #2196f3;
-$btn-warning-disabled-border-color: #ef6c00;
-$btn-danger-disabled-border-color: #b71c1c;
-$btn-link-disabled-bgcolor: transparent;
-$btn-flat-primary-disabled-color: $btn-disabled-color;
-$btn-flat-success-disabled-color: #00695c;
-$btn-flat-info-disabled-color: #2196f3;
-$btn-flat-warning-disabled-color: #ef6c00;
-$btn-flat-danger-disabled-color: #b71c1c;
-$btn-outline-primary-disabled-color: transparent;
-$btn-outline-success-disabled-color: #00695c;
-$btn-outline-info-disabled-color: #2196f3;
-$btn-outline-warning-disabled-color: #ef6c00;
-$btn-outline-danger-disabled-color: #b71c1c;
-$btn-outline-primary-disabled-border-color: transparent;
-$btn-outline-success-disabled-border-color: #00695c;
-$btn-outline-info-disabled-border-color: #2196f3;
-$btn-outline-warning-disabled-border-color: #ef6c00;
-$btn-outline-danger-disabled-border-color: #b71c1c;
-$btn-outline-active-box-shadow: none;
-$btn-round-small-height: 30px;
-$btn-round-small-width: 30px;
-$btn-round-bigger-small-height: 40px;
-$btn-round-bigger-small-width: 40px;
-$btn-flat-primary-bgcolor: $btn-flat-bgcolor;
-$btn-flat-success-bgcolor: $btn-flat-bgcolor;
-$btn-flat-info-bgcolor: $btn-flat-bgcolor;
-$btn-flat-warning-bgcolor: $btn-flat-bgcolor;
-$btn-flat-danger-bgcolor: $btn-flat-bgcolor;
-$btn-flat-hover-border-color: $btn-flat-border-color;
-$btn-flat-active-border-color: $btn-flat-border-color;
-$btn-flat-focus-border-color: $btn-flat-border-color;
-$btn-flat-disabled-border-color: $btn-flat-border-color;
-$btn-flat-primary-border-color: $btn-flat-border-color;
-$btn-flat-primary-hover-border-color: $btn-flat-border-color;
-$btn-flat-primary-active-border-color: $btn-flat-border-color;
-$btn-flat-primary-focus-border-color: $btn-flat-border-color;
-$btn-flat-primary-disabled-border-color: $btn-flat-border-color;
-$btn-flat-success-border-color: $btn-flat-border-color;
-$btn-flat-success-hover-border-color: $btn-flat-border-color;
-$btn-flat-success-active-border-color: $btn-flat-border-color;
-$btn-flat-success-focus-border-color: $btn-flat-border-color;
-$btn-flat-success-disabled-border-color: $btn-flat-border-color;
-$btn-flat-info-border-color: $btn-flat-border-color;
-$btn-flat-info-hover-border-color: $btn-flat-border-color;
-$btn-flat-info-active-border-color: $btn-flat-border-color;
-$btn-flat-info-focus-border-color: $btn-flat-border-color;
-$btn-flat-info-disabled-border-color: $btn-flat-border-color;
-$btn-flat-warning-border-color: $btn-flat-border-color;
-$btn-flat-warning-hover-border-color: $btn-flat-border-color;
-$btn-flat-warning-active-border-color: $btn-flat-border-color;
-$btn-flat-warning-focus-border-color: $btn-flat-border-color;
-$btn-flat-warning-disabled-border-color: $btn-flat-border-color;
-$btn-flat-danger-border-color: $btn-flat-border-color;
-$btn-flat-danger-hover-border-color: $btn-flat-border-color;
-$btn-flat-danger-active-border-color: $btn-flat-border-color;
-$btn-flat-danger-focus-border-color: $btn-flat-border-color;
-$btn-flat-danger-disabled-border-color: $btn-flat-border-color;
-$btn-flat-active-box-shadow: none;
-$btn-outline-hover-border-color: $btn-outline-border-color;
-$btn-outline-focus-border-color: $btn-outline-border-color;
-$btn-outline-active-border-color: $btn-outline-border-color;
-$btn-outline-primary-hover-border-color: $btn-outline-border-color;
-$btn-outline-primary-focus-border-color: $btn-outline-border-color;
-$btn-outline-primary-active-border-color: $btn-outline-border-color;
-$btn-round-hover-border-color: $btn-round-hover-bgcolor;
-$btn-round-focus-color: $btn-focus-color;
-$btn-round-active-color: $btn-active-color;
-$btn-info-active-color: $btn-info-color;
-$btn-flat-primary-focus-bgcolor: $btn-flat-primary-hover-bgcolor;
-$focus-outline: $btn-bgcolor 0 solid;
-$focus-outline-offset: 0;
-$active-outline: $btn-bgcolor 0 solid;
-$active-outline-offset: 0;
-$btn-outline-default-focus-border-color: $btn-hover-border-color;
-$primary-outline: $btn-bgcolor 0 solid;
-$btn-ripple-bgcolor: transparent;
-$btn-ripple-primary-bgcolor: transparent;
-$btn-ripple-success-bgcolor: transparent;
-$btn-ripple-info-bgcolor: transparent;
-$btn-ripple-warning-bgcolor: transparent;
-$btn-ripple-danger-bgcolor: transparent;
-$btn-ripple-flat-bgcolor: transparent;
-$btn-ripple-flat-primary-bgcolor: transparent;
-$btn-ripple-flat-success-bgcolor: transparent;
-$btn-ripple-flat-info-bgcolor: transparent;
-$btn-ripple-flat-warning-bgcolor: transparent;
-$btn-ripple-flat-danger-bgcolor: transparent;
-$btn-font-weight: 600;
-$btn-font-size: 14px;
-$btn-small-font-size: 12px;
-$btn-bigger-font-size: 16px;
-$btn-bigger-small-font-size: $btn-bigger-font-size;
-$btn-color: $neutral-light-font;
-$btn-bgcolor: $neutral-lighter;
-$btn-border-color:  $neutral-lighter;
-$btn-hover-bgcolor:  $neutral-light;
-$btn-hover-border-color: $neutral-light;
-$btn-hover-color: $neutral-light-fontalt;
-$btn-focus-border-color: $neutral-light;
-$btn-focus-color: $neutral-light-font;
-$btn-focus-bgcolor: $neutral-lighter;
-$btn-active-border-color: $neutral-tertiary-alt;
-$btn-active-bgcolor: $neutral-tertiary-alt;
-$btn-active-color: $neutral-light-fontalt;
-$btn-border-radius: 0;
-$btn-text-transform: none;
-$btn-padding: 2px 20px;
-$btn-small-padding: 3px 16px;
-$btn-bigger-padding: 3px 24px;
-$btn-bigger-small-padding: 1px 22px;
-$btn-icon-padding: 2px 8px;
-$btn-small-icon-padding: 3px 6px;
-$btn-bigger-icon-padding: 3px 11px;
-$btn-bigger-small-icon-padding: 1px 9px;
-$btn-box-shadow: none;
-$btn-hover-focus-box-shadow: none;
-$btn-active-box-shadow: $btn-box-shadow;
-$btn-disabled-color: $neutral-tertiary;
-$btn-disabled-bgcolor: $btn-bgcolor;
-$btn-disabled-border-color: $btn-border-color;
-$btn-primary-color: $theme-primary-font;
-$btn-primary-hover-color: $theme-primary-font;
-$btn-primary-focus-color: $theme-primary-font;
-$btn-primary-active-color: $theme-primary-font;
-$btn-primary-bgcolor: $theme-primary;
-$btn-primary-hover-bgcolor: $theme-dark-alt;
-$btn-primary-focus-bgcolor: $theme-primary;
-$btn-primary-active-bgcolor: $theme-dark;
-$btn-primary-border-color: $theme-primary;
-$btn-primary-hover-border-color: $btn-primary-hover-bgcolor;
-$btn-primary-focus-border-color: $neutral-white;
-$btn-primary-active-border-color: $btn-primary-active-bgcolor;
-$btn-flat-color: $btn-color;
-$btn-flat-border: $btn-border;
-$btn-flat-border-color: $btn-border-color;
-$btn-flat-hover-color: $btn-hover-color;
-$btn-flat-focus-color: $btn-focus-color;
-$btn-flat-active-color: $neutral-light-fontalt;
-$btn-flat-box-shadow: $btn-box-shadow;
-$btn-outline-bgcolor: transparent;
-$btn-outline-color: $neutral-light-font;
-$btn-outline-hover-bgcolor: $neutral-light;
-$btn-outline-hover-color: $neutral-light-fontalt;
-$btn-outline-focus-bgcolor: $neutral-light;
-$btn-outline-default-focus-border-color: $neutral-quintenary;
-$btn-outline-focus-color: $neutral-light-fontalt;
-$btn-outline-active-color: $neutral-light-fontalt;
-$btn-outline-active-bgcolor: $neutral-tertiary-alt;
-$btn-outline-border-color: $neutral-quintenary;
-$btn-icon-font-size: $btn-font-size;
-$btn-small-icon-font-size: 11px;
-$btn-bigger-icon-font-size: $btn-bigger-font-size;
-$btn-bigger-small-icon-font-size: 15px;
-$btn-round-bgcolor: $btn-bgcolor;
-$btn-round-color: $btn-color;
-$btn-round-border-color: $btn-border-color;
-$btn-round-hover-bgcolor: $btn-hover-bgcolor;
-$btn-round-hover-color: $btn-hover-color;
-$btn-round-height: 2.57143em;
-$btn-round-width: 2.57143em;
-$btn-round-bigger-height: 2.875em;
-$btn-round-bigger-width: 2.875em;
-$btn-round-small-height: 2.5em;
-$btn-round-small-width: 2.5em;
-$btn-round-bigger-small-height: 2.5em;
-$btn-round-bigger-small-width: 2.5em;
-$btn-success-bgcolor: #137c10;
-$btn-success-hover-bgcolor: #146511;
-$btn-success-focus-bgcolor: #137c10;
-$btn-success-active-bgcolor: #004b1d;
-$btn-success-border-color: $btn-success-bgcolor;
-$btn-success-hover-border-color: $btn-success-hover-bgcolor;
-$btn-success-focus-border-color: $neutral-white;
-$btn-success-active-border-color: $btn-success-active-bgcolor;
-$btn-success-active-color: $btn-success-color;
-$btn-info-bgcolor: #0378d5;
-$btn-info-hover-bgcolor: #016cc0;
-$btn-info-focus-bgcolor: #0378d5;
-$btn-info-active-bgcolor: #065fa6;
-$btn-info-border-color: $btn-info-bgcolor;
-$btn-info-hover-border-color: $btn-info-hover-bgcolor;
-$btn-info-focus-border-color: $neutral-white;
-$btn-info-active-border-color: $btn-info-active-bgcolor;
-$btn-warning-bgcolor: #d83b01;
-$btn-warning-hover-bgcolor: #c73702;
-$btn-warning-focus-bgcolor: #d83b01;
-$btn-warning-active-bgcolor: #a22c01;
-$btn-warning-border-color: $btn-warning-bgcolor;
-$btn-warning-hover-border-color: $btn-warning-hover-bgcolor;
-$btn-warning-focus-border-color: $neutral-white;
-$btn-warning-active-border-color: $btn-warning-active-bgcolor;
-$btn-danger-bgcolor: #a80000;
-$btn-danger-hover-bgcolor: #930000;
-$btn-danger-focus-bgcolor: #a80000;
-$btn-danger-active-bgcolor: #7c0101;
-$btn-danger-active-color: $btn-danger-color;
-$btn-danger-border-color: $btn-danger-bgcolor;
-$btn-danger-hover-border-color: $btn-danger-hover-bgcolor;
-$btn-danger-focus-border-color: $neutral-white;
-$btn-danger-active-border-color: $btn-danger-active-bgcolor;
-$btn-flat-active-bgcolor: $neutral-tertiary-alt;
-$btn-flat-primary-active-bgcolor: $btn-primary-active-bgcolor;
-$btn-flat-success-active-bgcolor: $btn-success-active-bgcolor;
-$btn-flat-info-active-bgcolor: $btn-info-active-bgcolor;
-$btn-flat-warning-active-bgcolor: $btn-warning-active-bgcolor;
-$btn-flat-danger-active-bgcolor: $btn-danger-active-bgcolor;
-$btn-round-font-size: 16px;
-$btn-small-round-font-size: 14px;
-$btn-bigger-round-font-size: 20px;
-$btn-bigger-small-round-font-size: 18px;
-$btn-flat-primary-color: $btn-primary-color;
-$btn-flat-success-color:  $btn-success-color;
-$btn-flat-info-color:  $btn-info-color;
-$btn-flat-warning-color:  $btn-warning-color;
-$btn-flat-danger-color:   $btn-danger-color;
-$btn-flat-primary-hover-color:  $btn-primary-hover-color;
-$btn-flat-success-hover-color:  $btn-success-hover-color;
-$btn-flat-info-hover-color: $btn-info-hover-color;
-$btn-flat-warning-hover-color:  $btn-warning-hover-color;
-$btn-flat-danger-hover-color: $btn-danger-hover-color;
-$btn-flat-primary-focus-color: $btn-primary-hover-color;
-$btn-flat-success-focus-color: $btn-success-hover-color;
-$btn-flat-info-focus-color: $btn-info-hover-color;
-$btn-flat-warning-focus-color: $btn-warning-hover-color;
-$btn-flat-danger-focus-color: $btn-danger-hover-color;
-$btn-flat-primary-active-color: $btn-primary-active-color;
-$btn-flat-success-active-color: $btn-success-color;
-$btn-flat-info-active-color: $btn-info-color;
-$btn-flat-warning-active-color: $btn-warning-color;
-$btn-flat-danger-active-color: $btn-danger-color;
-$btn-icon-margin-top: -3px;
-$btn-icon-margin: -.5714em;
-$btn-small-icon-margin: -.7273em;
-$btn-bigger-icon-margin: -.688em;
-$btn-bigger-small-icon-margin: -.5334em;
-$btn-icon-width: 1.929em;
-$btn-small-icon-width: 2.182em;
-$btn-bigger-icon-width: 2.25em;
-$btn-bigger-small-icon-width: 2.1334em;
-$icon-btn-width: 1em;
-$icon-small-btn-width: .91em;
-$icon-bigger-btn-width: 1em;
-$icon-bigger-small-btn-width: 1.0667em;
-$btn-round-icon-line-height: 2.125em;
-$btn-small-round-icon-line-height: 2em;
-$btn-bigger-round-icon-line-height: 2.2em;
-$btn-bigger-small-round-icon-line-height: 2.1112em;
-$btn-text-line-height: 1.8572em;
-$btn-bigger-text-line-height: 2em;
-$btn-small-text-line-height: 1.5em;
-$btn-bigger-small-text-line-height: 2em;
-$btn-primary-disabled-bgcolor: $btn-disabled-bgcolor;
-$btn-success-disabled-bgcolor: $btn-disabled-bgcolor;
-$btn-info-disabled-bgcolor: $btn-disabled-bgcolor;
-$btn-warning-disabled-bgcolor: $btn-disabled-bgcolor;
-$btn-danger-disabled-bgcolor: $btn-disabled-bgcolor;
-$btn-primary-disabled-color: $btn-disabled-color;
-$btn-success-disabled-color: $btn-disabled-color;
-$btn-info-disabled-color: $btn-disabled-color;
-$btn-warning-disabled-color: $btn-disabled-color;
-$btn-danger-disabled-color: $btn-disabled-color;
-$btn-primary-disabled-border-color: $btn-disabled-border-color;
-$btn-success-disabled-border-color: $btn-disabled-border-color;
-$btn-info-disabled-border-color: $btn-disabled-border-color;
-$btn-warning-disabled-border-color: $btn-disabled-border-color;
-$btn-danger-disabled-border-color: $btn-disabled-border-color;
-$btn-flat-bgcolor: $btn-bgcolor;
-$btn-flat-hover-bgcolor: $btn-hover-bgcolor;
-$btn-flat-focus-bgcolor: $btn-flat-hover-bgcolor;
-$btn-flat-primary-hover-bgcolor: $btn-primary-hover-bgcolor;
-$btn-flat-success-hover-bgcolor: $btn-success-hover-bgcolor;
-$btn-flat-info-hover-bgcolor: $btn-info-hover-bgcolor;
-$btn-flat-warning-hover-bgcolor: $btn-warning-hover-bgcolor;
-$btn-flat-danger-hover-bgcolor: $btn-danger-hover-bgcolor;
-$btn-flat-primary-disabled-color: $btn-disabled-color;
-$btn-flat-success-disabled-color: $btn-disabled-color;
-$btn-flat-info-disabled-color: $btn-disabled-color;
-$btn-flat-warning-disabled-color: $btn-disabled-color;
-$btn-flat-danger-disabled-color: $btn-disabled-color;
-$btn-outline-primary-disabled-color: $btn-disabled-color;
-$btn-outline-success-disabled-color: $btn-disabled-color;
-$btn-outline-info-disabled-color: $btn-disabled-color;
-$btn-outline-warning-disabled-color: $btn-disabled-color;
-$btn-outline-danger-disabled-color: $btn-disabled-color;
-$btn-outline-primary-disabled-border-color: $btn-disabled-border-color;
-$btn-outline-success-disabled-border-color: $btn-disabled-border-color;
-$btn-outline-info-disabled-border-color: $btn-disabled-border-color;
-$btn-outline-warning-disabled-border-color: $btn-disabled-border-color;
-$btn-outline-danger-disabled-border-color: $btn-disabled-border-color;
-$btn-outline-active-box-shadow: $btn-flat-box-shadow;
-$btn-flat-primary-bgcolor: $btn-primary-bgcolor;
-$btn-flat-success-bgcolor: $btn-success-bgcolor;
-$btn-flat-info-bgcolor: $btn-info-bgcolor;
-$btn-flat-warning-bgcolor: $btn-warning-bgcolor;
-$btn-flat-danger-bgcolor: $btn-danger-bgcolor;
-$btn-flat-success-focus-bgcolor: $btn-success-hover-bgcolor;
-$btn-flat-info-focus-bgcolor: $btn-info-hover-bgcolor;
-$btn-flat-warning-focus-bgcolor: $btn-warning-hover-bgcolor;
-$btn-flat-danger-focus-bgcolor: $btn-danger-hover-bgcolor;
-$btn-flat-hover-border-color: $btn-hover-border-color;
-$btn-flat-active-border-color: $neutral-tertiary-alt;
-$btn-flat-focus-border-color: $btn-focus-border-color;
-$btn-flat-disabled-border-color: $btn-disabled-border-color;
-$btn-flat-primary-border-color: $btn-primary-border-color;
-$btn-flat-primary-hover-border-color: $btn-primary-hover-border-color;
-$btn-flat-primary-active-border-color: $btn-primary-active-border-color;
-$btn-flat-primary-focus-border-color: $btn-primary-focus-border-color;
-$btn-flat-primary-disabled-border-color: $btn-primary-disabled-border-color;
-$btn-flat-success-border-color: $btn-success-border-color;
-$btn-flat-success-hover-border-color: $btn-success-hover-border-color;
-$btn-flat-success-active-border-color: $btn-success-active-border-color;
-$btn-flat-success-focus-border-color: $btn-success-focus-border-color;
-$btn-flat-success-disabled-border-color: $btn-success-disabled-border-color;
-$btn-flat-info-border-color: $btn-info-border-color;
-$btn-flat-info-hover-border-color: $btn-info-hover-border-color;
-$btn-flat-info-active-border-color: $btn-info-active-border-color;
-$btn-flat-info-focus-border-color: $btn-info-focus-border-color;
-$btn-flat-info-disabled-border-color: $btn-info-disabled-border-color;
-$btn-flat-warning-border-color: $btn-warning-border-color;
-$btn-flat-warning-hover-border-color: $btn-warning-hover-border-color;
-$btn-flat-warning-active-border-color: $btn-warning-active-border-color;
-$btn-flat-warning-focus-border-color: $btn-warning-focus-border-color;
-$btn-flat-warning-disabled-border-color: $btn-warning-disabled-border-color;
-$btn-flat-danger-border-color: $btn-danger-border-color;
-$btn-flat-danger-hover-border-color: $btn-danger-hover-border-color;
-$btn-flat-danger-active-border-color: $btn-danger-active-border-color;
-$btn-flat-danger-focus-border-color: $btn-danger-focus-border-color;
-$btn-flat-danger-disabled-border-color: $btn-danger-disabled-border-color;
-$btn-flat-active-box-shadow: $btn-box-shadow;
-$btn-outline-hover-border-color: $neutral-quintenary;
-$btn-outline-focus-border-color: $btn-info-focus-border-color;
-$btn-outline-active-border-color:  $btn-outline-active-bgcolor;
-$btn-outline-primary-hover-border-color: $theme-primary;
-$btn-outline-primary-focus-border-color: $btn-info-focus-border-color;
-$btn-outline-primary-active-border-color: $theme-primary;
-$btn-round-hover-border-color: $btn-round-hover-bgcolor;
-$btn-round-focus-color: $btn-focus-color;
-$btn-round-active-color: $btn-active-color;
-$btn-warning-active-color: $btn-warning-color;
-$btn-success-focus-color: $btn-success-hover-color;
-$btn-info-active-color: $btn-info-color;
-$btn-flat-primary-focus-bgcolor: $btn-flat-primary-hover-bgcolor;
-$focus-outline: $neutral-secondary-alt 1px solid;
-$focus-outline-offset: 0;
-$active-outline: $neutral-light 0 solid;
-$active-outline-offset: 0;
-$primary-outline: $neutral-secondary-alt 1px solid;
+$skin-name: 'fabric' !default;
+$btn-font-weight: 600 !default;
+$btn-font-size: 14px !default;
+$btn-small-font-size: 12px !default;
+$btn-bigger-font-size: 16px !default;
+$btn-bigger-small-font-size: $btn-bigger-font-size !default;
+$btn-color: $neutral-light-font !default;
+$btn-bgcolor: $neutral-lighter !default;
+$btn-border: 1px solid !default;
+$btn-border-color:  $neutral-lighter !default;
+$btn-hover-bgcolor:  $neutral-light !default;
+$btn-hover-border-color: $neutral-light !default;
+$btn-hover-color: $neutral-light-fontalt !default;
+$btn-focus-border-color: $neutral-light !default;
+$btn-focus-color: $neutral-light-font !default;
+$btn-focus-bgcolor: $neutral-lighter !default;
+$btn-active-border-color: $neutral-tertiary-alt !default;
+$btn-active-bgcolor: $neutral-tertiary-alt !default;
+$btn-active-color: $neutral-light-fontalt !default;
+$btn-border-radius: 0 !default;
+$btn-text-transform: none !default;
+$btn-padding: 2px 20px !default;
+$btn-small-padding: 3px 16px !default;
+$btn-bigger-padding: 3px 24px !default;
+$btn-bigger-small-padding: 1px 22px !default;
+$btn-icon-padding: 2px 8px !default;
+$btn-small-icon-padding: 3px 6px !default;
+$btn-bigger-icon-padding: 3px 11px !default;
+$btn-bigger-small-icon-padding: 1px 9px !default;
+$btn-top-icon-padding: 8px 20px !default;
+$btn-top-icon-bigger-padding: 10px 24px !default;
+$btn-icon-top-bottom-padding: 8px !default;
+$btn-small-icon-top-bottom-padding: 6px !default;
+$btn-bigger-icon-top-bottom-padding: 10px !default;
+$btn-box-shadow: none !default;
+$btn-hover-focus-box-shadow: none !default;
+$btn-active-box-shadow: $btn-box-shadow !default;
+$btn-disabled-color: $neutral-tertiary !default;
+$btn-disabled-bgcolor: $btn-bgcolor !default;
+$btn-disabled-border-color: $btn-border-color !default;
+$btn-primary-color: $theme-primary-font !default;
+$btn-primary-hover-color: $theme-primary-font !default;
+$btn-primary-focus-color: $theme-primary-font !default;
+$btn-primary-active-color: $theme-primary-font !default;
+$btn-primary-bgcolor: $theme-primary !default;
+$btn-primary-hover-bgcolor: $theme-dark-alt !default;
+$btn-primary-focus-bgcolor: $theme-primary !default;
+$btn-primary-active-bgcolor: $theme-dark !default;
+$btn-primary-border-color: $theme-primary !default;
+$btn-primary-hover-border-color: $btn-primary-hover-bgcolor !default;
+$btn-primary-focus-border-color: $neutral-white !default;
+$btn-primary-active-border-color: $btn-primary-active-bgcolor !default;
+$btn-flat-color: $btn-color !default;
+$btn-flat-border: $btn-border !default;
+$btn-flat-border-color: $btn-border-color !default;
+$btn-flat-hover-color: $btn-hover-color !default;
+$btn-flat-focus-color: $btn-focus-color !default;
+$btn-flat-active-color: $neutral-light-fontalt !default;
+$btn-flat-box-shadow: $btn-box-shadow !default;
+$btn-outline-bgcolor: transparent !default;
+$btn-outline-color: $neutral-light-font !default;
+$btn-outline-hover-bgcolor: $neutral-light !default;
+$btn-outline-hover-color: $neutral-light-fontalt !default;
+$btn-outline-focus-bgcolor: $neutral-light !default;
+$btn-outline-default-focus-border-color: $neutral-quintenary !default;
+$btn-outline-focus-color: $neutral-light-fontalt !default;
+$btn-outline-active-color: $neutral-light-fontalt !default;
+$btn-outline-active-bgcolor: $neutral-tertiary-alt !default;
+$btn-outline-border-color: $neutral-quintenary !default;
+$btn-icon-font-size: $btn-font-size !default;
+$btn-small-icon-font-size: 11px !default;
+$btn-bigger-icon-font-size: $btn-bigger-font-size !default;
+$btn-bigger-small-icon-font-size: 15px !default;
+$btn-round-bgcolor: $btn-bgcolor !default;
+$btn-round-color: $btn-color !default;
+$btn-round-border-color: $btn-border-color !default;
+$btn-round-hover-bgcolor: $btn-hover-bgcolor !default;
+$btn-round-hover-color: $btn-hover-color !default;
+$btn-round-height: 2.57143em !default;
+$btn-round-width: 2.57143em !default;
+$btn-round-bigger-height: 2.875em !default;
+$btn-round-bigger-width: 2.875em !default;
+$btn-round-small-height: 2.5em !default;
+$btn-round-small-width: 2.5em !default;
+$btn-round-bigger-small-height: 2.5em !default;
+$btn-round-bigger-small-width: 2.5em !default;
+$btn-success-color: #fff !default;
+$btn-success-bgcolor: #137c10 !default;
+$btn-success-hover-bgcolor: #146511 !default;
+$btn-success-focus-bgcolor: #137c10 !default;
+$btn-success-active-bgcolor: #004b1d !default;
+$btn-success-border-color: $btn-success-bgcolor !default;
+$btn-success-hover-border-color: $btn-success-hover-bgcolor !default;
+$btn-success-focus-border-color: $neutral-white !default;
+$btn-success-active-border-color: $btn-success-active-bgcolor !default;
+$btn-success-active-color: $btn-success-color !default;
+$btn-info-bgcolor: #0378d5 !default;
+$btn-info-hover-bgcolor: #016cc0 !default;
+$btn-info-focus-bgcolor: #0378d5 !default;
+$btn-info-active-bgcolor: #065fa6 !default;
+$btn-info-border-color: $btn-info-bgcolor !default;
+$btn-info-hover-border-color: $btn-info-hover-bgcolor !default;
+$btn-info-focus-border-color: $neutral-white !default;
+$btn-info-active-border-color: $btn-info-active-bgcolor !default;
+$btn-warning-bgcolor: #d83b01 !default;
+$btn-warning-hover-color: #fff !default;
+$btn-warning-hover-bgcolor: #c73702 !default;
+$btn-warning-focus-bgcolor: #d83b01 !default;
+$btn-warning-active-bgcolor: #a22c01 !default;
+$btn-warning-border-color: $btn-warning-bgcolor !default;
+$btn-warning-hover-border-color: $btn-warning-hover-bgcolor !default;
+$btn-warning-focus-border-color: $neutral-white !default;
+$btn-warning-active-border-color: $btn-warning-active-bgcolor !default;
+$btn-danger-bgcolor: #a80000 !default;
+$btn-danger-hover-bgcolor: #930000 !default;
+$btn-danger-focus-bgcolor: #a80000 !default;
+$btn-danger-active-bgcolor: #7c0101 !default;
+$btn-danger-color: #fff !default;
+$btn-danger-active-color: $btn-danger-color !default;
+$btn-danger-border-color: $btn-danger-bgcolor !default;
+$btn-danger-hover-border-color: $btn-danger-hover-bgcolor !default;
+$btn-danger-focus-border-color: $neutral-white !default;
+$btn-danger-active-border-color: $btn-danger-active-bgcolor !default;
+$btn-flat-active-bgcolor: $neutral-tertiary-alt !default;
+$btn-flat-primary-active-bgcolor: $btn-primary-active-bgcolor !default;
+$btn-flat-success-active-bgcolor: $btn-success-active-bgcolor !default;
+$btn-flat-info-active-bgcolor: $btn-info-active-bgcolor !default;
+$btn-flat-warning-active-bgcolor: $btn-warning-active-bgcolor !default;
+$btn-flat-danger-active-bgcolor: $btn-danger-active-bgcolor !default;
+$btn-round-font-size: 16px !default;
+$btn-small-round-font-size: 14px !default;
+$btn-bigger-round-font-size: 20px !default;
+$btn-bigger-small-round-font-size: 18px !default;
+$btn-flat-primary-color: $btn-primary-color !default;
+$btn-flat-success-color:  $btn-success-color !default;
+$btn-info-color: #fff !default;
+$btn-flat-info-color:  $btn-info-color !default;
+$btn-warning-color: #fff !default;
+$btn-flat-warning-color:  $btn-warning-color !default;
+$btn-flat-danger-color:   $btn-danger-color !default;
+$btn-flat-primary-hover-color:  $btn-primary-hover-color !default;
+$btn-success-hover-color: #fff !default;
+$btn-flat-success-hover-color:  $btn-success-hover-color !default;
+$btn-info-hover-color: #fff !default;
+$btn-flat-info-hover-color: $btn-info-hover-color !default;
+$btn-flat-warning-hover-color:  $btn-warning-hover-color !default;
+$btn-danger-hover-color: #fff !default;
+$btn-flat-danger-hover-color: $btn-danger-hover-color !default;
+$btn-flat-primary-focus-color: $btn-primary-hover-color !default;
+$btn-flat-success-focus-color: $btn-success-hover-color !default;
+$btn-flat-info-focus-color: $btn-info-hover-color !default;
+$btn-flat-warning-focus-color: $btn-warning-hover-color !default;
+$btn-flat-danger-focus-color: $btn-danger-hover-color !default;
+$btn-flat-primary-active-color: $btn-primary-active-color !default;
+$btn-flat-success-active-color: $btn-success-color !default;
+$btn-flat-info-active-color: $btn-info-color !default;
+$btn-flat-warning-active-color: $btn-warning-color !default;
+$btn-flat-danger-active-color: $btn-danger-color !default;
+$btn-icon-margin-top: -3px !default;
+$btn-icon-margin: -.5714em !default;
+$btn-small-icon-margin: -.7273em !default;
+$btn-bigger-icon-margin: -.688em !default;
+$btn-bigger-small-icon-margin: -.5334em !default;
+$btn-icon-width: 1.929em !default;
+$btn-small-icon-width: 2.182em !default;
+$btn-bigger-icon-width: 2.25em !default;
+$btn-bigger-small-icon-width: 2.1334em !default;
+$btn-icon-btn-width: 1em !default;
+$btn-icon-small-width: .91em !default;
+$btn-icon-bigger-width: 1em !default;
+$btn-icon-bigger-small-width: 1.0667em !default;
+$btn-round-icon-line-height: 2.125em !default;
+$btn-small-round-icon-line-height: 2em !default;
+$btn-bigger-round-icon-line-height: 2.2em !default;
+$btn-bigger-small-round-icon-line-height: 2.1112em !default;
+$btn-text-line-height: 1.8572em !default;
+$btn-bigger-text-line-height: 2em !default;
+$btn-small-text-line-height: 1.5em !default;
+$btn-bigger-small-text-line-height: 2em !default;
+$btn-primary-disabled-bgcolor: $btn-disabled-bgcolor !default;
+$btn-success-disabled-bgcolor: $btn-disabled-bgcolor !default;
+$btn-info-disabled-bgcolor: $btn-disabled-bgcolor !default;
+$btn-warning-disabled-bgcolor: $btn-disabled-bgcolor !default;
+$btn-danger-disabled-bgcolor: $btn-disabled-bgcolor !default;
+$btn-primary-disabled-color: $btn-disabled-color !default;
+$btn-success-disabled-color: $btn-disabled-color !default;
+$btn-info-disabled-color: $btn-disabled-color !default;
+$btn-warning-disabled-color: $btn-disabled-color !default;
+$btn-danger-disabled-color: $btn-disabled-color !default;
+$btn-primary-disabled-border-color: $btn-disabled-border-color !default;
+$btn-success-disabled-border-color: $btn-disabled-border-color !default;
+$btn-info-disabled-border-color: $btn-disabled-border-color !default;
+$btn-warning-disabled-border-color: $btn-disabled-border-color !default;
+$btn-danger-disabled-border-color: $btn-disabled-border-color !default;
+$btn-flat-bgcolor: $btn-bgcolor !default;
+$btn-flat-disabled-bgcolor: $btn-flat-bgcolor !default;
+$btn-flat-hover-bgcolor: $btn-hover-bgcolor !default;
+$btn-flat-focus-bgcolor: $btn-flat-hover-bgcolor !default;
+$btn-flat-primary-hover-bgcolor: $btn-primary-hover-bgcolor !default;
+$btn-flat-success-hover-bgcolor: $btn-success-hover-bgcolor !default;
+$btn-flat-info-hover-bgcolor: $btn-info-hover-bgcolor !default;
+$btn-flat-warning-hover-bgcolor: $btn-warning-hover-bgcolor !default;
+$btn-flat-danger-hover-bgcolor: $btn-danger-hover-bgcolor !default;
+$btn-flat-disabled-color: $btn-disabled-color !default;
+$btn-flat-primary-disabled-color: $btn-disabled-color !default;
+$btn-flat-success-disabled-color: $btn-disabled-color !default;
+$btn-flat-info-disabled-color: $btn-disabled-color !default;
+$btn-flat-warning-disabled-color: $btn-disabled-color !default;
+$btn-flat-danger-disabled-color: $btn-disabled-color !default;
+$btn-outline-primary-disabled-color: $btn-disabled-color !default;
+$btn-outline-success-disabled-color: $btn-disabled-color !default;
+$btn-outline-info-disabled-color: $btn-disabled-color !default;
+$btn-outline-warning-disabled-color: $btn-disabled-color !default;
+$btn-outline-danger-disabled-color: $btn-disabled-color !default;
+$btn-outline-primary-disabled-border-color: $btn-disabled-border-color !default;
+$btn-outline-success-disabled-border-color: $btn-disabled-border-color !default;
+$btn-outline-info-disabled-border-color: $btn-disabled-border-color !default;
+$btn-outline-warning-disabled-border-color: $btn-disabled-border-color !default;
+$btn-outline-danger-disabled-border-color: $btn-disabled-border-color !default;
+$btn-outline-active-box-shadow: $btn-flat-box-shadow !default;
+$btn-flat-primary-bgcolor: $btn-primary-bgcolor !default;
+$btn-flat-success-bgcolor: $btn-success-bgcolor !default;
+$btn-flat-info-bgcolor: $btn-info-bgcolor !default;
+$btn-flat-warning-bgcolor: $btn-warning-bgcolor !default;
+$btn-flat-danger-bgcolor: $btn-danger-bgcolor !default;
+$btn-flat-primary-disabled-bgcolor: $btn-disabled-bgcolor !default;
+$btn-flat-success-disabled-bgcolor: $btn-disabled-bgcolor !default;
+$btn-flat-info-disabled-bgcolor: $btn-disabled-bgcolor !default;
+$btn-flat-warning-disabled-bgcolor: $btn-disabled-bgcolor !default;
+$btn-flat-danger-disabled-bgcolor: $btn-disabled-bgcolor !default;
+$btn-flat-success-focus-bgcolor: $btn-success-hover-bgcolor !default;
+$btn-flat-info-focus-bgcolor: $btn-info-hover-bgcolor !default;
+$btn-flat-warning-focus-bgcolor: $btn-warning-hover-bgcolor !default;
+$btn-flat-danger-focus-bgcolor: $btn-danger-hover-bgcolor !default;
+$btn-flat-hover-border-color: $btn-hover-border-color !default;
+$btn-flat-active-border-color: $neutral-tertiary-alt !default;
+$btn-flat-focus-border-color: $btn-focus-border-color !default;
+$btn-flat-disabled-border-color: $btn-disabled-border-color !default;
+$btn-flat-primary-border-color: $btn-primary-border-color !default;
+$btn-flat-primary-hover-border-color: $btn-primary-hover-border-color !default;
+$btn-flat-primary-active-border-color: $btn-primary-active-border-color !default;
+$btn-flat-primary-focus-border-color: $btn-primary-focus-border-color !default;
+$btn-flat-primary-disabled-border-color: $btn-primary-disabled-border-color !default;
+$btn-flat-success-border-color: $btn-success-border-color !default;
+$btn-flat-success-hover-border-color: $btn-success-hover-border-color !default;
+$btn-flat-success-active-border-color: $btn-success-active-border-color !default;
+$btn-flat-success-focus-border-color: $btn-success-focus-border-color !default;
+$btn-flat-success-disabled-border-color: $btn-success-disabled-border-color !default;
+$btn-flat-info-border-color: $btn-info-border-color !default;
+$btn-flat-info-hover-border-color: $btn-info-hover-border-color !default;
+$btn-flat-info-active-border-color: $btn-info-active-border-color !default;
+$btn-flat-info-focus-border-color: $btn-info-focus-border-color !default;
+$btn-flat-info-disabled-border-color: $btn-info-disabled-border-color !default;
+$btn-flat-warning-border-color: $btn-warning-border-color !default;
+$btn-flat-warning-hover-border-color: $btn-warning-hover-border-color !default;
+$btn-flat-warning-active-border-color: $btn-warning-active-border-color !default;
+$btn-flat-warning-focus-border-color: $btn-warning-focus-border-color !default;
+$btn-flat-warning-disabled-border-color: $btn-warning-disabled-border-color !default;
+$btn-flat-danger-border-color: $btn-danger-border-color !default;
+$btn-flat-danger-hover-border-color: $btn-danger-hover-border-color !default;
+$btn-flat-danger-active-border-color: $btn-danger-active-border-color !default;
+$btn-flat-danger-focus-border-color: $btn-danger-focus-border-color !default;
+$btn-flat-danger-disabled-border-color: $btn-danger-disabled-border-color !default;
+$btn-flat-active-box-shadow: $btn-box-shadow !default;
+$btn-outline-hover-border-color: $neutral-quintenary !default;
+$btn-outline-focus-border-color: $btn-info-focus-border-color !default;
+$btn-outline-active-border-color:  $btn-outline-active-bgcolor !default;
+$btn-outline-primary-hover-border-color: $theme-primary !default;
+$btn-outline-primary-focus-border-color: $btn-info-focus-border-color !default;
+$btn-outline-primary-active-border-color: $theme-primary !default;
+$btn-round-hover-border-color: $btn-round-hover-bgcolor !default;
+$btn-round-focus-color: $btn-focus-color !default;
+$btn-round-active-color: $btn-active-color !default;
+$btn-warning-active-color: $btn-warning-color !default;
+$btn-success-focus-color: $btn-success-hover-color !default;
+$btn-info-active-color: $btn-info-color !default;
+$btn-flat-primary-focus-bgcolor: $btn-flat-primary-hover-bgcolor !default;
+$btn-focus-outline: $neutral-secondary-alt 1px solid !default;
+$btn-focus-outline-round: none !default;
+$btn-focus-outline-offset: 0 !default;
+$btn-active-outline: $neutral-light 0 solid !default;
+$btn-active-outline-offset: 0 !default;
+$btn-primary-outline: $neutral-secondary-alt 1px solid !default;
+$btn-outline-primary-color: $btn-primary-bgcolor !default;
+$btn-outline-primary-focus-bgcolor: $btn-primary-focus-bgcolor !default;
+$btn-outline-primary-focus-color: $btn-primary-focus-color !default;
+$btn-ripple-bgcolor: transparent !default;
+$btn-ripple-primary-bgcolor: transparent !default;
+$btn-ripple-success-bgcolor: transparent !default;
+$btn-ripple-info-bgcolor: transparent !default;
+$btn-ripple-warning-bgcolor: transparent !default;
+$btn-ripple-danger-bgcolor: transparent !default;
+$btn-ripple-flat-bgcolor: transparent !default;
+$btn-ripple-flat-primary-bgcolor: transparent !default;
+$btn-ripple-flat-success-bgcolor: transparent !default;
+$btn-ripple-flat-info-bgcolor: transparent !default;
+$btn-ripple-flat-warning-bgcolor: transparent !default;
+$btn-ripple-flat-danger-bgcolor: transparent !default;
+$btn-link-bgcolor: transparent !default;
+$btn-link-border-color: transparent !default;
+$btn-link-color: #0d47a1 !default;
+$btn-link-hover-color: #0a3576 !default;
+$btn-link-disabled-bgcolor: transparent !default;
 
 @include export-module('button-layout') {
   /*! button layout */
@@ -608,7 +348,7 @@ $primary-outline: $neutral-secondary-alt 1px solid;
         font-size: $btn-icon-font-size;
         margin-top: $btn-icon-margin-top;
         vertical-align: middle;
-        width: $icon-btn-width;
+        width: $btn-icon-btn-width;
 
         &.e-icon-left {
           margin-left: $btn-icon-margin;
@@ -623,18 +363,26 @@ $primary-outline: $neutral-secondary-alt 1px solid;
         &.e-icon-top {
           display: block;
           margin-top: 0;
+          padding-bottom: $btn-icon-top-bottom-padding;
           width: auto;
         }
 
         &.e-icon-bottom {
           display: block;
           margin-top: 0;
+          padding-top: $btn-icon-top-bottom-padding;
           width: auto;
         }
       }
 
       &.e-icon-btn {
         padding: $btn-icon-padding;
+      }
+
+      &.e-top-icon-btn,
+      &.e-bottom-icon-btn {
+        line-height: 1;
+        padding: $btn-top-icon-padding;
       }
 
       &.e-round {
@@ -675,7 +423,7 @@ $primary-outline: $neutral-secondary-alt 1px solid;
 
         & .e-btn-icon {
           font-size: $btn-small-icon-font-size;
-          width: $icon-small-btn-width;
+          width: $btn-icon-small-width;
 
           &.e-icon-left {
             margin-left: $btn-small-icon-margin;
@@ -688,16 +436,24 @@ $primary-outline: $neutral-secondary-alt 1px solid;
           }
 
           &.e-icon-top {
+            padding-bottom: $btn-small-icon-top-bottom-padding;
             width: auto;
           }
 
           &.e-icon-bottom {
+            padding-top: $btn-small-icon-top-bottom-padding;
             width: auto;
           }
         }
 
         &.e-icon-btn {
           padding: $btn-small-icon-padding;
+        }
+
+        &.e-top-icon-btn,
+        &.e-bottom-icon-btn {
+          line-height: 1;
+          padding: $btn-top-icon-padding;
         }
 
         &.e-round {
@@ -743,7 +499,7 @@ $primary-outline: $neutral-secondary-alt 1px solid;
 
     & .e-btn-icon {
       font-size: $btn-bigger-icon-font-size;
-      width: $icon-bigger-btn-width;
+      width: $btn-icon-bigger-width;
 
       &.e-icon-left {
         margin-left: $btn-bigger-icon-margin;
@@ -756,16 +512,24 @@ $primary-outline: $neutral-secondary-alt 1px solid;
       }
 
       &.e-icon-top {
+        padding-bottom: $btn-bigger-icon-top-bottom-padding;
         width: auto;
       }
 
       &.e-icon-bottom {
+        padding-top: $btn-bigger-icon-top-bottom-padding;
         width: auto;
       }
     }
 
     &.e-icon-btn {
       padding: $btn-bigger-icon-padding;
+    }
+
+    &.e-top-icon-btn,
+    &.e-bottom-icon-btn {
+      line-height: 1;
+      padding: $btn-top-icon-bigger-padding;
     }
 
     &.e-round {
@@ -800,7 +564,7 @@ $primary-outline: $neutral-secondary-alt 1px solid;
 
       & .e-btn-icon {
         font-size: $btn-bigger-small-icon-font-size;
-        width: $icon-bigger-small-btn-width;
+        width: $btn-icon-bigger-small-width;
 
         &.e-icon-left {
           margin-left: $btn-bigger-small-icon-margin;
@@ -813,16 +577,24 @@ $primary-outline: $neutral-secondary-alt 1px solid;
         }
 
         &.e-icon-top {
+          padding-bottom: $btn-small-icon-top-bottom-padding;
           width: auto;
         }
 
         &.e-icon-bottom {
+          padding-top: $btn-small-icon-top-bottom-padding;
           width: auto;
         }
       }
 
       &.e-icon-btn {
         padding: $btn-bigger-small-icon-padding;
+      }
+
+      &.e-top-icon-btn,
+      &.e-bottom-icon-btn {
+        line-height: 1;
+        padding: $btn-top-icon-bigger-padding;
       }
 
       &.e-round {
@@ -858,8 +630,12 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-focus-border-color;
   box-shadow: $btn-hover-focus-box-shadow;
   color: $btn-focus-color;
-  outline: $focus-outline;
-  outline-offset: $focus-outline-offset;
+  outline: $btn-focus-outline;
+  outline-offset: $btn-focus-outline-offset;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-focus-bgcolor, 50%), $btn-focus-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin button-active {
@@ -867,8 +643,12 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-active-border-color;
   box-shadow: $btn-active-box-shadow;
   color: $btn-active-color;
-  outline: $active-outline;
-  outline-offset: $active-outline-offset;
+  outline: $btn-active-outline;
+  outline-offset: $btn-active-outline-offset;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-active-bgcolor, 50%), $btn-active-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin primary-focus {
@@ -876,7 +656,11 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-primary-focus-border-color;
   box-shadow: $btn-hover-focus-box-shadow;
   color: $btn-primary-focus-color;
-  outline: $primary-outline;
+  outline: $btn-primary-outline;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-primary-focus-bgcolor, 50%), $btn-primary-focus-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin primary-active {
@@ -884,7 +668,11 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-primary-active-border-color;
   box-shadow: $btn-active-box-shadow;
   color: $btn-primary-active-color;
-  outline: $active-outline;
+  outline: $btn-active-outline;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-primary-active-bgcolor, 50%), $btn-primary-active-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin primary-disabled {
@@ -899,6 +687,10 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-outline-default-focus-border-color;
   box-shadow: $btn-hover-focus-box-shadow;
   color: $btn-outline-focus-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-outline-focus-bgcolor, 50%), $btn-outline-default-focus-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin outline-active {
@@ -906,12 +698,20 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-outline-active-border-color;
   box-shadow: $btn-outline-active-box-shadow;
   color: $btn-outline-active-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-outline-active-bgcolor, 50%), $btn-outline-active-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin outline-primary-focus {
-  background-color: $btn-primary-focus-bgcolor;
+  background-color: $btn-outline-primary-focus-bgcolor;
   border-color: $btn-outline-primary-focus-border-color;
-  color: $btn-primary-focus-color;
+  color: $btn-outline-primary-focus-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-outline-primary-focus-bgcolor, 50%), $btn-outline-primary-focus-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin outline-primary-active {
@@ -919,12 +719,20 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-outline-primary-active-border-color;
   box-shadow: $btn-outline-active-box-shadow;
   color: $btn-primary-active-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-primary-active-bgcolor, 50%), $btn-outline-primary-active-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin outline-success-focus {
   background-color: $btn-success-focus-bgcolor;
   border-color: $btn-success-focus-border-color;
   color: $btn-success-focus-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-success-focus-bgcolor, 50%), $btn-success-focus-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin outline-success-active {
@@ -932,12 +740,20 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-success-active-border-color;
   box-shadow: $btn-outline-active-box-shadow;
   color: $btn-success-active-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-success-active-bgcolor, 50%), $btn-success-active-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin outline-info-focus {
   background-color: $btn-info-hover-bgcolor;
   border-color: $btn-info-focus-border-color;
   color: $btn-info-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-info-hover-bgcolor, 50%), $btn-info-focus-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin outline-info-active {
@@ -945,12 +761,20 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-info-active-border-color;
   box-shadow: $btn-outline-active-box-shadow;
   color: $btn-info-active-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-info-active-bgcolor, 50%), $btn-info-active-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin outline-warning-focus {
   background-color: $btn-warning-hover-bgcolor;
   border-color: $btn-warning-focus-border-color;
   color: $btn-warning-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-warning-hover-bgcolor, 50%), $btn-warning-focus-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin outline-warning-active {
@@ -958,12 +782,20 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-warning-active-border-color;
   box-shadow: $btn-outline-active-box-shadow;
   color: $btn-warning-active-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-warning-active-bgcolor, 50%), $btn-warning-active-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin outline-danger-focus {
   background-color: $btn-danger-hover-bgcolor;
   border-color: $btn-danger-focus-border-color;
   color: $btn-danger-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-danger-hover-bgcolor, 50%), $btn-danger-focus-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin outline-danger-active {
@@ -971,6 +803,10 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-danger-active-border-color;
   box-shadow: $btn-outline-active-box-shadow;
   color: $btn-danger-active-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-danger-active-bgcolor, 50%), $btn-danger-active-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin outline-disabled {
@@ -1020,6 +856,10 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-success-focus-border-color;
   box-shadow: $btn-hover-focus-box-shadow;
   color: $btn-success-hover-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-success-focus-bgcolor, 50%), $btn-success-focus-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin success-active {
@@ -1027,6 +867,10 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-success-active-border-color;
   box-shadow: $btn-active-box-shadow;
   color: $btn-success-active-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-success-active-bgcolor, 50%), $btn-success-active-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin info-focus {
@@ -1034,6 +878,10 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-info-focus-border-color;
   box-shadow: $btn-hover-focus-box-shadow;
   color: $btn-info-hover-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-info-focus-bgcolor, 50%), $btn-info-focus-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin info-active {
@@ -1041,6 +889,10 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-info-active-border-color;
   box-shadow: $btn-active-box-shadow;
   color: $btn-info-active-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-info-active-bgcolor, 50%), $btn-info-active-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin warning-focus {
@@ -1048,6 +900,10 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-warning-focus-border-color;
   box-shadow: $btn-hover-focus-box-shadow;
   color: $btn-warning-hover-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-warning-focus-bgcolor, 50%), $btn-warning-focus-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin warning-active {
@@ -1055,6 +911,10 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-warning-active-border-color;
   box-shadow: $btn-active-box-shadow;
   color: $btn-warning-active-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-warning-active-bgcolor, 50%), $btn-warning-active-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin danger-focus {
@@ -1062,6 +922,10 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-danger-focus-border-color;
   box-shadow: $btn-hover-focus-box-shadow;
   color: $btn-danger-hover-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-danger-focus-bgcolor, 50%), $btn-danger-focus-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin danger-active {
@@ -1069,6 +933,10 @@ $primary-outline: $neutral-secondary-alt 1px solid;
   border-color: $btn-danger-active-border-color;
   box-shadow: $btn-active-box-shadow;
   color: $btn-danger-active-color;
+  @if $skin-name == 'bootstrap4' {
+    $color-rgba: rgba(mix(lighten($btn-danger-active-bgcolor, 50%), $btn-danger-active-border-color, .15), .5);
+    box-shadow: 0 0 0 .2rem $color-rgba;
+  }
 }
 
 @mixin link-focus {
@@ -1172,8 +1040,8 @@ $primary-outline: $neutral-secondary-alt 1px solid;
           border-color: $btn-focus-border-color;
           box-shadow: $btn-box-shadow;
           color: $btn-round-focus-color;
-          outline: $focus-outline;
-          outline-offset: $focus-outline-offset;
+          outline: $btn-focus-outline-round;
+          outline-offset: $btn-focus-outline-offset;
         }
 
         &:active {
@@ -1181,8 +1049,8 @@ $primary-outline: $neutral-secondary-alt 1px solid;
           border-color: $btn-active-border-color;
           box-shadow: $btn-active-box-shadow;
           color: $btn-round-active-color;
-          outline: $active-outline;
-          outline-offset: $active-outline-offset;
+          outline: $btn-active-outline;
+          outline-offset: $btn-active-outline-offset;
         }
 
         &:disabled {
@@ -1190,6 +1058,36 @@ $primary-outline: $neutral-secondary-alt 1px solid;
           border-color: $btn-disabled-border-color;
           box-shadow: $btn-flat-box-shadow;
           color: $btn-disabled-color;
+        }
+
+        &.e-primary {
+          &:focus {
+            outline: $btn-focus-outline-round;
+          }
+        }
+
+        &.e-success {
+          &:focus {
+            outline: $btn-focus-outline-round;
+          }
+        }
+
+        &.e-info {
+          &:focus {
+            outline: $btn-focus-outline-round;
+          }
+        }
+
+        &.e-warning {
+          &:focus {
+            outline: $btn-focus-outline-round;
+           }
+        }
+
+        &.e-danger {
+          &:focus {
+            outline: $btn-focus-outline-round;
+          }
         }
       }
 
@@ -1215,7 +1113,7 @@ $primary-outline: $neutral-secondary-alt 1px solid;
 
         &.e-active {
           background-color: $btn-primary-active-bgcolor;
-          border-color: $btn-primary-border-color;
+          border-color: $btn-primary-active-border-color;
           box-shadow: $btn-active-box-shadow;
           color: $btn-primary-active-color;
         }
@@ -1611,8 +1509,8 @@ $primary-outline: $neutral-secondary-alt 1px solid;
 
         &.e-primary {
           background-color: $btn-outline-bgcolor;
-          border-color: $btn-primary-bgcolor;
-          color: $btn-primary-bgcolor;
+          border-color: $btn-outline-primary-color;
+          color: $btn-outline-primary-color;
 
           &:hover {
             background-color: $btn-primary-hover-bgcolor;
