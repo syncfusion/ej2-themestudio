@@ -1,97 +1,85 @@
 
-$dialog-bg-color: $default-bg-color;
-$dialog-icon-color: $default-icon-color;
-$dialog-icon-bg-normal: $default-bg-color;
-$dialog-active-icon-color: $active-icon-color;
-$dialog-header-bg-color: $default-bg-color;
-$dialog-content-bg-color: $default-bg-color;
-$dialog-footer-bg-color: $default-bg-color;
-$dialog-shadow-color: $shadow-color;
-$dialog-header-font-size: $font-size;
-$dialog-content-font-size: $font-size;
-$dialog-device-content-font-size: 14px;
-$dialog-border-radius: 2px;
-$dialog-headericon-border-radius: 50%;
-$dialog-btn-bg-bgcolor: transparent;
-$dialog-btn-box-shadow: none;
-$dialog-closeicon-btn-hover-color: transparent;
-$dialog-closeicon-btn-active-color: transparent;
-$dialog-bg-color: $neutral-white;
-$dialog-icon-color: $neutral-light-font;
-$dialog-active-icon-color: $theme-primary;
-$dialog-close-button-left: 7px;
-$dialog-close-button-right: 11px;
-$dialog-header-border: none;
-$dialog-close-icon-normal-opacity: initial;
-$dialog-close-icon-active-opacity: initial;
-$dialog-footer-content-border-top: none;
-$dialog-border: none;
-$dialog-close-icon-content: '\e7a7';
-$header-content-border-radius: 1px 1px 0 0;
-$dialog-close-icon-font-size: 16px;
-$footer-content-border-radius: 0;
-$dialog-header-line-height: normal;
-$dialog-content-padding-top: 0;
-$dialog-bigger-content-padding-top: 0;
-$dialog-close-icon-button-padding: 0 16px;
-$dialog-bigger-close-icon-button-padding: 0 20px;
-$dialog-bigger-close-icon-font-size: 16px;
-$dialog-hover-icon-color: $theme-darker;
-$dialog-icon-bg-normal: $neutral-light-font;
-$dialog-header-bg-color: $neutral-white;
-$dialog-content-bg-color: $neutral-white;
-$dialog-footer-bg-color: $neutral-white;
-$dialog-shadow-color: 0 0 5px rgba($shadow, .4);
-$dialog-header-font-size: 21px;
-$dialog-header-font-weight: 100;
-$dialog-header-font-color: $neutral-light-font;
-$dialog-content-font-size: 14px;
-$dialog-content-line-height: 1.5;
-$dialog-content-font-weight: 300;
-$dialog-device-content-font-size: 15px;
-$dialog-content-font-color: $neutral-light-font;
-$dialog-border-radius: 0;
-$dialog-headericon-border-radius: 50%;
-$dialog-overlay-bg-color: #383838;
-$dialog-closeicon-btn-hover-color: transparent;
-$dialog-closeicon-btn-active-color: transparent;
-$dialog-close-button-height: 32px;
-$dialog-close-button-width: 32px;
-$dialog-header-content-padding: 20px 23px 19px;
-$dialog-content-padding: 28px 25px 20px;
-$dialog-footer-content-padding: 20px 25px 20px;
-$dialog-bigger-header-content-padding: 25px 23.25px 11px;
-$dialog-bigger-content-padding: 35px 31.25px 25;
-$dialog-bigger-footer-content-padding: 0 31.25px 25px;
-$dialog-bigger-footer-button-margin-left: 10px;
-$dialog-footer-button-margin-left: 8px;
-$dialog-footer-button-margin-right: 8px;
-$dialog-bigger-footer-button-margin-right: 10px;
-$dialog-close-icon-margin-left: -7px;
-$dialog-close-icon-height: 16px;
-$dialog-close-icon-width: 16px;
-$dialog-bigger-close-icon-height: 16px;
-$dialog-bigger-close-icon-width: 16px;
-$dialog-close-icon-top: -4px;
-$dialog-bigger-close-icon-top: -10px;
-$dialog-bigger-close-icon-margin-left: -8px;
-$dialog-bigger-close-icon-margin-right: -1px;
-$dialog-bigger-close-button-bottom: 4px;
-$dialog-bigger-close-button-height: 40px;
-$dialog-bigger-close-button-left: 12px;
-$dialog-bigger-close-button-width: 40px;
-$dialog-btn-border-color: transparent;
-$dialog-btn-bg-color: transparent;
-$dialog-active-btn-border-color: transparent;
-$dialog-active-btn-bg-color: transparent;
-$dialog-headericon-bottom: 0;
-
-@include export-module('dialog-icons') {
-  /*! component icons */
+$dialog-btn-bg-bgcolor: transparent !default;
+$dialog-btn-box-shadow: none !default;
+$dialog-bg-color: $neutral-white !default;
+$dialog-icon-color: $neutral-light-font !default;
+$dialog-active-icon-color: $theme-primary !default;
+$dialog-close-button-left: 7px !default;
+$dialog-close-button-right: 11px !default;
+$dialog-header-border: none !default;
+$dialog-close-icon-normal-opacity: initial !default;
+$dialog-close-icon-active-opacity: initial !default;
+$dialog-footer-content-border-top: none !default;
+$dialog-border: none !default;
+$header-content-border-radius: 1px 1px 0 0 !default;
+$dialog-close-icon-font-size: 16px !default;
+$footer-content-border-radius: 0 !default;
+$dialog-header-line-height: normal !default;
+$dialog-content-padding-top: 0 !default;
+$dialog-bigger-content-padding-top: 0 !default;
+$dialog-close-icon-button-padding: 0 16px !default;
+$dialog-bigger-close-icon-button-padding: 0 20px !default;
+$dialog-bigger-close-icon-font-size: 16px !default;
+$dialog-hover-icon-color: $theme-darker !default;
+$dialog-icon-bg-normal: $neutral-light-font !default;
+$dialog-header-bg-color: $neutral-white !default;
+$dialog-content-bg-color: $neutral-white !default;
+$dialog-footer-bg-color: $neutral-white !default;
+$dialog-shadow-color: 0 0 5px rgba($shadow, .4) !default;
+$dialog-header-font-size: 21px !default;
+$dialog-header-font-weight: 100 !default;
+$dialog-header-font-color: $neutral-light-font !default;
+$dialog-content-font-size: 14px !default;
+$dialog-content-line-height: 1.5 !default;
+$dialog-content-font-weight: 300 !default;
+$dialog-device-content-font-size: 15px !default;
+$dialog-content-font-color: $neutral-light-font !default;
+$dialog-border-radius: 0 !default;
+$dialog-headericon-border-radius: 50% !default;
+$dialog-overlay-bg-color: #383838 !default;
+$dialog-overlay-opacity: .5 !default;
+$dialog-closeicon-btn-hover-color: transparent !default;
+$dialog-closeicon-btn-active-color: transparent !default;
+$dialog-close-button-height: 32px !default;
+$dialog-close-button-width: 32px !default;
+$dialog-header-content-padding: 20px 23px 19px !default;
+$dialog-content-padding: 28px 25px 10px !default;
+$dialog-footer-content-padding: 20px 25px 20px !default;
+$dialog-bigger-header-content-padding: 25px 23.25px 11px !default;
+$dialog-bigger-content-padding: 35px 31.25px 12.5px !default;
+$dialog-bigger-footer-content-padding: 25px 31.25px 25px !default;
+$dialog-bigger-footer-button-margin-left: 10px !default;
+$dialog-footer-button-margin-left: 8px !default;
+$dialog-footer-button-margin-right: 8px !default;
+$dialog-bigger-footer-button-margin-right: 10px !default;
+$dialog-close-icon-margin-left: -7px !default;
+$dialog-close-icon-height: 16px !default;
+$dialog-close-icon-width: 16px !default;
+$dialog-bigger-close-icon-height: 16px !default;
+$dialog-bigger-close-icon-width: 16px !default;
+$dialog-close-icon-top: -4px !default;
+$dialog-bigger-header-content-font-size: 21px !default;
+$dialog-bigger-content-font-size: 14px !default;
+$dialog-bigger-close-icon-top: -10px !default;
+$dialog-bigger-close-icon-margin-left: -8px !default;
+$dialog-bigger-close-icon-margin-right: -1px !default;
+$dialog-bigger-close-button-bottom: 4px !default;
+$dialog-bigger-close-button-height: 40px !default;
+$dialog-bigger-close-button-left: 12px !default;
+$dialog-bigger-close-button-width: 40px !default;
+$dialog-btn-border-color: transparent !default;
+$dialog-btn-bg-color: transparent !default;
+$dialog-active-btn-border-color: transparent !default;
+$dialog-active-btn-bg-color: transparent !default;
+$dialog-headericon-bottom: 0 !default;
+$dialog-resize-handler-width: 15px;
+$dialog-resize-handler-height: 15px;
+$dialog-resize-handler-position: 0;
+$resize-hanlder-bottom-rtl: 2px;
+@include export-module('dialog-bootstrap-icons') {
   #{&}.e-dialog {
-
     .e-icon-dlg-close::before {
-      content: $dialog-close-icon-content;
+      content: '\e7a7';
       position: relative;
     }
 
@@ -106,8 +94,14 @@ $dialog-headericon-bottom: 0;
     .e-icon-dlg-close:hover {
       opacity: $dialog-close-icon-active-opacity;
     }
+
+    .e-south-east::before,
+    .e-south-west::before {
+      content: '\eb06';
+    }
   }
 }
+
 @include export-module('dialog-layout') {
   /*! dialog layout */
   // sass-lint:disable no-vendor-prefixes
@@ -117,6 +111,14 @@ $dialog-headericon-bottom: 0;
     border-radius: $dialog-border-radius;
     flex-direction: column;
     width: 100%;
+
+    &.e-popup {
+      width: 100%;
+    }
+
+    &.e-dlg-resizable {
+      touch-action: none;
+    }
 
     .e-dlg-header-content {
       border-radius: $header-content-border-radius;
@@ -142,7 +144,7 @@ $dialog-headericon-bottom: 0;
       user-select: none;
       vertical-align: top;
       white-space: nowrap;
-      width: 83%;
+      width: 80%;
     }
 
     .e-dlg-modal {
@@ -179,16 +181,32 @@ $dialog-headericon-bottom: 0;
       text-align: right;
     }
 
+    .e-resize-handle {
+      height: $dialog-resize-handler-height;
+      position: absolute;
+      width: $dialog-resize-handler-width;
+
+      &.e-south-east {
+        bottom: $dialog-resize-handler-position;
+        cursor: nwse-resize;
+        right: $dialog-resize-handler-position;
+      }
+    }
   }
 
   //Bigger Style 
   .e-bigger#{&}.e-dialog,
-  &.e-bigger #{&}.e-dialog {
-    & .e-dlg-header-content {
+  .e-bigger #{&}.e-dialog {
+     .e-dlg-header-content {
       padding: $dialog-bigger-header-content-padding;
       }
 
+    & .e-dlg-header {
+      font-size: $dialog-bigger-header-content-font-size;
+    }
+
     & .e-dlg-content {
+      font-size: $dialog-bigger-content-font-size;
       padding: $dialog-bigger-content-padding;
     }
 
@@ -287,14 +305,34 @@ $dialog-headericon-bottom: 0;
     width: $dialog-close-button-width;
   }
 
+  .e-rtl {
+
+    &.e-dialog {
+
+      .e-resize-handle {
+        &.e-south-west {
+          bottom: $resize-hanlder-bottom-rtl;
+          cursor: sw-resize;
+          left: 2px;
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
 
   .e-dlg-overlay {
     height: 100%;
     left: 0;
-    opacity: .5;
+    opacity: $dialog-overlay-opacity;
     position: fixed;
     top: 0;
+    transition: opacity .15s linear;
     width: 100%;
+
+    &.e-fade {
+      opacity: 0;
+    }
   }
 
   .e-dlg-overflow-hidden {
@@ -315,27 +353,33 @@ $dialog-headericon-bottom: 0;
   }
 
   .e-dlg-container {
-    -webkit-align-items: center;
-    align-items: center;
+    align-items: flex-start;
     display: none;
     height: 100%;
     left: 0;
+    position: fixed;
     top: 0;
     width: 100%;
   }
 
   .e-dlg-center-center {
+    -webkit-align-items: center;
     -webkit-justify-content: center;
+    align-items: center;
     justify-content: center;
   }
 
   .e-dlg-left-center {
+    -webkit-align-items: center;
     -webkit-justify-content: flex-start;
+    align-items: center;
     justify-content: flex-start;
   }
 
   .e-dlg-right-center {
+    -webkit-align-items: center;
     -webkit-justify-content: flex-end;
+    align-items: center;
     justify-content: flex-end;
   }
 
@@ -354,7 +398,9 @@ $dialog-headericon-bottom: 0;
   }
 
   .e-dlg-center-top {
+    -webkit-align-items: center;
     -webkit-flex-direction: column;
+    align-items: center;
     flex-direction: column;
   }
 
@@ -373,8 +419,10 @@ $dialog-headericon-bottom: 0;
   }
 
   .e-dlg-center-bottom {
+    -webkit-align-items: center;
     -webkit-flex-direction: column;
     -webkit-justify-content: flex-end;
+    align-items: center;
     flex-direction: column;
     justify-content: flex-end;
   }
@@ -387,6 +435,22 @@ $dialog-headericon-bottom: 0;
     box-shadow: 0 0 0 transparent;
     }
 
+}
+
+@media (min-width: 768px) {
+  .e-alert-dialog.e-dialog.e-popup,
+  .e-confirm-dialog.e-dialog.e-popup {
+    margin: 30px auto;
+    width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .e-alert-dialog.e-dialog.e-popup,
+  .e-confirm-dialog.e-dialog.e-popup {
+    margin: 30px auto;
+    width: auto;
+  }
 }
 @include export-module('dialog-theme') {
   #{&}.e-dialog {
@@ -452,5 +516,8 @@ $dialog-headericon-bottom: 0;
     background-color: $dialog-closeicon-btn-active-color;
   }
 
-
+  .e-south-east,
+  .e-south-west {
+    color: $dialog-icon-color;
+  }
 }

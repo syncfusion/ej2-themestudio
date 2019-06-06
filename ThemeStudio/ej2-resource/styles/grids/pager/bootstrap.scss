@@ -1,210 +1,160 @@
 
-$pager-font-size: 13px;
-$pager-font-family: sans-serif;
-$pager-border-type: $border-type;
-$pager-border-size: $border-size;
-$pager-icon-size: 7px;
-$pager-mobile-icon-size: 11px;
-$pager-icon-color: $default-icon-color;
-$pager-bg-color: $default-bg-color;
-$pager-color: $default-font-color;
-$pager-border-color: $default-border-color;
-$pager-hover-bg-color: $hover-bg-color;
-$pager-hover-color: $hover-font-color;
-$pager-mhover-color: $default-font-color;
-$pager-number-hover-bg-color: $hover-font-color;
-$pager-active-bg-color: $active-bg-color;
-$page-content-color: $default-font-color;
-$pager-pagermessage-weight: normal;
-$pager-last-border-size: 0;
-$pager-bigger-icons-align: '';
-$pager-numeric-font-weight: normal;
-$pager-active-color: $active-font-color;
-$pager-icon-width: 'auto';
-$pager-icon-height: 'auto';
-$pager-container-margin: 0 6px -3px;
-$pager-numeric-icon-padding: 6px 3px 7px 2px;
-$pager-navigationicon-padding: 11px 9px 8px;
-$pager-navigationicon-right: 0;
-$pager-navigationicon-top: 0;
-$pager-numericitem-padding: 0;
-$pager-numericitem-margin-right: 0;
-$pager-numericitem-border-radius: 0;
-$pager-messagebar-padding-top: 5px;
-$pager-messagebar-padding-right: 6px;
-$pager-messagebar-padding-bottom: 9px;
-$pager-bigger-messagebar-padding-bottom: 8px;
-$pager-padding: 9px 0;
-$pager-content-opacity: 1;
-$pager-next-icon-margin-left: 0;
-$pager-container-rtl-margin: 0 6px -4px 0;
-$pager-rtl-navigation-icon-padding: 11px 9px 8px 2px;
-$pager-activeitem-padding: 6px 1px 7px;
-$pager-rtl-numeric-margin: 0;
-$pager-tripledot-font-size: 16px;
-$pager-tripledot-padding: 6px;
-$pager-letter-spacing: -.1em;
-$pager-first-content-icon: '\e716';
-$pager-prev-content-icon: '\e84b';
-$pager-next-content-icon: '\e848';
-$pager-last-content-icon: '\e701';
-$pager-pagecontainer-icon-padding: 11px 9px 8px;
-$pager-last-page-hover-border-radius:  0 4px 4px 0;
-$pager-first-page-hover-border-radius: 4px 0 0 4px;
-$pager-rtl-parentmsgbar-margin-left: 6px;
-$pager-bigger-padding: 4px 0 2px;
-$pager-bigger-icon-font-size: 13px;
-$pager-bigger-font-size: 13px;
-$pager-bigger-messagebar-padding-right: $pager-messagebar-padding-right / .75;
-$pager-bigger-messagebar-padding-top: $pager-messagebar-padding-top / .75;
-$pager-bigger-pagercontainer-margin: 5px 8px 5px 24px;
-$pager-bigger-nexticon-marign-left: $pager-next-icon-margin-left / .75;
-$pager-bigger-numeric-item-margin: 0 8px;
-$pager-bigger-current-item-border-radius: $pager-numericitem-border-radius / .75;
-$pager-bigger-current-item-padding: 10px 13px;
-$pager-bigger-pagercontainer-icons-marign-right: 16px;
-$pager-bigger-pagercontainer-icons-padding: 6px;
-$pager-bigger-rtl-nexticon-marign-left: 0;
-$pager-bigger-rtl-nexticon-marign-right: $pager-next-icon-margin-left / .75;
-$pager-device-padding: 19px 0;
-$pager-device-messabar-padding: 0;
-$pager-bigger-rtl-parentmsgbar-margin-left: 6px;
-$pager-bigger-rtl-numeric-margin: 2px 0 0 0;
-$pager-bigger-rtl-activeitem-padding: 12px 14px 13px 14px;
-$pager-bigger-letter-spacing: 10px 13px;
-$pager-dropdown-margin-top: -20px;
-$pager-dropdown-margin-left: 18px;
-$pager-bigger-dropdown-constant-margin: 4px;
-$pager-bigger-dropdown-margin: -35px  0 0 24px;
-$pager-dropdown-height: 32px;
-$pager-constant-margin: 0 0 3px 16px;
-$pager-numericitem-min-width: 26px;
-$pager-tripledot-rtl-bigger-margin-top: -5px;
-$pager-item-hover-border-width: 0;
-$pager-item-hover-border-color: $pager-border-color;
-$pager-bigger-current-item-hover-padding: $pager-bigger-current-item-padding;
-$pager-numeric-icon-hover-padding: $pager-numeric-icon-padding;
-$pager-bigger-rtl-activeitem-hover-padding:  $pager-bigger-rtl-activeitem-padding;
-$pager-activeitem-hover-padding: $pager-activeitem-padding;
-$pager-font-size: 12px;
-$pager-bg-color: $grey-white;
-$pager-border-color: $grey-dd;
-$pager-color: $grey-light-font;
-$pager-icon-size: 10px;
-$pager-border-size: 1px;
-$pager-numericitem-padding: 13px 12px 10px 12px;
-$pager-padding: 8px;
-$pager-numeric-font-weight: bold;
-$pager-messagebar-padding-top: 8px;
-$pager-numericitem-border-radius: 4px;
-$pager-number-hover-bg-color: $grey-lighter;
-$pager-font-family: Helvertica;
-$pager-font-weight: bold;
-$pager-messagebar-padding-right: 8px;
-$pager-tripledot-padding: 8px 11px 9px;
-$pager-numeric-icon-padding: 11px 12px 10px 11px;
-$pager-pagecontainer-icon-padding: 11px 10px 12px 8px;
-$pager-hover-color: $brand-primary-darken-25;
-$pager-mhover-color: $brand-primary-darken-10;
-$pager-pagermessage-weight: 500;
-$pager-active-color: $brand-primary-font;
-$pager-active-bg-color: $brand-primary;
-$pager-last-border-size: 1px;
-$pager-numericitem-border-radius: 0;
-$page-content-color: $brand-primary;
-$pager-container-margin: 0 0 -4px;
-$pager-bigger-numeric-item-margin: 0;
-$pager-bigger-icon-font-size: 12px;
-$pager-bigger-font-size: 12px;
-$pager-bigger-padding: 13px 10px 8px;
-$pager-bigger-pagercontainer-margin: 0;
-$pager-bigger-pagercontainer-icons-padding: 13px 10px 12px;
-$pager-bigger-pagercontainer-icons-marign-right: 0;
-$pager-bigger-current-item-padding: 12px 14px 13px;
-$pager-letter-spacing: 0;
-$pager-bigger-icons-align: middle;
-$pager-bigger-messagebar-padding-right: 10px;
-$pager-bigger-messagebar-padding-top: 11px;
-$pager-last-content-icon: '\e235';
-$pager-next-content-icon: '\e236';
-$pager-prev-content-icon: '\e237';
-$pager-first-content-icon: '\e238';
-$pager-icon-color: $brand-primary;
-$pager-hover-bg-color: $grey-lighter;
-$pager-dropdown-margin-top: -20px;
-$pager-dropdown-margin-left: 16px;
-$pager-bigger-dropdown-constant-margin: 12px;
-$pager-bigger-dropdown-margin: -35px  0 0 20px;
-$pager-dropdown-height: 34px;
-$pager-constant-margin: 0 0 6px 8px;
-$pager-bigger-letter-spacing: 9px 10px 12px;
-$pager-tripledot-rtl-margin-top: 2px;
-$pager-tripledot-rtl-padding: 8px 11px 9px 11px;
-$pager-rtl-pagerconstant-margin-top: 8px;
-$pager-rtl-pagerdropdown-margin: -20px 16px 0 0;
-$pager-tripledot-rtl-bigger-margin-top: -5px;
-$pager-bigger-rtl-numeric-margin: 0;
-$pager-bigger-container-rtl-margin: 0 0 -4px 0;
-$pager-activeitem-padding: 11px 12px 10px 11px;
-$pager-rtl-pagerdropdown-bigger-margin: -25px 16px 0 0;
-$pager-rtl-pagerconstant-bigger-margin-top: 13px 16px 13px 0;
-$pager-bigger-rtl-parentmsgbar-margin-top: 2px;
-$pager-bigger-rtl-pagercontainer-margin-top: 5px;
-$pager-bigger-device-rtl-parentmsgbar-margin-top: 5px;
-$pager-rtl-pagermsgbar-device-margin-top: 10px;
-$pager-bigger-constant-margin-left: 16px;
-$pager-rtl-last-content-icon: '\e238';
-$pager-rtl-first-content-icon: '\e235';
-$pager-rtl-prev-content-icon: '\e236';
-$pager-rtl-next-content-icon: '\e237';
-$pager-item-hover-border-width: 0 1px 0 0;
-$pager-item-hover-border-color: $pager-border-color;
-$pager-bigger-current-item-hover-padding: $pager-bigger-current-item-padding;
-$pager-numeric-icon-hover-padding: $pager-numeric-icon-padding;
-$pager-bigger-rtl-activeitem-hover-padding:  $pager-bigger-rtl-activeitem-padding;
-$pager-activeitem-hover-padding: $pager-activeitem-padding;
-
-@include export-module('pager-icons') {
-  /*! component icons */
+$pager-numericitem-border-radius: 4px !default;
+$pager-border-type: $border-type !default;
+$pager-mobile-icon-size: 11px !default;
+$pager-icon-width: 'auto' !default;
+$pager-icon-height: 'auto' !default;
+$pager-navigationicon-padding: 11px 9px 8px !default;
+$pager-navigationicon-right: 0 !default;
+$pager-navigationicon-top: 0 !default;
+$pager-numericitem-margin-right: 0 !default;
+$pager-messagebar-padding-bottom: 9px !default;
+$pager-bigger-messagebar-padding-bottom: 8px !default;
+$pager-content-opacity: 1 !default;
+$pager-next-icon-margin-left: 0 !default;
+$pager-container-rtl-margin: 0 6px -4px 0 !default;
+$pager-rtl-navigation-icon-padding: 11px 9px 8px 2px !default;
+$pager-rtl-numeric-margin: 0 !default;
+$pager-tripledot-font-size: 16px !default;
+$pager-last-page-hover-border-radius:  0 4px 4px 0 !default;
+$pager-first-page-hover-border-radius: 4px 0 0 4px !default;
+$pager-rtl-parentmsgbar-margin-left: 6px !default;
+$pager-bigger-nexticon-marign-left: $pager-next-icon-margin-left / .75 !default;
+$pager-bigger-current-item-border-radius: $pager-numericitem-border-radius / .75 !default;
+$pager-bigger-rtl-nexticon-marign-left: 0 !default;
+$pager-bigger-rtl-nexticon-marign-right: $pager-next-icon-margin-left / .75 !default;
+$pager-device-padding: 19px 0 !default;
+$pager-device-messabar-padding: 0 !default;
+$pager-bigger-rtl-parentmsgbar-margin-left: 6px !default;
+$pager-bigger-rtl-activeitem-padding: 12px 14px 13px 14px !default;
+$pager-numericitem-min-width: 26px !default;
+$pager-font-size: 12px !default;
+$pager-bg-color: $grey-white !default;
+$pager-border-color: $grey-dd !default;
+$pager-color: $grey-light-font !default;
+$pager-icon-size: 10px !default;
+$pager-border-size: 1px !default;
+$pager-numericitem-padding: 13px 12px 10px 12px !default;
+$pager-padding: 8px !default;
+$pager-numeric-font-weight: bold !default;
+$pager-messagebar-padding-top: 8px !default;
+$pager-number-hover-bg-color: $grey-lighter !default;
+$pager-font-family: Helvertica !default;
+$pager-font-weight: bold !default;
+$pager-messagebar-padding-right: 8px !default;
+$pager-tripledot-padding: 8px 11px 9px !default;
+$pager-numeric-icon-padding: 11px 12px 10px 11px !default;
+$pager-pagecontainer-icon-padding: 11px 10px 12px 8px !default;
+$pager-hover-color: $brand-primary-darken-25 !default;
+$pager-mhover-color: $brand-primary-darken-10 !default;
+$pager-pagermessage-weight: 500 !default;
+$pager-active-color: $brand-primary-font !default;
+$pager-active-bg-color: $brand-primary !default;
+$pager-last-border-size: 1px !default;
+$page-content-color: $brand-primary !default;
+$pager-container-margin: 0 0 -4px !default;
+$pager-bigger-numeric-item-margin: 0 !default;
+$pager-bigger-icon-font-size: 12px !default;
+$pager-bigger-font-size: 12px !default;
+$pager-bigger-padding: 13px 10px 8px !default;
+$pager-bigger-pagercontainer-margin: 0 !default;
+$pager-bigger-pagercontainer-icons-padding: 13px 10px 12px !default;
+$pager-bigger-pagercontainer-icons-marign-right: 0 !default;
+$pager-bigger-current-item-padding: 12px 14px 13px !default;
+$pager-letter-spacing: 0 !default;
+$pager-bigger-icons-align: middle !default;
+$pager-bigger-messagebar-padding-right: 10px !default;
+$pager-bigger-messagebar-padding-top: 11px !default;
+$pager-last-content-icon: 'e235' !default;
+$pager-next-content-icon: 'e236' !default;
+$pager-prev-content-icon: 'e237' !default;
+$pager-first-content-icon: 'e238' !default;
+$pager-icon-color: $brand-primary !default;
+$pager-hover-bg-color: $grey-lighter !default;
+$pager-dropdown-margin-top: -20px !default;
+$pager-dropdown-margin-left: 16px !default;
+$pager-dropdown-margin-right: 0 !default;
+$pager-bigger-dropdown-constant-margin: 12px !default;
+$pager-bigger-dropdown-margin: -35px  0 0 20px !default;
+$pager-dropdown-height: 34px !default;
+$pager-constant-margin: 0 0 6px 8px !default;
+$pager-bigger-letter-spacing: 9px 10px 12px !default;
+$pager-tripledot-rtl-margin-top: 2px !default;
+$pager-tripledot-rtl-padding: 8px 11px 9px 11px !default;
+$pager-rtl-pagerconstant-margin-top: 8px !default;
+$pager-rtl-pagerdropdown-margin: -20px 16px 0 0 !default;
+$pager-tripledot-rtl-bigger-margin-top: -5px !default;
+$pager-bigger-rtl-numeric-margin: 0 !default;
+$pager-bigger-container-rtl-margin: 0 0 -4px 0 !default;
+$pager-activeitem-padding: 11px 12px 10px 11px !default;
+$pager-rtl-pagerdropdown-bigger-margin: -25px 16px 0 0 !default;
+$pager-rtl-pagerconstant-bigger-margin-top: 13px 16px 13px 0 !default;
+$pager-bigger-rtl-parentmsgbar-margin-top: 2px !default;
+$pager-bigger-rtl-pagercontainer-margin-top: 5px !default;
+$pager-bigger-device-rtl-parentmsgbar-margin-top: 5px !default;
+$pager-rtl-pagermsgbar-device-margin-top: 10px !default;
+$pager-bigger-constant-margin-left: 16px !default;
+$pager-rtl-last-content-icon: 'e238' !default;
+$pager-rtl-first-content-icon: 'e235' !default;
+$pager-rtl-prev-content-icon: 'e236' !default;
+$pager-rtl-next-content-icon: 'e237' !default;
+$pager-item-hover-border-width: 0 1px 0 0 !default;
+$pager-item-hover-border-color: $pager-border-color !default;
+$pager-bigger-current-item-hover-padding: $pager-bigger-current-item-padding !default;
+$pager-numeric-icon-hover-padding: $pager-numeric-icon-padding !default;
+$pager-bigger-rtl-activeitem-hover-padding:  $pager-bigger-rtl-activeitem-padding !default;
+$pager-activeitem-hover-padding: $pager-activeitem-padding !default;
+$pager-bigger-dropdown-margin-top: $pager-dropdown-margin-top !default;
+@include export-module('pager-bootstrap-icons') {
+  /*!componenticons*/
 
   #{&}.e-pager,
   .e-grid-menu {
 
     .e-icon-last::before {
-      content: $pager-last-content-icon;
+      content: '\e235';
     }
 
     .e-icon-first::before {
-      content: $pager-first-content-icon;
+      content: '\e238';
     }
 
     .e-icon-prev::before {
-      content: $pager-prev-content-icon;
+      content: '\e237';
     }
 
     .e-icon-next::before {
-      content: $pager-next-content-icon;
-    }&.e-rtl {
+      content: '\e236';
+    }
+
+    &.e-rtl {
       & .e-icon-last.e-lastpage::before,
       & .e-icon-last.e-lastpage:hover,
       & .e-icon-last.e-lastpagedisabled::before {
-        content: $pager-rtl-last-content-icon;
-    }& .e-icon-first.e-firstpage::before,
+        content: '\e238';
+      }
+
+      & .e-icon-first.e-firstpage::before,
       & .e-icon-first.e-firstpage:hover,
       & .e-icon-first.e-firstpagedisabled::before {
-        content: $pager-rtl-first-content-icon;
-    }& .e-icon-prev.e-prevpage::before,
+        content: '\e235';
+      }
+
+      & .e-icon-prev.e-prevpage::before,
       & .e-icon-prev.e-prevpage:hover,
       & .e-icon-prev.e-prevpagedisabled::before {
-        content: $pager-rtl-prev-content-icon;
-    }& .e-icon-next.e-nextpage::before,
+        content: '\e236';
+      }
+
+      & .e-icon-next.e-nextpage::before,
       & .e-icon-next.e-nextpage:hover,
       & .e-icon-next.e-nextpagedisabled::before {
-        content: $pager-rtl-next-content-icon;
+        content: '\e237';
+      }
+    }
+  }
 }
-     }
-  }
-  }
+
 @include export-module('pager-layout') {
   /*! Pager layout */
   .e-bigger  #{&}.e-pager,
@@ -226,6 +176,7 @@ $pager-activeitem-hover-padding: $pager-activeitem-padding;
     .e-pagerdropdown {
       height: 40px;
       margin: $pager-bigger-dropdown-margin;
+      margin-top: $pager-bigger-dropdown-margin-top;
     }
 
     .e-pagerconstant {
@@ -361,6 +312,7 @@ $pager-activeitem-hover-padding: $pager-activeitem-padding;
       display: inline-block;
       height: $pager-dropdown-height;
       margin-left: $pager-dropdown-margin-left;
+      margin-right: $pager-dropdown-margin-right;
       margin-top: $pager-dropdown-margin-top;
       overflow: hidden;
       vertical-align: middle;

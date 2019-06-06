@@ -1,400 +1,74 @@
 
-
-$drop-down-arrow-content: '\e969';
-$vertical-btn-padding: 12px 12px;
-$vertical-bigger-btn-padding: 16px 16px;
-$vertical-btn-icon-padding: 6px;
-$vertical-btn-small-icon-padding: 6px;
-$vertical-btn-bigger-icon-padding: 8px;
-$vertical-btn-small-bigger-icon-padding: 8px;
-$bigger-font-size: 15px;
-$bigger-li-height: 48px;
-$bigger-max-width: 280px;
-$bigger-min-width: 112px;
-$color: rgba(0, 0, 0, .87);
-$disable-text: rgba(0, 0, 0, .38);
-$font-size: 14px;
-$font-weight: normal;
-$icon-margin-right: 10px;
-$li-bgcolor: #808080;
-$li-border-color: rgba(0, 0, 0, .12);
-$li-border-style: solid;
-$li-border-width: 1px;
-$li-focus-bgcolor: 808080;
-$li-height: 36px;
-$li-padding: 0 16px;
-$li-box-shadow: 0 0 0 1px rgba(0, 0, 0, .26) inset;
-$li-selection-bgcolor: #808080;
-$li-selection-font-color: rgba(0, 0, 0, .87);
-$max-width: 240px;
-$menu-icon-color: rgba(0, 0, 0, .54);
-$menu-icon-disabled-color: rgba(0, 0, 0, .38);
-$menu-icon-bigger-font-size: 16px;
-$menu-icon-font-size: 14px;
-$min-width: 120px;
-$parent-ul-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .26);
-$selected-color: rgba(0, 0, 0, .87);
-$seperator-padding: 8px 0;
-$sub-ul-box-shadow: 0 8px 10px 0 rgba(0, 0, 0, .24);
-$ul-bgcolor: #fff;
-$ul-border: none;
-$ul-border-radius: 0;
-$ul-padding: 8px 0;
-$ul-bigger-padding: 8px 0;
-$blank-icon: 40px;
-$blank-icon-bigger: 42px;
-$btn-active-box-shadow: none;
-$icon-font-size: 14px;
-$icon-font-size-bigger: 16px;
-$caret-icon-font-size: 8px;
-$caret-icon-font-size-bigger: 10px;
-$drop-down-arrow-content: '\e969';
-$vertical-btn-icon-padding: 6px;
-$vertical-btn-small-icon-padding: 6px;
-$vertical-btn-bigger-icon-padding: 8px;
-$vertical-btn-small-bigger-icon-padding: 8px;
-$vertical-btn-padding: 6px 12px;
-$vertical-bigger-btn-padding: 8px 16px;
-$bigger-font-size: 15px;
-$bigger-li-height: 40px;
-$bigger-max-width: 280px;
-$bigger-min-width: 112px;
-$color: $grey-dark;
-$disable-text: rgba($grey, .65);
-$font-size: 14px;
-$font-weight: normal;
-$icon-margin-right: 12px;
-$li-bgcolor: $grey-e6;
-$li-box-shadow: 0 0 0 1px $grey-8c inset;
-$li-border-color: $grey-e6;
-$li-border-style: solid;
-$li-border-width: 1px;
-$li-focus-bgcolor: none;
-$li-height: 26px;
-$li-padding: 0 14px;
-$li-selection-bgcolor: $grey-e6;
-$li-selection-font-color: $grey-dark;
-$max-width: 240px;
-$menu-icon-bigger-font-size: 16px;
-$menu-icon-color: $grey-dark;
-$menu-icon-disabled-color: rgba($grey-light-font, .65);
-$menu-icon-font-size: 16px;
-$min-width: 120px;
-$parent-ul-box-shadow: 0 6px 12px rgba($grey-base, .175);
-$seperator-padding: 3px 0;
-$selected-color: $grey-dark;
-$sub-ul-box-shadow: 0 6px 12px rgba($grey-base, .175);
-$ul-bgcolor: $grey-white;
-$ul-border: 1px solid $grey-cc;
-$ul-border-radius: 4px;
-$ul-padding: 3px 0;
-$ul-bigger-padding: 5px 0;
-$blank-icon: 42px;
-$blank-icon-bigger: 42px;
-$btn-active-box-shadow: inset 0 3px 5px rgba($grey-base, .125);
-
-@include export-module('drop-down-button-layout') {
-  /*! drop-down button layout */
-  #{&}.e-dropdown-btn,
-  #{&}.e-dropdown-btn.e-btn {
-    box-shadow: none;
-    text-transform: none;
-    white-space: normal;
-
-    &:hover,
-    &:focus {
-      box-shadow: none;
-    }
-
-    &:active {
-      box-shadow: $btn-active-box-shadow;
-    }
-
-    .e-btn-icon {
-      font-size: $icon-font-size;
-    }
-
-    .e-caret {
-      font-size: $caret-icon-font-size;
-
-      &::before {
-        content: $drop-down-arrow-content;
-      }
-    }
-
-    & .e-icon-top {
-      padding-bottom: $vertical-btn-icon-padding;
-    }
-
-    &.e-vertical,
-    &.e-top-icon-btn {
-      line-height: 1;
-      padding: $vertical-btn-padding;
-    }
-
-    & .e-icon-bottom {
-      padding-top: $vertical-btn-icon-padding;
-    }
-
-    &.e-caret-hide {
-      & .e-caret {
-        display: none;
-      }
-    }
-
-    &.e-small {
-      & .e-icon-top {
-        padding-bottom: $vertical-btn-small-icon-padding;
-      }
-
-      &.e-vertical,
-      &.e-top-icon-btn {
-        line-height: 1;
-        padding: $vertical-btn-padding;
-      }
-
-      & .e-icon-bottom {
-        padding-top: $vertical-btn-small-icon-padding;
-      }
-    }
-  }
-
-  .e-bigger #{&}.e-dropdown-btn,
-  .e-bigger#{&}.e-dropdown-btn {
-    & .e-icon-top {
-      padding-bottom: $vertical-btn-bigger-icon-padding;
-    }
-
-    .e-btn-icon {
-      font-size: $icon-font-size-bigger;
-    }
-
-    .e-caret {
-      font-size: $caret-icon-font-size-bigger;
-    }
-
-    &.e-vertical,
-    &.e-top-icon-btn {
-      line-height: 1;
-      padding: $vertical-bigger-btn-padding;
-    }
-
-    & .e-icon-bottom {
-      padding-top: $vertical-btn-bigger-icon-padding;
-    }
-
-    &.e-small {
-      & .e-icon-top {
-        padding-bottom: $vertical-btn-small-icon-padding;
-      }
-
-      &.e-vertical,
-      &.e-top-icon-btn {
-        line-height: 1;
-        padding: $vertical-bigger-btn-padding;
-      }
-
-      & .e-icon-bottom {
-        padding-top: $vertical-btn-small-icon-padding;
-      }
-    }
-  }
-
-  #{&}.e-dropdown-popup {
-    position: absolute;
-
-    & ul {
-      border: $ul-border;
-      border-radius: $ul-border-radius;
-      box-shadow: $parent-ul-box-shadow;
-      font-size: $font-size;
-      font-weight: $font-weight;
-      list-style-image: none;
-      list-style-position: outside;
-      list-style-type: none;
-      margin: 0;
-      min-width: $min-width;
-      overflow: hidden;
-      padding: $ul-padding;
-      user-select: none;
-      white-space: nowrap;
-
-      & .e-item  {
-        cursor: pointer;
-        height: $li-height;
-        line-height: $li-height;
-        padding: $li-padding;
-
-        & .e-menu-url {
-          display: inline-block;
-          text-decoration: none;
-        }
-
-        & .e-menu-icon {
-          float: left;
-          font-size: $menu-icon-font-size;
-          line-height: $li-height;
-          margin-right: $icon-margin-right;
-          vertical-align: middle;
-        }
-
-        &.e-blank-icon {
-          padding-left: $blank-icon;
-        }
-
-        &.e-disabled {
-          cursor: auto;
-          pointer-events: none;
-        }
-
-        &.e-separator {
-          border-bottom-style: $li-border-style;
-          border-bottom-width: $li-border-width;
-          cursor: auto;
-          height: auto;
-          line-height: normal;
-          margin: $seperator-padding;
-          pointer-events: none;
-        }
-      }
-    }
-  }
-
-  .e-rtl#{&}.e-dropdown-popup .e-item {
-    &.e-blank-icon {
-      padding-right: $blank-icon;
-    }
-
-    & .e-menu-icon {
-      float: right;
-      margin-left: $icon-margin-right;
-      margin-right: 0;
-    }
-  }
-
-  &.e-bigger #{&}.e-dropdown-popup ul,
-  &.e-bigger#{&}.e-dropdown-popup ul {
-    box-shadow: $parent-ul-box-shadow;
-    font-size: $bigger-font-size;
-    max-width: $bigger-max-width;
-    min-width: $bigger-min-width;
-    padding: $ul-bigger-padding;
-
-    & .e-item  {
-      height: $bigger-li-height;
-      line-height: $bigger-li-height;
-
-      & .e-menu-icon {
-        font-size: $menu-icon-bigger-font-size;
-        line-height: $bigger-li-height;
-      }
-
-      &.e-blank-icon {
-        padding-left: $blank-icon-bigger;
-      }
-
-      &.e-separator {
-        height: auto;
-        line-height: normal;
-      }
-    }
-  }
-}
-@include export-module('drop-down-button-theme') {
-  /*! drop-down button theme */
-  #{&}.e-dropdown-popup {
-    background-color: $ul-bgcolor;
-    color: $color;
-
-    & ul {
-      & .e-item  {
-        & .e-menu-url {
-          color: $color;
-        }
-
-        & .e-menu-icon {
-          color: $menu-icon-color;
-        }
-
-        &.e-focused {
-          background-color: $li-focus-bgcolor;
-          box-shadow: $li-box-shadow;
-        }
-
-        &:hover {
-          background-color: $li-bgcolor;
-          color: $li-selection-font-color;
-        }
-
-        &:active,
-        &.e-selected {
-          background-color: $li-selection-bgcolor;
-          color: $selected-color;
-
-          & .e-menu-url {
-            color: $selected-color;
-          }
-
-          & .e-menu-icon {
-            color: $selected-color;
-          }
-        }
-      }
-
-      & .e-separator {
-        border-bottom-color: $li-border-color;
-      }
-    }
-  }
-}
-$btn-zindex: 0;
-$btn-border-radius: 2px;
-$btn-focus-border-color: rgba(0, 0, 0, .12);
-$btn-focus-vertical-border-color: transparent;
-$btn-focus-outline-offset: 0;
-$vertical-secondary-icon-line-height: .417em;
-$btn-seperator-border: 1px solid;
-$btn-seperator-border-color: rgba(0, 0, 0, .12);
-$btn-seperator-default-border-color: transparent;
-$btn-seperator-vertical-border-color: rgba(0, 0, 0, .12);
-$btn-hover-border-color: transparent;
-$btn-hover-vertical-border-color: transparent;
-$btn-active-border-color: $btn-border-color;
-$btn-active-vertical-border-color: transparent;
-$btn-disabled-vertical-border-color: transparent;
-$btn-active-box-shadow: none;
-$btn-disabled-left-border-color: transparent;
-$btn-hover-left-border-color: transparent;
-$btn-focus-left-border-color: transparent;
-$btn-active-left-border-color: transparent;
-$btn-sec-btn-margin-left: 0;
-$icon-font-size: 14px;
-$icon-font-size-bigger: 16px;
-$icon-btn-padding: 6px;
-$icon-btn-padding-bigger: 6px;
-$btn-zindex: 2;
-$btn-border-radius: 4px;
-$btn-focus-border-color: $grey-8c;
-$btn-focus-vertical-border-color: $grey-8c;
-$btn-focus-outline-offset: 0;
-$vertical-secondary-icon-line-height: .334em;
-$btn-seperator-border: 1px solid;
-$btn-seperator-border-color: $grey-cc;
-$btn-seperator-default-border-color: $grey-cc;
-$btn-seperator-vertical-border-color: $grey-cc;
-$btn-hover-border-color: $grey-ad;
-$btn-hover-vertical-border-color: $grey-ad;
-$btn-active-border-color: $grey-ad;
-$btn-active-vertical-border-color: $grey-ad;
-$btn-disabled-vertical-border-color: rgba($grey-cc, .65);
-$btn-active-box-shadow: inset 0 3px 5px rgba($grey-base, .125);
-$btn-disabled-left-border-color: $grey-cc;
-$btn-hover-left-border-color: $grey-ad;
-$btn-focus-left-border-color: $grey-8c;
-$btn-active-left-border-color: $grey-ad;
-$btn-sec-btn-margin-left: -1px;
-$icon-btn-padding: 10px;
-$icon-btn-padding-bigger: 12px;
+$drop-down-btn-arrow-content: '\e969' !default;
+$drop-down-btn-vertical-btn-padding: 6px 12px !default;
+$drop-down-btn-vertical-bigger-padding: 8px 16px !default;
+$drop-down-btn-bigger-font-size: 15px !default;
+$drop-down-btn-bigger-li-height: 40px !default;
+$drop-down-btn-bigger-max-width: 280px !default;
+$drop-down-btn-bigger-min-width: 112px !default;
+$drop-down-btn-color: $grey-dark !default;
+$drop-down-btn-disable-text: rgba($grey, .65) !default;
+$drop-down-btn-font-size: 14px !default;
+$drop-down-btn-font-weight: normal !default;
+$drop-down-btn-icon-font-size: 14px !default;
+$drop-down-btn-icon-margin-right: 12px !default;
+$drop-down-btn-bigger-icon-margin-right: 12px !default;
+$drop-down-btn-li-bgcolor: $grey-e6 !default;
+$drop-down-btn-li-box-shadow: 0 0 0 1px $grey-8c inset !default;
+$drop-down-btn-li-border-color: $grey-e6 !default;
+$drop-down-btn-li-border-style: solid !default;
+$drop-down-btn-li-border-width: 1px !default;
+$drop-down-btn-li-focus-bgcolor: none !default;
+$drop-down-btn-li-height: 26px !default;
+$drop-down-btn-li-padding: 0 14px !default;
+$drop-down-btn-bigger-li-padding: 0 14px !default;
+$drop-down-btn-small-li-padding: 0 14px !default;
+$drop-down-btn-li-selection-bgcolor: $grey-e6 !default;
+$drop-down-btn-li-selection-font-color: $grey-dark !default;
+$drop-down-btn-max-width: 240px !default;
+$drop-down-btn-menu-icon-bigger-font-size: 16px !default;
+$drop-down-btn-menu-icon-color: $grey-dark !default;
+$drop-down-btn-menu-icon-disabled-color: rgba($grey-light-font, .65) !default;
+$drop-down-btn-menu-icon-font-size: 16px !default;
+$drop-down-btn-min-width: 120px !default;
+$drop-down-btn-parent-ul-box-shadow: 0 6px 12px rgba($grey-base, .175) !default;
+$drop-down-btn-seperator-padding: 3px 0 !default;
+$drop-down-btn-selected-color: $grey-dark !default;
+$drop-down-btn-sub-ul-box-shadow: 0 6px 12px rgba($grey-base, .175) !default;
+$drop-down-btn-ul-bgcolor: $grey-white !default;
+$drop-down-btn-ul-border: 1px solid $grey-cc !default;
+$drop-down-btn-ul-border-radius: 4px !default;
+$drop-down-btn-ul-padding: 3px 0 !default;
+$drop-down-btn-ul-bigger-padding: 5px 0 !default;
+$drop-down-btn-ul-small-padding: 5px 0 !default;
+$drop-down-btn-blank-icon: 42px !default;
+$drop-down-btn-blank-icon-bigger: 42px !default;
+$drop-down-btn-caret-icon-font-size: 8px !default;
+$drop-down-btn-icon-font-size-bigger: 16px !default;
+$drop-down-btn-caret-icon-font-size-bigger: 10px !default;
+$split-btn-zindex: 2 !default;
+$split-btn-border-radius: 4px !default;
+$split-btn-focus-border-color: $grey-8c !default;
+$split-btn-focus-vertical-border-color: $grey-8c !default;
+$split-btn-focus-outline-offset: 0 !default;
+$split-btn-vertical-secondary-icon-line-height: .334em !default;
+$split-btn-seperator-border: 1px solid !default;
+$split-btn-seperator-border-color: $grey-cc !default;
+$split-btn-seperator-default-border-color: $grey-cc !default;
+$split-btn-seperator-vertical-border-color: $grey-cc !default;
+$split-btn-hover-border-color: $grey-ad !default;
+$split-btn-hover-vertical-border-color: $grey-ad !default;
+$split-btn-active-border-color: $grey-ad !default;
+$split-btn-active-vertical-border-color: $grey-ad !default;
+$split-btn-disabled-vertical-border-color: rgba($grey-cc, .65) !default;
+$split-btn-active-box-shadow: inset 0 3px 5px rgba($grey-base, .125) !default;
+$split-btn-disabled-left-border-color: $grey-cc !default;
+$split-btn-hover-left-border-color: $grey-ad !default;
+$split-btn-focus-left-border-color: $grey-8c !default;
+$split-btn-active-left-border-color: $grey-ad !default;
+$split-btn-sec-btn-margin-left: -1px !default;
+$split-btn-icon-btn-padding: 10px !default;
+$split-btn-icon-btn-padding-bigger: 12px !default;
 
 @include export-module('split-button-layout') {
   /*! splitbutton layout */
@@ -406,13 +80,19 @@ $icon-btn-padding-bigger: 12px;
     .e-split-btn {
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
-      padding-left: 10px;
-      padding-right: 4px;
       text-transform: none;
       z-index: 1;
+      @if $skin-name == 'bootstrap4' {
+        padding-left: $split-btn-icon-btn-padding;
+        padding-right: $split-btn-icon-btn-padding;
+      }
+      @else {
+        padding-left: 10px;
+        padding-right: 4px;
+      }
 
       &:focus {
-        outline-offset: $btn-focus-outline-offset;
+        outline-offset: $split-btn-focus-outline-offset;
       }
 
       &:focus,
@@ -427,7 +107,7 @@ $icon-btn-padding-bigger: 12px;
       }
 
       .e-btn-icon {
-        font-size: $icon-font-size;
+        font-size: $drop-down-btn-icon-font-size;
         margin-left: 0;
         padding-right: 8px;
         width: auto;
@@ -439,8 +119,8 @@ $icon-btn-padding-bigger: 12px;
       }
 
       &.e-icon-btn {
-        padding-left: $icon-btn-padding;
-        padding-right: $icon-btn-padding;
+        padding-left: $split-btn-icon-btn-padding;
+        padding-right: $split-btn-icon-btn-padding;
 
         .e-btn-icon {
           padding-right: 0;
@@ -451,14 +131,20 @@ $icon-btn-padding-bigger: 12px;
     .e-dropdown-btn {
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
-      margin-left: $btn-sec-btn-margin-left;
-      padding-left: 4px;
-      padding-right: 4px;
+      margin-left: $split-btn-sec-btn-margin-left;
+      @if $skin-name == 'bootstrap4' {
+        padding-left: $split-btn-icon-btn-padding;
+        padding-right: $split-btn-icon-btn-padding;
+      }
+      @else {
+        padding-left: 4px;
+        padding-right: 4px;
+      }
 
       &:focus,
       &:hover,
       &:active {
-        z-index: $btn-zindex;
+        z-index: $split-btn-zindex;
       }
 
       &:disabled {
@@ -470,7 +156,7 @@ $icon-btn-padding-bigger: 12px;
       }
 
       &:focus {
-        outline-offset: $btn-focus-outline-offset;
+        outline-offset: $split-btn-focus-outline-offset;
       }
     }
 
@@ -483,7 +169,7 @@ $icon-btn-padding-bigger: 12px;
       }
 
       &:active {
-        box-shadow: $btn-active-box-shadow;
+        box-shadow: $split-btn-active-box-shadow;
       }
 
       &:disabled {
@@ -494,12 +180,18 @@ $icon-btn-padding-bigger: 12px;
     &.e-rtl {
       .e-split-btn {
         border-bottom-left-radius: 0;
-        border-bottom-right-radius: $btn-border-radius;
+        border-bottom-right-radius: $split-btn-border-radius;
         border-top-left-radius: 0;
-        border-top-right-radius: $btn-border-radius;
-        margin-left: $btn-sec-btn-margin-left;
-        padding-left: 4px;
-        padding-right: 10px;
+        border-top-right-radius: $split-btn-border-radius;
+        margin-left: $split-btn-sec-btn-margin-left;
+        @if $skin-name == 'bootstrap4' {
+          padding-left: $split-btn-icon-btn-padding;
+          padding-right: $split-btn-icon-btn-padding;
+        }
+        @else {
+          padding-left: 4px;
+          padding-right: 10px;
+        }
 
         .e-btn-icon {
           margin-right: 0;
@@ -512,8 +204,8 @@ $icon-btn-padding-bigger: 12px;
         }
 
         &.e-icon-btn {
-          padding-left: $icon-btn-padding;
-          padding-right: $icon-btn-padding;
+          padding-left: $split-btn-icon-btn-padding;
+          padding-right: $split-btn-icon-btn-padding;
 
           .e-btn-icon {
             padding-left: 0;
@@ -522,9 +214,9 @@ $icon-btn-padding-bigger: 12px;
     }
 
       .e-dropdown-btn {
-        border-bottom-left-radius: $btn-border-radius;
+        border-bottom-left-radius: $split-btn-border-radius;
         border-bottom-right-radius: 0;
-        border-top-left-radius: $btn-border-radius;
+        border-top-left-radius: $split-btn-border-radius;
         border-top-right-radius: 0;
         margin-left: 0;
       }
@@ -541,10 +233,16 @@ $icon-btn-padding-bigger: 12px;
 
       .e-split-btn {
         border-bottom-left-radius: 0;
-        border-top-right-radius: $btn-border-radius;
+        border-top-right-radius: $split-btn-border-radius;
         line-height: 1;
-        padding-bottom: 4px;
-        padding-right: 10px;
+        @if $skin-name == 'bootstrap4' {
+          padding-bottom: $split-btn-icon-btn-padding;
+          padding-right: $split-btn-icon-btn-padding;
+        }
+        @else {
+          padding-bottom: 4px;
+          padding-right: 10px;
+        }
 
         .e-icon-top {
           padding-bottom: 4px;
@@ -552,13 +250,19 @@ $icon-btn-padding-bigger: 12px;
       }
 
       .e-dropdown-btn {
-        border-bottom-left-radius: $btn-border-radius;
+        border-bottom-left-radius: $split-btn-border-radius;
         border-top-right-radius: 0;
-        line-height: $vertical-secondary-icon-line-height;
+        line-height: $split-btn-vertical-secondary-icon-line-height;
         margin-left: 0;
-        margin-top: $btn-sec-btn-margin-left;
-        padding-bottom: 4px;
-        padding-top: 4px;
+        margin-top: $split-btn-sec-btn-margin-left;
+        @if $skin-name == 'bootstrap4' {
+          padding-bottom: $split-btn-icon-btn-padding;
+          padding-top: $split-btn-icon-btn-padding;
+        }
+        @else {
+          padding-bottom: 4px;
+          padding-top: 4px;
+        }
 
         .e-icon-bottom {
           padding-top: 0;
@@ -568,12 +272,12 @@ $icon-btn-padding-bigger: 12px;
       &.e-rtl {
         .e-split-btn {
           border-bottom-right-radius: 0;
-          border-top-left-radius: $btn-border-radius;
+          border-top-left-radius: $split-btn-border-radius;
           margin-left: 0;
         }
 
         .e-dropdown-btn {
-          border-bottom-right-radius: $btn-border-radius;
+          border-bottom-right-radius: $split-btn-border-radius;
           border-top-left-radius: 0;
         }
       }
@@ -583,8 +287,14 @@ $icon-btn-padding-bigger: 12px;
   .e-bigger .e-split-btn-wrapper,
   .e-bigger.e-split-btn-wrapper {
     .e-split-btn {
-      padding-left: 12px;
-      padding-right: 6px;
+      @if $skin-name == 'bootstrap4' {
+        padding-left: $split-btn-icon-btn-padding-bigger;
+        padding-right: $split-btn-icon-btn-padding-bigger;
+      }
+      @else {
+        padding-left: 12px;
+        padding-right: 6px;
+      }
 
       &.e-top-icon-btn {
         padding-bottom: 12px;
@@ -592,7 +302,7 @@ $icon-btn-padding-bigger: 12px;
       }
 
       .e-btn-icon {
-        font-size: $icon-font-size-bigger;
+        font-size: $drop-down-btn-icon-font-size-bigger;
         margin-left: 0;
         padding-right: 10px;
         width: auto;
@@ -604,8 +314,8 @@ $icon-btn-padding-bigger: 12px;
       }
 
       &.e-icon-btn {
-        padding-left: $icon-btn-padding-bigger;
-        padding-right: $icon-btn-padding-bigger;
+        padding-left: $split-btn-icon-btn-padding-bigger;
+        padding-right: $split-btn-icon-btn-padding-bigger;
 
         .e-btn-icon {
           padding-right: 0;
@@ -614,14 +324,26 @@ $icon-btn-padding-bigger: 12px;
     }
 
     .e-dropdown-btn {
-      padding-left: 4px;
-      padding-right: 4px;
+      @if $skin-name == 'bootstrap4' {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      @else {
+        padding-left: 4px;
+        padding-right: 4px;
+      }
     }
 
     &.e-rtl {
       .e-split-btn {
-        padding-left: 6px;
-        padding-right: 12px;
+        @if $skin-name == 'bootstrap4' {
+          padding-left: $split-btn-icon-btn-padding-bigger;
+          padding-right: $split-btn-icon-btn-padding-bigger;
+        }
+        @else {
+          padding-left: 6px;
+          padding-right: 12px;
+        }
 
         .e-btn-icon {
           padding-left: 10px;
@@ -633,8 +355,8 @@ $icon-btn-padding-bigger: 12px;
         }
 
         &.e-icon-btn {
-          padding-left: $icon-btn-padding-bigger;
-          padding-right: $icon-btn-padding-bigger;
+          padding-left: $split-btn-icon-btn-padding-bigger;
+          padding-right: $split-btn-icon-btn-padding-bigger;
 
           .e-btn-icon {
             padding-left: 0;
@@ -645,13 +367,25 @@ $icon-btn-padding-bigger: 12px;
 
     &.e-vertical {
       .e-split-btn {
-        padding-bottom: 6px;
-        padding-right: 12px;
+        @if $skin-name == 'bootstrap4' {
+          padding-bottom: $split-btn-icon-btn-padding-bigger;
+          padding-right: $split-btn-icon-btn-padding-bigger;
+        }
+        @else {
+          padding-bottom: 6px;
+          padding-right: 12px;
+        }
       }
 
       .e-dropdown-btn {
-        padding-bottom: 4px;
-        padding-top: 4px;
+        @if $skin-name == 'bootstrap4' {
+          padding-bottom: $split-btn-icon-btn-padding-bigger;
+          padding-top: $split-btn-icon-btn-padding-bigger;
+        }
+        @else {
+          padding-bottom: 4px;
+          padding-top: 4px;
+        }
 
         .e-icon-bottom {
           padding-top: 0;
@@ -664,24 +398,24 @@ $icon-btn-padding-bigger: 12px;
   /*! splitbutton theme */
   .e-split-btn-wrapper {
     .e-split-btn {
-      border-right-color: $btn-seperator-border-color;
+      border-right-color: $split-btn-seperator-border-color;
 
       &:focus {
-        border-right-color: $btn-focus-border-color;
+        border-right-color: $split-btn-focus-border-color;
       }
 
       &:active {
-        border-right-color: $btn-active-border-color;
+        border-right-color: $split-btn-active-border-color;
       }
 
       &:disabled {
-        border-right-color: $btn-disabled-border-color;
+        border-right-color: $btn-disabled-bgcolor;
       }
     }
 
     &:hover {
       & .e-split-btn {
-        border-right-color: $btn-hover-border-color;
+        border-right-color: $split-btn-hover-border-color;
 
         &:disabled {
           border-right-color: $btn-disabled-border-color;
@@ -691,29 +425,44 @@ $icon-btn-padding-bigger: 12px;
 
     &.e-rtl {
       .e-split-btn {
-        border-left-color: $btn-seperator-border-color;
-        border-right-color: $btn-seperator-default-border-color;
+        @if $skin-name != 'bootstrap4' {
+          border-color: transparent;
+        }
+        @else {
+          border-left-color: $split-btn-seperator-border-color;
+          border-right-color: $split-btn-seperator-default-border-color;
+        }
 
         &:focus {
-          border-left-color: $btn-focus-border-color;
-          border-right-color: $btn-focus-vertical-border-color;
+          @if $skin-name != 'bootstrap4' {
+            border-color: transparent;
+          }
+          @else {
+            border-left-color: $split-btn-focus-border-color;
+            border-right-color: $split-btn-focus-vertical-border-color;
+          }
         }
 
         &:active {
-          border-left-color: $btn-active-border-color;
-          border-right-color: $btn-active-vertical-border-color;
+          @if $skin-name != 'bootstrap4' {
+            border-color: transparent;
+          }
+          @else {
+            border-left-color: $split-btn-active-border-color;
+            border-right-color: $split-btn-active-vertical-border-color;
+          }
         }
 
         &:disabled {
           border-left-color: $btn-disabled-border-color;
-          border-right-color: $btn-disabled-vertical-border-color;
+          border-right-color: $split-btn-disabled-vertical-border-color;
         }
       }
 
       &:hover {
         & .e-split-btn {
-          border-left-color: $btn-hover-border-color;
-          border-right-color: $btn-hover-vertical-border-color;
+          border-left-color: $split-btn-hover-border-color;
+          border-right-color: $split-btn-hover-vertical-border-color;
 
           &:disabled {
             border-left-color: $btn-disabled-border-color;
@@ -724,29 +473,29 @@ $icon-btn-padding-bigger: 12px;
 
     &.e-vertical {
       .e-split-btn {
-        border-bottom-color: $btn-seperator-vertical-border-color;
-        border-right-color: $btn-seperator-default-border-color;
+        border-bottom-color: $split-btn-seperator-vertical-border-color;
+        border-right-color: $split-btn-seperator-default-border-color;
 
         &:focus {
-          border-bottom-color: $btn-focus-border-color;
-          border-right-color: $btn-focus-vertical-border-color;
+          border-bottom-color: $split-btn-focus-border-color;
+          border-right-color: $split-btn-focus-vertical-border-color;
         }
 
         &:active {
-          border-bottom-color: $btn-active-border-color;
-          border-right-color: $btn-active-vertical-border-color;
+          border-bottom-color: $split-btn-active-border-color;
+          border-right-color: $split-btn-active-vertical-border-color;
         }
 
         &:disabled {
           border-bottom-color: $btn-disabled-border-color;
-          border-right-color: $btn-disabled-vertical-border-color;
+          border-right-color: $split-btn-disabled-vertical-border-color;
         }
       }
 
       &:hover {
         & .e-split-btn {
-          border-bottom-color: $btn-hover-border-color;
-          border-right-color: $btn-hover-vertical-border-color;
+          border-bottom-color: $split-btn-hover-border-color;
+          border-right-color: $split-btn-hover-vertical-border-color;
 
           &:disabled {
             border-bottom-color: $btn-disabled-border-color;
@@ -756,24 +505,24 @@ $icon-btn-padding-bigger: 12px;
 
       &.e-rtl {
         .e-split-btn {
-          border-left-color: $btn-seperator-default-border-color;
+          border-left-color: $split-btn-seperator-default-border-color;
 
           &:focus {
-            border-left-color: $btn-focus-left-border-color;
+            border-left-color: $split-btn-focus-left-border-color;
           }
 
           &:active {
-            border-left-color: $btn-active-left-border-color;
+            border-left-color: $split-btn-active-left-border-color;
           }
 
           &:disabled {
-            border-left-color: $btn-disabled-left-border-color;
+            border-left-color: $split-btn-disabled-left-border-color;
           }
         }
 
         &:hover {
           & .e-split-btn {
-            border-left-color: $btn-hover-left-border-color;
+            border-left-color: $split-btn-hover-left-border-color;
           }
         }
       }

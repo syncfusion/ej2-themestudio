@@ -1,162 +1,107 @@
 
-$bgcolor: #fff;
-$bigger-check-fontsize: 17px;
-$bigger-font-size: 15px;
-$bigger-height: 25px;
-$bigger-indeterminate-fontsize: 14px;
-$bigger-indeterminate-lineheight: 28px;
-$bigger-lineheight: 29px;
-$bigger-margin: 12px;
-$bigger-small-check-fontsize: 14px;
-$bigger-small-font-size: 15px;
-$bigger-small-height: 20px;
-$bigger-small-indeterminate-fontsize: 10px;
-$bigger-small-indeterminate-lineheight: 20px;
-$bigger-small-lineheight: 24px;
-$bigger-small-width: 20px;
-$bigger-width: 25px;
-$border: 1px solid;
-$border-color: #c8c8c8;
-$border-radius: 0;
-$check-fontsize: 14px;
-$checked-ripple-bgcolor: rgba(0, 0, 0, .3);
-$checkmark-bgcolor: #fff;
-$checkmark-border-color: #c8c8c8;
-$checkmark-color: #179bd7;
-$checkmark-content: '\e933';
-$checkmark-disabled-bgcolor: #fff;
-$checkmark-disabled-border-color: #e3e3e3;
-$checkmark-disabled-color: #d6d7d7;
-$checkmark-hover-bgcolor: #fff;
-$checkmark-hover-border-color: #c8c8c8;
-$checkmark-hover-color: #179bd7;
-$color: #5c5c5c;
-$disabled-bgcolor: #fff;
-$disabled-border-color: #e3e3e3;
-$disabled-color: #d6d7d7;
-$focussed-bgcolor: #fff;
-$focussed-border-color: #c8c8c8;
-$focussed-box-shadow: 0 0 2px #cbcbcb;
-$focussed-checkmark-bgcolor: #fff;
-$focussed-checkmark-border-color: #c8c8c8;
-$focussed-checkmark-color: #179bd7;
-$focussed-color: #5c5c5c;
-$focussed-indeterminate-color: #179bd7;
-$font-size: 14px;
-$height: 20px;
-$hover-bgcolor: #fff;
-$hover-border-color: #c8c8c8;
-$hover-color: #5c5c5c;
-$indeterminate-bgcolor: #fff;
-$indeterminate-border-color: #c8c8c8;
-$indeterminate-color: #179bd7;
-$indeterminate-content: '\e790';
-$indeterminate-disabled-bgcolor: #fff;
-$indeterminate-disabled-border-color: #e3e3e3;
-$indeterminate-disabled-color: #d6d7d7;
-$indeterminate-fontsize: 10px;
-$indeterminate-hover-color: #179bd7;
-$indeterminate-lineheight: 20px;
-$key-focussed-bgcolor: transparent;
-$key-focussed-checked-bgcolor: transparent;
-$lineheight: 21px;
-$margin: 10px;
-$padding: 0;
-$ripple-bgcolor: rgba(0, 0, 0, .3);
-$ripple-bigger-size: -15px;
-$ripple-bigger-small-size: -16px;
-$ripple-size: -9px;
-$ripple-small-size: -13px;
-$ripple-height: 36px;
-$ripple-width: 36px;
-$ripple-small-height: 30px;
-$ripple-small-width: 30px;
-$ripple-bigger-height: 38px;
-$ripple-bigger-width: 38px;
-$ripple-bigger-small-height: 38px;
-$ripple-bigger-small-width: 38px;
-$small-check-fontsize: 10px;
-$small-font-size: 14px;
-$small-height: 16px;
-$small-indeterminate-fontsize: 8px;
-$small-indeterminate-lineheight: 15px;
-$small-lineheight: 16px;
-$small-width: 16px;
-$width: 20px;
-$focus-outline: $bgcolor 0 solid;
-$focus-outline-offset: 0;
-$bgcolor: $neutral-white;
-$bigger-check-fontsize: 14px;
-$bigger-font-size: 15px;
-$bigger-height: 22px;
-$bigger-indeterminate-fontsize: 14px;
-$bigger-indeterminate-lineheight: 18px;
-$bigger-lineheight: 18px;
-$bigger-margin: 8px;
-$bigger-small-check-fontsize: 10px;
-$bigger-small-font-size: 15px;
-$bigger-small-height: 18px;
-$bigger-small-indeterminate-fontsize: 10px;
-$bigger-small-indeterminate-lineheight: 14px;
-$bigger-small-lineheight: 15px;
-$bigger-small-width: 18px;
-$bigger-width: 22px;
-$border: 2px solid;
-$border-color: $neutral-tertiary;
-$border-radius: 0;
-$check-fontsize: 12px;
-$checkmark-bgcolor: $theme-primary;
-$checkmark-border-color: $theme-primary;
-$checkmark-color: $theme-primary-font;
-$checkmark-content: '\e935';
-$checkmark-disabled-bgcolor: $neutral-tertiary-alt;
-$checkmark-disabled-border-color: $neutral-tertiary-alt;
-$checkmark-disabled-color: $grey-dark-font;
-$checkmark-hover-bgcolor: $theme-dark-alt;
-$checkmark-hover-border-color: $theme-dark-alt;
-$checkmark-hover-color: $theme-primary-font;
-$color: $neutral-light-font;
-$disabled-bgcolor: $neutral-white;
-$disabled-border-color: $neutral-tertiary-alt;
-$disabled-color: $neutral-tertiary-alt;
-$focussed-bgcolor: $neutral-white;
-$focussed-border-color: $neutral-secondary-alt;
-$focussed-box-shadow: none;
-$focussed-checkmark-bgcolor: $theme-dark-alt;
-$focussed-checkmark-border-color: $theme-dark-alt;
-$focussed-checkmark-color: $theme-dark-font;
-$focussed-color: $neutral-light-fontalt;
-$focussed-indeterminate-color: $neutral-secondary-alt;
-$font-size: 14px;
-$height: 20px;
-$hover-bgcolor: $neutral-white;
-$hover-border-color: $neutral-secondary-alt;
-$hover-color: $neutral-light-fontalt;
-$indeterminate-bgcolor: $neutral-white;
-$indeterminate-border-color: $neutral-tertiary;
-$indeterminate-color: $neutral-tertiary;
-$indeterminate-content: '\e934';
-$indeterminate-disabled-bgcolor: $neutral-white;
-$indeterminate-disabled-border-color: $neutral-tertiary-alt;
-$indeterminate-disabled-color: $neutral-tertiary-alt;
-$indeterminate-fontsize: 10px;
-$indeterminate-hover-color: $neutral-secondary-alt;
-$indeterminate-lineheight: 16px;
-$lineheight: 16px;
-$margin: 8px;
-$padding: 0;
-$ripple-bgcolor: rgba(0, 0, 0, .3);
-$small-check-fontsize: 8px;
-$small-font-size: 14px;
-$small-height: 14px;
-$small-indeterminate-fontsize: 8px;
-$small-indeterminate-lineheight: 10px;
-$small-lineheight: 10px;
-$small-width: 14px;
-$width: 20px;
-$border-style: solid;
-$focus-outline: $neutral-secondary-alt 1px solid;
-$focus-outline-offset: 2px;
+$cbox-bgcolor: $neutral-white !default;
+$cbox-bigger-check-fontsize: 14px !default;
+$cbox-bigger-font-size: 15px !default;
+$cbox-bigger-height: 22px !default;
+$cbox-bigger-indeterminate-fontsize: 14px !default;
+$cbox-bigger-indeterminate-lineheight: 18px !default;
+$cbox-bigger-lineheight: 18px !default;
+$cbox-bigger-margin: 8px !default;
+$cbox-bigger-small-check-fontsize: 10px !default;
+$cbox-bigger-small-font-size: 15px !default;
+$cbox-bigger-small-height: 18px !default;
+$cbox-bigger-small-indeterminate-fontsize: 10px !default;
+$cbox-bigger-small-indeterminate-lineheight: 14px !default;
+$cbox-bigger-small-lineheight: 15px !default;
+$cbox-bigger-small-width: 18px !default;
+$cbox-bigger-width: 22px !default;
+$cbox-border: 2px solid !default;
+$cbox-border-color: $neutral-tertiary !default;
+$cbox-border-radius: 0 !default;
+$cbox-check-fontsize: 12px !default;
+$cbox-checkmark-bgcolor: $theme-primary !default;
+$cbox-checkmark-border-color: $theme-primary !default;
+$cbox-checkmark-color: $theme-primary-font !default;
+$cbox-checkmark-disabled-bgcolor: $neutral-tertiary-alt !default;
+$cbox-checkmark-disabled-border-color: $neutral-tertiary-alt !default;
+$cbox-checkmark-disabled-color: $grey-dark-font !default;
+$cbox-checkmark-hover-bgcolor: $theme-dark-alt !default;
+$cbox-checkmark-hover-border-color: $theme-dark-alt !default;
+$cbox-checkmark-hover-color: $theme-primary-font !default;
+$cbox-color: $neutral-light-font !default;
+$cbox-disabled-bgcolor: $neutral-white !default;
+$cbox-disabled-border-color: $neutral-tertiary-alt !default;
+$cbox-disabled-color: $neutral-tertiary-alt !default;
+$cbox-focussed-bgcolor: $neutral-white !default;
+$cbox-focussed-border-color: $neutral-secondary-alt !default;
+$cbox-focussed-box-shadow: none !default;
+$cbox-focussed-checkmark-bgcolor: $theme-dark-alt !default;
+$cbox-focussed-checkmark-border-color: $theme-dark-alt !default;
+$cbox-focussed-checkmark-color: $theme-dark-font !default;
+$cbox-focussed-color: $neutral-light-fontalt !default;
+$cbox-focussed-indeterminate-color: $neutral-secondary-alt !default;
+$cbox-font-size: 14px !default;
+$cbox-height: 20px !default;
+$cbox-hover-bgcolor: $neutral-white !default;
+$cbox-hover-border-color: $neutral-secondary-alt !default;
+$cbox-hover-color: $neutral-light-fontalt !default;
+$cbox-indeterminate-bgcolor: $neutral-white !default;
+$cbox-indeterminate-border-color: $neutral-tertiary !default;
+$cbox-indeterminate-color: $neutral-tertiary !default;
+$cbox-indeterminate-content: '\e934' !default;
+$cbox-indeterminate-disabled-bgcolor: $neutral-white !default;
+$cbox-indeterminate-disabled-border-color: $neutral-tertiary-alt !default;
+$cbox-indeterminate-disabled-color: $neutral-tertiary-alt !default;
+$cbox-indeterminate-fontsize: 10px !default;
+$cbox-indeterminate-hover-color: $neutral-secondary-alt !default;
+$cbox-indeterminate-lineheight: 16px !default;
+$cbox-lineheight: 16px !default;
+$cbox-margin: 8px !default;
+$cbox-padding: 0 !default;
+$cbox-ripple-bgcolor: rgba(0, 0, 0, .3) !default;
+$cbox-small-check-fontsize: 8px !default;
+$cbox-small-font-size: 14px !default;
+$cbox-small-height: 14px !default;
+$cbox-small-indeterminate-fontsize: 8px !default;
+$cbox-small-indeterminate-lineheight: 10px !default;
+$cbox-small-lineheight: 10px !default;
+$cbox-small-width: 14px !default;
+$cbox-width: 20px !default;
+$cbox-border-style: solid !default;
+$cbox-focus-outline: $neutral-secondary-alt 1px solid !default;
+$cbox-focus-outline-offset: 2px !default;
+$cbox-ripple-size: -9px !default;
+$cbox-ripple-height: 36px !default;
+$cbox-ripple-width: 36px !default;
+$cbox-ripple-small-size: -13px !default;
+$cbox-ripple-small-height: 30px !default;
+$cbox-ripple-small-width: 30px !default;
+$cbox-ripple-bigger-size: -15px !default;
+$cbox-ripple-bigger-height: 38px !default;
+$cbox-ripple-bigger-width: 38px !default;
+$cbox-ripple-bigger-small-size: -16px !default;
+$cbox-ripple-bigger-small-height: 38px !default;
+$cbox-ripple-bigger-small-width: 38px !default;
+$cbox-key-focussed-bgcolor: transparent !default;
+$cbox-checked-ripple-bgcolo: rgba(0, 0, 0, .3) !default;
+@include export-module('check-box-fabric-icons') {
+  .e-checkbox-wrapper,
+  .e-css.e-checkbox-wrapper {
+    @at-root {
+      & .e-check {
+        &::before {
+          content: '\e935';
+        }
+      }
+
+      & .e-stop {
+        &::before {
+          content: '\e934';
+        }
+      }
+    }
+  }
+}
 
 @include export-module('checkbox-layout') {
   /*! checkbox layout */
@@ -180,20 +125,20 @@ $focus-outline-offset: 2px;
 
       &:focus {
         & .e-frame {
-          box-shadow: $focussed-box-shadow;
+          box-shadow: $cbox-focussed-box-shadow;
         }
       }
 
       & .e-ripple-container {
         border-radius: 50%;
-        bottom: $ripple-size;
-        height: $ripple-height;
-        left:  $ripple-size;
+        bottom: $cbox-ripple-size;
+        height: $cbox-ripple-height;
+        left:  $cbox-ripple-size;
         pointer-events: none;
         position: absolute;
-        right:  $ripple-size;
-        top:  $ripple-size;
-        width: $ripple-width;
+        right:  $cbox-ripple-size;
+        top:  $cbox-ripple-size;
+        width: $cbox-ripple-width;
         z-index: 1;
       }
 
@@ -201,9 +146,9 @@ $focus-outline-offset: 2px;
         cursor: pointer;
         display: inline-block;
         font-family: $font-family;
-        font-size: $font-size;
+        font-size: $cbox-font-size;
         font-weight: normal;
-        line-height: $height;
+        line-height: $cbox-height;
         user-select: none;
         vertical-align: middle;
         white-space: normal;
@@ -216,26 +161,26 @@ $focus-outline-offset: 2px;
         width: 1px;
 
         +.e-label {
-          margin-right: $margin;
+          margin-right: $cbox-margin;
         }
       }
 
       & .e-frame {
-        border: $border;
-        border-radius: $border-radius;
+        border: $cbox-border;
+        border-radius: $cbox-border-radius;
         box-sizing: border-box;
         cursor: pointer;
         display: inline-block;
         font-family: 'e-icons';
-        height: $height;
-        line-height: $lineheight;
-        padding: $padding;
+        height: $cbox-height;
+        line-height: $cbox-lineheight;
+        padding: $cbox-padding;
         text-align: center;
         vertical-align: middle;
-        width: $width;
+        width: $cbox-width;
 
         +.e-label {
-          margin-left: $margin;
+          margin-left: $cbox-margin;
         }
 
         +.e-ripple-container {
@@ -244,20 +189,12 @@ $focus-outline-offset: 2px;
       }
 
       & .e-check {
-        font-size: $check-fontsize;
-
-        &::before {
-          content: $checkmark-content;
-        }
+        font-size: $cbox-check-fontsize;
       }
 
       & .e-stop {
-        font-size: $indeterminate-fontsize;
-        line-height: $indeterminate-lineheight;
-
-        &::before {
-          content: $indeterminate-content;
-        }
+        font-size: $cbox-indeterminate-fontsize;
+        line-height: $cbox-indeterminate-lineheight;
       }
 
       &.e-checkbox-disabled {
@@ -276,21 +213,21 @@ $focus-outline-offset: 2px;
       &.e-rtl {
 
         .e-ripple-container {
-          right: $ripple-size;
+          right: $cbox-ripple-size;
         }
 
         & .e-frame {
           margin: 0;
 
           + .e-ripple-container {
-            left: $ripple-size;
+            left: $cbox-ripple-size;
             right: auto;
           }
         }
 
         & .e-label {
           margin-left: 0;
-          margin-right: $margin;
+          margin-right: $cbox-margin;
 
           +.e-frame {
             margin: 0;
@@ -299,7 +236,7 @@ $focus-outline-offset: 2px;
 
         & .e-checkbox {
           +.e-label {
-            margin-left: $margin;
+            margin-left: $cbox-margin;
             margin-right: 0;
           }
         }
@@ -307,32 +244,32 @@ $focus-outline-offset: 2px;
 
       &.e-small {
         & .e-frame {
-          height: $small-height;
-          line-height: $small-lineheight;
-          width: $small-width;
+          height: $cbox-small-height;
+          line-height: $cbox-small-lineheight;
+          width: $cbox-small-width;
         }
 
         & .e-check {
-          font-size: $small-check-fontsize;
+          font-size: $cbox-small-check-fontsize;
         }
 
         & .e-stop {
-          font-size: $small-indeterminate-fontsize;
-          line-height: $small-indeterminate-lineheight;
+          font-size: $cbox-small-indeterminate-fontsize;
+          line-height: $cbox-small-indeterminate-lineheight;
         }
 
         & .e-label {
-          font-size: $small-font-size;
-          line-height: $small-height;
+          font-size: $cbox-small-font-size;
+          line-height: $cbox-small-height;
         }
 
         & .e-ripple-container {
-          bottom: $ripple-small-size;
-          height: $ripple-small-height;
-          left: $ripple-small-size;
-          right: $ripple-small-size;
-          top: $ripple-small-size;
-          width: $ripple-small-width;
+          bottom: $cbox-ripple-small-size;
+          height: $cbox-ripple-small-height;
+          left: $cbox-ripple-small-size;
+          right: $cbox-ripple-small-size;
+          top: $cbox-ripple-small-size;
+          width: $cbox-ripple-small-width;
         }
       }
     }
@@ -343,37 +280,37 @@ $focus-outline-offset: 2px;
   .e-bigger .e-css.e-checkbox-wrapper,
   .e-bigger.e-css.e-checkbox-wrapper {
     & .e-frame {
-      height: $bigger-height;
-      line-height: $bigger-lineheight;
-      width: $bigger-width;
+      height: $cbox-bigger-height;
+      line-height: $cbox-bigger-lineheight;
+      width: $cbox-bigger-width;
 
       +.e-label {
-        font-size: $bigger-font-size;
-        line-height: $bigger-height;
-        margin-left: $bigger-margin;
+        font-size: $cbox-bigger-font-size;
+        line-height: $cbox-bigger-height;
+        margin-left: $cbox-bigger-margin;
       }
     }
 
     & .e-check {
-      font-size: $bigger-check-fontsize;
+      font-size: $cbox-bigger-check-fontsize;
     }
 
     & .e-stop {
-      font-size: $bigger-indeterminate-fontsize;
-      line-height: $bigger-indeterminate-lineheight;
+      font-size: $cbox-bigger-indeterminate-fontsize;
+      line-height: $cbox-bigger-indeterminate-lineheight;
     }
 
     & .e-label {
-      font-size: $bigger-font-size;
+      font-size: $cbox-bigger-font-size;
     }
 
     & .e-ripple-container {
-      bottom: $ripple-bigger-size;
-      height: $ripple-bigger-height;
-      left: $ripple-bigger-size;
-      right: $ripple-bigger-size;
-      top: $ripple-bigger-size;
-      width: $ripple-bigger-width;
+      bottom: $cbox-ripple-bigger-size;
+      height: $cbox-ripple-bigger-height;
+      left: $cbox-ripple-bigger-size;
+      right: $cbox-ripple-bigger-size;
+      top: $cbox-ripple-bigger-size;
+      width: $cbox-ripple-bigger-width;
     }
 
     &.e-rtl {
@@ -382,7 +319,7 @@ $focus-outline-offset: 2px;
 
         +.e-label {
           margin-left: 0;
-          margin-right: $bigger-margin;
+          margin-right: $cbox-bigger-margin;
         }
 
         +.e-ripple-container {
@@ -393,32 +330,32 @@ $focus-outline-offset: 2px;
 
     &.e-small {
       & .e-frame {
-        height: $bigger-small-height;
-        line-height: $bigger-small-lineheight;
-        width: $bigger-small-width;
+        height: $cbox-bigger-small-height;
+        line-height: $cbox-bigger-small-lineheight;
+        width: $cbox-bigger-small-width;
       }
 
       & .e-check {
-        font-size: $bigger-small-check-fontsize;
+        font-size: $cbox-bigger-small-check-fontsize;
       }
 
       & .e-stop {
-        font-size: $bigger-small-indeterminate-fontsize;
-        line-height: $bigger-small-indeterminate-lineheight;
+        font-size: $cbox-bigger-small-indeterminate-fontsize;
+        line-height: $cbox-bigger-small-indeterminate-lineheight;
       }
 
       & .e-label {
-        font-size: $bigger-small-font-size;
-        line-height: $bigger-small-height;
+        font-size: $cbox-bigger-small-font-size;
+        line-height: $cbox-bigger-small-height;
       }
 
       & .e-ripple-container {
-        bottom: $ripple-bigger-small-size;
-        height: $ripple-bigger-small-height;
-        left: $ripple-bigger-small-size;
-        right: $ripple-bigger-small-size;
-        top: $ripple-bigger-small-size;
-        width: $ripple-bigger-small-width;
+        bottom: $cbox-ripple-bigger-small-size;
+        height: $cbox-ripple-bigger-small-height;
+        left: $cbox-ripple-bigger-small-size;
+        right: $cbox-ripple-bigger-small-size;
+        top: $cbox-ripple-bigger-small-size;
+        width: $cbox-ripple-bigger-small-width;
       }
     }
   }
@@ -431,65 +368,65 @@ $focus-outline-offset: 2px;
     -webkit-tap-highlight-color: transparent;
     @at-root {
       & .e-frame {
-        background-color: $bgcolor;
-        border-color: $border-color;
+        background-color: $cbox-bgcolor;
+        border-color: $cbox-border-color;
 
         &.e-check {
-          background-color: $checkmark-bgcolor;
-          border-color: $checkmark-border-color;
-          color: $checkmark-color;
+          background-color: $cbox-checkmark-bgcolor;
+          border-color: $cbox-checkmark-border-color;
+          color: $cbox-checkmark-color;
         }
 
         &.e-stop {
-          background-color: $indeterminate-bgcolor;
-          border-color: $indeterminate-border-color;
-          color: $indeterminate-color;
+          background-color: $cbox-indeterminate-bgcolor;
+          border-color: $cbox-indeterminate-border-color;
+          color: $cbox-indeterminate-color;
         }
       }
 
       & .e-ripple-element {
-        background: $checked-ripple-bgcolor;
+        background: $cbox-checked-ripple-bgcolo;
       }
 
       & .e-ripple-check {
         & .e-ripple-element {
-          background: $ripple-bgcolor;
+          background: $cbox-ripple-bgcolor;
         }
       }
 
       &:active {
         & .e-ripple-element {
-          background: $ripple-bgcolor;
+          background: $cbox-ripple-bgcolor;
         }
 
         & .e-ripple-check {
           & .e-ripple-element {
-            background: $checked-ripple-bgcolor;
+            background: $cbox-checked-ripple-bgcolo;
           }
         }
       }
 
       & .e-label {
-        color: $color;
+        color: $cbox-color;
       }
 
       & .e-checkbox {
         &:focus {
           +.e-frame {
-            background-color: $focussed-bgcolor;
-            border-color: $focussed-border-color;
-            box-shadow: $focussed-box-shadow;
+            background-color: $cbox-focussed-bgcolor;
+            border-color: $cbox-focussed-border-color;
+            box-shadow: $cbox-focussed-box-shadow;
 
             &.e-check {
-              background-color: $focussed-checkmark-bgcolor;
-              border-color: $focussed-checkmark-border-color;
-              box-shadow: $focussed-box-shadow;
-              color: $focussed-checkmark-color;
+              background-color: $cbox-focussed-checkmark-bgcolor;
+              border-color: $cbox-focussed-checkmark-border-color;
+              box-shadow: $cbox-focussed-box-shadow;
+              color: $cbox-focussed-checkmark-color;
             }
 
             &.e-stop {
-              box-shadow: $focussed-box-shadow;
-              color: $indeterminate-hover-color;
+              box-shadow: $cbox-focussed-box-shadow;
+              color: $cbox-indeterminate-hover-color;
             }
           }
         }
@@ -497,65 +434,71 @@ $focus-outline-offset: 2px;
 
       &:hover {
         & .e-frame {
-          background-color: $hover-bgcolor;
-          border-color: $hover-border-color;
+          background-color: $cbox-hover-bgcolor;
+          border-color: $cbox-hover-border-color;
 
           &.e-check {
-            background-color: $checkmark-hover-bgcolor;
-            border-color: $checkmark-hover-border-color;
-            color: $checkmark-hover-color;
+            background-color: $cbox-checkmark-hover-bgcolor;
+            border-color: $cbox-checkmark-hover-border-color;
+            color: $cbox-checkmark-hover-color;
           }
 
           &.e-stop {
-            color: $indeterminate-hover-color;
+            @if $skin-name == 'bootstrap4' {
+              background-color: $cbox-checkmark-hover-bgcolor;
+              border-color: $cbox-checkmark-hover-border-color;
+            }
+            @else {
+              color: $cbox-indeterminate-hover-color;
+            }
           }
         }
 
         & .e-label {
-          color: $hover-color;
+          color: $cbox-hover-color;
         }
       }
 
       &.e-checkbox-disabled {
         & .e-frame {
-          background-color: $disabled-bgcolor;
-          border-color: $disabled-border-color;
-          color: $disabled-color;
+          background-color: $cbox-disabled-bgcolor;
+          border-color: $cbox-disabled-border-color;
+          color: $cbox-disabled-color;
 
           &.e-check {
-            background-color: $checkmark-disabled-bgcolor;
-            border-color: $checkmark-disabled-border-color;
-            color: $checkmark-disabled-color;
+            background-color: $cbox-checkmark-disabled-bgcolor;
+            border-color: $cbox-checkmark-disabled-border-color;
+            color: $cbox-checkmark-disabled-color;
           }
 
           &.e-stop {
-            background-color: $indeterminate-disabled-bgcolor;
-            border-color: $indeterminate-disabled-border-color;
-            color: $indeterminate-disabled-color;
+            background-color: $cbox-indeterminate-disabled-bgcolor;
+            border-color: $cbox-indeterminate-disabled-border-color;
+            color: $cbox-indeterminate-disabled-color;
           }
         }
 
         & .e-label {
-          color: $disabled-color;
+          color: $cbox-disabled-color;
         }
       }
 
       &.e-focus {
         & .e-ripple-container {
-          background-color: $key-focussed-bgcolor;
+          background-color: $cbox-key-focussed-bgcolor;
 
           &.e-ripple-check {
-            background-color: $checked-ripple-bgcolor;
+            background-color: $cbox-checked-ripple-bgcolo;
           }
         }
 
         & .e-frame {
-          outline: $focus-outline;
-          outline-offset: $focus-outline-offset;
+          outline: $cbox-focus-outline;
+          outline-offset: $cbox-focus-outline-offset;
 
           &.e-check {
-            outline: $focus-outline;
-            outline-offset: $focus-outline-offset;
+            outline: $cbox-focus-outline;
+            outline-offset: $cbox-focus-outline-offset;
           }
         }
       }

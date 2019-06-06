@@ -1,284 +1,168 @@
 
-/*! calendar default definitions and variables */
-
-$calendar-title-hover-color: $content-bg-color;
-$calendar-icon-hover-color: $content-bg-color;
-$calendar-light-font: $content-bg-color;
-$calendar-bg-color: $content-bg-color;
-$calendar-active-font-color: $content-bg-color;
-$calendar-active-bg-color: $content-bg-color;
-$calendar-active-bg-border-color: 1px solid $content-bg-color;
-$calendar-hover-color: $content-bg-color;
-$calendar-header-font-color: rgba($content-bg-color, .87);
-$calendar-header-icon-color: rgba($content-bg-color, .54);
-$calendar-week-header-font-color: rgba($content-bg-color, .54);
-$calendar-title-font-color: rgba($calendar-header-icon-color, .74);
-$calendar-icon-font-color: rgba($calendar-header-icon-color, .74);
-$calendar-focus-date-color: rgba($content-bg-color, .12);
-$calendar-other-month-date: rgba($content-bg-color, .38);
-$calendar-text-color: rgba($content-bg-color, .87);
-$calendar-focus-bg-color: rgba($content-bg-color, .12);
-$calendar-border-style: 1px solid rgba(0, 0, 0, .12);
-$calendar-none-style: '';
-$calendar-cursor-default-style: default;
-$calendar-cursor-pointer-style: pointer;
-$calendar-block-style: block;
-$calendar-inline-block-style: inline-block;
-$calendar-wrapper-border-radius: 0;
-$calendar-box-shadow: rgb(224, 224, 224);
-$calendar-full-width: 100%;
-$calendar-header-font-size: 14px;
-$calendar-title-font-size: 16px;
-$calendar-focused-state-color: $content-bg-color;
-$calendar-bigger-header-padding: 10px 10px 0 16px;
-$calendar-bigger-icon-size: 48px;
-$calendar-bigger-max-width: 328px;
-$calendar-bigger-min-width: 320px;
-$calendar-bigger-month-view-height: 40px;
-$calendar-bigger-day-header-height: $calendar-bigger-month-view-height;
-$calendar-bigger-year-decade-height: 75px;
-$calendar-bigger-header-height: 48px;
-$calendar-bigger-today-button-height: 48px;
-$calendar-normal-header-padding: 10px 10px 0 14px;
-$calendar-normal-max-width: 246px;
-$calendar-normal-min-width: 240px;
-$calendar-normal-month-view-height: 30px;
-$calendar-normal-day-header-height: $calendar-normal-month-view-height;
-$calendar-normal-year-decade-height: 45px;
-$calendar-normal-header-height: 36px;
-$calendar-normal-icon-size: 36px;
-$calendar-normal-today-button-height: 36px;
-$calendar-border-radius: 0;
-$calendar-pointer-events: initial;
-$calendar-float-right-style: right;
-$calendar-float-left-style: left;
-$calendar-table-padding: 0 7.5px 7.5px;
-$calendar-next-prev-icon-size: 13px;
-$calendar-prev-icon: '\e839';
-$calendar-next-icon: '\e844';
-$calendar-date-font-size: 13px;
-$calendar-yeardecade-bg-color: $content-bg-color;
-$calendar-yeardecade-hover-color: $content-bg-color;
-// newly added for fabric
-$calendar-title-font-weight-style: normal;
-$calendar-spanicon-font-weight-style: bold;
-$calendar-title-margin-left-style: 0;
-$calendar-normal-year-decade-padding: 6px;
-$calendar-box-shadow: 1px solid rgba(0, 0, 0, .12);
-$calendar-icon-font-size-style: 13px;
-$calendar-link-font-weight-style: normal;
-$calendar-focused-date-bg-style: none;
-$calendar-yeardecade-bg-color: none;
-$calendar-yeardeacde-span-padding: 0;
-$calendar-yeardecade-padding: 10px;
-$calendar-yeardecade-header-padding: 10px 10px 0 14px;
-$calendar-week-header-bg-style: none;
-$calendar-today-bg-style: none;
-$calendar-disable-font-weight-style: normal;
-$calendar-other-month-display-style: block;
-$calendar-other-month-row-display-style: none;
-$calendar-week-number-font-style: italic;
-$calendar-week-number-color-style: $calendar-text-color;
-$calendar-week-number-font-size-style: 13px;
-$calendar-normal-month-cell-padding: 2px;
-$calendar-bigger-table-month-padding: 0 7.5px 7.5px;
-$calendar-bigger-table-yeardecade-padding: 0 7.5px 7.5px;
-$calendar-bigger-header-font-size: 14px;
-$clendar-bigger-month-font-size: 13px;
-$calendar-bigger-yeardecade-header-padding: 10px 10px 0 16px;
-$calendar-bigger-year-decade-padding: 2px;
-$calendar-yeardecade-hover-bg: $calendar-yeardecade-bg-color;
-$clendar-bigger-yeardecade-font-size: $clendar-bigger-month-font-size;
-$clendar-bigger-yeardecade-font-weight: $clendar-bigger-month-font-size;
-$clendar-bigger-yeardecade-font-weight: normal;
-$calendar-normal-day-header-font-weight: normal;
-$calendar-other-month-date-hover-bg: $calendar-other-month-date;
-$calendar-yeardecade-selected-hover-bg: $calendar-active-bg-color;
-$calendar-bigger-day-font-size: 13px;
-$calendar-yeardecade-font-weight: normal;
-$calendar-today-color-font-style: $calendar-active-bg-color;
-$calendar-today-color: $calendar-active-bg-color;
-$calendar-bigger-icon-font-size: 13px;
-$calendar-bigger-month-view-padding: 2px;
-$calendar-bigger-week-header-font-size: 15px;
-$calendar-today-border-color: none;
-$calendar-focus-border-color: none;
-$calendar-normal-month-view-width: $calendar-normal-month-view-height;
-$calendar-normal-year-decade-width: $calendar-normal-year-decade-height;
-$calendar-popup-padding: 0;
-$calendar-popup-bigger-padding: 0;
-$calendar-thead-padding: 0;
-$calendar-week-normal-max-width: $calendar-normal-max-width;
-$calendar-week-normal-min-width: $calendar-normal-min-width;
-$calendar-week-bigger-max-width: $calendar-bigger-max-width;
-$calendar-week-bigger-min-width: $calendar-bigger-min-width;
-$calendar-bigger-month-view-width: $calendar-bigger-month-view-height;
-$calendar-bigger-year-decade-width: $calendar-bigger-year-decade-height;
-$calendar-active-state-icon-bg-color: $content-bg-color;
-$calendar-icon-hover-bg-color: none;
-$calendar-today-bg-hover-color: none;
-$calendar-disable-font-color: $calendar-light-font;
-$calendar-disable-opacity: none;
-$calendar-active-hover-bg-color: $calendar-active-bg-color;
-$calendar-other-decade-cell-color: $calendar-text-color;
-$calendar-decade-title-left-margin-style: $calendar-title-margin-left-style;
-$calendar-disabled-background-style: transparent;
 /*! calendar fabric theme variables */
-$calendar-title-hover-color: $theme-darker;
-$calendar-icon-hover-color: $neutral-light-fontalt;
-$calendar-default-border-color: none;
-$calendar-icon-hover-border-color: $calendar-default-border-color;
-$calendar-light-font: $neutral-light-fontalt;
-$calendar-bg-color: $content-bg-color;
-$calendar-active-font-color: $header-font-color;
-$calendar-active-bg-color: $theme-primary;
-$calendar-active-bg-border-color: none;
-$calendar-hover-color: $neutral-light;
-$calendar-header-font-color: $neutral-light-font;
-$calendar-header-icon-color: $neutral-light-font;
-$calendar-week-header-font-color: $neutral-light-font;
-$calendar-title-font-color: $theme-primary;
-$calendar-title-decoration-style: none;
-$calendar-icon-font-color: $neutral-light-font;
-$calendar-active-icon-color: $calendar-icon-font-color;
-$calendar-active-state-icon-bg-color: $content-bg-color;
-$calendar-icon-hover-bg-color: none;
-$calendar-focus-date-color: $neutral-quintenaryalt;
-$calendar-other-month-date: $neutral-tertiary;
-$calendar-text-color: $neutral-light-font;
-$calendar-hover-text: $calendar-text-color;
-$calendar-today-bg-style: $theme-light;
-$calendar-focus-bg-color: $alert-bg;
-$calendar-focused-today-bg-style: $neutral-light;
-$calendar-focused-today-border-style: none;
-$calendar-border-style: 1px solid $neutral-light;
-$calendar-box-shadow: none;
-$alendar-cursor-default-style: default;
-$calendar-cursor-pointer-style: pointer;
-$calendar-block-style: block;
-$calendar-inline-block-style: inline-block;
-$calendar-display-style: flex;
-$calendar-wrapper-border-radius: 0;
-$calendar-full-width: 100%;
-$calendar-header-font-size: 12px;
-$calendar-title-font-size: 17px;
-$calendar-focused-state-color: $neutral-light;
-$calendar-bigger-header-padding: 12px 12px 0 12px;
-$calendar-bigger-icon-size: 45px;
-$calendar-icon-line-height: 16px;
-$calendar-bigger-max-width: 288px;
-$calendar-bigger-min-width: 288px;
-$calendar-bigger-month-view-height: 37px;
-$calendar-bigger-day-header-height: $calendar-bigger-month-view-height;
-$calendar-bigger-year-decade-height: 54px;
-$calendar-bigger-header-height: 48px;
-$calendar-bigger-today-button-height: 48px;
-$calendar-normal-header-padding: 10px 10px 0 10px;
-$calendar-normal-max-width: 232px;
-$calendar-normal-min-width: 232px;
-$calendar-weeknumber-min-width: 262px;
-$calendar-weeknumber-bigger-width: 320px;
-$calendar-normal-month-view-height: 30px;
-$calendar-normal-day-header-height: $calendar-normal-month-view-height;
-$calendar-normal-year-decade-height: 45px;
-$calendar-normal-header-height: 36px;
-$calendar-normal-icon-size: 30px;
-$calendar-normal-today-button-height: 36px;
-$calendar-border-radius: 0;
-$calendar-pointer-events: initial;
-$calendar-float-right-style: right;
-$calendar-float-left-style: left;
-$calendar-table-padding: 0 10px 10px 10px;
-$calendar-zero-value: 0;
-$calendar-next-prev-icon-size: 16px;
-$calendar-prev-icon: '\e85e';
-$calendar-next-icon: '\e84f';
-$calendar-date-font-size: 12px;
-$calendar-title-font-weight-style: 300;
-$calendar-yeardecade-bg-color: $neutral-lighter;
-$calendar-yeardecade-hover-color: $neutral-tertiary-alt;
-$calendar-spanicon-font-weight-style: 300;
-$calendar-title-margin-left-style: 7px;
-$calendar-normal-year-decade-padding: 0 0 10px 0;
-$calendar-icon-font-size-style: 14px;
-$calendar-link-font-weight-style: 500;
-$calendar-focused-date-bg-style: $neutral-quintenaryalt;
-$calendar-yeardecade-bg-color: $neutral-lighter;
-$calendar-yeardeacde-span-padding: 0;
-$calendar-yeardecade-padding: 0 6px 0;
-$calendar-yeardecade-header-padding: 10px;
-$calendar-week-header-bg-style: none;
-$calendar-none-style: none;
-$calendar-disable-font-weight-style: 500;
-$calendar-other-month-display-style: '';
-$calendar-other-month-row-display-style: none;
-$calendar-week-number-font-style: $font-family;
-$calendar-week-number-color-style: $neutral-tertiary;
-$calendar-week-number-font-size-style: 12px;
-$calendar-week-number-font-color: $calendar-text-color;
-$calendar-normal-month-cell-padding: 0;
-$calendar-bigger-table-month-padding: 0 12px 12px 12px;
-$calendar-bigger-table-yeardecade-padding: 0 8.5px 3.5px 8.5px;
-$calendar-bigger-header-font-size: 19px;
-$calendar-bigger-month-font-size: 14px;
-$calendar-bigger-yeardecade-header-padding: 12px 12px 10px 12px;
-$calendar-bigger-year-decade-padding: 0 0 13px 0;
-$calendar-yeardecade-hover-bg: $neutral-quintenaryalt;
-$calendar-bigger-yeardecade-font-size: 14px;
-$calendar-bigger-yeardecade-font-weight: normal;
-$calendar-normal-day-header-font-weight: 500;
-$calendar-other-month-date-hover-bg: $neutral-light-fontalt;
-$calendar-yeardecade-selected-hover-bg: $calendar-active-bg-color;
-$calendar-bigger-day-font-size: 14px;
-$calendar-yeardecade-font-weight: normal;
-$calendar-today-focus-color: $neutral-light-font;
-$calendar-today-color: $theme-light-font;
-$calendar-bigger-icon-font-size: 18px;
-$calendar-bigger-month-view-padding: 0;
-$calendar-today-border-color: none;
-$calendar-focus-border-color: none;
-$calendar-hover-border-color: none;
-$calendar-normal-month-view-width: $calendar-normal-month-view-height;
-$calendar-normal-year-decade-width: $calendar-normal-year-decade-height;
-$calendar-popup-padding: 0;
-$calendar-popup-bigger-padding: 0;
-$calendar-thead-padding: 0;
-$calendar-week-normal-max-width: $calendar-normal-max-width;
-$calendar-week-normal-min-width: $calendar-normal-min-width;
-$calendar-week-bigger-max-width: $calendar-bigger-max-width;
-$calendar-week-bigger-min-width: $calendar-bigger-min-width;
-$calendar-bigger-month-view-width: $calendar-bigger-month-view-height;
-$calendar-bigger-year-decade-width: $calendar-bigger-year-decade-height;
-$calendar-today-bg-hover-color: $alert-bg;
-$calendar-disable-font-color: $calendar-light-font;
-$calendar-disable-opacity: .35;
-$calendar-active-hover-bg-color: $calendar-active-bg-color;
-$calendar-other-decade-cell-color: $calendar-text-color;
-$calendar-decade-title-left-margin-style: $calendar-title-margin-left-style;
-$calendar-icon-padding: 7px;
-$calendar-bigger-icon-padding: 13px;
-$calendar-selected-box-shadow: none;
-$calendar-selected-border-color: none;
+$calendar-title-hover-color: $theme-darker !default;
+$calendar-icon-hover-color: $neutral-light-fontalt !default;
+$calendar-default-border-color: none !default;
+$calendar-icon-hover-border-color: $calendar-default-border-color !default;
+$calendar-light-font: $neutral-light-fontalt !default;
+$calendar-bg-color: $content-bg-color !default;
+$calendar-active-font-color: $header-font-color !default;
+$calendar-active-hover-font-color: $header-font-color !default;
+$calendar-active-today-font-color: $header-font-color !default;
+$calendar-active-today-hover-font-color: $header-font-color !default;
+$calendar-active-bg-color: $theme-primary !default;
+$calendar-active-bg-border-color: none !default;
+$calendar-hover-color: $neutral-light !default;
+$calendar-header-font-color: $neutral-light-font !default;
+$calendar-header-icon-color: $neutral-light-font !default;
+$calendar-week-header-font-color: $neutral-light-font !default;
+$calendar-title-font-color: $theme-primary !default;
+$calendar-title-decoration-style: none !default;
+$calendar-icon-font-color: $neutral-light-font !default;
+$calendar-active-icon-color: $calendar-icon-font-color !default;
+$calendar-active-state-icon-bg-color: $content-bg-color !default;
+$calendar-icon-hover-bg-color: none !default;
+$calendar-focus-date-color: $neutral-quintenaryalt !default;
+$calendar-other-month-date: $neutral-tertiary !default;
+$calendar-text-color: $neutral-light-font !default;
+$calendar-hover-text: $calendar-text-color !default;
+$calendar-today-bg-style: $theme-light !default;
+$calendar-focus-bg-color: $alert-bg !default;
+$calendar-focused-today-bg-style: $neutral-light !default;
+$calendar-focused-today-border-style: none !default;
+$calendar-border-style: 1px solid $neutral-light !default;
+$calendar-box-shadow: none !default;
+$calendar-cursor-default-style: default !default;
+$calendar-cursor-pointer-style: pointer !default;
+$calendar-block-style: block !default;
+$calendar-inline-block-style: inline-block !default;
+$calendar-display-style: flex !default;
+$calendar-wrapper-border-radius: 0 !default;
+$calendar-full-width: 100% !default;
+$calendar-header-font-size: 12px !default;
+$calendar-title-font-size: 17px !default;
+$calendar-focused-state-color: $neutral-light !default;
+$calendar-bigger-header-padding: 12px 12px 0 12px !default;
+$calendar-bigger-icon-size: 45px !default;
+$calendar-icon-line-height: 16px !default;
+$calendar-bigger-max-width: 288px !default;
+$calendar-bigger-min-width: 288px !default;
+$calendar-bigger-month-view-height: 37px !default;
+$calendar-bigger-day-header-height: $calendar-bigger-month-view-height !default;
+$calendar-bigger-year-decade-height: 54px !default;
+$calendar-bigger-header-height: 48px !default;
+$calendar-bigger-today-button-height: 48px !default;
+$calendar-normal-header-padding: 10px 10px 0 10px !default;
+$calendar-normal-max-width: 232px !default;
+$calendar-normal-min-width: 232px !default;
+$calendar-weeknumber-min-width: 262px !default;
+$calendar-weeknumber-bigger-width: 320px !default;
+$calendar-normal-month-view-height: 30px !default;
+$calendar-normal-day-header-height: $calendar-normal-month-view-height !default;
+$calendar-normal-year-decade-height: 45px !default;
+$calendar-normal-header-height: 36px !default;
+$calendar-normal-icon-size: 30px !default;
+$calendar-normal-today-button-height: 36px !default;
+$calendar-border-radius: 0 !default;
+$calendar-pointer-events: initial !default;
+$calendar-float-right-style: right !default;
+$calendar-float-left-style: left !default;
+$calendar-table-padding: 0 10px 10px 10px !default;
+$calendar-zero-value: 0 !default;
+$calendar-next-prev-icon-size: 16px !default;
+$calendar-prev-icon: '\e85e' !default;
+$calendar-next-icon: '\e84f' !default;
+$calendar-date-font-size: 12px !default;
+$calendar-title-font-weight-style: 300 !default;
+//$calendar-yeardecade-bg-color: $neutral-lighter !default;
+$calendar-yeardecade-hover-color: $neutral-tertiary-alt !default;
+$calendar-spanicon-font-weight-style: 300 !default;
+$calendar-title-margin-left-style: 7px !default;
+$calendar-normal-year-decade-padding: 0 0 10px 0 !default;
+$calendar-icon-font-size-style: 14px !default;
+$calendar-link-font-weight-style: 500 !default;
+$calendar-focused-date-bg-style: $neutral-quintenaryalt !default;
+$calendar-yeardecade-bg-color: $neutral-lighter !default;
+$calendar-yeardeacde-span-padding: 0 !default;
+$calendar-yeardecade-padding: 0 6px 0 !default;
+$calendar-yeardecade-header-padding: 10px !default;
+$calendar-week-header-bg-style: none !default;
+$calendar-none-style: none !default;
+$calendar-disable-font-weight-style: 500 !default;
+$calendar-other-month-display-style: '' !default;
+$calendar-other-month-row-display-style: none !default;
+$calendar-week-number-font-style: $font-family !default;
+$calendar-week-number-color-style: $neutral-tertiary !default;
+$calendar-week-number-font-size-style: 12px !default;
+$calendar-week-number-font-color: $calendar-text-color !default;
+$calendar-normal-month-cell-padding: 0 !default;
+$calendar-bigger-table-month-padding: 0 12px 12px 12px !default;
+$calendar-bigger-table-yeardecade-padding: 0 8.5px 3.5px 8.5px !default;
+$calendar-bigger-header-font-size: 19px !default;
+$calendar-bigger-month-font-size: 14px !default;
+$calendar-bigger-yeardecade-header-padding: 12px 12px 10px 12px !default;
+$calendar-bigger-year-decade-padding: 0 0 13px 0 !default;
+$calendar-yeardecade-hover-bg: $neutral-quintenaryalt !default;
+$calendar-bigger-yeardecade-font-size: 14px !default;
+$calendar-bigger-yeardecade-font-weight: normal !default;
+$calendar-normal-day-header-font-weight: 500 !default;
+$calendar-other-month-date-hover-bg: $neutral-light-fontalt !default;
+$calendar-bigger-week-header-font-size: 15px !default;
+$calendar-yeardecade-selected-hover-bg: $calendar-active-bg-color !default;
+$calendar-bigger-day-font-size: 14px !default;
+$calendar-yeardecade-font-weight: normal !default;
+$calendar-today-focus-color: $neutral-light-font !default;
+$calendar-today-color: $theme-light-font !default;
+$calendar-today-focused-font-color: $theme-light-font !default;
+$calendar-bigger-icon-font-size: 18px !default;
+$calendar-bigger-month-view-padding: 0 !default;
+$calendar-today-border-color: none !default;
+$calendar-focus-border-color: none !default;
+$calendar-hover-border-color: none !default;
+$calendar-normal-month-view-width: $calendar-normal-month-view-height !default;
+$calendar-normal-year-decade-width: $calendar-normal-year-decade-height !default;
+$calendar-popup-padding: 0 !default;
+$calendar-popup-bigger-padding: 0 !default;
+$calendar-thead-padding: 0 !default;
+$calendar-week-normal-max-width: $calendar-normal-max-width !default;
+$calendar-week-normal-min-width: $calendar-normal-min-width !default;
+$calendar-week-bigger-max-width: $calendar-bigger-max-width !default;
+$calendar-week-bigger-min-width: $calendar-bigger-min-width !default;
+$calendar-bigger-month-view-width: $calendar-bigger-month-view-height !default;
+$calendar-bigger-year-decade-width: $calendar-bigger-year-decade-height !default;
+$calendar-today-bg-hover-color: $alert-bg !default;
+$calendar-disable-font-color: $calendar-light-font !default;
+$calendar-disable-opacity: .35 !default;
+$calendar-active-hover-bg-color: darken($calendar-active-bg-color, 10%) !default;
+$calendar-other-decade-cell-color: $calendar-other-month-date !default;
+$calendar-decade-title-left-margin-style: $calendar-title-margin-left-style !default;
+$calendar-icon-padding: 7px !default;
+$calendar-bigger-icon-padding: 13px !default;
+$calendar-selected-box-shadow: none !default;
+$calendar-selected-border-color: none !default;
 
 //today
-$calendar-footer-container-padding: 0 10px 10px 10px;
-$calendar-today-disabled-background-style: $neutral-lighter;
-$calendar-today-disabled-border-style: $neutral-lighter;
-$calendar-today-disabled-box-shadow: none;
-$calendar-today-disabled-color: $neutral-tertiary;
-
-@include export-module('calendar-icons') {
+$calendar-footer-container-padding: 0 10px 10px 10px !default;
+$calendar-footer-border: none !default;
+$calendar-bigger-footer-container-padding: 0 10px 10px 10px !default;
+$calendar-bigger-footer-border: none !default;
+$calendar-today-disabled-background-style: $neutral-lighter !default;
+$calendar-today-disabled-border-style: $neutral-lighter !default;
+$calendar-today-disabled-box-shadow: none !default;
+$calendar-today-disabled-color: $neutral-tertiary !default;
+@include export-module('calendar-fabric-icons') {
   /*! component icons */
   .e-calendar .e-header {
     & .e-date-icon-prev::before {
-      content: $calendar-prev-icon;
+      content: '\e85e';
       }
 
     & .e-date-icon-next::before {
-      content: $calendar-next-icon;
-      }
+      content: '\e84f';
+    }
   }
 }
+
 @include export-module('calendar-layout') { /*! calendar layout */
 
   #{&}ejs-calendar {
@@ -307,7 +191,7 @@ $calendar-today-disabled-color: $neutral-tertiary;
       width: $calendar-full-width;
 
       & button {
-        background: none;
+        background: transparent;
         border: 0;
         padding: 0;
         text-decoration: $calendar-none-style;
@@ -362,6 +246,7 @@ $calendar-today-disabled-color: $neutral-tertiary;
           font-weight: 500;
 }&.e-overlay {
           background: $calendar-none-style;
+          width: initial;
 }
 }
 
@@ -375,18 +260,21 @@ $calendar-today-disabled-color: $neutral-tertiary;
         padding: $calendar-table-padding;
         table-layout: fixed;
         width: $calendar-full-width;
-}& td.e-other-month > span.e-day {
+}& td.e-other-month > span.e-day,
+      & td.e-other-year > span.e-day {
         display: $calendar-other-month-display-style;
         font-weight: $calendar-link-font-weight-style;
 }& tr.e-month-hide {
         display: $calendar-other-month-row-display-style;
         font-weight: $calendar-link-font-weight-style;
 }& tr.e-month-hide,
-      & td.e-other-month {
+      & td.e-other-month,
+      & td.e-other-year {
         pointer-events: $calendar-pointer-events;
         touch-action: $calendar-pointer-events;
 }& tr.e-month-hide,
-      & td.e-other-month.e-disabled {
+      & td.e-other-month.e-disabled,
+      & td.e-other-year.e-disabled {
         pointer-events: $calendar-none-style;
         touch-action: $calendar-none-style;
 }& td.e-week-number:hover span.e-day,
@@ -502,6 +390,7 @@ $calendar-today-disabled-color: $neutral-tertiary;
         width: $calendar-normal-icon-size;
     }
 }& .e-footer-container {
+      border-top: $calendar-footer-border;
       cursor: $calendar-cursor-default-style;
       display: $calendar-display-style;
       flex-direction: row;
@@ -514,7 +403,7 @@ $calendar-today-disabled-color: $neutral-tertiary;
 
   //bigger style
   .e-bigger#{&}.e-calendar,
-  &.e-bigger #{&}.e-calendar {
+  .e-bigger #{&}.e-calendar {
     max-width: $calendar-bigger-max-width;
     min-width: $calendar-bigger-min-width;
     padding: $calendar-popup-bigger-padding;
@@ -590,6 +479,9 @@ $calendar-today-disabled-color: $neutral-tertiary;
         height: $calendar-bigger-icon-size;
         width: $calendar-bigger-icon-size;
     }
+    }& .e-footer-container {
+      border-top: $calendar-bigger-footer-border;
+      padding: $calendar-bigger-footer-container-padding;
     }
   }
 
@@ -715,6 +607,7 @@ $calendar-today-disabled-color: $neutral-tertiary;
         }& td.e-focused-date.e-today span.e-day {
           background: $calendar-focused-today-bg-style;
           border: $calendar-focused-today-border-style;
+          color: $calendar-today-focused-font-color;
 		}& td.e-today:focus span.e-day,
         & td.e-focused-date.e-today:focus span.e-day {
           background-color: $calendar-focus-bg-color;
@@ -726,16 +619,17 @@ $calendar-today-disabled-color: $neutral-tertiary;
         & td.e-focused-date.e-today:focus span.e-day {
           background-color: $calendar-hover-color;
           border: $calendar-today-border-color;
-          color: $calendar-today-color;
+          color: $calendar-today-focus-color;
         }& td.e-today.e-selected span.e-day {
           background-color: $calendar-active-bg-color;
           border: $calendar-active-bg-border-color;
           box-shadow: $calendar-selected-box-shadow;
-          color: $calendar-active-font-color;
+          color: $calendar-active-today-font-color;
         }& td.e-today.e-selected:hover span.e-day,
-        & td.e-selected:hover span.e-day {
+        & td.e-selected:hover span.e-day,
+        & td.e-selected.e-focused-date span.e-day {
           background-color: $calendar-active-hover-bg-color;
-          color: $calendar-active-font-color;
+          color: $calendar-active-today-hover-font-color;
         }& span {
           color: $calendar-text-color;
         }& .e-disabled span.e-day:hover {

@@ -4344,3 +4344,650 @@ window.listData = [
         'category': 'BMW'
     }
 ];
+window.info = [
+    { text: "Hennessey Venom", id: "list-01" },
+    { text: "Bugatti Chiron", id: "list-02" },
+    { text: "Bugatti Veyron Super Sport", id: "list-03" },
+    { text: "SSC Ultimate Aero", id: "list-04" },
+    { text: "Koenigsegg CCR", id: "list-05" },
+    { text: "McLaren F1", id: "list-06" },
+    { text: "Aston Martin One- 77", id: "list-07" },
+    { text: "Jaguar XJ220", id: "list-08" },
+    { text: "McLaren P1", id: "list-09" },
+    { text: "Ferrari LaFerrari", id: "list-10" }
+];
+
+window.TreegridData = [
+    {
+        taskID: 1,
+        taskName: 'Planning',
+        startDate: new Date('02/03/2017'),
+        endDate: new Date('02/07/2017'),
+        progress: 100,
+        duration: 5,
+        priority: 'Normal',
+        approved: false,
+        subtasks: [
+            {
+                taskID: 2, taskName: 'Plan timeline', startDate: new Date('02/03/2017'),
+                endDate: new Date('02/07/2017'), duration: 5, progress: 100, priority: 'Normal', approved: false
+            },
+            {
+                taskID: 3, taskName: 'Plan budget', startDate: new Date('02/03/2017'),
+                endDate: new Date('02/07/2017'), duration: 5, progress: 100, priority: 'Low', approved: true
+            },
+            {
+                taskID: 4, taskName: 'Allocate resources', startDate: new Date('02/03/2017'),
+                endDate: new Date('02/07/2017'), duration: 5, progress: 100, priority: 'Critical', approved: false
+            },
+            {
+                taskID: 5, taskName: 'Planning complete', startDate: new Date('02/07/2017'),
+                endDate: new Date('02/07/2017'), duration: 0, progress: 0, priority: 'Low', approved: true
+            }
+        ]
+    },
+    {
+        taskID: 6,
+        taskName: 'Design',
+        startDate: new Date('02/10/2017'),
+        endDate: new Date('02/14/2017'),
+        duration: 3,
+        progress: 86,
+        priority: 'High',
+        approved: false,
+        subtasks: [
+            {
+                taskID: 7, taskName: 'Software Specification', startDate: new Date('02/10/2017'),
+                endDate: new Date('02/12/2017'), duration: 3, progress: 60, priority: 'Normal', approved: false
+            },
+            {
+                taskID: 8, taskName: 'Develop prototype', startDate: new Date('02/10/2017'),
+                endDate: new Date('02/12/2017'), duration: 3, progress: 100, priority: 'Critical', approved: false
+            },
+            {
+                taskID: 9, taskName: 'Get approval from customer', startDate: new Date('02/13/2017'),
+                endDate: new Date('02/14/2017'), duration: 2, progress: 100, priority: 'Low', approved: true
+            },
+            {
+                taskID: 10, taskName: 'Design Documentation', startDate: new Date('02/13/2017'),
+                endDate: new Date('02/14/2017'), duration: 2, progress: 100, priority: 'High', approved: true
+            },
+            {
+                taskID: 11, taskName: 'Design complete', startDate: new Date('02/14/2017'),
+                endDate: new Date('02/14/2017'), duration: 0, progress: 0, priority: 'Normal', approved: true
+            }
+        ]
+    },
+    {
+        taskID: 12,
+        taskName: 'Implementation Phase',
+        startDate: new Date('02/17/2017'),
+        endDate: new Date('02/27/2017'),
+        priority: 'Normal',
+        approved: false,
+        duration: 11,
+        progress: 66,
+        subtasks: [
+            {
+                taskID: 13,
+                taskName: 'Phase 1',
+                startDate: new Date('02/17/2017'),
+                endDate: new Date('02/27/2017'),
+                priority: 'High',
+                approved: false,
+                progress: 50,
+                duration: 11,
+                subtasks: [{
+                    taskID: 14,
+                    taskName: 'Implementation Module 1',
+                    startDate: new Date('02/17/2017'),
+                    endDate: new Date('02/27/2017'),
+                    priority: 'Normal',
+                    duration: 11,
+                    progress: 10,
+                    approved: false,
+                    subtasks: [
+                        {
+                            taskID: 15, taskName: 'Development Task 1', startDate: new Date('02/17/2017'),
+                            endDate: new Date('02/19/2017'), duration: 3, progress: '50', priority: 'High', approved: false
+                        },
+                        {
+                            taskID: 16, taskName: 'Development Task 2', startDate: new Date('02/17/2017'),
+                            endDate: new Date('02/19/2017'), duration: 3, progress: '50', priority: 'Low', approved: true
+                        },
+                        {
+                            taskID: 17, taskName: 'Testing', startDate: new Date('02/20/2017'),
+                            endDate: new Date('02/21/2017'), duration: 2, progress: '0', priority: 'Normal', approved: true
+                        },
+                        {
+                            taskID: 18, taskName: 'Bug fix', startDate: new Date('02/24/2017'),
+                            endDate: new Date('02/25/2017'), duration: 2, progress: '0', priority: 'Critical', approved: false
+                        },
+                        {
+                            taskID: 19, taskName: 'Customer review meeting', startDate: new Date('02/26/2017'),
+                            endDate: new Date('02/27/2017'), duration: 2, progress: '0', priority: 'High', approved: false
+                        },
+                        {
+                            taskID: 20, taskName: 'Phase 1 complete', startDate: new Date('02/27/2017'),
+                            endDate: new Date('02/27/2017'), duration: 0, progress: '50', priority: 'Low', approved: true
+                        }
+
+                    ]
+                }]
+            },
+            {
+                taskID: 21,
+                taskName: 'Phase 2',
+                startDate: new Date('02/17/2017'),
+                endDate: new Date('02/28/2017'),
+                priority: 'High',
+                approved: false,
+                duration: 12,
+                progress: 60,
+                subtasks: [{
+                    taskID: 22,
+                    taskName: 'Implementation Module 2',
+                    startDate: new Date('02/17/2017'),
+                    endDate: new Date('02/28/2017'),
+                    priority: 'Critical',
+                    approved: false,
+                    duration: 12,
+                    progress: 90,
+                    subtasks: [
+                        {
+                            taskID: 23, taskName: 'Development Task 1', startDate: new Date('02/17/2017'),
+                            endDate: new Date('02/20/2017'), duration: 4, progress: '50', priority: 'Normal', approved: true
+                        },
+                        {
+                            taskID: 24, taskName: 'Development Task 2', startDate: new Date('02/17/2017'),
+                            endDate: new Date('02/20/2017'), duration: 4, progress: '50', priority: 'Critical', approved: true
+                        },
+                        {
+                            taskID: 25, taskName: 'Testing', startDate: new Date('02/21/2017'),
+                            endDate: new Date('02/24/2017'), duration: 2, progress: '0', priority: 'High', approved: false
+                        },
+                        {
+                            taskID: 26, taskName: 'Bug fix', startDate: new Date('02/25/2017'),
+                            endDate: new Date('02/26/2017'), duration: 2, progress: '0', priority: 'Low', approved: false
+                        },
+                        {
+                            taskID: 27, taskName: 'Customer review meeting', startDate: new Date('02/27/2017'),
+                            endDate: new Date('02/28/2017'), duration: 2, progress: '0', priority: 'Critical', approved: true
+                        },
+                        {
+                            taskID: 28, taskName: 'Phase 2 complete', startDate: new Date('02/28/2017'),
+                            endDate: new Date('02/28/2017'), duration: 0, progress: '50', priority: 'Normal', approved: false
+                        }
+
+                    ]
+                }]
+            },
+
+            {
+                taskID: 29,
+                taskName: 'Phase 3',
+                startDate: new Date('02/17/2017'),
+                endDate: new Date('02/27/2017'),
+                priority: 'Normal',
+                approved: false,
+                duration: 11,
+                progress: 30,
+                subtasks: [{
+                    taskID: 30,
+                    taskName: 'Implementation Module 3',
+                    startDate: new Date('02/17/2017'),
+                    endDate: new Date('02/27/2017'),
+                    priority: 'High',
+                    approved: false,
+                    duration: 11,
+                    progress: 60,
+                    subtasks: [
+                        {
+                            taskID: 31, taskName: 'Development Task 1', startDate: new Date('02/17/2017'),
+                            endDate: new Date('02/19/2017'), duration: 3, progress: '50', priority: 'Low', approved: true
+                        },
+                        {
+                            taskID: 32, taskName: 'Development Task 2', startDate: new Date('02/17/2017'),
+                            endDate: new Date('02/19/2017'), duration: 3, progress: '50', priority: 'Normal', approved: false
+                        },
+                        {
+                            taskID: 33, taskName: 'Testing', startDate: new Date('02/20/2017'),
+                            endDate: new Date('02/21/2017'), duration: 2, progress: '0', priority: 'Critical', approved: true
+                        },
+                        {
+                            taskID: 34, taskName: 'Bug fix', startDate: new Date('02/24/2017'),
+                            endDate: new Date('02/25/2017'), duration: 2, progress: '0', priority: 'High', approved: false
+                        },
+                        {
+                            taskID: 35, taskName: 'Customer review meeting', startDate: new Date('02/26/2017'),
+                            endDate: new Date('02/27/2017'), duration: 2, progress: '0', priority: 'Normal', approved: true
+                        },
+                        {
+                            taskID: 36, taskName: 'Phase 3 complete', startDate: new Date('02/27/2017'),
+                            endDate: new Date('02/27/2017'), duration: 0, progress: '50', priority: 'Critical', approved: false
+                        },
+                    ]
+                }]
+            }
+        ]
+    }
+];
+window.querybuilderemployeeData = [{
+    'EmployeeID': 1,
+    'LastName': 'Davolio',
+    'FirstName': 'Nancy',
+    'Title': 'Sales Representative',
+    'TitleOfCourtesy': 'Ms.',
+    'BirthDate': new Date(-664743600000),
+    'HireDate': new Date(704692800000),
+    'Address': '507 - 20th Ave. E.\r\nApt. 2A',
+    'City': 'Seattle',
+    'Region': 'WA',
+    'PostalCode': '98122',
+    'Country': 'USA',
+    'HomePhone': '(206) 555-9857',
+    'Extension': '5467',
+    'Photo': { 'Length': 21626 },
+    'ReportsTo': 2,
+    'PhotoPath': 'http://accweb/emmployees/davolio.bmp'
+},
+{
+    'EmployeeID': 2,
+    'LastName': 'Fuller',
+    'FirstName': 'Andrew',
+    'Title': 'Vice President',
+    'TitleOfCourtesy': 'Dr.',
+    'BirthDate': new Date(-563828400000),
+    'HireDate': new Date(713764800000),
+    'Address': '908 W. Capital Way',
+    'City': 'Tacoma',
+    'Region': 'WA',
+    'PostalCode': '98401',
+    'Country': 'USA',
+    'HomePhone': '(206) 555-9482',
+    'Extension': '3457',
+    'Photo': { 'Length': 21626 },
+    'ReportsTo': 0,
+    'PhotoPath': 'http://accweb/emmployees/fuller.bmp'
+},
+{
+    'EmployeeID': 3,
+    'LastName': 'Leverling',
+    'FirstName': 'Janet',
+    'Title': 'Sales Representative',
+    'TitleOfCourtesy': 'Ms.',
+    'BirthDate': new Date(-200088000000),
+    'HireDate': new Date(702104400000),
+    'Address': '722 Moss Bay Blvd.',
+    'City': 'Kirkland',
+    'Region': 'WA',
+    'PostalCode': '98033',
+    'Country': 'USA',
+    'HomePhone': '(206) 555-3412',
+    'Extension': '3355',
+    'Photo': { 'Length': 21722 },
+    'ReportsTo': 2,
+    'PhotoPath': 'http://accweb/emmployees/leverling.bmp'
+},
+{
+    'EmployeeID': 4,
+    'LastName': 'Peacock',
+    'FirstName': 'Margaret',
+    'Title': 'Sales Representative',
+    'TitleOfCourtesy': 'Mrs.',
+    'BirthDate': new Date(-1018814400000),
+    'HireDate': new Date(736401600000),
+    'Address': '4110 Old Redmond Rd.',
+    'City': 'Redmond',
+    'Region': 'WA',
+    'PostalCode': '98052',
+    'Country': 'USA',
+    'HomePhone': '(206) 555-8122',
+    'Extension': '5176',
+    'Photo': { 'Length': 21626 },
+    'ReportsTo': 2,
+    'PhotoPath': 'http://accweb/emmployees/peacock.bmp'
+},
+{
+    'EmployeeID': 5,
+    'LastName': 'Buchanan',
+    'FirstName': 'Steven',
+    'Title': 'Sales Manager',
+    'TitleOfCourtesy': 'Mr.',
+    'BirthDate': new Date(-468010800000),
+    'HireDate': new Date(750830400000),
+    'Address': '14 Garrett Hill',
+    'City': 'London',
+    'Region': null,
+    'PostalCode':
+        'SW1 8JR',
+    'Country': 'UK',
+    'HomePhone': '(71) 555-4848',
+    'Extension': '3453',
+    'Photo': { 'Length': 21626 },
+    'ReportsTo': 2,
+    'PhotoPath': 'http://accweb/emmployees/buchanan.bmp'
+},
+{
+    'EmployeeID': 6,
+    'LastName': 'Suyama',
+    'FirstName': 'Michael',
+    'Title': 'Sales Representative',
+    'TitleOfCourtesy': 'Mr.',
+    'BirthDate': new Date(-205185600000),
+    'HireDate': new Date(750830400000),
+    'Address': 'Coventry House\r\nMiner Rd.',
+    'City': 'London',
+    'Region': null,
+    'PostalCode': 'EC2 7JR',
+    'Country': 'UK',
+    'HomePhone': '(71) 555-7773',
+    'Extension': '428',
+    'Photo': { 'Length': 21626 },
+    'ReportsTo': 5,
+    'PhotoPath': 'http://accweb/emmployees/davolio.bmp'
+},
+{
+    'EmployeeID': 7,
+    'LastName': 'King',
+    'FirstName': 'Robert',
+    'Title': 'Sales Representative',
+    'TitleOfCourtesy': 'Mr.',
+    'BirthDate': new Date(-302731200000),
+    'HireDate': new Date(757486800000),
+    'Address': 'Edgeham Hollow\r\nWinchester Way',
+    'City': 'London',
+    'Region': null,
+    'PostalCode': 'RG1 9SP',
+    'Country': 'UK',
+    'HomePhone': '(71) 555-5598',
+    'Extension': '465',
+    'Photo': { 'Length': 21626 },
+    'ReportsTo': 5,
+    'PhotoPath': 'http://accweb/emmployees/davolio.bmp'
+},
+{
+    'EmployeeID': 8,
+    'LastName': 'Callahan',
+    'FirstName': 'Laura',
+    'Title': 'Inside Sales Coordinator',
+    'TitleOfCourtesy': 'Ms.',
+    'BirthDate': new Date(-377982000000),
+    'HireDate': new Date(762843600000),
+    'Address': '4726 - 11th Ave. N.E.',
+    'City': 'Seattle',
+    'Region': 'WA',
+    'PostalCode': '98105',
+    'Country': 'USA',
+    'HomePhone': '(206) 555-1189',
+    'Extension': '2344',
+    'Photo': { 'Length': 21626 },
+    'ReportsTo': 2,
+    'PhotoPath': 'http://accweb/emmployees/davolio.bmp'
+},
+{
+    'EmployeeID': 9,
+    'LastName': 'Dodsworth',
+    'FirstName': 'Anne',
+    'Title': 'Sales Representative',
+    'TitleOfCourtesy': 'Ms.',
+    'BirthDate': new Date(-123966000000),
+    'HireDate': new Date(784875600000),
+    'Address': '7 Houndstooth Rd.',
+    'City': 'London',
+    'Region': null,
+    'PostalCode': 'WG2 7LT',
+    'Country': 'UK',
+    'HomePhone': '(71) 555-4444',
+    'Extension': '452',
+    'Photo': { 'Length': 21626 },
+    'ReportsTo': 5,
+    'PhotoPath': 'http://accweb/emmployees/davolio.bmp'
+}];
+window.projectNewData = [
+    {
+        TaskID: 1,
+        TaskName: 'Product Concept',
+        StartDate: new Date('04/02/2019'),
+        EndDate: new Date('04/21/2019'),
+        subtasks: [
+            { TaskID: 2, TaskName: 'Defining the product and its usage', StartDate: new Date('04/02/2019'), Duration: 3, Progress: 30 },
+            { TaskID: 3, TaskName: 'Defining target audience', StartDate: new Date('04/02/2019'), Duration: 3 },
+            {
+                TaskID: 4, TaskName: 'Prepare product sketch and notes', StartDate: new Date('04/02/2019'), Duration: 2,
+                Predecessor: '2', Progress: 30
+            },
+        ]
+    },
+    {
+        TaskID: 5, TaskName: 'Concept Approval', StartDate: new Date('04/02/2019'), Duration: 0, Predecessor: '3,4',
+        Indicators: [
+            {
+                'date': '04/10/2019',
+                'name': '#briefing',
+                'title': 'Product concept breifing',
+            }
+        ]
+    },
+    {
+        TaskID: 6,
+        TaskName: 'Market Research',
+        StartDate: new Date('04/02/2019'),
+        EndDate: new Date('04/21/2019'),
+        subtasks: [
+            {
+                TaskID: 7,
+                TaskName: 'Demand Analysis',
+                StartDate: new Date('04/04/2019'),
+                EndDate: new Date('04/21/2019'),
+                subtasks: [
+                    {
+                        TaskID: 8, TaskName: 'Customer strength', StartDate: new Date('04/04/2019'), Duration: 4,
+                        Predecessor: '5', Progress: 30
+                    },
+                    { TaskID: 9, TaskName: 'Market opportunity analysis', StartDate: new Date('04/04/2019'), Duration: 4, Predecessor: '5' }
+                ]
+            },
+            {
+                TaskID: 10, TaskName: 'Competitor Analysis', StartDate: new Date('04/04/2019'), Duration: 4,
+                Predecessor: '7, 8', Progress: 30
+            },
+            { TaskID: 11, TaskName: 'Product strength analsysis', StartDate: new Date('04/04/2019'), Duration: 4, Predecessor: '9' },
+            {
+                TaskID: 12, TaskName: 'Research complete', StartDate: new Date('04/04/2019'), Duration: 0, Predecessor: '10',
+                Indicators: [
+                    {
+                        'date': '04/20/2019',
+                        'name': '#meeting',
+                        'title': '1st board of directors meeting',
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        TaskID: 13,
+        TaskName: 'Product Design and Development',
+        StartDate: new Date('04/04/2019'),
+        EndDate: new Date('04/21/2019'),
+        subtasks: [
+            {
+                TaskID: 14, TaskName: 'Functionality design', StartDate: new Date('04/04/2019'),
+                Duration: 3, Progress: 30, Predecessor: '12'
+            },
+            { TaskID: 15, TaskName: 'Quality design', StartDate: new Date('04/04/2019'), Duration: 3, Predecessor: '12' },
+            { TaskID: 16, TaskName: 'Define Reliability', StartDate: new Date('04/04/2019'), Duration: 2, Progress: 30, Predecessor: '15' },
+            { TaskID: 17, TaskName: 'Identifying raw materials', StartDate: new Date('04/04/2019'), Duration: 2, Predecessor: '15' },
+            {
+                TaskID: 18,
+                TaskName: 'Define cost plan',
+                StartDate: new Date('04/04/2019'),
+                EndDate: new Date('04/21/2019'),
+                subtasks: [
+                    {
+                        TaskID: 19, TaskName: 'Manufacturing cost', StartDate: new Date('04/04/2019'),
+                        Duration: 2, Progress: 30, Predecessor: '17'
+                    },
+                    { TaskID: 20, TaskName: 'Selling cost', StartDate: new Date('04/04/2019'), Duration: 2, Predecessor: '17' }
+                ]
+            },
+            {
+                TaskID: 21,
+                TaskName: 'Development of the final design',
+                StartDate: new Date('04/04/2019'),
+                EndDate: new Date('04/21/2019'),
+                subtasks: [
+                    {
+                        TaskID: 22, TaskName: 'Defining dimensions and package volume', StartDate: new Date('04/04/2019'),
+                        Duration: 2, Progress: 30, Predecessor: '19,20'
+                    },
+                    {
+                        TaskID: 23, TaskName: 'Develop design to meet industry standards', StartDate: new Date('04/04/2019'),
+                        Duration: 2, Predecessor: '22'
+                    },
+                    { TaskID: 24, TaskName: 'Include all the details', StartDate: new Date('04/04/2019'), Duration: 3, Predecessor: '23' }
+                ]
+            },
+            {
+                TaskID: 25, TaskName: 'CAD Computer-aided design', StartDate: new Date('04/04/2019'),
+                Duration: 3, Progress: 30, Predecessor: '24'
+            },
+            { TaskID: 26, TaskName: 'CAM Computer-aided manufacturing', StartDate: new Date('04/04/2019'), Duration: 3, Predecessor: '25' },
+            {
+                TaskID: 27, TaskName: 'Design complete', StartDate: new Date('04/04/2019'), Duration: 0, Predecessor: '26',
+                Indicators: [
+                    {
+                        'date': '05/18/2019',
+                        'name': '#meeting',
+                        'title': '2nd board of directors meeting',
+                    }
+                ]
+            }
+
+        ]
+    },
+    { TaskID: 28, TaskName: 'Prototype Testing', StartDate: new Date('04/04/2019'), Duration: 4, Progress: 30, Predecessor: '27' },
+    { TaskID: 29, TaskName: 'Include feedback', StartDate: new Date('04/04/2019'), Duration: 4, Predecessor: '28ss' },
+    { TaskID: 30, TaskName: 'Manufacturing', StartDate: new Date('04/04/2019'), Duration: 5, Progress: 30, Predecessor: '28,29' },
+    { TaskID: 31, TaskName: 'Assembling materials to finsihed goods', StartDate: new Date('04/04/2019'), Duration: 5, Predecessor: '30' },
+    {
+        TaskID: 32,
+        TaskName: 'Feedback and Testing',
+        StartDate: new Date('04/04/2019'),
+        EndDate: new Date('04/21/2019'),
+        subtasks: [
+            {
+                TaskID: 33, TaskName: 'Internal testing and feedback', StartDate: new Date('04/04/2019'),
+                Duration: 3, Progress: 45, Predecessor: '31'
+            },
+            {
+                TaskID: 34, TaskName: 'Customer testing and feedback', StartDate: new Date('04/04/2019'),
+                Duration: 3, Progress: 50, Predecessor: '33'
+            }
+        ]
+    },
+    {
+        TaskID: 35,
+        TaskName: 'Final Product Development',
+        StartDate: new Date('04/04/2019'),
+        EndDate: new Date('04/21/2019'),
+        subtasks: [
+            {
+                TaskID: 36, TaskName: 'Important improvements', StartDate: new Date('04/04/2019'),
+                Duration: 4, Progress: 30, Predecessor: '34'
+            },
+            {
+                TaskID: 37, TaskName: 'Address any unforeseen issues', StartDate: new Date('04/04/2019'),
+                Duration: 4, Progress: 30, Predecessor: '36ss'
+            }
+        ]
+    },
+    {
+        TaskID: 38,
+        TaskName: 'Final Product',
+        StartDate: new Date('04/04/2019'),
+        EndDate: new Date('04/21/2019'),
+        subtasks: [
+            { TaskID: 39, TaskName: 'Branding product', StartDate: new Date('04/04/2019'), Duration: 4, Predecessor: '37' },
+            {
+                TaskID: 40, TaskName: 'Marketing and presales', StartDate: new Date('04/04/2019'),
+                Duration: 4, Progress: 30, Predecessor: '39'
+            }
+        ]
+    }
+];
+
+window.chipsData = {
+    "defaultData": [{
+        "text": "Apple",
+        "cssClass": "e-primary"
+    },
+    {
+        "text": "Microsoft",
+        "cssClass": "e-info"
+    },
+    {
+        "text": "Google",
+        "cssClass": "e-success"
+    },
+    {
+        "text": "Tesla",
+        "cssClass": "e-warning"
+    },
+    {
+        "text": "Intel",
+        "cssClass": "e-danger"
+    }
+    ],
+    "avatarData": [{
+        "text": "Anne",
+        "leadingIconCss": "anne"
+    },
+    {
+        "text": "Janet",
+        "leadingIconCss": "janet"
+    },
+    {
+        "text": "Laura",
+        "leadingIconCss": "laura"
+    },
+    {
+        "text": "Margaret",
+        "leadingIconCss": "margaret"
+    }
+    ],
+    "filterData": [{
+        "text": "Extra small"
+    },
+    {
+        "text": "Small"
+    },
+    {
+        "text": "Medium"
+    },
+    {
+        "text": "Large"
+    },
+    {
+        "text": "Extra large"
+    }
+    ],
+    "choiceData": [{
+        "text": "Send a text",
+        "leadingIconCss": "text"
+    },
+    {
+        "text": "Set a remainder",
+        "leadingIconCss": "alarm"
+    },
+    {
+        "text": "Read my emails",
+        "leadingIconCss": "mail"
+    },
+    {
+        "text": "Play a game",
+        "leadingIconCss": "game"
+    }
+    ]
+};
+

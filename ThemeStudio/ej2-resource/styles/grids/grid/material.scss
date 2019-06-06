@@ -1,784 +1,676 @@
 
-$grid-font-size: 13px;
-$grid-icon-color: $default-icon-color;
-$grid-hover-icon-color: $hover-icon-color;
-$grid-icon-font-size: 10px;
-$grid-border-type: $border-type;
-$grid-border-size: $border-size;
-$grid-bottom-border-size: $border-size;
-$grid-vertical-border-size: $border-size;
-$grid-horizontal-border-size: $border-size;
-$grid-font-family: $font-family;
+$group-row-bg-stcolor: #ececec !default;
+$group-row-bg-color: $grey-50 !default;
+$grid-font-size: 13px !default;
+$grid-icon-color: $default-icon-color !default;
+$grid-icon-font-size: 10px !default;
+$grid-border-type: $border-type !default;
+$grid-border-size: $border-size !default;
+$grid-bottom-border-size: $border-size !default;
+$grid-horizontal-border-size: $border-size !default;
+$grid-font-family: $font-family !default;
 
-$grid-header-font-size: 14px;
-$grid-header-icon-color: $header-icon-color;
-$grid-header-bg-color: $header-bg-color;
-$grid-header-border-color: $content-border-color;
-$grid-header-color: $header-font-color;
-$grid-headercell-div-padding: 0 .6em;
-$grid-grouped-headercell-span-padding: 0;
-$grid-sorted-header-color: $header-font-color;
-$grid-group-text-width: 57px;
+$grid-headercell-div-padding: 0 .6em !default;
+$grid-grouped-headercell-span-padding: 0 !default;
+$grid-group-text-width: 57px !default;
 
-$grid-content-bg-color: $content-bg-color;
-$grid-cell-border-color: $content-border-color;
-$grid-altrow-bg-color: lighten($hover-bg-color, 10%);
-$grid-hover-bg-color: darken($hover-bg-color, 5%);
-$grid-popup-bg-color: $content-bg-color;
-$grid-border-radius: 0;
+$grid-content-bg-color: $content-bg-color !default;
+$grid-popup-bg-color: $content-bg-color !default;
+$grid-border-radius: 0 !default;
 
-$grid-sortnumber-bg-color: #bbbdc0;
-$grid-sortnumber-color: $content-font-color;
-$grid-table-background-color: $content-bg-color;
+$grid-sortnumber-bg-color: #bbbdc0 !default;
+$grid-sortnumber-color: $content-font-color !default;
+$grid-table-background-color: $content-bg-color !default;
 
-$grid-row-selection-bg-color: $active-bg-color;
-$grid-row-selection-color: $active-font-color;
-$grid-cell-selection-bg-color: darken($active-bg-color, 5%);
-$grid-cell-selection-color: $active-font-color;
-$grid-drag-selection-bg-color: $active-bg-color;
-$grid-drag-selection-color: $content-border-color;
 
-$grid-drag-clone-bg-color: $hover-bg-color;
-$grid-drag-clone-border-color: $content-border-color;
-$grid-drag-clone-color: $header-font-color;
-$grid-drag-clone-opacity: .6;
+$group-droparea-hover-color: $active-font-color !default;
 
-$group-droparea-color: $active-font-color;
-$group-droparea-bg-color: $active-bg-color;
-$group-droparea-hover-color: $active-font-color;
-$group-droparea-hover-bg-color:  $active-bg-color;
+$group-header-hover-color: $header-font-color !default;
+$grid-group-hover-broder-color: $content-border-color !default;
+$grid-group-headercell-line-height: 26px !default;
+$grid-group-text-line-height: 24px !default;
+$grid-group-right-arrow-icon: 'e859' !default;
+$grid-group-rtl-right-arrow-icon: 'e854' !default;
+$grid-group-down-arrow-icon: 'e83d' !default;
+$grid-group-down-arrow-icon-font-size: 11px !default;
+$grid-group-right-arrow-icon-font-size: 10px !default;
+$grid-group-clone-text-align: center !default;
+$grid-group-unpgroupicon-margin-top: 0 !default;
+$grid-ungroup-rtl-padding-right: 6px !default;
+$filter-text-color: $content-font-color !default;
+$grid-wrap-line-height: 18px !default;
+$grid-wrap-margin-bottom: 2px !default;
+$grid-wrap-margin-top: 0 !default;
 
-$group-header-color: $header-font-color;
-$group-header-bg-color: $header-bg-color;
-$group-header-hover-color: $header-font-color;
-$group-header-hover-bg-color: $header-bg-color;
-$group-header-border-radius: 9px;
-$group-row-bg-stcolor: #ececec;
-$group-row-bg-color: lighten($group-row-bg-stcolor, 4%);
-$grid-group-broder-color:  $content-border-color;
-$grid-group-hover-broder-color: $content-border-color;
-$grid-group-headercell-line-height: 26px;
-$grid-group-text-line-height: 24px;
-$grid-group-caption-font-size: 13px;
-$grid-group-right-arrow-icon: '\e859';
-$grid-group-rtl-right-arrow-icon: '\e854';
-$grid-group-down-arrow-icon: '\e83d';
-$grid-group-down-arrow-icon-font-size: 11px;
-$grid-group-right-arrow-icon-font-size: 10px;
-$grid-group-clone-text-align: center;
-$grid-group-unpgroupicon-margin-top: 0;
-$grid-ungroup-rtl-padding-right: 6px;
-$grid-rtl-group-headercell-margin-right: 10px;
-$grid-rtl-group-headercell-margin-left: 0;
-$filter-text-color: $content-font-color;
-$grid-wrap-line-height: 18px;
-$grid-wrap-margin-bottom: 2px;
-$grid-wrap-margin-top: 0;
+$grid-filterbarcell-first-last-child-padding-left: 21px !default;
+$grid-filterbar-border-radius: 0 !default;
+$grid-ungroup-button-line-height: 26px !default;
+$grid-ungroup-button-font-size: 13px !default;
+$grid-clone-padding: 4px 5px !default;
+$group-sorticon-margin-right: 0 !default;
+$group-sorticon-margin-top: 0 !default;
+$group-ungroupicon-padding: 5px 3px !default;
+$grid-rtl-group-sorticon-margin-left: 0 !default;
+$grouped-text-font-size: 13px !default;
+$grid-hide-icon-content: 'e825' !default;
+$grid-searchbar-cancel-icon-content: 'e825' !default;
+$grid-summary-row-bg-color: lighten($group-row-bg-stcolor, 4%) !default;
+$grid-filtercell-both-border-width: 1px 0 0 1px !default;
+$grid-headercelldiv-margin: -7px !default;
+$grid-rtl-headercelldiv-padding: 0 .6em 0 1.8em !default;
+$grid-headercelldiv-padding: 0 1.8em 0 .6em !default;
+$grid-headercelldiv-right-align-padding: 0 .6em 0 1.9em !default;
+$grid-filterbarcell-text-input: 26px !default;
+$grid-summary-cell-line-height: 18px !default;
+$grid-td-checkbox-margin-top: 5px !default;
+$grid-gd-clone-padding: 2px !default;
+$grid-toolbar-border-width: 1px solid !default;
+$grid-sortdiv-margin: -15px 10px !default;
+$grid-sortdiv-right-align-margin: -15px 5px !default;
+$grid-filterdiv-padding: 0 !default;
+$grid-headercelldiv-height: 29px !default;
+$grid-filterbarcell-input-height: 26px !default;
+$grid-sortdiv-height: 10px !default;
+$grid-sortdiv-width: 10px !default;
+$grid-sortdiv-padding: 3px !default;
+$grid-sortnumer-line-height: 16px !default;
+$grid-sortnumber-border-radius: 65% !default;
+$grid-textwrap-srotnumber-rightalign-margin: 3px 2px 0 5px !default;
+$grid-textwrap-srotnumber-margin: 3px 5px 0 2px !default;
+$grid-textwrap-sorticon-margin: -9px 10px !default;
+$grid-columnchooser-header-padding: 11px 18px 15px !default;
+$grid-cc-checkbox-padding-left: 9px !default;
+$grid-columnchooser-toolbar-button-padding: 0 12px !default;
+$grid-columnchooser-ul-padding: 0 !default;
+$grid-columnchooser-li-padding: 9px 0 !default;
+$grid-column-chooser-searchdiv: 0 0 2px !default;
+$grid-column-chosser-searchdiv-opactiy: .6 !default;
+$grid-column-chosser-searchdiv-fopactiy: 1 !default;
+$grid-columnchooser-search-border-color: #212121 !default;
+$grid-columnchooser-search-border-fcolor: #ff4081 !default;
+$grid-columnchooser-toolbar-div-padding: 0 10px !default;
+$grid-columnchooser-toolbar-icon-line-height: 1.9 !default;
+$grid-columnchooser-toolbar-icon-font-size: 15px !default;
+$grid-columnchooser-btn-font-size: 9px !default;
+$grid-columnchooser-btn-line-height: 3 !default;
+$grid-bigger-columnchooser-btn-font-size: 12px !default;
+$grid-columnchooser-toolbardiv-padding: 3px 0 0 !default;
+$grid-columnchooser-toolbardiv-margin-top: 0 !default;
+$grid-bigger-columnchooser-toolbartxt-padding: 0 6px 0 !default;
+$grid-columnchooser-toolbartxt-padding: 0 6px 0 !default;
+$grid-columnchooser-toolbar-icon-vertical-align: middle !default;
+$grid-columnchooser-cancel-icon-content: 'e953' !default;
+$grid-columnchooser-cancel-icon-content-f-opactiy: 1 !default;
+$grid-columnchooser-cancel-btn-color: rgba(0, 0, 0, .87) !default;
+$grid-columnchooser-toolbar-div-margin-top: -1px !default;
+$grid-columnchooser-searchbar-cancel-icon-content: 'e7a7' !default;
+$grid-columnchooser-input-border: 0 !default;
+$grid-columnchooser-input-padding-top: 4px !default;
+$grid-column-chooser-search-icon-padding: 5px 2px !default;
+$grid-column-chooser-cancel-icon-padding: 5px 2px 6px !default;
+$grid-columnchooser-input-padding-bottom: 8px !default;
+$grid-columnchooser-input-padding-left: 4px !default;
+$grid-column-chooser-searchdiv-left: 4px !default;
+$grid-columnchooser-ul-margin: 13px 0 !default;
+$grid-column-chooser-dlg-footer-padding: 8px !default;
+$grid-rtl-bigger-sortnumber-margin: 6px 0 0 5px !default;
+$grid-rtl-sortcelldiv-margin: -14px 10px !default;
+$grid-rtl-sortcelldiv-right-align-margin: -14px 10px !default;
+$grid-rtl-bigger-sortcelldiv-right-align-margin: -17px 10px !default;
+$grid-rtl-bigger-sortcelldiv-margin: -17px 10px !default;
+$grid-rtl-group-text-marign-right: 0 !default;
+$grid-rtl-group-text-margin-left: 18px !default;
+$grid-rtl-group-text-margin-right: 0 !default;
+$grid-rtl-textwrap-srotnumber-margin: 3px 5px 0 2px !default;
+$grid-header-wrap-sortfilter-div-margin: -18px 10px !default;
+$grid-rtl-textwrap-sorticon-margin: -17px 4px !default;
+$grid-rtl-textwrap-sorticon-rightalign-margin: -17px 5px !default;
+$grid-rtl-headercell-both-border-width:  0 1px 0 0 !default;
+$grid-rtl-textwrap-srotnumber-rightalign-margin: 3px 5px 0 2px !default;
+$grid-rtl-stackedhader-firstcell-left-border-size: 0 !default;
+$grid-rtl-stackedhader-firstcell-right-border-size: 1px !default;
+$grid-rtl-bothlines-stackedhader-firstcell-left-border-size: 1px !default;
+$grid-rtl-bothlines-stackedhader-firstcell-right-border-size: 0 !default;
+$grid-bigger-headercell-font-size: 12px !default;
+$grid-bigger-font-size: 13px !default;
+$grid-bigger-content-font-size: 13px !default;
+$grid-bigger-icons-font-size: 12px !default;
+$grid-bigger-header-icons-font-size: 12px !default;
+$grid-bigger-gdownarrow-icon-font-size: 12px !default;
+$grid-bigger-grightarrow-icon-font-size: 12px !default;
+$grid-bigger-sortdiv-margin: -17px 8px !default;
+$grid-bigger-sortdiv-rightalign-margin: -17px 2px !default;
+$group-bigger-sorticon-margin-right: 0 !default;
+$grid-bigger-groupdroparea-padding: 22px 24px !default;
+$grid-bigger-groupedcell-padding: 11px 0 12px !default;
+$grid-bigger-grouped-headercell-border-radius: 16px !default;
+$grid-bigger-group-headercell-margin: 4px 0 0 24px !default;
+$grid-bigger-group-headercell-padding: 0 8px 0 12px !default;
+$grid-bigger-group-clone-padding: 6px !default;
+$grid-bigger-grouptext-width: 76px !default;
+$grid-bigger-ungroup-button-font-size: 16px !default;
+$grid-bigger-ungroupbutton-icon-margin-top: 0 !default;
+$grid-bigger-group-text-line-height: 32px !default;
+$grid-bigger-ungroupbutton-icons-font-size: 16px !default;
+$grid-bigger-groupcaption-line-height: 32px !default;
+$grid-bigger-grouparea-font-size: 19px !default;
+$grid-bigger-rtl-group-headercell-margin: 3px 24px 0 0 !default;
+$grid-bigger-rtl-ungroup-icon-margin-top: 0 !default;
+$grid-bigger-rtl-ungroup-icon-margin-right: 6px !default;
+$grid-bigger-textwrap-srotnumber-rightalign-margin: 3px 2px 0 5px !default;
+$grid-bigger-textwrap-sorticon-rightalign-margin: -9px 5px !default;
+$grid-bigger-textwrap-sorticon-margin: -9px 10px !default;
+$grid-bigger-textwrap-srotnumber-margin: 3px 5px 0 2px !default;
+$grid-bigger-columnchooser-header-padding: 24px 24px 38px !default;
+$grid-bigger-columnchooser-ul-padding: 0 !default;
+$grid-bigger-columnchooser-li-padding: 11px 0 !default;
+$grid-bigger-columnchooser-toolbar-div-margin-top: 0 !default;
+$grid-bigger-cc-checkbox-padding-left: 12px !default;
+$grid-bigger-searchdiv-padding-left: 6px !default;
+$grid-bigger-sorticon-margin-top: 0 !default;
+$grid-bigger-groupcell-span-padding: 0 !default;
+$grid-bigger-ungroupbutton-icon-margin-left: 0 !default;
+$grid-device-groupheadercell-span-line-height: 30px !default;
+$grid-device-ungroupbutton-line-height: 33px !default;
+$grid-device-gridheader-row-span-padding: 20px !default;
+$grid-descending-icon-content: 'e83f' !default;
+$grid-edit-input-margin-top: 0 !default;
+$grid-edit-icon: 'e81e' !default;
+$grid-add-icon: 'e7f9' !default;
+$grid-print-icon: 'e813' !default;
+$grid-delete-icon: 'e84e' !default;
+$frozen-border: 1px solid !default;
+$grid-filtermenu-icon: 'e7ee' !default;
+$grid-fltrdiv-float: right !default;
+$grid-fltrdiv-text-align: right !default;
+$grid-fltrdiv-margin: -18px -7px !default;
+$grid-fltrdiv-padding: 6px !default;
+$grid-rtl-fltrdiv-padding: 6px !default;
+$grid-flmenu-padding: 24px 0 0 !default;
+$grid-flmenu-boolean-content-padding: 18px 18px 0 !default;
+$grid-flmenu-boolean-button-width: 110px !default;
+$grid-flmenu-device-padding: 24px 0 0 !default;
+$grid-rtl-fltrdiv-margin: -18px 0 -18px -11px !default;
+$grid-rtl-bigger-fltrdiv-margin: -18px 0 -18px -11px !default;
+$grid-rtl-headercelldiv-rightalign-fltricon-margin: -7px !default;
+$grid-rtl-headercelldiv-fltricon-margin: -7px !default;
+$grid-headercelldiv-fltricon-margin: -7px 15px -7px -7px !default;
+$grid-headercelldiv-rightalign-fltricon-margin: -7px 15px -7px -7px !default;
+$grid-rtlfltrdiv-float: left !default;
+$grid-checkbox-padding-topbottom: 9px !default;
+$grid-checkbox-wrapper-height: 20px !default;
+$grid-checkbox-wrapper-line-height: 20px !default;
+$grid-bigger-checkbox-padding-topbottom: 13px !default;
+$grid-bigger-fltrdiv-margin: -18px -7px !default;
+$grid-sortdiv-filtericon-margin: -15px 24px !default;
+$grid-sortdiv-filtericon-rightalign-margin: -15px 5px !default;
+$grid-rtl-sortdiv-filtericon-rightalign-margin: -14px 0 0 11px !default;
+$grid-rtl-sortdiv-filtericon-margin: -14px 0 0 11px !default;
+$grid-bigger-fltricon-sortdiv-rightalign-margin: -17px 2px !default;
+$grid-bigger-fltricon-sortdiv-margin: -15px 18px !default;
+$grid-rtl-headercelldiv-fltricon-padding: 0 1.6em 0 10px !default;
+$grid-sortnumber-filtericon-rightalign-margin: 8px 2px 0 5px !default;
+$grid-bigger-checkbox-filter-min-height: 352px !default;
+$grid-checkbox-filter-min-height: 322px !default;
+$grid-rtl-bigger-fltricon-sortdiv-margin: -15px 30px 0 0 !default;
+$grid-rtl-bigger-fltricon-sortdiv-rightalign-margin: -16px 0 !default;
+$grid-excelmenu-filter-icon: 'e251' !default;
+$grid-excelmenu-clear-filter-icon: 'e248' !default;
+$grid-xlfl-fieldset-padding: 15px !default;
+$grid-xlfltd-padding: 12px !default;
+$grid-xlfltable-border-spacing: 0 !default;
+$grid-xlfl-dropdown-padding-right: 12px !default;
+$grid-xlfl-radio-margin-left: 13px !default;
+$grid-xlfl-min-height: 295px !default;
+$grid-xlfl-li-left-padding: 28px !default;
+$grid-xlfl-li-icon-margin-right: 12px !default;
+$grid-xlfl-dlg-padding-bottom: 6px !default;
+$grid-xlfltd-radio-mtcase-padding: 12px !default;
+$grid-xlfl-fieldset-font-size: 14px !default;
+$grid-xlfl-dlgfields-font-size: 17px !default;
+$grid-xlfl-li-height: 36px !default;
+$grid-xlfl-radiodiv-width: 117px !default;
+$grid-xl-radio-padding-left: 23px !default;
+$grid-xl-radio-padding-right: 13px !default;
+$grid-xl-match-margin-left: 6px !default;
+$grid-bigger-xlfl-li-height: 48px !default;
+$grid-bigger-xlfl-fieldset-font-size: 15px !default;
+$grid-bigger-xlfl-dlgfields-font-size: 18px !default;
+$grid-bigger-xlfltd-radio-mtcase-padding: 16px !default;
+$grid-bigger-xlfl-dlg-padding-bottom: 8px !default;
+$grid-bigger-xlfl-li-icon-margin-right: 15px !default;
+$grid-bigger-xlfl-li-left-padding: 35px !default;
+$grid-bigger-xlfl-min-height: 396px !default;
+$grid-bigger-xlfl-fieldset-padding: 20px !default;
+$grid-bigger-xlfltd-padding: 16px !default;
+$grid-bigger-xlfl-radio-margin-left: 18px !default;
+$grid-bigger-xlfltable-border-spacing: 0 !default;
+$grid-bigger-xlfl-dropdown-padding-right: 16px !default;
+$grid-bigger-xlfl-radiodiv-width: 137px !default;
+$grid-bigger-xl-radio-padding-left: 28px !default;
+$grid-bigger-xl-radio-padding-right: 5px !default;
+$grid-bigger-xl-match-margin-left: 8px !default;
+$grid-rows-bg-color: $content-bg-color !default;
+$grid-resize-border-width: 1px !default;
+$grid-xl-rtl-radio-padding-left: 0 !default;
+$grid-xl-rtl-radio-padding-right: 25px !default;
+$grid-filterbarcell-input-padding: 0 26px 0 10px !default;
+$grid-header-wrap-rightalign-sortfilter-div-margin: -18px 5px !default;
+$grid-header-wrap-filtericon-sortfilter-div-margin: -11px 24px !default;
+$grid-bigger-wrap-sortdiv-margin: -20px 8px !default;
+$grid-bigger-wrap-rightalign-sortdiv-margin: -20px 2px !default;
+$grid-bigger-wrap-fltricon-sortdiv-margin: -10px 18px !default;
+$grid-bigger-wrap-rightalign-fltricon-sortdiv-margin: -12px 2px !default;
+$grid-header-wrap-filtericon-rightalign-sortfilter-div-margin: -10px 5px !default;
+$grid-header-padding: 21px !default;
+$grid-header-first-last-cell-padding: 21px !default;
+$grid-header-bottom-padding: 0 !default;
+$grid-header-bg-color: $grey-white !default;
+$grid-header-color: rgba($grey-light-font, .54) !default;
+$grid-sorted-header-color: $grey-light-font !default;
+$gridcontent-font-color: $grey-light-font !default;
+$grid-header-border-color: $grey-300 !default;
+$grid-headerconent-font-opacity: .54 !default;
+$grid-content-right-padding: 21px !default;
+$grid-first-last-rowcell-padding: 21px !default;
+$grid-filterbarcell-padding: 0 21px !default;
+$grid-vertical-border-size: 0 !default;
+$grid-content-padding: 8px !default;
+$grid-rowcell-line-height: 20px !default;
+$grid-headercell-line-height: 42px !default;
+$grid-filtercell-line-height: 42px !default;
+$grid-cell-border-color: $grey-300 !default;
+$grid-content-font-color: $grey-light-font !default;
+$grid-hover-content-font-color: $grey-light-font !default;
+$grid-conent-font-opacity: .87 !default;
+$grid-row-selection-bg-color: $grey-300 !default;
+$grid-row-selection-color: $grey-light-font !default;
+$grid-hover-bg-color: $grey-200 !default;
+$grid-cell-selection-bg-color: $grey-300 !default;
+$grid-cell-selection-color: $grey-light-font !default;
+$grid-filterbar-input-border-width: 0 0 2px 0 !default;
+$grid-filterbarcell-border-width: 1px 0 0 !default;
+$grid-group-height: 48px !default;
+$grid-group-captioncell-line-height: 20px !default;
+$group-header-color: $primary-font !default;
+$group-header-border-radius: 12px !default;
+$grid-drag-clone-bg-color: $grey-200 !default;
+$grid-drag-clone-border-color: $grey-300 !default;
+$grid-drag-clone-opacity: 1 !default;
+$grid-drag-clone-color: rgba($grey-light-font, .54) !default;
+$group-droparea-bg-color: $primary-50 !default;
+$group-droparea-color: $grey-light-font !default;
+$grid-grouparea-font-size: 14px !default;
+$group-header-bg-color: $primary !default;
+$group-header-hover-bg-color: $primary !default;
+$group-border-width: 0 !default;
+$grouped-droparea-bg-color: $primary-300 !default;
+$group-droparea-hover-bg-color: $primary-100 !default;
+$group-expand-icon-text-indent: 12px !default;
+$group-collapse-icon-text-indent: 12px !default;
+$grid-group-broder-color: $grey-300 !default;
+$grid-header-font-weight: 500 !default;
+$grid-header-font-size: 12px !default;
+$grid-bigger-header-font-size: $grid-header-font-size !default;
+$grid-content-font-size: 13px !default;
+$grid-header-height: 29px !default;
+$grid-bigger-header-height: $grid-header-height !default;
+$grid-header-icon-color: $grey-white !default;
+$grid-hover-icon-color: $grey-white !default;
+$grid-grouparea-margin: 3px 0 0 18px !default;
+$group-area-padding: 14px 24px !default;
+$group-text-padding-right: 9px !default;
+$group-unpgrouicon-margin-left: 6px !default;
+$group-sorticon-margin-left: 6px !default;
+$grid-rtl-group-sorticon-margin-right: 6px !default;
+$grid-grouptopleftcell-border-top: 1px solid !default;
+$grid-grouped-padding: 9px 0 10px !default;
+$grid-ungroup-icon-opactiy: .7 !default;
+$grid-headecell-height: 24px !default;
+$group-sorticon-font-size: 10px !default;
+$grid-grouped-headercell-padding: 0 6px 0 9px !default;
+$grid-rtl-grouped-headercell-padding: 0 9px 0 6px !default;
+$grid-group-caption-font-size: 12px !default;
+$grid-default-color: $grey-white !default;
+$group-text-align: left !default;
+$grid-icon-default-color: $grey-900 !default;
+$grid-right-border: 0 !default;
+$grid-stackedheadercell-border-size: 0 0 1px 1px !default;
+$grid-stackedheadercell-botttom-padding: 13px !default;
+$grid-grouparea-first-cell-margin: 0 6px 0 12px !default;
+$grid-ungroup-icon-content: 'e917' !default;
+$grid-summary-cell-font-size: 13px !default;
+$grid-summary-template-row-bg-color: $group-row-bg-color !default;
+$grid-altrow-bg-color: $grey-white !default;
+$grid-header-border-width: 0 !default;
+$grid-rowcell-broder-width: 1px 0 0 0 !default;
+$grid-headercell-both-border-width: 0 0 0 1px !default;
+$grid-rowcell-both-border-width: 1px 0 0 1px !default;
+$grid-indentcell-border-width: 0 1px 0 0 !default;
+$grid-headercelldiv-line-height: 30px !default;
+$grid-bigger-headercelldiv-line-height: $grid-headercelldiv-line-height !default;
+$grid-filterbarcell-text-indent: 0 !default;
+$grid-grouptext-margin-right: 6px !default;
+$grid-groupdroparea-rtl-text-align: right !default;
+$grid-rtl-th-firstcell-border-left: 0 !default;
+$grid-gd-clone-border-radius: 13px !default;
+$group-ungroupicon-font-size: 9px !default;
+$grid-checkbox-cell-padding-top-bottom: 6px !default;
+$grid-rtl-headercell-border-width: 0 !default;
+$grid-rowselect-text-indent: 7% !default;
+$grid-ungroup-rtl-padding-top: 0 !default;
+$grid-sortnumber-rightalign-margin: 8px 2px 0 5px !default;
+$grid-columnchooser-footer-border-color: rgba($grey-light-font, .12) !default;
+$grid-columnchooser-footer-border-opacity: 1 !default;
+$grid-columnchooser-hover-bg-color: rgba($grey-black, .2) !default;
+$grid-columnchooser-active-bg-color: rgba($grey-400, .4) !default;
+$grid-columnchooser-content-padding: 16px 18px 13px 9px !default;
+$grid-bigger-columnchooser-content-padding: 17px 24px 5px 12px !default;
+$grid-bigger-columnchooser-content-margin: 20px 0 0 !default;
+$grid-columnchooser-content-margin: 20px 0 0 !default;
+$grid-columnchooser-search-icon-content: 'e993' !default;
+$grid-rtl-sortnumber-margin: 9px 0 0 5px !default;
+$grid-sortnumber-margin: 8px 5px 0 2px !default;
+$grid-rtl-sortnumber-rightalign-margin: 9px 0 0 5px !default;
+$grid-bigger-rtl-group-headercell-padding: 0 12px 0 8px !default;
+$group-caption-font-color: $grey-light-font !default;
+$grid-filterbar-cancel-icon-content: 'e825' !default;
+$grid-rtl-group-headercell-margin-left: 10px !default;
+$grid-rtl-group-headercell-margin-right: 18px !default;
+$grid-rtl-stackedheadercell-border-size: 0 1px 1px 0 !default;
+$grid-bigger-groupcell-span-line-height: 32px !default;
+$grid-bigger-headercell-padding: round($grid-header-padding/.75) !default;
+$grid-bigger-headercell-bootom-padding: round($grid-header-bottom-padding/.75) !default;
+$grid-bigger-headercell-line-height: round($grid-headercell-line-height/.75) !default;
+$grid-bigger-header-first-last-cell-padding: round($grid-header-first-last-cell-padding/.75) !default;
+$grid-bigger-content-padding: round($grid-content-padding/.75) !default;
+$grid-bigger-content-right-padding: round($grid-content-right-padding/.75) !default;
+$grid-bigger-rowcell-line-height: round($grid-rowcell-line-height/.75) !default;
+$grid-bigger-first-last-rowcell-padding: round($grid-first-last-rowcell-padding/.75) !default;
+$grid-bigger-group-line-height: round($grid-group-height/.75) !default;
+$grid-bigger-group-headercell-height: round($grid-headecell-height/.75) !default;
+$grid-bigger-group-clone-broder-radius: round($grid-gd-clone-border-radius / .75) !default;
+$grid-bigger-grouptext-marign: round($grid-grouptext-margin-right / .75) !default;
+$grid-bigger-groupedcell-icons-marign-left: round($group-sorticon-margin-left / .75) !default;
+$grid-bigger-filterbarcell-text-input: 26px !default;
+$grid-device-headercell-padding: 0 12px $grid-header-bottom-padding !default;
+$grid-device-headercell-fistchild-padding: 0 12px $grid-header-bottom-padding 16px !default;
+$grid-device-headercell-lastchild-padding: 0 16px $grid-header-bottom-padding 12px !default;
+$grid-device-rowcell-padding: $grid-content-padding 12px !default;
+$grid-device-rowcell-firstchild-padding: $grid-content-padding 12px $grid-content-padding 16px !default;
+$grid-device-rowcell-lastchild-padding: $grid-content-padding 16px $grid-content-padding 12px !default;
+$grid-device-filterbarcell-padding: $grid-content-padding 12px !default;
+$grid-device-filterbarcell-firstchild-padding: $grid-device-rowcell-firstchild-padding !default;
+$grid-device-filterbarcell-lastchild-padding: $grid-device-rowcell-lastchild-padding !default;
+$grid-edit-cell-padding: 4px !default;
+$grid-edit-input-padding-top: 9px !default;
+$grid-edit-input-padding-bottom: 6px !default;
+$grid-edit-input-margin: 2px !default;
+$grid-batch-updated-bg-color: #d7f9c7 !default;
+$grid-val-error-color: #f44336 !default;
+$grid-val-error-bg-color: #fcdbe4 !default;
+$grid-edit-input-bigger-padding-bottom: 9px !default;
+$grid-edit-input-bigger-padding-top: 13px !default;
+$grid-edit-input-bigger-margin: 5px !default;
+$grid-edit-input-bigger-device-padding-bottom: 5px !default;
+$grid-edit-input-bigger-device-padding-top: 12px !default;
+$grid-resize-helper-color: $grey-light-font !default;
+$grid-grouped-sort-icon: 'e840' !default;
+$grid-grouped-sort-dec-icon: 'e83f' !default;
+$grid-headecell-span-height: 24px !default;
+$grid-edit-checkbox-bigger-padding-left: 21px !default;
+$grid-edit-checkbox-bigger-padding-top: 5px !default;
+$frozen-border-color: $accent !default;
+$grid-icon-save: 'e98e' !default;
+$grid-cell-focus-shadow: 0 0 0 1px $grey-500 inset !default;
+$grid-filtered-color: $accent !default;
+$grid-autofill-color: $accent !default;
+$grid-e-firstrow-dragborder-bcolor: $accent !default;
+$grid-column-menu-sub-menu-box-shadow: 0 8px 10px 0 rgba($shadow, .24) !default;
+$grid-column-menu-margin: -18px !default;
+$grid-textwrap-column-menu-margin: -13px -13px -23px -23px !default;
+$grid-bigger-column-menu-margin: 0 -7px !default;
+$grid-column-menu-top-touch: 17px !default;
+$grid-column-chooser-footdiv: 1px 0 0 !default;
+$grid-toolbar-search-margin-bottom: 0 !default;
+$grid-toolbar-search-width: 230px !default;
+$grid-toolbar-search-wrapper-padding-top: 1px !default;
+$grid-toolbar-search-wrapper-padding-bottom: 6px !default;
+$grid-toolbar-search-icon-min-width: 18px !default;
+$grid-bigger-toolbar-search-icon-min-width: 20px !default;
+$grid-bigger-toolbar-search-wrapper-padding-bottom: 8px !default;
+$grid-bigger-toolbar-search-wrapper-padding-top: 2px !default;
+$grid-toolbar-search-icon-content: 'e993' !default;
+$grid-selection-font-weight: normal !default;
+$group-hover-border: $group-border-width !default;
+$grid-grouped-headercell-hover-padding: $grid-grouped-headercell-padding !default;
+$grid-drag-clone-font-weight: $grid-header-font-weight !default;
+$grid-content-batch-font-color: $grid-content-font-color !default;
+$grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-padding !default;
 
-$grid-content-font-color: $content-font-color;
-$grid-header-padding: .5em;
-$grid-header-first-last-cell-padding: .5em;
-$grid-header-bottom-padding: 0;
-$grid-content-padding: .7em;
-$grid-content-right-padding: .7em;
-$grid-headerconent-font-opacity: 1;
-$grid-conent-font-opacity: 1;
-$grid-rowcell-line-height: 14px;
-$grid-headercell-line-height: 40px;
-$grid-filtercell-line-height: 27px;
-$grid-filterbar-input-border-width: 1px;
-$grid-filterbarcell-border-width: 1px 0 0 1px;
-$grid-filterbarcell-padding: 4px 7px;
-$grid-filterbarcell-first-last-child-padding-left: 21px;
-$grid-filterbar-border-radius: 0;
-$grid-group-height: 48px;
-$grid-grouparea-font-size: 19px;
-$grid-grouparea-margin: 0 0 0 10px;
-$group-border-width: 1px solid;
-$grouped-droparea-bg-color: $active-bg-color;
-$group-collapse-icon-text-indent: 8px;
-$group-expand-icon-text-indent: 8px;
-$grid-group-captioncell-line-height: 14px;
-$grid-ungroup-button-line-height: 26px;
-$grid-ungroup-button-font-size: 13px;
-$grid-ungroup-icon-content: '\e825';
-$grid-clone-padding: 4px 5px;
-$grid-header-font-weight: bold;
-$grid-headecell-span-height: 33px;
-$grid-content-font-size: 12px;
-$group-area-padding: 5px 0 8px;
-$group-text-padding-right: 3px;
-$group-sorticon-font-size: 11px;
-$group-sorticon-margin-left: 0;
-$group-sorticon-margin-right: 0;
-$group-sorticon-margin-top: 0;
-$group-ungroupicon-padding: 5px 3px;
-$group-unpgrouicon-margin-left: 0;
-$grid-rtl-group-sorticon-margin-left: 0;
-$grid-rtl-group-sorticon-margin-right: 0;
-$grouped-text-font-size: 13px;
-$grid-grouptopleftcell-border-top: 0;
-$grid-grouped-padding: 8px 0 5px;
-$grid-ungroup-icon-opactiy: 1px;
-$grid-grouped-headercell-padding: 6px;
-$grid-rtl-grouped-headercell-padding: 6px;
-$grid-headecell-height: 33px;
-$grid-default-color: '';
-$grid-stackedheadercell-border-size: 1px 0 1px 1px;
-$grid-stackedheadercell-botttom-padding: 13px;
-$group-text-align: center;
-$grid-icon-default-color: $content-bg-color;
-$grid-right-border: 1px;
-$grid-header-border-width: 0 0 0 1px;
-$grid-grouparea-first-cell-margin: '';
-$grid-hide-icon-content: '\e825';
-$grid-filterbar-cancel-icon-content: '\e842';
-$grid-searchbar-cancel-icon-content: '\e825';
-$grid-summary-row-bg-color: $group-row-bg-color;
-$grid-rowcell-broder-width: 1px 0 0 1px;
-$grid-headercell-both-border-width: 0 0 1px 1px;
-$grid-rowcell-both-border-width: 1px 0 0 1px;
-$grid-filtercell-both-border-width: 1px 0 0 1px;
-$grid-indentcell-border-width: 0 1px 0 0;
-$grid-headercelldiv-line-height: 29px;
-$grid-headercelldiv-margin: -7px;
-$grid-rtl-headercelldiv-padding: 0 .6em 0 1.8em;
-$grid-headercelldiv-padding: 0 1.8em 0 .5em;
-$grid-headercelldiv-padding: 0 1.8em 0 .6em;
-$grid-rtl-headercelldiv-padding: 0 .6em 0 1.8em;
-$grid-headercelldiv-right-align-padding: 0 .6em 0 1.9em;
-$grid-headercell-div-padding: 0 .6em;
-$grid-group-text-width: 57px;
-$grid-filterbarcell-text-indent: 1px;
-$grid-filterbarcell-text-input: 26px;
-$grid-summary-cell-font-size: 12px;
-$grid-summary-cell-line-height: 18px;
-$grid-summary-template-row-bg-color: $group-row-bg-color;
-$grid-grouptext-margin-right: 4px;
-$grid-td-checkbox-margin-top: 5px;
-$grid-groupdroparea-rtl-text-align: center;
-$grid-rtl-th-firstcell-border-left: 1px;
-$grid-gd-clone-border-radius: 0;
-$grid-gd-clone-padding: 2px;
-$group-ungroupicon-font-size: 11px;
-$grid-checkbox-cell-padding-top-bottom: 8px;
-$grid-rtl-headercell-border-width: 0 0 0 1px;
-$grid-rowselect-text-indent: 1px;
-$grid-ungroup-rtl-padding-top: 3px;
-$grid-toolbar-border-width: 1px solid;
-$grid-sortdiv-margin: -15px 10px;
-$grid-sortdiv-right-align-margin: -15px 5px;
-$grid-filterdiv-padding: 0;
-$grid-first-last-rowcell-padding: .7em;
-$grid-headercelldiv-height: 29px;
-$grid-filterbarcell-input-height: 26px;
-$grid-sortdiv-height: 10px;
-$grid-sortdiv-width: 10px;
-$grid-sortdiv-padding: 3px;
-$grid-sortnumber-margin: 7px 5px 0 2px;
-$grid-sortnumer-line-height: 16px;
-$grid-sortnumber-border-radius: 65%;
-$grid-sortnumber-rightalign-margin: 8px 2px 0 5px;
-$grid-textwrap-srotnumber-rightalign-margin: 3px 2px 0 5px;
-$grid-textwrap-srotnumber-margin: 3px 5px 0 2px;
-$grid-textwrap-sorticon-margin: -9px 10px;
-$grid-columnchooser-header-padding: 11px 18px 15px;
-$grid-columnchooser-content-padding: 25px 18px 13px;
-$grid-cc-checkbox-padding-left: 9px;
-$grid-columnchooser-toolbar-button-padding: 0 12px;
-$grid-columnchooser-ul-padding: 0;
-$grid-columnchooser-li-padding: 9px 0;
-$grid-column-chooser-footdiv: 2px 0 0;
-$grid-column-chooser-searchdiv: 0 0 2px;
-$grid-column-chosser-searchdiv-opactiy: .6;
-$grid-column-chosser-searchdiv-fopactiy: 1;
-$grid-columnchooser-search-border-color: #212121;
-$grid-columnchooser-search-border-fcolor: #ff4081;
-$grid-columnchooser-footer-border-color: #212121;
-$grid-columnchooser-footer-border-opacity: 1;
-$grid-columnchooser-toolbar-div-padding: 0 10px;
-$grid-columnchooser-toolbar-icon-line-height: 1.9;
-$grid-columnchooser-toolbar-icon-font-size: 15px;
-$grid-columnchooser-btn-font-size: 9px;
-$grid-columnchooser-btn-line-height: 3;
-$grid-columnchooser-content-margin: 22px 0 0;
-$grid-bigger-columnchooser-btn-font-size: 12px;
-$grid-columnchooser-toolbardiv-padding: 3px 0 0;
-$grid-columnchooser-toolbardiv-margin-top: 0;
-$grid-bigger-columnchooser-content-margin: 22px 0 0;
-$grid-bigger-columnchooser-toolbartxt-padding: 0 6px 0;
-$grid-columnchooser-toolbartxt-padding: 0 6px 0;
-$grid-columnchooser-toolbar-icon-vertical-align: middle;
-$grid-columnchooser-search-icon-content: '\e993';
-$grid-columnchooser-cancel-icon-content: '\e953';
-$grid-columnchooser-cancel-icon-content-f-opactiy: 1;
-$grid-columnchooser-cancel-btn-color: rgba(0, 0, 0, .87);
-$grid-columnchooser-hover-bg-color: #000;
-$grid-columnchooser-active-bg-color: #bdbdbd;
-$grid-columnchooser-toolbar-div-margin-top: -1px;
-$grid-columnchooser-searchbar-cancel-icon-content: '\e7a7';
-$grid-columnchooser-input-border: 0;
-$grid-columnchooser-input-padding-top: 4px;
-$grid-column-chooser-search-icon-padding: 5px 2px;
-$grid-column-chooser-cancel-icon-padding: 5px 2px 6px;
-$grid-columnchooser-input-padding-bottom: 8px;
-$grid-columnchooser-input-padding-left: 4px;
-$grid-column-chooser-searchdiv-left: 4px;
-$grid-columnchooser-ul-margin: 13px 0;
-$grid-column-chooser-dlg-footer-padding: 8px;
-$grid-rtl-sortnumber-margin: 6px 0 0 5px;
-$grid-rtl-bigger-sortnumber-margin: 6px 0 0 5px;
-$grid-rtl-sortnumber-rightalign-margin: 6px 0 0 5px;
-$grid-rtl-sortcelldiv-margin: -14px 10px;
-$grid-rtl-sortcelldiv-right-align-margin: -14px 10px;
-$grid-rtl-bigger-sortcelldiv-right-align-margin: -17px 10px;
-$grid-rtl-bigger-sortcelldiv-margin: -17px 10px;
-$grid-rtl-group-text-marign-right: 0;
-$grid-rtl-group-text-margin-left: 18px;
-$grid-rtl-group-text-margin-right: 0;
-$grid-rtl-textwrap-srotnumber-margin: 3px 5px 0 2px;
-$grid-header-wrap-sortfilter-div-margin: -18px 10px;
-$grid-rtl-textwrap-sorticon-margin: -17px 4px;
-$grid-rtl-textwrap-sorticon-rightalign-margin: -17px 5px;
-$grid-rtl-headercell-both-border-width:  0 1px 0 0;
-$grid-rtl-textwrap-srotnumber-rightalign-margin: 3px 5px 0 2px;
-$grid-rtl-stackedheadercell-border-size: 0 1px 1px 0;
-$grid-rtl-stackedhader-firstcell-left-border-size: 0;
-$grid-rtl-stackedhader-firstcell-right-border-size: 1px;
-$grid-rtl-bothlines-stackedhader-firstcell-left-border-size: 1px;
-$grid-rtl-bothlines-stackedhader-firstcell-right-border-size: 0;
-$grid-bigger-headercell-font-size: 12px;
-$grid-bigger-font-size: 13px;
-$grid-bigger-content-font-size: 13px;
-$grid-bigger-headercell-line-height: round($grid-headercell-line-height/.75);
-$grid-bigger-headercell-padding: round($grid-header-padding/.75);
-$grid-bigger-headercell-bootom-padding: round($grid-header-bottom-padding/.75);
-$grid-bigger-header-first-last-cell-padding: round($grid-header-first-last-cell-padding/.75);
-$grid-bigger-icons-font-size: 12px;
-$grid-bigger-header-icons-font-size: 12px;
-$grid-bigger-gdownarrow-icon-font-size: 12px;
-$grid-bigger-grightarrow-icon-font-size: 12px;
-$grid-bigger-content-padding: round(7/.75) + px;
-$grid-bigger-content-right-padding: round(7/.75) + px;
-$grid-bigger-rowcell-line-height: round($grid-rowcell-line-height/.75);
-$grid-bigger-first-last-rowcell-padding: round(9/.75) + px;
-$grid-bigger-sortdiv-margin: -17px 8px;
-$grid-bigger-sortdiv-rightalign-margin: -17px 2px;
-$group-bigger-sorticon-margin-right: 0;
-$grid-bigger-filterbarcell-text-input: round($grid-filterbarcell-text-input/.75);
-$grid-bigger-group-line-height: round($grid-group-height/.75);
-$grid-bigger-groupdroparea-padding: 22px 24px;
-$grid-bigger-groupedcell-padding: 11px 0 12px;
-$grid-bigger-grouped-headercell-border-radius: 16px;
-$grid-bigger-group-headercell-height: round($grid-headecell-height/.75);
-$grid-bigger-group-headercell-margin: 4px 0 0 24px;
-$grid-bigger-group-headercell-padding: 0 8px 0 12px;
-$grid-bigger-group-clone-broder-radius: round($grid-gd-clone-border-radius / .75);
-$grid-bigger-group-clone-padding: 6px;
-$grid-bigger-groupcell-span-line-height: 33px;
-$grid-bigger-grouptext-marign: round($grid-grouptext-margin-right / .75);
-$grid-bigger-grouptext-width: 76px;
-$grid-bigger-ungroup-button-font-size: 16px;
-$grid-bigger-ungroupbutton-icon-margin-top: 0;
-$grid-bigger-group-text-line-height: 32px;
-$grid-bigger-groupedcell-icons-marign-left: round($group-sorticon-margin-left / .75);
-$grid-bigger-ungroupbutton-icons-font-size: 16px;
-$grid-bigger-groupcaption-line-height: 32px;
-$grid-bigger-grouparea-font-size: 19px;
-$grid-bigger-rtl-group-headercell-margin: 3px 24px 0 0;
-$grid-bigger-rtl-group-headercell-padding: 4px 6px 4px 9px;
-$grid-bigger-rtl-ungroup-icon-margin-top: 0;
-$grid-bigger-rtl-ungroup-icon-margin-right: 6px;
-$grid-bigger-textwrap-srotnumber-rightalign-margin: 3px 2px 0 5px;
-$grid-bigger-textwrap-sorticon-rightalign-margin: -9px 5px;
-$grid-bigger-textwrap-sorticon-margin: -9px 10px;
-$group-bigger-sorticon-margin-right: 0;
-$grid-bigger-textwrap-srotnumber-margin: 3px 5px 0 2px;
-$grid-bigger-columnchooser-header-padding: 24px 24px 38px;
-$grid-bigger-columnchooser-content-padding: 25px 24px 5px 12px;
-$grid-bigger-columnchooser-ul-padding: 0;
-$grid-bigger-columnchooser-li-padding: 11px 0;
-$grid-bigger-columnchooser-toolbar-div-margin-top: 0;
-$grid-bigger-cc-checkbox-padding-left: 12px;
-$grid-bigger-searchdiv-padding-left: 6px;
-$grid-bigger-sorticon-margin-top: 0;
-$grid-bigger-groupcell-span-padding: 0;
-$grid-bigger-ungroupbutton-icon-margin-left: 0;
-$grid-device-headercell-padding: 0 12px $grid-header-bottom-padding;
-$grid-device-headercell-fistchild-padding: 0 12px $grid-header-bottom-padding 16px;
-$grid-device-headercell-lastchild-padding: 0 16px $grid-header-bottom-padding 12px;
-$grid-device-groupheadercell-span-line-height: 30px;
-$grid-device-rowcell-padding: $grid-content-padding 12px;
-$grid-device-rowcell-firstchild-padding: $grid-content-padding 12px $grid-content-padding 16px;
-$grid-device-rowcell-lastchild-padding: $grid-content-padding 16px $grid-content-padding 12px;
-$grid-device-filterbarcell-padding: $grid-content-padding 12px;
-$grid-device-filterbarcell-firstchild-padding: $grid-content-padding 12px $grid-content-padding 16px;
-$grid-device-filterbarcell-lastchild-padding: $grid-content-padding 16px $grid-content-padding 12px;
-$grid-device-ungroupbutton-line-height: 33px;
-$grid-device-gridheader-row-span-padding: 20px;
-$grid-descending-icon-content: '\e83f';
-$grid-edit-input-bigger-padding-bottom: 0;
-$grid-edit-input-bigger-padding-top: 0;
-$grid-edit-input-bigger-margin: 0;
-$grid-edit-input-bigger-device-padding-bottom: 0;
-$grid-edit-input-bigger-device-padding-top: 0;
-$grid-edit-cell-padding: 4px;
-$grid-edit-input-margin-top: 0;
-$grid-edit-input-margin: 2px;
-$grid-edit-icon: '\e81e';
-$grid-add-icon: '\e7f9';
-$grid-print-icon: '\e813';
-$grid-delete-icon: '\e84e';
-$grid-edit-checkbox-bigger-padding-left: 21px;
-$frozen-border: 1px solid;
-$frozen-border-color: #ff4081;
-$grid-filtermenu-icon: '\e7ee';
-$grid-fltrdiv-float: right;
-$grid-fltrdiv-text-align: right;
-$grid-fltrdiv-margin: -18px -7px;
-$grid-fltrdiv-padding: 6px;
-$grid-rtl-fltrdiv-padding: 6px;
-$grid-flmenu-padding: 24px 0 0;
-$grid-flmenu-boolean-content-padding: 18px 18px 0;
-$grid-flmenu-boolean-button-width: 110px;
-$grid-flmenu-device-padding: 24px 0 0;
-$grid-rtl-fltrdiv-margin: -18px 0 -18px -11px;
-$grid-rtl-bigger-fltrdiv-margin: -18px 0 -18px -11px;
-$grid-rtl-headercelldiv-rightalign-fltricon-margin: -7px;
-$grid-rtl-headercelldiv-fltricon-margin: -7px;
-$grid-headercelldiv-fltricon-margin: -7px 15px -7px -7px;
-$grid-headercelldiv-rightalign-fltricon-margin: -7px 15px -7px -7px;
-$grid-filtered-color: #f00;
-$grid-rtlfltrdiv-float: left;
-$grid-checkbox-padding-topbottom: 9px;
-$grid-checkbox-wrapper-height: 21px;
-$grid-checkbox-wrapper-line-height: 20px;
-$grid-bigger-checkbox-padding-topbottom: 13px;
-$grid-bigger-fltrdiv-margin: -18px -7px;
-$grid-sortdiv-filtericon-margin: -15px 24px;
-$grid-sortdiv-filtericon-rightalign-margin: -15px 5px;
-$grid-rtl-sortdiv-filtericon-rightalign-margin: -14px 0 0 11px;
-$grid-rtl-sortdiv-filtericon-margin: -14px 0 0 11px;
-$grid-bigger-fltricon-sortdiv-rightalign-margin: -17px 2px;
-$grid-bigger-fltricon-sortdiv-margin: -15px 18px;
-$grid-rtl-headercelldiv-fltricon-padding: 0 1.6em 0 10px;
-$grid-sortnumber-filtericon-rightalign-margin: 8px 2px 0 5px;
-$grid-bigger-checkbox-filter-min-height: 352px;
-$grid-xlfl-min-height: 301px;
-$grid-bigger-xlfl-min-height: 373px;
-$grid-checkbox-filter-min-height: 322px;
-$grid-column-menu-top: 10px;
-$grid-column-menu-top-touch: 10px;
-$grid-rtl-bigger-fltricon-sortdiv-margin: -15px 30px 0 0;
-$grid-rtl-bigger-fltricon-sortdiv-rightalign-margin: -16px 0;
-$grid-excelmenu-filter-icon: '\e251';
-$grid-excelmenu-clear-filter-icon: '\e248';
-$grid-xlfl-fieldset-padding: 15px;
-$grid-xlfltd-padding: 12px;
-$grid-xlfltable-border-spacing: 0;
-$grid-xlfl-dropdown-padding-right: 12px;
-$grid-xlfl-radio-margin-left: 13px;
-$grid-xlfl-min-height: 295px;
-$grid-xlfl-li-left-padding: 28px;
-$grid-xlfl-li-icon-margin-right: 12px;
-$grid-xlfl-dlg-padding-bottom: 6px;
-$grid-xlfltd-radio-mtcase-padding: 12px;
-$grid-xlfl-fieldset-font-size: 14px;
-$grid-xlfl-dlgfields-font-size: 17px;
-$grid-xlfl-li-height: 36px;
-$grid-xlfl-radiodiv-width: 117px;
-$grid-xl-radio-padding-left: 23px;
-$grid-xl-radio-padding-right: 13px;
-$grid-xl-match-margin-left: 6px;
-$grid-bigger-xlfl-li-height: 48px;
-$grid-bigger-xlfl-fieldset-font-size: 15px;
-$grid-bigger-xlfl-dlgfields-font-size: 18px;
-$grid-bigger-xlfltd-radio-mtcase-padding: 16px;
-$grid-bigger-xlfl-dlg-padding-bottom: 8px;
-$grid-bigger-xlfl-li-icon-margin-right: 15px;
-$grid-bigger-xlfl-li-left-padding: 35px;
-$grid-bigger-xlfl-min-height: 396px;
-$grid-bigger-xlfl-fieldset-padding: 20px;
-$grid-bigger-xlfltd-padding: 16px;
-$grid-bigger-xlfl-radio-margin-left: 18px;
-$grid-bigger-xlfltable-border-spacing: 0;
-$grid-bigger-xlfl-dropdown-padding-right: 16px;
-$grid-bigger-xlfl-radiodiv-width: 137px;
-$grid-bigger-xl-radio-padding-left: 28px;
-$grid-bigger-xl-radio-padding-right: 5px;
-$grid-bigger-xl-match-margin-left: 8px;
-$grid-toolbar-search-margin-bottom: 0;
-$grid-toolbar-search-width: 230px;
-$grid-toolbar-search-icon-min-width: 18px;
-$grid-toolbar-search-wrapper-padding-top: 5px;
-$grid-toolbar-search-wrapper-padding-bottom: 5px;
-$grid-bigger-toolbar-search-icon-min-width: 20px;
-$grid-bigger-toolbar-search-wrapper-padding-bottom: 5px;
-$grid-bigger-toolbar-search-wrapper-padding-top: 5px;
-$grid-toolbar-search-icon-content: '\e993';
-$grid-selection-font-weight: normal;
-$grid-rows-bg-color: $content-bg-color;
-$grid-drag-clone-font-weight: $grid-header-font-weight;
-$grid-resize-border-width: 1px;
-$group-hover-border: 1px solid;
-$grid-grouped-headercell-hover-padding: $grid-grouped-headercell-padding;
-$grid-xl-rtl-radio-padding-left: 0;
-$grid-xl-rtl-radio-padding-right: 25px;
-$grid-content-batch-font-color: $grid-content-font-color;
-$grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-padding;
-$grid-filterbarcell-input-padding: 0 26px 0 10px;
-$grid-header-wrap-rightalign-sortfilter-div-margin: -18px 5px;
-$grid-header-wrap-filtericon-sortfilter-div-margin: -11px 24px;
-$grid-bigger-wrap-sortdiv-margin: -20px 8px;
-$grid-bigger-wrap-rightalign-sortdiv-margin: -20px 2px;
-$grid-bigger-wrap-fltricon-sortdiv-margin: -10px 18px;
-$grid-bigger-wrap-rightalign-fltricon-sortdiv-margin: -12px 2px;
-$grid-header-wrap-filtericon-rightalign-sortfilter-div-margin: -10px 5px;
-$grid-header-padding: 21px;
-$grid-header-first-last-cell-padding: 21px;
-$grid-header-bottom-padding: 0;
-$grid-header-bg-color: $grey-white;
-$grid-header-color: rgba($grey-light-font, .54);
-$grid-sorted-header-color: $grey-light-font;
-$gridcontent-font-color: $grey-light-font;
-$grid-header-border-color: $grey-300;
-$grid-headerconent-font-opacity: .54;
-$grid-content-right-padding: 21px;
-$grid-first-last-rowcell-padding: 21px;
-$grid-filterbarcell-padding: 0 21px;
-$grid-vertical-border-size: 0;
-$grid-content-padding: 8px;
-$grid-rowcell-line-height: 20px;
-$grid-headercell-line-height: 42px;
-$grid-filtercell-line-height: 42px;
-$grid-cell-border-color: $grey-300;
-$grid-content-font-color: $grey-light-font;
-$grid-hover-content-font-color: $grey-light-font;
-$grid-conent-font-opacity: .87;
-$grid-row-selection-bg-color: $grey-300;
-$grid-row-selection-color: $grey-light-font;
-$grid-hover-bg-color: $grey-200;
-$grid-cell-selection-bg-color: $grey-300;
-$grid-cell-selection-color: $grey-light-font;
-$grid-filterbar-input-border-width: 0 0 2px 0;
-$grid-filterbarcell-border-width: 1px 0 0;
-$grid-group-height: 48px;
-$grid-group-captioncell-line-height: 20px;
-$group-header-color: $primary-font;
-$group-header-border-radius: 12px;
-$grid-drag-clone-bg-color: $grey-200;
-$grid-drag-clone-border-color: $grey-300;
-$grid-drag-clone-opacity: 1;
-$grid-drag-clone-color: rgba($grey-light-font, .54);
-$group-droparea-bg-color: $primary-50;
-$group-droparea-color: $grey-light-font;
-$grid-grouparea-font-size: 14px;
-$group-header-bg-color: $primary;
-$group-header-hover-bg-color: $primary;
-$group-border-width: 0;
-$grouped-droparea-bg-color: $primary-300;
-$group-droparea-hover-bg-color: $primary-100;
-$group-expand-icon-text-indent: 12px;
-$group-collapse-icon-text-indent: 12px;
-$group-row-bg-color: $grey-50;
-$grid-group-broder-color: $grey-300;
-$grid-header-font-weight: 500;
-$grid-header-font-size: 12px;
-$grid-content-font-size: 13px;
-$grid-header-icon-color: $grey-light-font;
-$grid-header-icon-color: $grey-white;
-$grid-hover-icon-color: $grey-white;
-$grid-grouparea-margin: 3px 0 0 18px;
-$group-area-padding: 14px 24px;
-$group-text-padding-right: 9px;
-$group-unpgrouicon-margin-left: 6px;
-$group-sorticon-margin-left: 6px;
-$grid-rtl-group-sorticon-margin-right: 6px;
-$grid-grouptopleftcell-border-top: 1px solid;
-$grid-grouped-padding: 9px 0 10px;
-$grid-ungroup-icon-opactiy: .7;
-$grid-headecell-height: 24px;
-$group-sorticon-font-size: 10px;
-$grid-grouped-headercell-padding: 0 6px 0 9px;
-$grid-rtl-grouped-headercell-padding: 0 9px 0 6px;
-$grid-group-caption-font-size: 12px;
-$grid-default-color: $grey-white;
-$group-text-align: left;
-$grid-icon-default-color: $grey-900;
-$grid-right-border: 0;
-$grid-stackedheadercell-border-size: 0 0 1px 1px;
-$grid-stackedheadercell-botttom-padding: 13px;
-$grid-grouparea-first-cell-margin: 0 6px 0 12px;
-$grid-ungroup-icon-content: '\e917';
-$grid-summary-cell-font-size: 13px;
-$grid-summary-template-row-bg-color: $group-row-bg-color;
-$grid-altrow-bg-color: $grey-white;
-$grid-header-border-width: 0;
-$grid-rowcell-broder-width: 1px 0 0 0;
-$grid-headercell-both-border-width: 0 0 0 1px;
-$grid-rowcell-both-border-width: 1px 0 0 1px;
-$grid-indentcell-border-width: 0 1px 0 0;
-$grid-headercelldiv-line-height: 30px;
-$grid-filterbarcell-text-indent: 0;
-$grid-grouptext-margin-right: 6px;
-$grid-groupdroparea-rtl-text-align: right;
-$grid-drag-selection-bg-color: $grey-100;
-$grid-rtl-th-firstcell-border-left: 0;
-$grid-gd-clone-border-radius: 13px;
-$group-ungroupicon-font-size: 9px;
-$grid-checkbox-cell-padding-top-bottom: 6px;
-$grid-rtl-headercell-border-width: 0;
-$grid-rowselect-text-indent: 7%;
-$grid-ungroup-rtl-padding-top: 0;
-$grid-sortnumber-rightalign-margin: 8px 2px 0 5px;
-$grid-columnchooser-footer-border-color: rgba($grey-light-font, .12);
-$grid-columnchooser-footer-border-opacity: 1;
-$grid-columnchooser-hover-bg-color: rgba($grey-black, .2);
-$grid-columnchooser-active-bg-color: rgba($grey-400, .4);
-$grid-columnchooser-content-padding: 16px 18px 13px 9px;
-$grid-bigger-columnchooser-content-padding: 17px 24px 5px 12px;
-$grid-bigger-columnchooser-content-margin: 20px 0 0;
-$grid-columnchooser-content-margin: 20px 0 0;
-$grid-columnchooser-search-icon-content: '\e993';
-$grid-rtl-sortnumber-margin: 9px 0 0 5px;
-$grid-sortnumber-margin: 8px 5px 0 2px;
-$grid-rtl-sortnumber-rightalign-margin: 9px 0 0 5px;
-$grid-bigger-rtl-group-headercell-padding: 0 12px 0 8px;
-$group-caption-font-color: $grey-light-font;
-$grid-filterbar-cancel-icon-content: '\e825';
-$grid-rtl-group-headercell-margin-left: 10px;
-$grid-rtl-group-headercell-margin-right: 18px;
-$grid-rtl-stackedheadercell-border-size: 0 1px 1px 0;
-$grid-bigger-groupcell-span-line-height: 32px;
-$grid-bigger-headercell-padding: round($grid-header-padding/.75);
-$grid-bigger-headercell-bootom-padding: round($grid-header-bottom-padding/.75);
-$grid-bigger-headercell-line-height: round($grid-headercell-line-height/.75);
-$grid-bigger-header-first-last-cell-padding: round($grid-header-first-last-cell-padding/.75);
-$grid-bigger-content-padding: round($grid-content-padding/.75);
-$grid-bigger-content-right-padding: round($grid-content-right-padding/.75);
-$grid-bigger-rowcell-line-height: round($grid-rowcell-line-height/.75);
-$grid-bigger-first-last-rowcell-padding: round($grid-first-last-rowcell-padding/.75);
-$grid-bigger-group-line-height: round($grid-group-height/.75);
-$grid-bigger-group-headercell-height: round($grid-headecell-height/.75);
-$grid-bigger-group-clone-broder-radius: round($grid-gd-clone-border-radius / .75);
-$grid-bigger-grouptext-marign: round($grid-grouptext-margin-right / .75);
-$grid-bigger-groupedcell-icons-marign-left: round($group-sorticon-margin-left / .75);
-$grid-bigger-filterbarcell-text-input: 26px;
-$grid-device-headercell-padding: 0 12px $grid-header-bottom-padding;
-$grid-device-headercell-fistchild-padding: 0 12px $grid-header-bottom-padding 16px;
-$grid-device-headercell-lastchild-padding: 0 16px $grid-header-bottom-padding 12px;
-$grid-device-rowcell-padding: $grid-content-padding 12px;
-$grid-device-rowcell-firstchild-padding: $grid-content-padding 12px $grid-content-padding 16px;
-$grid-device-rowcell-lastchild-padding: $grid-content-padding 16px $grid-content-padding 12px;
-$grid-device-filterbarcell-padding: $grid-content-padding 12px;
-$grid-device-filterbarcell-firstchild-padding: $grid-device-rowcell-firstchild-padding;
-$grid-device-filterbarcell-lastchild-padding: $grid-device-rowcell-lastchild-padding;
-$grid-edit-cell-padding: 4px;
-$grid-edit-input-padding-top: 9px;
-$grid-edit-input-padding-bottom: 6px;
-$grid-edit-input-margin: 2px;
-$grid-batch-updated-bg-color: #d7f9c7;
-$grid-val-error-color: #f44336;
-$grid-val-error-bg-color: #fcdbe4;
-$grid-edit-input-bigger-padding-bottom: 9px;
-$grid-edit-input-bigger-padding-top: 13px;
-$grid-edit-input-bigger-margin: 5px;
-$grid-edit-input-bigger-device-padding-bottom: 5px;
-$grid-edit-input-bigger-device-padding-top: 12px;
-$grid-resize-helper-color: $grey-light-font;
-$grid-grouped-sort-icon: '\e840';
-$grid-grouped-sort-dec-icon: '\e83f';
-$grid-headecell-span-height: 24px;
-$grid-edit-checkbox-bigger-padding-left: 21px;
-$grid-edit-checkbox-bigger-padding-top: 5px;
-$frozen-border-color: $accent;
-$grid-icon-save: '\e98e';
-$grid-cell-focus-shadow: 0 0 0 1px $grey-500 inset;
-$grid-filtered-color: $accent;
-$grid-icon-save: '\e98e';
-$grid-column-menu-sub-menu-box-shadow: 0 8px 10px 0 rgba($shadow, .24);
-$grid-column-menu-top: 11px;
-$grid-column-menu-top-touch: 17px;
-$grid-column-chooser-footdiv: 1px 0 0;
-$grid-toolbar-search-margin-bottom: 0;
-$grid-toolbar-search-width: 230px;
-$grid-toolbar-search-wrapper-padding-top: 1px;
-$grid-toolbar-search-wrapper-padding-bottom: 6px;
-$grid-toolbar-search-icon-min-width: 18px;
-$grid-bigger-toolbar-search-icon-min-width: 20px;
-$grid-bigger-toolbar-search-wrapper-padding-bottom: 8px;
-$grid-bigger-toolbar-search-wrapper-padding-top: 2px;
-$grid-toolbar-search-icon-content: '\e993';
-$grid-selection-font-weight: normal;
-$group-hover-border: $group-border-width;
-$grid-grouped-headercell-hover-padding: $grid-grouped-headercell-padding;
-$grid-drag-clone-font-weight: $grid-header-font-weight;
-$grid-content-batch-font-color: $grid-content-font-color;
-$grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-padding;
+$grid-drag-font-size: 12px !default;
+$grid-drag-icon-font-weight: bold !default;
+$grid-drag-move-icon: 10px !default;
+$grid-dragdrop-padding: 2px !default;
+$grid-dragborder-box-shadow: 0 2px 0 0 $accent !default;
+$grid-dragborder-position: relative !default;
+$grid-dragborder-z-index: 5 !default;
+$grid-dragicon-cell-border: 1px 0 0 0 !default;
+$grid-border-bottom-width: 1px !default;
+$grid-dragcell-border-style: solid !default;
+$grid-dragcell-border-color: $grey-300 !default;
+$grid-row-drag-header-top-border: 1px solid #e0e0e0;
+$grid-e-firstrow-dragborder-bcolor: $accent !default;
+$grid-cloneproperties-table-td-border: 1px solid !default;
+$grid-vertical-rowdragdrop-border-right: 1px solid $grey-700 !default;
+$grid-drap-drop-icon-color: $grey-light-font !default;
+$grid-clone-dropitemscount-color: $primary-font !default;
+$grid-clone-dropitemscount-bg-color: $accent !default;
+$grid-clone-row-border-color: $grey-300 !default;
+$grid-dropitemscount-color: $primary-font !default;
+$grid-clone-prop-box-shadow: 0 3px 8px 0 rgba($grey-black, .26) !default;
+$grid-drag-icon-opacity: .54 !default;
+$grid-clone-dropitemscount-border: $primary-font !default;
+$grid-clone-dragdrop-bg-color: $grid-table-background-color !default;
+$grid-group-clone-box-shadow: 0 0 !default;
+$grid-unboundcelldiv-margin: 0 3.5px !default;
+$grid-bigger-flmenu-padding: $grid-flmenu-padding !default;
+$grid-rowcell-wrap-height: 18px !default;
+$grid-rowcell-wrap-max-height: 36px !default;
+$grid-bigger-sortnumber-rightalign-margin: $grid-sortnumber-rightalign-margin !default;
+$grid-bigger-columnmenu-bottom: 16px !default;
+$grid-bigger-sortnumber-margin: $grid-sortnumber-margin !default;
+$grid-rtl-searchclear: 10px !default;
+$grid-column-chosser-searchdiv-top: -46px !default;
+$grid-reorderarrow-font-size: 7px !default;
+$grid-bigger-wrap-line-height: $grid-wrap-line-height !default;
+$grid-bigger-clone-padding: $grid-clone-padding !default;
+$grouped-bigger-text-font-size: $grouped-text-font-size !default;
+$grid-bigger-ungroupbutton-icon-margin-right: 0 !default;
+$grid-bigger-font-size: $grid-font-size !default;
+$grid-rtl-bigger-rightalign-fltrdiv-margin: $grid-rtl-bigger-fltrdiv-margin !default;
+$grid-bigger-rtl-ungroup-icon-margin-left: 0 !default;
+$grid-grouparea-font-weight: lighter !default;
+$grid-ungroup-rtl-padding-left: 0 !default;
+$grid-rtl-group-sorticon-margin-left: 0 !default;
+$grid-column-menu-padding: 6px !default;
+$grid-rtl-column-menu-left: 5px !default;
+$grid-checkboxfiltertext-width: 150px !default;
+$grid-rtl-column-menu-margin: -17px -18px -18px 3px !default;
+$grid-rtl-textwrap-column-menu-margin: -13px -13px -23px -3px !default;
+@include export-module('grid-material-icons') {
+  /*!componenticons*/
 
-@include export-module('grid-icons') {
-    /*! component icons */
-    .e-icon-check::before {
-        content: '\e7ff';
+  .e-icon-check::before {
+    content: '\e7ff';
+  }
+
+  #{&}.e-grid,
+  .e-grid-menu {
+
+    .e-icon-ascending::before {
+      content: '\e840';
     }
 
-    #{&}.e-grid,
-    .e-grid-menu {
+    .e-icon-descending::before {
+      content: '\e83f';
+    }
 
-        .e-icon-ascending::before {
-            content: '\e840';
-        }
+    .e-icon-hide::before {
+      content: '\e825';
+    }
 
-        .e-icon-descending::before {
-            content: '\e83f';
-        }
+    .e-ungroupbutton.e-icon-hide::before {
+      content: '\e917';
+    }
 
-        .e-icon-hide::before {
-            content: '\e825';
-        }
+    .e-icon-rowselect::before {
+      content: '\e930';
+    }
 
-        .e-ungroupbutton.e-icon-hide::before {
-            content: $grid-ungroup-icon-content;
-        }
+    .e-icon-sortdirect::before {
+      content: '\e890';
+    }
 
-        .e-icon-rowselect::before {
-            content: '\e930';
-        }
+    .e-icon-gdownarrow::before {
+      content: '\e83d';
+    }
 
-        .e-icon-sortdirect::before {
-            content: '\e890';
-        }
+    .e-icon-grightarrow::before {
+      content: '\e859';
+    }
 
-        .e-icon-gdownarrow::before {
-            content: $grid-group-down-arrow-icon;
-        }
+    .e-icon-filter::before {
+      content: '\e7ee';
+    }
 
-        .e-icon-grightarrow::before {
-            content: $grid-group-right-arrow-icon;
-        }
+    .e-excl-filter-icon::before {
+      content:  '\e251';
+    }
 
-        .e-icon-filter::before {
-            content: $grid-filtermenu-icon;
-        }
+    .e-excl-filter-icon.e-filtered::before {
+      content: '\e248';
+    }
 
-        .e-excl-filter-icon::before {
-            content: $grid-excelmenu-filter-icon;
-        }
-
-        .e-excl-filter-icon.e-filtered::before {
-            content: $grid-excelmenu-clear-filter-icon;
-        }
-
-
-        &.e-rtl {
-            .e-icon-grightarrow::before {
-                content: $grid-group-rtl-right-arrow-icon;
-            }
-        }
-
-        .e-icon-group::before {
-            content: '\e926';
-        }
-
-        .e-icon-ungroup::before {
-            content: '\e926';
-        }
-
-        .e-icon-reorderuparrow::before {
-            content: '\e918';
-        }
-
-        .e-icon-reorderdownarrow::before {
-            content: '\e919';
-        }
-
-        .e-print::before {
-            content: $grid-print-icon;
-        }
-
-        .e-add::before {
-            content: $grid-add-icon;
-        }
-
-        .e-wordexport::before {
-            content: '\e7b0';
-        }
-
-        .e-pdfexport::before {
-            content: '\e240';
-        }
-
-        .e-csvexport::before {
-            content: '\e241';
-        }
-
-        .e-excelexport::before {
-            content: '\e242';
-        }
-
-        .e-edit::before {
-            content: $grid-edit-icon;
-        }
-
-        .e-columnmenu::before {
-            content: '\e984';
-        }
-
-        .e-delete::before {
-            content: $grid-delete-icon;
-        }
-
-        .e-cancel::before {
-            content: $grid-filterbar-cancel-icon-content;
-        }
-
-        .e-copy::before {
-            content: '\e70a';
-        }
-
-        .e-save::before {
-            content: $grid-icon-save;
-        }
-
-        .e-update::before {
-            content: '\e735';
-        }
-
-        .e-search-icon::before {
-            content: $grid-columnchooser-search-icon-content;
-        }
-
-        .e-cancel-icon::before {
-            content: $grid-searchbar-cancel-icon-content;
-        }
-
-        .e-columnchooserdiv::before {
-            content: '\e714';
-        }
-
-        .e-ccsearch-icon::before {
-            content: $grid-columnchooser-search-icon-content;
-        }
-
-        .e-columnchooser::before {
-            content: '\e21e';
-        }
-
-        .e-columnchooser-btn::before {
-            content: '\e969';
-        }
-
-        .e-cc-icon::before {
-            content: '\e82e';
-        }
-
-
-        .e-ccsearch-icon.e-cc-cancel::before,
-        .e-chkcancel-icon::before {
-            content: $grid-columnchooser-searchbar-cancel-icon-content;
+    &.e-rtl {
+      .e-icon-grightarrow::before {
+        content: '\e854';
         }
     }
+
+    .e-icon-group::before {
+      content: '\e926';
+    }
+
+    .e-icon-ungroup::before {
+      content: '\e926';
+    }
+
+    .e-icon-reorderuparrow::before {
+      content: '\e918';
+    }
+
+    .e-icon-reorderdownarrow::before {
+      content: '\e919';
+    }
+
+    .e-print::before {
+      content: '\e813';
+    }
+
+    .e-add::before {
+      content: '\e7f9';
+    }
+
+    .e-wordexport::before {
+      content: '\e7b0';
+    }
+
+    .e-pdfexport::before {
+      content: '\e240';
+    }
+
+    .e-csvexport::before {
+      content: '\e241';
+    }
+
+    .e-excelexport::before {
+      content: '\e242';
+    }
+
+    .e-edit::before {
+      content: '\e81e';
+    }
+
+    .e-columnmenu::before {
+      content: '\e984';
+    }
+
+    .e-delete::before {
+      content: '\e84e';
+    }
+
+    .e-cancel::before {
+      content: '\e825';
+    }
+
+    .e-copy::before {
+      content: '\e70a';
+    }
+
+    .e-save::before {
+      content: '\e98e';
+    }
+
+    .e-update::before {
+      content: '\e735';
+    }
+
+    .e-search-icon::before {
+      content: '\e993';
+    }
+
+    .e-cancel-icon::before {
+      content: '\e825';
+    }
+
+    .e-columnchooserdiv::before {
+      content: '\e714';
+    }
+
+    .e-ccsearch-icon::before {
+      content: '\e993';
+    }
+
+    .e-columnchooser::before {
+      content: '\e21e';
+    }
+
+    .e-columnchooser-btn::before {
+      content: '\e969';
+    }
+
+    .e-cc-icon::before {
+      content: '\e82e';
+    }
+
+    .e-icon-rowdragicon::before {
+      content: '\e330';
+    }
+
+    &.e-rtl {
+      .e-icon-rowdragicon::before {
+        content: '\e330';
+       }
+    }
+
+    .e-ccsearch-icon.e-cc-cancel::before,
+    .e-chkcancel-icon::before {
+      content: '\e7a7';
+    }
+   }
 }
+
 @include export-module('grid-layout') {
   /*! Grid layout */
   .e-disableuserselect {
@@ -941,6 +833,10 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       min-height: $grid-bigger-xlfl-min-height;
     }
 
+    .e-flmenu-valuediv {
+      padding: $grid-bigger-flmenu-padding;
+    }
+
     .e-excelfilter .e-contextmenu-wrapper ul li {
       height: $grid-bigger-xlfl-li-height;
       line-height: $grid-bigger-xlfl-li-height;
@@ -962,11 +858,22 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       padding: 0 $grid-bigger-headercell-padding $grid-bigger-headercell-bootom-padding;
     }
 
+    .e-headercelldiv {
+      font-size: $grid-bigger-header-font-size;
+      height: $grid-bigger-header-height;
+      line-height: $grid-bigger-headercelldiv-line-height;
+    }
+
+    .e-headercell,
+    .e-detailheadercell {
+      font-size: $grid-bigger-header-font-size;
+    }
+
     .e-icons {
       font-size: $grid-bigger-icons-font-size;
     }
 
-    .e-gridheader .e-icons {
+    .e-gridheader thead .e-icons {
       font-size: $grid-bigger-header-icons-font-size;
     }
 
@@ -1084,8 +991,33 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       margin: $grid-bigger-wrap-rightalign-fltricon-sortdiv-margin;
     }
 
+    &.e-wrap {
+      & .e-rowcell,
+      & .e-columnheader .e-stackedheadercelldiv,
+      & .e-columnheader .e-headercelldiv {
+        line-height: $grid-bigger-wrap-line-height;
+      }
+    }
+
     .e-gridheader .e-rightalign .e-sortfilterdiv {
       margin: $grid-bigger-sortdiv-rightalign-margin;
+    }
+
+    .e-gridheader .e-rightalign .e-sortnumber {
+      float: left;
+      margin: $grid-bigger-sortnumber-rightalign-margin;
+    }
+
+    .e-sortnumber {
+      border-radius: $grid-sortnumber-border-radius;
+      display: inline-block;
+      float: right;
+      font-size: 9px;
+      height: 15px;
+      line-height: $grid-sortnumer-line-height;
+      margin: $grid-bigger-sortnumber-margin;
+      text-align: center;
+      width: 15px;
     }
 
     .e-gridheader .e-rightalign.e-fltr-icon .e-sortfilterdiv {
@@ -1113,6 +1045,10 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       margin: $grid-rtl-bigger-fltrdiv-margin;
     }
 
+    &.e-rtl .e-rightalign .e-filtermenudiv {
+      margin: $grid-rtl-bigger-rightalign-fltrdiv-margin;
+    }
+
     &.e-rtl .e-headercell .e-headercelldiv .e-sortnumber,
     &.e-rtl .e-detailheadercell .e-headercelldiv .e-sortnumber {
       margin: $grid-rtl-bigger-sortnumber-margin;
@@ -1122,7 +1058,9 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
     .e-summarycell,
     .e-emptyrow td,
     .e-frozencontent table tr td:first-child:empty,
-    .e-movablecontent table tr td:first-child:empty {
+    .e-movablecontent table tr td:first-child:empty,
+    &:not(.e-grid-min-height) .e-gridcontent tr td:not(.e-indentcell):first-child:empty,
+    &:not(.e-grid-min-height) .e-gridcontent tr.e-row .e-rowcell:empty {
       line-height: $grid-bigger-rowcell-line-height;
     }
 
@@ -1136,6 +1074,14 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       padding: $grid-bigger-groupdroparea-padding;
     }
 
+    .e-cloneproperties {
+      padding: $grid-bigger-clone-padding;
+    }
+
+    .e-headerclone {
+      font-size: $grid-bigger-header-font-size;
+    }
+
     .e-groupdroparea.e-grouped {
       padding: $grid-bigger-groupedcell-padding;
     }
@@ -1147,12 +1093,19 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
 // sass-lint:disable-all
     .e-frozencontent table tr td:first-child:empty,
     .e-movablecontent table tr td:first-child:empty,
-    .e-frozenhdrcont table tr td:first-child:empty {
+    .e-frozenhdrcont table tr td:first-child:empty,
+    &:not(.e-grid-min-height) .e-gridcontent tr td:not(.e-indentcell):first-child:empty,
+    &:not(.e-grid-min-height) .e-gridcontent tr.e-row .e-rowcell:empty {
       height: $grid-bigger-rowcell-line-height + $grid-bigger-content-padding +  $grid-bigger-content-padding;
     }
 
     &.e-bigger .e-columnmenu {
-      bottom: 16px;
+      bottom: $grid-bigger-columnmenu-bottom;
+      margin: $grid-bigger-column-menu-margin;
+    }
+
+    .e-columnmenu {
+      right: 10px;
     }
 
     .e-groupheadercell,
@@ -1161,6 +1114,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       height: $grid-bigger-group-headercell-height;
       margin: $grid-bigger-group-headercell-margin;
       padding: $grid-bigger-group-headercell-padding;
+      font-size: $grouped-bigger-text-font-size;
     }
 
     .e-groupheadercell:hover {
@@ -1189,7 +1143,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
     .e-row .e-input-group .e-input.e-field,
     .e-row .e-input-focus .e-input.e-field {
       font-family: $grid-font-family;
-      font-size: $grid-font-size;
+      font-size: $grid-bigger-font-size;
       padding-bottom: $grid-edit-input-bigger-padding-bottom;
       padding-top: $grid-edit-input-bigger-padding-top;
     }
@@ -1290,6 +1244,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       font-size: $grid-bigger-ungroupbutton-icons-font-size;
       margin-left: $grid-bigger-ungroupbutton-icon-margin-left;
       margin-top: $grid-bigger-ungroupbutton-icon-margin-top;
+      margin-right: $grid-bigger-ungroupbutton-icon-margin-right;
     }
 
     .e-groupsort {
@@ -1304,6 +1259,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
  }
 
     &.e-rtl span.e-ungroupbutton.e-icons {
+      margin-left: $grid-bigger-rtl-ungroup-icon-margin-left;
       margin-right: $grid-bigger-rtl-ungroup-icon-margin-right;
       margin-top: $grid-bigger-rtl-ungroup-icon-margin-top;
       padding-top: $grid-ungroup-rtl-padding-top;
@@ -1354,10 +1310,102 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
     .e-gridheader {
       user-select: none;
     }
+    
+    .e-gridheader .e-firstrow-dragborder,
+    &.e-rtl .e-gridheader .e-firstrow-dragborder,
+    .e-gridcontent .e-lastrow-dragborder,
+    &.e-rtl .e-gridcontent .e-lastrow-dragborder {
+      bottom: 0;
+      background-color: $grid-e-firstrow-dragborder-bcolor;
+      height: 2px;
+      position: absolute;
+      z-index: 10;
+    }
 
-    .e-gridheader .e-icons {
+    .e-grid-relative {
+      position: relative;
+    }
+
+    .e-dropitemscount {   
+        border: 1px solid $grid-clone-dropitemscount-border;
+        border-radius: 17px;
+        box-sizing: content-box;
+        font-size: 13px;
+        line-height: normal;
+        margin-left: -8px;
+        min-width: 12px;
+        padding: 3px 7px 4px;
+        position: absolute;
+        text-align: center;
+        top: -10px;
+        z-index: 5;
+    }
+     
+    &.e-verticallines .e-cloneproperties.e-draganddrop .e-rowdragdrop, 
+    &.e-bothlines .e-cloneproperties.e-draganddrop .e-rowdragdrop{
+        border-top: 1px solid $grid-cell-border-color;
+        border-right: 1px solid $grid-cell-border-color;
+        border-bottom: 0;
+    }
+
+    .e-gridcontent tr.e-row:first-child .e-rowcell.e-dragborder,
+    .e-gridcontent .e-rowcell.e-dragborder,
+    .e-gridcontent .e-rowdragdrop.e-dragborder ,
+    & .e-gridheader thead tr th.e-firstrowdragborder,
+    &.e-rtl .e-gridcontent tr.e-row:first-child .e-rowcell.e-dragborder,
+    &.e-rtl .e-gridcontent .e-rowcell.e-dragborder,
+    &.e-rtl .e-gridcontent .e-rowdragdrop.e-dragborder {
+      box-shadow: $grid-dragborder-box-shadow;
+      position: $grid-dragborder-position;
+      z-index: $grid-dragborder-z-index;
+    }
+
+    .e-gridheader thead .e-icons {
       font-size: $grid-icon-font-size;
     }
+
+    .e-row .e-icon-rowdragicon::before {
+        display: block;
+        text-indent: 10px;
+        font-size: $grid-drag-font-size;
+        font-weight: $grid-drag-icon-font-weight;
+        color: $grid-drap-drop-icon-color;
+        opacity: $grid-drag-icon-opacity;
+      }
+  
+      .e-row .e-icon-rowdragmoveicon::before {
+          font-size: $grid-drag-font-size;
+          font-weight: $grid-drag-icon-font-weight;
+      }
+  
+      .e-row .e-icon-rowdragmoveicon {
+          padding-left: $grid-drag-move-icon;
+      }
+     
+      .e-draganddrop .e-rowcell, &.e-rtl .e-draganddrop .e-rowcell {
+          padding-left: 6px;
+          padding-right: 6px;   
+      }
+      
+     .e-gridcontent .e-rowdragdrop {
+          border-style: $grid-dragcell-border-style;
+          border-width: $grid-dragicon-cell-border;
+          border-color: $grid-dragcell-border-color;
+      }
+  
+      .e-gridcontent .e-rowdragdrop.e-lastrowcell {
+          border-bottom-width: $grid-border-bottom-width;
+      }
+
+      & .e-cloneproperties.e-draganddrop .e-row .e-icon-rowdragicon::before {
+        position: relative;
+        left: -5px;
+      }
+
+      .e-icon-rowdragicon {
+        font-size: $grid-group-right-arrow-icon-font-size;
+        text-indent: $group-expand-icon-text-indent;
+      }
 
     .e-toolbar {
       border-bottom: 0;
@@ -1436,7 +1484,8 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
     &.e-default.e-verticallines,
     &.e-default.e-hidelines {
       & .e-detailrowcollapse,
-      & .e-detailrowexpand {
+      & .e-detailrowexpand,
+      & .e-rowdragdrop {
         border-top-width: 0;
       }
     }
@@ -1516,7 +1565,6 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
     }
 
     .e-virtualtable {
-      overflow: hidden;
       will-change: transform;
       z-index: 1;
     }
@@ -1526,7 +1574,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       display: block;
       font-size: $grid-header-font-size;
       font-weight: $grid-header-font-weight;
-      height: 29px;
+      height: $grid-header-height;
       line-height: $grid-headercelldiv-line-height;
       margin: $grid-headercelldiv-margin;
       overflow: hidden;
@@ -1654,7 +1702,9 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
 
     .e-frozencontent table tr td:first-child:empty,
     .e-movablecontent table tr td:first-child:empty,
-    .e-frozenhdrcont table tr td:first-child:empty {
+    .e-frozenhdrcont table tr td:first-child:empty,
+    &:not(.e-grid-min-height) .e-gridcontent tr td:not(.e-indentcell):first-child:empty,
+    &:not(.e-grid-min-height) .e-gridcontent tr.e-row .e-rowcell:empty {
       height: $grid-rowcell-line-height + $grid-content-padding + $grid-content-padding;
     }
 
@@ -1676,7 +1726,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
     }
 
     .e-unboundcelldiv > button {
-      margin: 0 3.5px;
+      margin: $grid-unboundcelldiv-margin;
     }
 
     .e-unboundcelldiv {
@@ -1685,7 +1735,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
 
     .e-summarycell {
       border-style: solid;
-      border-width: $border-size 0 0;
+      border-width: 1px 0 0;
       font-size: $grid-summary-cell-font-size;
       font-weight: $grid-header-font-weight;
       height: auto;
@@ -1740,11 +1790,11 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
    }
 
     &.e-default .e-rowcell.e-lastrowcell {
-      border-bottom-width: $border-size;
+      border-bottom-width: 1px;
     }
 
     &.e-bothlines .e-rowcell.e-lastrowcell {
-      border-bottom-width: $border-size;
+      border-bottom-width: 1px;
     }
 
     &.e-bothlines .e-rowcell {
@@ -1886,6 +1936,28 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       cursor: pointer;
     }
 
+    &.e-print-grid-layout {
+      .e-pager, .e-filterbar, .e-icons:not(.e-frame), .e-grouptopleftcell, .e-recordpluscollapse, .e-indentcell, .e-recordplusexpand {
+        display: none;
+      }
+
+      .e-indentcell.e-detailindentcelltop {
+        display: table-cell;
+      }
+
+      .e-content {
+        overflow-y: hidden;
+      }
+
+      .e-grouptext {
+        width: auto;
+      }
+
+      .e-detailcell {
+        padding: .8em .6em;
+      }
+    }
+
     &.e-print-grid {
       left: -1000px;
       top: -1000px;
@@ -1948,15 +2020,27 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
     }
 
     .e-columnmenu {
-      bottom: $grid-column-menu-top;
-      padding: 5px;
       position: absolute;
-      right: 5px;
+      right: 23px;
+      float: right;
+      margin: $grid-column-menu-margin;
+      padding: 6px;
+    }
+
+    &.e-wrap .e-columnmenu {
+      margin: $grid-textwrap-column-menu-margin;
     }
 
     &.e-rtl .e-columnmenu {
-      left: 5px;
+      left: $grid-rtl-column-menu-left;
       right: auto;
+      margin: $grid-rtl-column-menu-margin;
+    }
+
+    &.e-wrap {
+        &.e-rtl  .e-columnmenu {
+            margin: $grid-rtl-textwrap-column-menu-margin;
+        }
     }
 
     [class^='e-'] {
@@ -1974,7 +2058,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       border-right-style: $grid-border-type;
       border-right-width: $grid-border-size;
     }
-
+    
     .e-detailcell {
       border-top-style: $grid-border-type;
       border-top-width: $grid-border-size;
@@ -2063,6 +2147,12 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       vertical-align: middle;
     }
 
+    .e-rowdragheader {
+      border-color: $grid-header-border-color;
+      border-style: $grid-border-type;
+      border-width: $grid-filterbarcell-border-width;
+    }
+
     .e-filterbarcell input {
       border-radius: $grid-filterbar-border-radius;
       border-style: solid;
@@ -2095,7 +2185,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
     &.e-rtl .e-searchclear {
       float: left;
       position: relative;
-      top: 10px;
+      top: $grid-rtl-searchclear;
     }
 
     .e-checkboxlist {
@@ -2106,6 +2196,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
     }
 
     .e-chk-hidden {
+      -moz-appearance: none; // sass-lint:disable-line no-vendor-prefixes
       height: 1px;
       opacity: 0;
       width: 1px;
@@ -2267,6 +2358,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
     .e-cloneproperties {
       border-style: solid;
       border-width: $grid-border-size;
+      box-shadow: $grid-group-clone-box-shadow;
       font-size: $grid-header-font-size;
       font-weight: $grid-drag-clone-font-weight;
       opacity: $grid-drag-clone-opacity;
@@ -2279,6 +2371,17 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       z-index: 10;
     }
 
+    .e-cloneproperties.e-draganddrop {
+      border-spacing: 0;
+      font-size: $grid-header-font-size;
+      font-weight: normal;
+      overflow: visible;
+    }
+
+    .e-cloneproperties.e-draganddrop table {
+      border-spacing: 0;
+    }
+
     .e-defaultcur {
       cursor: default;
     }
@@ -2287,7 +2390,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       cursor: not-allowed;
     }
 
-    .e-cloneproperties table {
+    .e-cloneproperties.e-headerclone table {
       border-spacing: 0;
     }
 
@@ -2305,7 +2408,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
     }
 
     .e-draganddrop .e-rowcell {
-      opacity: .8;
+      opacity: .95;
     }
 
     &.e-default .e-gridheader th.e-firstcell {
@@ -2326,7 +2429,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
 
     .e-gridheader .e-headercontent .e-reorderuparrow,
     .e-gridheader .e-headercontent .e-reorderdownarrow {
-      font-size: 7px;
+      font-size: $grid-reorderarrow-font-size;
       position: absolute;
       z-index: 10;
     }
@@ -2383,7 +2486,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
     .e-groupdroparea {
       border-top-width: $grid-border-size;
       font-size: $grid-grouparea-font-size;
-      font-weight: lighter;
+      font-weight: $grid-grouparea-font-weight;
       opacity: $grid-conent-font-opacity;
       padding: $group-area-padding;
       text-align: $group-text-align;
@@ -2531,6 +2634,20 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       padding: $grid-content-padding $grid-content-right-padding;
     }
 
+    .e-autofill {
+      border: 1px solid;
+      height: 8px;
+      position: absolute;
+      user-select: none;
+      width: 8px;
+    }
+
+    .e-xlsel {
+      border: 0 solid;
+      position: absolute;
+      user-select: none;
+    }
+
     .e-headercontent {
       border-style: solid;
       border-width: 0;
@@ -2625,14 +2742,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
     .e-dialog .e-gridform .e-rowcell {
       border: 0;
       padding: 0;
-    }
-
-    .e-dialog table {
-      border-collapse: separate;
-      border-spacing: 11px;
-    }
-
-    .e-row .e-input-group .e-input.e-field,
+    }.e-row .e-input-group .e-input.e-field,
     .e-row .e-input-focus .e-input.e-field {
       font-family: $grid-font-family;
       font-size: $grid-font-size;
@@ -2718,7 +2828,7 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
         opacity: $grid-column-chosser-searchdiv-opactiy;
         position: absolute;
         right: 0;
-        top: -46px;
+        top: $grid-column-chosser-searchdiv-top;
 
         span.e-ccsearch-icon.e-icons {
           float: right;
@@ -2770,6 +2880,11 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
        }
   }
 
+    .e-checkboxfiltertext {
+      width: $grid-checkboxfiltertext-width;
+      word-break: normal;
+    }
+
     .e-frozenhdrcont .e-headercontent > .e-table,
     .e-frozenhdrcont .e-frozenheader > .e-table,
     .e-frozenhdrcont .e-movableheader > .e-table {
@@ -2811,6 +2926,8 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
 
     .e-frozencontent {
       -ms-touch-action: none; // sass-lint:disable-line no-vendor-prefixes
+      border-bottom-style: $grid-border-type;
+      border-bottom-width: $grid-border-size;
       float: left;
       height: inherit;
       overflow: hidden;
@@ -3103,12 +3220,12 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       & .e-groupsort,
       & .e-ungroupbutton,
       & .e-toggleungroup {
-        margin-left: 0;
+        margin-left: $grid-rtl-group-sorticon-margin-left;
         margin-right: $grid-rtl-group-sorticon-margin-right;
     }
 
       & span.e-ungroupbutton.e-icons {
-        margin-left: 0;
+        margin-left: $grid-ungroup-rtl-padding-left;
         margin-right: $grid-ungroup-rtl-padding-right;
         padding-top: $grid-ungroup-rtl-padding-top;
     }
@@ -3116,6 +3233,19 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       &.e-default.e-bothlines .e-headercell,
       &.e-default.e-bothlines .e-detailheadercell {
         border-width: $grid-headercell-both-border-width;
+      }
+
+      &.e-default.e-bothlines .e-dragheadercell,
+      &.e-default.e-bothlines .e-rowdragheader,
+      &.e-default.e-bothlines .e-cloneproperties.e-draganddrop td.e-rowdragdrop,
+      &.e-default.e-verticallines .e-cloneproperties.e-draganddrop td.e-rowdragdrop {
+        border-left: 1px solid $grid-header-border-color;
+        padding-left: 3px;
+      }
+
+      & .e-cloneproperties.e-draganddrop .e-row .e-icon-rowdragicon::before {
+        left: 4px;
+        position: relative;
       }
 
       &.e-default table th[rowspan]  {
@@ -3239,13 +3369,18 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       & .e-columnheader .e-stackedheadercelldiv,
       & .e-columnheader .e-headercelldiv {
         height: Auto;
-        line-height: 18px;
+        line-height: $grid-rowcell-wrap-height;
         overflow-wrap: break-word;
         text-overflow: clip;
         white-space: normal;
         word-wrap: break-word;
       }
+
+      & .e-stackedheader .e-columnheader .e-stackedheadercelldiv,
+      & .e-stackedheader .e-columnheader .e-headercelldiv {
+        max-height: $grid-rowcell-wrap-max-height;
     }
+  }
 
     &.e-wrap .e-columnheader .e-headercelldiv,
     & .e-columnheader.e-wrap .e-headercelldiv {
@@ -3254,6 +3389,10 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       }
 
     &.e-wrap .e-columnheader .e-filtermenudiv {
+      line-height: $grid-wrap-line-height;
+    }
+
+    & .e-columnheader.e-wrap .e-filtermenudiv {
       line-height: $grid-wrap-line-height;
     }
 
@@ -3272,6 +3411,11 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
     & .e-stackedheadercelldiv {
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    & .e-stackedheader .e-columnheader.e-wrap .e-headercelldiv,
+    & .e-stackedheader .e-columnheader.e-wrap .e-stackedheadercelldiv {
+      max-height: $grid-rowcell-wrap-max-height;
     }
 
     & .e-columnheader.e-wrap .e-sortfilterdiv,
@@ -3315,10 +3459,41 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       top: -1000px;
       width: 1px;
     }
+
+    &.e-resize-lines,
+    &.e-resize-lines.e-rtl {
+
+      & th.e-headercell.e-stackedheadercell,
+      & th.e-headercell.e-firstcell {
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+      }
+
+      & tr.e-columnheader th:last-child.e-stackedheadercell .e-rhandler.e-rcursor {
+        border-right: 0;
+      }
+
+      &.e-default table th[rowspan] {
+        border-left: 0;
+      }
+    }
+
+    &.e-resize-lines.e-rtl {
+
+      & tr.e-columnheader th:last-child.e-stackedheadercell .e-rhandler.e-rcursor,
+      & tr.e-columnheader th.e-lastcell .e-rhandler.e-rcursor {
+        border-left: 0;
+      }
+
+      &.e-default table th[rowspan] {
+        border-right: 0;
+      }
+    }
   }
 }
 
-.e-grid-min-height {
+#{&}.e-grid-min-height {
   .e-rowcell {
     line-height: 0;
     padding-bottom: 0;
@@ -3366,7 +3541,9 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
 
   .e-frozencontent table tr td:first-child:empty,
   .e-movablecontent table tr td:first-child:empty,
-  .e-frozenhdrcont table tr td:first-child:empty {
+  .e-frozenhdrcont table tr td:first-child:empty,
+  &:not(.e-grid-min-height) .e-gridcontent tr td:not(.e-indentcell):first-child:empty,
+  &:not(.e-grid-min-height) .e-gridcontent tr.e-row .e-rowcell:empty {
     height: 18px;
    }
 }
@@ -3380,6 +3557,16 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       text-align: right;
     }
   }
+}
+
+.e-edit-dialog .e-gridform .e-table {
+  border-collapse: separate;
+  border-spacing: 11px;
+  width: 100%;
+}
+
+.e-edit-dialog .e-dlg-content {
+  position: relative;
 }
 @include export-module('grid-theme') {
   /*! Grid theme */
@@ -3416,6 +3603,24 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
 
     .e-tableborder {
       border-right-color: $grid-header-border-color;
+    }
+
+    .e-autofill,
+    .e-xlsel {
+      background-color: $grid-autofill-color;
+      border-color: $grid-autofill-color;
+    }
+
+    .e-gridcontent tr.e-row:first-child .e-rowcell.e-dragborder,
+    .e-gridcontent .e-rowcell.e-dragborder,
+    .e-gridcontent .e-rowdragdrop.e-dragborder ,
+    & .e-gridheader thead tr th.e-firstrowdragborder,
+    &.e-rtl .e-gridcontent tr.e-row:first-child .e-rowcell.e-dragborder,
+    &.e-rtl .e-gridcontent .e-rowcell.e-dragborder,
+    &.e-rtl .e-gridcontent .e-rowdragdrop.e-dragborder {
+      box-shadow: $grid-dragborder-box-shadow;
+      position: $grid-dragborder-position;
+      z-index: $grid-dragborder-z-index;
     }
 
     .e-gridheader {
@@ -3492,9 +3697,13 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
 
     .e-rowcell,
     .e-detailrowcollapse,
-    .e-detailrowexpand {
-      color: $grid-content-font-color;
-      opacity: $grid-conent-font-opacity;
+    .e-detailrowexpand,
+    .e-gridcontent .e-rowdragdrop,
+    .e-emptyrow {
+      &:not(.e-editedbatchcell) {
+        color: $grid-content-font-color;
+        opacity: $grid-conent-font-opacity;
+      }
     }
 
     .e-summarycell {
@@ -3534,6 +3743,10 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       border-bottom-color: $frozen-border-color;
     }
 
+    .e-frozencontent {
+      border-bottom-color: $grid-cell-border-color;
+    }
+
     .e-frozenheader > .e-table,
     .e-frozencontent > .e-table  {
       border-right-color: $frozen-border-color;
@@ -3546,11 +3759,17 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
 
     &.e-gridhover tr[role='row']:not(.e-editedrow):hover .e-rowcell,
     &.e-gridhover tr[role='row']:hover .e-detailrowcollapse,
+    &.e-gridhover tr[role='row']:hover .e-rowdragdrop,
+    &.e-rtl .e-gridhover tr[role='row']:hover .e-rowdragdrop,
     &.e-gridhover tr[role='row']:hover .e-detailrowexpand {
       &:not(.e-cellselectionbackground):not(.e-active):not(.e-updatedtd):not(.e-indentcell) {
         background-color: $grid-hover-bg-color;
         color: $grid-hover-content-font-color;
       }
+    }
+
+    & tr[role='row']:hover .e-rowdragdrop {
+      cursor: move;
     }
 
     .e-sortnumber {
@@ -3560,6 +3779,10 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
 
     .e-col-menu.e-filter-popup {
       box-shadow: $grid-column-menu-sub-menu-box-shadow;
+    }
+
+    & td.e-active .e-icon-rowdragicon::before {
+      color: $grid-row-selection-color;
     }
 
     td.e-active {
@@ -3659,8 +3882,15 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       border-top: 1px solid $grid-header-border-color;
     }
 
-    .e-draganddrop {
-      opacity: .5;
+    .e-cloneproperties.e-draganddrop {
+      box-shadow: $grid-clone-prop-box-shadow;
+      opacity: .95;
+      overflow: visible;
+    }
+
+    & .e-row .e-dragstartrow::before,
+    & .e-row .e-selectionbackground .e-dragstartrow::before {
+      color: $grid-clone-dropitemscount-bg-color;
     }
 
     .e-griddragarea {
@@ -3734,6 +3964,11 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
       border-top-color: $grid-header-border-color;
     }
 
+    .e-gridcontent .e-normaledit .e-dragindentcell,
+    .e-gridcontent .e-normaledit .e-detailrowcollapse {
+      border-top: 1px solid $grid-header-border-color;
+    }
+
     .e-excelfilter .e-footer-content {
       border-color: $grid-columnchooser-footer-border-color;
       opacity: $grid-columnchooser-footer-border-opacity;
@@ -3753,6 +3988,16 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
         border-color: $grid-columnchooser-search-border-fcolor;
       }
 
+    }
+
+    .e-cloneproperties.e-draganddrop .e-rowcell {
+      color: $grid-content-font-color;
+    }
+
+    .e-cloneproperties.e-draganddrop table,
+    .e-cloneproperties.e-draganddrop table .e-selectionbackground {
+      background-color: $grid-clone-dragdrop-bg-color;
+      height: 30px;
     }
 
     &.e-rtl {
@@ -3801,5 +4046,10 @@ $grid-bigger-group-headercell-hover-padding: $grid-bigger-group-headercell-paddi
   .e-tooltip-wrap.e-griderror .e-tip-content label {
     color: $grid-val-error-color;
   }
+
+  .e-dropitemscount {
+    background-color: $grid-clone-dropitemscount-bg-color;
+    color: $grid-dropitemscount-color;
+   }
 
 }

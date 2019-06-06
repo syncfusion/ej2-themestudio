@@ -1,11 +1,8 @@
 
-/*! component's default definitions and variables */
-$white: rgba(0, 0, 0, 0);
-$box-shadow: 0 0 2.5em rgba(85, 85, 85, .5);
-$white: $grey-white;
-$sidebar-border: $grey-lighter;
-$sidebar-box-shadow: 0 0 20px rgba(0, 0, 0, .2);
-$sidebar-overlay: rgba(0, 0, 0, .6);
+$sidebar-background: $grey-white !default;
+$sidebar-border: $grey-lighter !default;
+$sidebar-box-shadow: 0 0 20px rgba(0, 0, 0, .2) !default;
+$sidebar-overlay: rgba(0, 0, 0, .6) !default;
 
 
 
@@ -18,7 +15,7 @@ $sidebar-overlay: rgba(0, 0, 0, .6);
   .e-sidebar {
     // sass-lint:disable no-vendor-prefixes
     -webkit-tap-highlight-color: transparent;
-    background: $white;
+    background: $sidebar-background;
     height: 100%;
     overflow: auto;
     position: fixed;
@@ -81,11 +78,13 @@ $sidebar-overlay: rgba(0, 0, 0, .6);
 
     &.e-left.e-close.e-dock {
       transform: translateX(0%);
+      transition: transform ease;
       visibility: visible;
     }
 
     &.e-right.e-close.e-dock {
       transform: translateX(0%);
+      transition: transform ease;
       visibility: visible;
     }
 

@@ -1,268 +1,202 @@
 
 // uploader definition styles
-$zero-value: 0;
-$upload-element-opacity: $zero-value;
-$upload-element-width: $zero-value;
-$select-file-margin: $zero-value;
-$select-file-padding: $zero-value;
-$upload-font-family: $font-family;
-$header-padding: 10px 0 10px 12px;
-$drop-area-font-size: 13px;
-$drop-area-padding-left: 10px;
-$list-items-font-size: 15px;
-$list-item-height: 35px;
-$list-item-margin-right: 90px;
-$list-item-name-width: 75%;
-$list-item-status-font-size: 14px;
-$progress-bar-wrapper-height: 5px;
-$progress-bar-wrapper-width: 98%;
-$progress-bar-height: 90%;
-$progress-bar-text-top: 10px;
-$progress-bar-text-right: 1%;
-$remove-icon-font-size: 11px;
-$delete-icon-font-size: 13px;
-$abort-icon-font-size: 18px;
-$remove-icon-margin: 10px;
-$delete-icon-opacity: 1;
-$remove-icon-right: 5px;
-$remove-icon-top: 8px;
-$float-right: right;
-$float-left: left;
-$margin-rtl: 14px;
-$right: 100%;
-$left: 17px;
-$file-status-rtl-top-margin: 7%;
-$drop-zone-margin: 3px;
-$list-item-margin-left: 8px;
-$remove-icon-height: 20px;
-$remove-icon-width: 20px;
-$remove-icon-before: 4px;
-$list-items-height: 50px;
-$file-container-left: 5px;
-$file-size-top: $zero-value;
-$action-buttons-margin: 10px;
-$file-status-rtl: 30px;
-$progress-inner-wrap-height: 5px;
-$progress-inner-wrap-top: 3px;
-$progress-bar-wrap-top: 34px;
-$rtl-progress-top: -2px;
-$file-status-top-bigger: 35px;
-$file-drop-rtl-smaller: -10px;
-$file-drop-rtl-bigger: -10px;
-$footer-height: 50px;
-$footer-height-smaller: 30px;
-$footer-buttons-height: 30px;
-$footer-buttons-height-bigger: 40px;
-$footer-buttons-margin: 16px;
-$file-name-font-size: 10px;
-$progress-bar-top-paddding: 10px;
-$progress-bar-bottom-paddding: 9px;
-$inner-wrap-radius: 1px;
-$progress-bar-radius: 1px;
-$file-name-top: $zero-value;
-$file-container-top-bigger: $zero-value;
-$remove-icon-rtl: 20px;
-$reload-btn-right: 36px;
-$icons-small-ie-padding: 18px 13px 18px 23px;
-$icons-bigger-ie-padding: 20px 17px 20px 26px;
+$zero-value: 0 !default;
+$upload-element-opacity: $zero-value !default;
+$upload-element-width: $zero-value !default;
+$select-file-margin: $zero-value !default;
+$select-file-padding: $zero-value !default;
+$list-items-font-size: 15px !default;
+$list-item-height: 35px !default;
+$list-item-margin-right: 90px !default;
+$list-item-name-width: 75% !default;
+$delete-icon-opacity: 1 !default;
+$float-right: right !default;
+$float-left: left !default;
+$margin-rtl: 14px !default;
+$right: 100% !default;
+$file-status-rtl-top-margin: 7% !default;
+$remove-icon-before: 4px !default;
+$file-size-top: $zero-value !default;
+$action-buttons-margin: 10px !default;
+$file-status-rtl: 30px !default;
+$progress-inner-wrap-top: 3px !default;
+$progress-bar-wrap-top: 34px !default;
+$file-status-top-bigger: 35px !default;
+$file-drop-rtl-smaller: -10px !default;
+$file-drop-rtl-bigger: -10px !default;
+$footer-height: 50px !default;
+$footer-height-smaller: 30px !default;
+$footer-buttons-height: 30px !default;
+$footer-buttons-height-bigger: 40px !default;
+$file-container-top-bigger: $zero-value !default;
+$remove-icon-rtl: 20px !default;
+$reload-btn-right: 36px !default;
+$icons-small-ie-padding: 18px 13px 18px 23px !default;
+$icons-bigger-ie-padding: 20px 17px 20px 26px !default;
 
 // Smaller values
-$drop-area-font-size-smaller: 14px;
-$drop-area-padding-left-smaller: 10px;
-$list-items-font-size-smaller: 14px;
-$list-items-height-smaller: 60px;
-$list-item-margin-left-smaller: 12px;
-$list-item-status-font-size-smaller: 12px;
-$list-item-status-margin-smaller: 8px;
-$progress-bar-height-smaller: 3px;
-$progress-inner-wrap-height-smaller: 5px;
-$progress-bar-top-smaller: $zero-value;
-$progress-bar-wrapper-height-smaller: 10px;
-$progress-bar-text-right-smaller: -20px;
-$progress-bar-text-top-smaller: -10px;
-$remove-icon-font-size-smaller: 12px;
-$remove-icon-margin-smaller: 16px;
-$delete-icon-font-size-smaller: 11px;
-$file-container-top: -5px;
-$file-status-top-smaller: 19px;
-$action-buttons-margin-smaller: 8px;
-$file-name-font-size-smaller: 13px;
-$list-item-status-top-smaller: 10px;
-$file-size-top-smaller: 10px;
-$file-size-left-smaller: 10px;
-$file-type-top-smaller: $zero-value;
-$file-size-rtl-right: 10px;
-$list-item-size-top: 30px;
-$header-padding-bigger: 10px;
-$file-name-padding-top: 4px;
-$file-size-padding: 4px 0;
-$file-name-padding-top-smaller: 1px;
-$file-size-padding-smaller: 3px 0;
-$file-container-height: 100%;
-$li-min-height: 72px;
-$progress-bar-paddding: 6px 6px;
-$delete-icon-padding: 1px;
-$delete-icon-padding-smaller: $zero-value;
-$remove-icon-before-bigger: 15px;
-$progress-bar-wrapper-width-bigger: 90%;
-$header-padding-rtl-bigger: 20px 15px 30px 10px;
-$margin-rtl-header: $zero-value;
-$remove-icon-rtl-bigger: $zero-value;
-$header-padding-rtl-smaller: 10px;
-$margin-rtl-header-smaller: 10;
-$file-name-font-family: $upload-font-family;
+$list-items-font-size-smaller: 14px !default;
+$list-items-height-smaller: 60px !default;
+$list-item-status-margin-smaller: 8px !default;
+$progress-bar-top-smaller: $zero-value !default;
+$progress-bar-wrapper-height-smaller: 10px !default;
+$file-status-top-smaller: 19px !default;
+$list-item-status-top-smaller: 10px !default;
+$file-size-top-smaller: 10px !default;
+$file-size-left-smaller: 10px !default;
+$file-type-top-smaller: $zero-value !default;
+$file-size-rtl-right: 10px !default;
+$list-item-size-top: 30px !default;
+$file-container-height: 100% !default;
+$progress-bar-paddding: 6px 6px !default;
+$remove-icon-before-bigger: 15px !default;
+$progress-bar-wrapper-width-bigger: 90% !default;
+$margin-rtl-header: $zero-value !default;
+$remove-icon-rtl-bigger: $zero-value !default;
+$margin-rtl-header-smaller: 10 !default;
 
 // Smaller RTL values
-$margin-rtl-smaller: 12px;
-$file-status-rtl-smaller: 21px;
-$progress-bar-wrap-top-smaller: 23px;
-$rtl-progress-left-smaller: -23px;
-$remove-icon-rtl-top-smaller: 2px;
-$remove-icon-top-bigger: 10px;
-$remove-icon-top-smaller: 1px;
-$progress-bar-width-rtl: 80%;
-$rtl-progress-top: -15px;
-$file-container-top: $zero-value;
+$file-status-rtl-smaller: 21px !default;
+$progress-bar-wrap-top-smaller: 23px !default;
+$rtl-progress-left-smaller: -23px !default;
+$remove-icon-top-bigger: 10px !default;
 
 // themes files
-$progress-bar-transition: width 2s;
-$clear-icon-font-content: '\e932';
-$delete-icon-font-content: '\e82d';
-$pause-icon-font-content: '\e753';
-$play-icon-font-content: '\e798';
-$remove-icon-margin-top-smaller: -10px;
-$remove-icon-margin-top: -14px;
-$remove-icon-disabled-color:  $zero-value;
-$remove-icon-padding-smaller: $zero-value;
-$progress-text-rtl-smaller: 0;
-$pause-play-button-right-value: 36px;
-$pause-play-button-right-value-bigger: 45px;
-$pause-play-button-right-value-bigger-rtl: 41px;
-$file-container-left: 60px;
-// uploader high contrast theme 
-$upload-font-family: $font-family;
-$drop-area-font-size-smaller: 14px;
-$drop-area-font-size: 15px;
-$drop-text-color: $content-font;
-$drag-hover-border: 2px dashed $selection-bg;
-$drop-zone-margin: 2px;
-$header-padding: 16px 0 16px 12px;
-$drop-area-padding-left: 12px;
-$drop-area-padding-left-smaller: 9px;
-$file-name-font-size-smaller: 14px;
-$file-name-font-size: 14px;
-$file-size-color: $content-font-alt;
-$list-item-status-font-size-smaller: 11px;
-$list-item-status-font-size: 12px;
-$file-name-padding-top-smaller: 12px;
-$file-name-padding-top: 16px;
-$file-size-padding: 10px $zero-value;
-$file-size-padding-smaller: 8px $zero-value;
-$list-item-margin-left-smaller: 12px;
-$list-item-margin-left: 16px;
-$list-line-height: normal;
-$remove-icon-margin: 16px;
-$remove-icon-margin-smaller: 12px;
-$action-buttons-margin-smaller: 12px;
-$footer-buttons-margin: 16px;
-$list-bottom-border: 1px solid $border-default;
-$delete-icon-padding-smaller: 16px;
-$delete-icon-padding: 24px;
-$remove-icon-top-smaller: 50%;
-$remove-icon-right: $zero-value;
-$remove-icon-before-left: 8px;
-$remove-icon-before-top: 9px;
-$file-name-font-family: $font-family;
-$li-min-height: 90px;
-$progress-inner-wrap-height-smaller: 2px;
-$progress-inner-wrap-height: 2px;
-$progress-bar-height-smaller: 2px;
-$progress-bar-height: 2px;
-$progress-bar-wrapper-height: 10px;
-$inner-wrap-radius: 1px;
-$progress-bar-radius: 1px;
-$progress-bar-wrapper-width: 94%;
-$progress-bar-top-paddding: 6px;
-$progress-bar-bottom-paddding: 11px;
-$progress-bar-text-right-smaller: $zero-value;
-$progress-bar-text-top-smaller: -33px;
-$progress-bar-text-right: 16px;
-$progress-bar-text-top: -31px;
-$list-items-height: 108px;
-$remove-icon-before-left-bigger: 12px;
-$remove-icon-before-top-bigger: 12px;
-$progress-bar-wrapper-width: 96%;
-$margin-rtl-smaller: 12px;
-$left: $zero-value;
-$progress-bar-width-rtl: 87%;
-$rtl-progress-top: -28px;
-$remove-icon-rtl-top-smaller: 50%;
-$file-container-top: $zero-value;
-$remove-icon-font-size-smaller: 11px;
-$delete-icon-font-size-smaller: 11px;
-$abort-icon-font-size-smaller: 15px;
-$remove-icon-font-size: 12px;
-$delete-icon-font-size: 12px;
-$abort-icon-font-size: 18px;
-$file-name-top: $zero-value;
-$remove-icon-top: 50%;
-$clear-icon-focus-color: $hover-bg;
-$remove-icon-height: 26px;
-$remove-icon-width: 26px;
-$remove-icon-margin-top: -24px;
-$remove-icon-margin-top-smaller: -21px;
-$remove-icon-padding-smaller: 16px;
-// RTL
-$header-padding-rtl-bigger: 20px 16px 20px $zero-value;
-$header-padding-rtl-smaller: 16px 12px 16px $zero-value;
-$header-padding-bigger: 20px 0 20px 16px;
-$upload-in-progress-color: $selection-bg;
-$upload-success-color: $success-alt;
-$upload-failure-color: $error-alt;
-$progress-background-color: $bg-base-20;
-$upload-border: 1px solid $border-default;
-$remove-icon-color: $content-font;
-$hover-icon-color: $hover-font;
-$progress-text-color: $content-font;
-$clear-icon-font-content: '\e953';
-$delete-icon-font-content: '\e965';
-$abort-icon-font-content: '\e202';
-$reload-icon-font-content: '\e837';
-$pause-icon-font-content: '\e325';
-$play-icon-font-content: '\e327';
-$disabled-state: rgba($content-font, .38);
+$progress-bar-transition: width 2s !default;
+$remove-icon-disabled-color:  $zero-value !default;
+$progress-text-rtl-smaller: 0 !default;
+$pause-play-button-right-value: 36px !default;
+$pause-play-button-right-value-bigger: 45px !default;
+$pause-play-button-right-value-bigger-rtl: 41px !default;
+$file-container-left: 60px !default;
+$ie-icons-position-value: 10px !default;
+$ie-abort-icon-position-value: 12px !default;
 
-// icon styles
-@include export-module('uploader-icons') {
+$upload-font-family: $font-family !default;
+$drop-area-font-size-smaller: 14px !default;
+$drop-area-font-size: 15px !default;
+$drop-text-color: $content-font !default;
+$drag-hover-border: 2px dashed $selection-bg !default;
+$drop-zone-margin: 2px !default;
+$header-padding: 16px 0 16px 12px !default;
+$drop-area-padding-left: 12px !default;
+$drop-area-padding-left-smaller: 9px !default;
+$file-name-font-size-smaller: 14px !default;
+$file-name-font-size: 14px !default;
+$file-size-color: $content-font-alt !default;
+$list-item-status-font-size-smaller: 11px !default;
+$list-item-status-font-size: 12px !default;
+$file-name-padding-top-smaller: 12px !default;
+$file-name-padding-top: 16px !default;
+$file-size-padding: 10px $zero-value !default;
+$file-size-padding-smaller: 8px $zero-value !default;
+$list-item-margin-left-smaller: 12px !default;
+$list-item-margin-left: 16px !default;
+$list-line-height: normal !default;
+$remove-icon-margin: 16px !default;
+$remove-icon-margin-smaller: 12px !default;
+$action-buttons-margin-smaller: 12px !default;
+$footer-buttons-margin: 16px !default;
+$list-bottom-border: 1px solid $border-default !default;
+$delete-icon-padding-smaller: 16px !default;
+$delete-icon-padding: 24px !default;
+$remove-icon-top-smaller: 50% !default;
+$remove-icon-right: $zero-value !default;
+$remove-icon-before-left: 8px !default;
+$remove-icon-before-top: 9px !default;
+$file-name-font-family: $font-family !default;
+$li-min-height: 90px !default;
+$progress-inner-wrap-height-smaller: 2px !default;
+$progress-inner-wrap-height: 2px !default;
+$progress-bar-height-smaller: 2px !default;
+$progress-bar-height: 2px !default;
+$progress-bar-wrapper-height: 10px !default;
+$inner-wrap-radius: 1px !default;
+$progress-bar-radius: 1px !default;
+$progress-bar-wrapper-width: 94% !default;
+$progress-bar-top-paddding: 6px !default;
+$progress-bar-bottom-paddding: 11px !default;
+$progress-bar-text-right-smaller: $zero-value !default;
+$progress-bar-text-top-smaller: -33px !default;
+$progress-bar-text-right: 16px !default;
+$progress-bar-text-top: -31px !default;
+$list-items-height: 108px !default;
+$remove-icon-before-left-bigger: 12px !default;
+$remove-icon-before-top-bigger: 12px !default;
+$progress-bar-wrapper-width: 96% !default;
+$margin-rtl-smaller: 12px !default;
+$left: $zero-value !default;
+$progress-bar-width-rtl: 87% !default;
+$rtl-progress-top: -28px !default;
+$remove-icon-rtl-top-smaller: 50% !default;
+$file-container-top: $zero-value !default;
+$remove-icon-font-size-smaller: 11px !default;
+$delete-icon-font-size-smaller: 11px !default;
+$abort-icon-font-size-smaller: 15px !default;
+$remove-icon-font-size: 12px !default;
+$delete-icon-font-size: 12px !default;
+$abort-icon-font-size: 18px !default;
+$file-name-top: $zero-value !default;
+$remove-icon-top: 50% !default;
+$clear-icon-focus-color: $hover-bg !default;
+$remove-icon-height: 26px !default;
+$remove-icon-width: 26px !default;
+$remove-bigger-icon-height: 26px !default;
+$remove-bigger-icon-width: 26px !default;
+$remove-icon-margin-top: -24px !default;
+$remove-icon-margin-top-smaller: -21px !default;
+$remove-icon-padding-smaller: 16px !default;
+// RTL
+$header-padding-rtl-bigger: 20px 16px 20px $zero-value !default;
+$header-padding-rtl-smaller: 16px 12px 16px $zero-value !default;
+$header-padding-bigger: 20px 0 20px 16px !default;
+$upload-in-progress-color: $selection-bg !default;
+$upload-success-color: $success-alt !default;
+$upload-failure-color: $error-alt !default;
+$progress-background-color: $bg-base-20 !default;
+$upload-border: 1px solid $border-default !default;
+$remove-icon-color: $content-font !default;
+$upload-hover-icon-color: $hover-font !default;
+$progress-text-color: $content-font !default;
+
+$disabled-state: rgba($content-font, .38) !default;
+
+$uploader-icons-hover-radius: 50% !default;
+@include export-module('uploader-highcontrast-icons') {
   .e-upload .e-upload-files .e-file-remove-btn.e-icons::before {
-    content: $clear-icon-font-content;
+    content: '\e953';
   }
 
   .e-upload .e-upload-files .e-icons.e-file-pause-btn::before {
-    content: $pause-icon-font-content;
+    content: '\e325';
   }
 
   .e-upload .e-upload-files .e-icons.e-file-reload-btn::before {
-    content: $reload-icon-font-content;
+    content: '\e837';
   }
 
   .e-upload .e-upload-files .e-icons.e-file-play-btn::before {
-    content: $play-icon-font-content;
+    content: '\e327';
   }
 
   .e-upload .e-upload-files .e-file-delete-btn.e-icons::before {
-    content: $delete-icon-font-content;
+    content: '\e965';
   }
 
   .e-upload .e-upload-files .e-file-abort-btn.e-icons::before {
-    content: $abort-icon-font-content;
+    content: '\e202';
   }
 
   .e-upload .e-upload-files .e-icons.e-msie::before {
     position: relative;
-    right: 5px;
+    right: $ie-icons-position-value;
+  }
+
+  .e-upload .e-upload-files .e-icons.e-file-abort-icon.e-msie::before {
+    right: $ie-abort-icon-position-value;
   }
 }
+
 // uploader layout styles
 @include export-module('uploader-layout') {
   // For bigger class UI
@@ -339,10 +273,12 @@ $disabled-state: rgba($content-font, .38);
         & .e-file-play-btn.e-icons,
         & .e-file-pause-btn.e-icons {
           font-size: $remove-icon-font-size;
+          height: $remove-bigger-icon-height;
           margin: $remove-icon-margin;
           margin-top: $remove-icon-margin-top;
           padding: $delete-icon-padding;
           top: $remove-icon-top-smaller;
+          width: $remove-bigger-icon-width;
         }
 
         & .e-file-remove-btn.e-msie.e-icons,
@@ -375,9 +311,22 @@ $disabled-state: rgba($content-font, .38);
 
       & .e-upload-actions {
 
-        .e-file-upload-btn,
+        .e-file-upload-btn {
+          @if ($skin-name == 'bootstrap4') {
+            margin: $footer-upload-buttons-margin;
+          }
+          @else if ($skin-name != 'bootstrap4') {
+            margin: $footer-buttons-margin;
+          }
+        }
+
         .e-file-clear-btn {
-          margin: $footer-buttons-margin;
+          @if ($skin-name == 'bootstrap4') {
+            margin: $footer-clear-buttons-margin;
+          }
+          @else if ($skin-name != 'bootstrap4') {
+            margin: $footer-buttons-margin;
+          }
         }
       }
 
@@ -440,7 +389,7 @@ $disabled-state: rgba($content-font, .38);
 
             & .e-file-play-btn,
             & .e-file-reload-btn,
-            & .e-file-pause-btn, {
+            & .e-file-pause-btn {
               &.e-icons {
                 left: $pause-play-button-right-value-bigger-rtl;
               }
@@ -454,7 +403,6 @@ $disabled-state: rgba($content-font, .38);
   // For Desktop view
 
   .e-upload {
-    float: left;
     width: 100%;
 
     .e-file-select-wrap {
@@ -624,8 +572,18 @@ $disabled-state: rgba($content-font, .38);
       & .e-clear-icon-focus {
         background-color: $clear-icon-focus-color;
         border-color: transparent;
-        border-radius: 50%;
+        border-radius: $uploader-icons-hover-radius;
         box-shadow: 0 0 0 transparent;
+      }
+
+      & .e-file-remove-btn.e-icons:not(.e-upload-progress):focus,
+      & .e-file-delete-btn.e-icons:not(.e-upload-progress):focus,
+      & .e-file-pause-btn.e-icons:not(.e-upload-progress):focus,
+      & .e-file-play-btn.e-icons:not(.e-upload-progress):focus,
+      & .e-file-reload-btn.e-icons:focus,
+      & .e-file-abort-btn.e-icons:not(.e-disabled):focus,
+      & .e-clear-icon-focus {
+        border-radius: $uploader-icons-hover-radius;
       }
 
       & .e-file-delete-btn.e-icons {
@@ -645,12 +603,25 @@ $disabled-state: rgba($content-font, .38);
     }
 
     & .e-upload-actions {
-      float: right;
       position: relative;
+      text-align: right;
 
-      .e-file-upload-btn,
+      .e-file-upload-btn {
+        @if ($skin-name == 'bootstrap4') {
+          margin: $action-upload-buttons-margin-smaller;
+        }
+        @else if ($skin-name != 'bootstrap4') {
+          margin: $action-buttons-margin-smaller;
+        }
+      }
+
       .e-file-clear-btn {
-        margin: $action-buttons-margin-smaller;
+        @if ($skin-name == 'bootstrap4') {
+          margin: $action-clear-buttons-margin-smaller;
+        }
+        @else if ($skin-name != 'bootstrap4') {
+          margin: $action-buttons-margin-smaller;
+        }
       }
     }
 
@@ -672,7 +643,7 @@ $disabled-state: rgba($content-font, .38);
       }
 
       & .e-upload-actions {
-        float: $float-left;
+        text-align: $float-left;
       }
 
       & .e-upload-files {
@@ -743,7 +714,7 @@ $disabled-state: rgba($content-font, .38);
 
           & .e-file-play-btn,
           & .e-file-reload-btn,
-          & .e-file-pause-btn, {
+          & .e-file-pause-btn {
             &.e-icons {
               left: $pause-play-button-right-value;
             }
@@ -846,14 +817,27 @@ $disabled-state: rgba($content-font, .38);
 
       & .e-file-remove-btn.e-icons,
       & .e-file-delete-btn.e-icons,
+      & .e-file-reload-btn.e-icons,
       & .e-file-abort-btn.e-icons,
       & .e-file-pause-btn.e-icons,
       & .e-file-play-btn.e-icons {
         color: $remove-icon-color;
 
         &:hover {
-          color: $hover-icon-color;
+          color: $upload-hover-icon-color;
         }
+      }
+
+      & .e-file-remove-btn.e-icons:not(.e-upload-progress):focus,
+      & .e-file-delete-btn.e-icons:not(.e-upload-progress):focus,
+      & .e-file-pause-btn.e-icons:not(.e-upload-progress):focus,
+      & .e-file-play-btn.e-icons:not(.e-upload-progress):focus,
+      & .e-file-reload-btn.e-icons:focus,
+      & .e-file-abort-btn.e-icons:not(.e-disabled):focus,
+      & .e-clear-icon-focus {
+        background-color: $clear-icon-focus-color;
+        border-color: transparent;
+        box-shadow: 0 0 0 transparent;
       }
     }
   }

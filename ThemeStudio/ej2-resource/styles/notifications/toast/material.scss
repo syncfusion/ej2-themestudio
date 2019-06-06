@@ -1,189 +1,126 @@
 
-$skin-name: 'material';
-
-//dimention variables
-
 //Mouse Mode
-
-$toast-icon-nrml-height: 14px;
-$toast-icon-nrml-width: 14px;
-$toast-icon-nrml-size: 15px;
-$toast-icon-nrml-right-margin: 10px;
-$toast-close-icon-nrml-height: 14px;
-$toast-close-icon-nrml-width: 14px;
-$toast-close-icon-nrml-size: 15px;
-$toast-position-nrml-distance: 10px;
-$multitoast-nrml-gap-distance: 10px;
-$toast-nrml-padding: 14px 24px;
-$toast-action-btn-nrml-padding: 24px 0 14px 0;
-$toast-action-btn-nrml-margin: 10px;
-$toast-progressbar-nrml-height: 4px;
-$toast-content-nrml-padding: 14px 0 24px 0;
-$toast-nrml-border-radious: 2px;
-$toast-font-nrml-size: 14px;
-$toast-title-font-nrml-size: 15px;
+$toast-icon-nrml-height: 24px !default;
+$toast-icon-nrml-width: 24px !default;
+$toast-icon-nrml-size: 18px !default;
+$toast-icon-nrml-right-margin: 14px !default;
+$toast-close-icon-nrml-height: 24px !default;
+$toast-close-icon-nrml-width: 24px !default;
+$toast-close-icon-nrml-size: 14px !default;
+$toast-position-nrml-distance: 10px !default;
+$multitoast-nrml-gap-distance: 10px !default;
+$toast-nrml-min-height: 48px !default;
+$toast-nrml-padding: 14px !default;
+$toast-action-btn-nrml-padding: 10px 0 0 0 !default;
+$toast-action-btn-nrml-margin: 10px !default;
+$toast-progressbar-nrml-height: 4px !default;
+$toast-content-nrml-padding: 14px 0 10px 0 !default;
+$toast-nrml-border-radious: 2px !default;
+$toast-font-nrml-size: 14px !default;
+$toast-title-font-nrml-size: 15px !default;
 
 //Touch Mode
-$toast-icon-bgr-height: 24px;
-$toast-icon-bgr-width: 24px;
-$toast-icon-bgr-size: 18px;
-$toast-icon-bgr-right-margin: 14px;
-$toast-close-icon-bgr-height: 24px;
-$toast-close-icon-bgr-width: 24px;
-$toast-close-icon-bgr-size: 20px;
-$toast-position-bgr-distance: 10px;
-$multitoast-bgr-gap-distance: 10px;
-$toast-bgr-min-height: 48px;
-$toast-bgr-padding: 14px 24px;
-$toast-action-btn-bgr-padding: 24px 0 14px 0;
-$toast-action-btn-bgr-margin: 10px;
-$toast-progressbar-bgr-height: 4px;
-$toast-content-bgr-padding: 14px 0 24px 0;
-$toast-bgr-border-radious: 2px;
-$toast-font-bgr-size: 14px;
+$toast-icon-bgr-height: 24px !default;
+$toast-icon-bgr-width: 24px !default;
+$toast-icon-bgr-size: 18px !default;
+$toast-icon-bgr-right-margin: 14px !default;
+$toast-close-icon-bgr-height: 24px !default;
+$toast-close-icon-bgr-width: 24px !default;
+$toast-close-icon-bgr-size: 14px !default;
+$toast-position-bgr-distance: 10px !default;
+$multitoast-bgr-gap-distance: 10px !default;
+$toast-bgr-min-height: 48px !default;
+$toast-bgr-padding: 14px !default;
+$toast-action-btn-bgr-padding: 10px 0 0 0 !default;
+$toast-action-btn-bgr-margin: 10px !default;
+$toast-progressbar-bgr-height: 4px !default;
+$toast-content-bgr-padding: 14px 0 10px 0 !default;
+$toast-bgr-border-radious: 2px !default;
+$toast-font-bgr-size: 14px !default;
 
-$toast-title-font-weight: bold;
+$toast-title-font-weight: bold !default;
 
 //theme variables
 
-$toast-box-shadow: 0 2px 5px 0 rgba(0 , 0 , 0 , .16) , 0 2px 10px 0 rgba(0 , 0 , 0 , .12);
-$toast-hover-box-shadow: 0 8px 17px 0 rgba(0 , 0 , 0 , .2) , 0 6px 20px 0 rgba(0 , 0 , 0 , .19);
-$toast-progress-color: #000;
-$toast-bg-color: $default-bg-color;
-$toast-hover-bg-color: $default-bg-color;
-$toast-active-bg-color: $default-bg-color;
-$toast-font-color: $default-font-color;
-$toast-icon-color: $default-font-color;
-$toast-close-icon-color: $default-font-color;
-$toast-title-color: $default-font-color;
-$toast-content-color: $default-font-color;
-
-//icon variabels
-
-$toast-close-icon: '\e7e9';
-$skin-name: 'material';
-
-//dimention variables
-
-//Mouse Mode
-$toast-icon-nrml-height: 24px;
-$toast-icon-nrml-width: 24px;
-$toast-icon-nrml-size: 18px;
-$toast-icon-nrml-right-margin: 14px;
-$toast-close-icon-nrml-height: 24px;
-$toast-close-icon-nrml-width: 24px;
-$toast-close-icon-nrml-size: 14px;
-$toast-position-nrml-distance: 10px;
-$multitoast-nrml-gap-distance: 10px;
-$toast-nrml-min-height: 48px;
-$toast-nrml-padding: 14px;
-$toast-action-btn-nrml-padding: 10px 0 0 0;
-$toast-action-btn-nrml-margin: 10px;
-$toast-progressbar-nrml-height: 4px;
-$toast-content-nrml-padding: 14px 0 10px 0;
-$toast-nrml-border-radious: 2px;
-$toast-font-nrml-size: 14px;
-$toast-title-font-nrml-size: 15px;
-
-//Touch Mode
-$toast-icon-bgr-height: 24px;
-$toast-icon-bgr-width: 24px;
-$toast-icon-bgr-size: 18px;
-$toast-icon-bgr-right-margin: 14px;
-$toast-close-icon-bgr-height: 24px;
-$toast-close-icon-bgr-width: 24px;
-$toast-close-icon-bgr-size: 14px;
-$toast-position-bgr-distance: 10px;
-$multitoast-bgr-gap-distance: 10px;
-$toast-bgr-min-height: 48px;
-$toast-bgr-padding: 14px;
-$toast-action-btn-bgr-padding: 10px 0 0 0;
-$toast-action-btn-bgr-margin: 10px;
-$toast-progressbar-bgr-height: 4px;
-$toast-content-bgr-padding: 14px 0 10px 0;
-$toast-bgr-border-radious: 2px;
-$toast-font-bgr-size: 14px;
-
-$toast-title-font-weight: bold;
-
-//theme variables
-
-$toast-box-shadow: 0 2px 5px 0 rgba($grey-black, .26);
-$toast-hover-box-shadow: 0 3px 6px 0 rgba($grey-black, .26);
-$toast-progress-color: $accent;
-$toast-bg-color: $grey-dark;
-$toast-hover-bg-color: $grey-900;
-$toast-active-bg-color: $grey-dark;
-$toast-font-color: $grey-dark-font;
-$toast-icon-color: $grey-dark-font;
-$toast-close-icon-color: $grey-dark-font;
-$toast-title-color: $grey-dark-font;
-$toast-content-color: $grey-dark-font;
+$toast-box-shadow: 0 2px 5px 0 rgba($grey-black, .26) !default;
+$toast-hover-box-shadow: 0 3px 6px 0 rgba($grey-black, .26) !default;
+$toast-progress-color: $accent !default;
+$toast-bg-color: $grey-dark !default;
+$toast-hover-bg-color: $grey-900 !default;
+$toast-active-bg-color: $grey-dark !default;
+$toast-font-color: $grey-dark-font !default;
+$toast-icon-color: $grey-dark-font !default;
+$toast-close-icon-color: $grey-dark-font !default;
+$toast-title-color: $grey-dark-font !default;
+$toast-content-color: $grey-dark-font !default;
 
 // Flat Button Customization
 
-$btn-flat-color: lighten($accent, 15%);
-$btn-flat-bgcolor: transparent;
-$btn-flat-border-color: transparent;
-$btn-flat-box-shadow: none;
-$btn-flat-hover-color: $btn-flat-color;
-$btn-flat-hover-bgcolor: transparent;
-$btn-flat-focus-color: $btn-flat-color;
-$btn-flat-focus-bgcolor: transparent;
-$btn-flat-active-color: $btn-flat-color;
-$btn-flat-active-bgcolor: transparent;
+$toast-btn-flat-color: lighten($accent, 15%) !default;
+$toast-btn-flat-bgcolor: transparent !default;
+$toast-btn-flat-border-color: transparent !default;
+$toast-btn-flat-box-shadow: none !default;
+$toast-btn-flat-hover-color: $toast-btn-flat-color !default;
+$toast-btn-flat-hover-bgcolor: transparent !default;
+$toast-btn-flat-focus-color: $toast-btn-flat-color !default;
+$toast-btn-flat-focus-bgcolor: transparent !default;
+$toast-btn-flat-active-color: $toast-btn-flat-color !default;
+$toast-btn-flat-active-bgcolor: transparent !default;
 
 
 // Toast Types theme definitions
 
-$toast-success-bg-color: #4d831e;
-$toast-success-color: $toast-font-color;
-$toast-success-title-color: $toast-success-color;
-$toast-success-icon-color: $toast-success-color;
-$toast-success-content-color: $toast-success-color;
-$toast-success-hover-bg-color: $toast-success-bg-color;
-$toast-success-hover-color: $toast-success-color;
-$toast-success-hover-box-shadow: 0 3px 6px 0 rgba($grey-black, .26);
+$toast-success-bg-color: #4d831e !default;
+$toast-success-color: $toast-font-color !default;
+$toast-success-title-color: $toast-success-color !default;
+$toast-success-icon-color: $toast-success-color !default;
+$toast-success-content-color: $toast-success-color !default;
+$toast-success-hover-bg-color: $toast-success-bg-color !default;
+$toast-success-hover-color: $toast-success-color !default;
+$toast-success-hover-box-shadow: 0 3px 6px 0 rgba($grey-black, .26) !default;
 
 
-$toast-info-bg-color: #0677d5;
-$toast-info-color: $toast-font-color;
-$toast-info-title-color: $toast-info-color;
-$toast-info-icon-color: $toast-info-color;
-$toast-info-content-color: $toast-info-color;
-$toast-info-hover-bg-color: $toast-info-bg-color;
-$toast-info-hover-color: $toast-info-color;
-$toast-info-hover-box-shadow: 0 3px 6px 0 rgba($grey-black, .26);
+$toast-info-bg-color: #0677d5 !default;
+$toast-info-color: $toast-font-color !default;
+$toast-info-title-color: $toast-info-color !default;
+$toast-info-icon-color: $toast-info-color !default;
+$toast-info-content-color: $toast-info-color !default;
+$toast-info-hover-bg-color: $toast-info-bg-color !default;
+$toast-info-hover-color: $toast-info-color !default;
+$toast-info-hover-box-shadow: 0 3px 6px 0 rgba($grey-black, .26) !default;
 
 
-$toast-warning-bg-color: #c15601;
-$toast-warning-color: $toast-font-color;
-$toast-warning-title-color: $toast-warning-color;
-$toast-warning-icon-color: $toast-warning-color;
-$toast-warning-content-color: $toast-warning-color;
-$toast-warning-hover-bg-color: $toast-warning-bg-color;
-$toast-warning-hover-color: $toast-warning-color;
-$toast-warning-hover-box-shadow: 0 3px 6px 0 rgba($grey-black, .26);
+$toast-warning-bg-color: #c15601 !default;
+$toast-warning-color: $toast-font-color !default;
+$toast-warning-title-color: $toast-warning-color !default;
+$toast-warning-icon-color: $toast-warning-color !default;
+$toast-warning-content-color: $toast-warning-color !default;
+$toast-warning-hover-bg-color: $toast-warning-bg-color !default;
+$toast-warning-hover-color: $toast-warning-color !default;
+$toast-warning-hover-box-shadow: 0 3px 6px 0 rgba($grey-black, .26) !default;
 
 
-$toast-danger-bg-color: #d74113;
-$toast-danger-color: $toast-font-color;
-$toast-danger-title-color: $toast-danger-color;
-$toast-danger-icon-color: $toast-danger-color;
-$toast-danger-content-color: $toast-danger-color;
-$toast-danger-hover-bg-color: $toast-danger-bg-color;
-$toast-danger-hover-color: $toast-danger-color;
-$toast-danger-hover-box-shadow: 0 3px 6px 0 rgba($grey-black, .26);
+$toast-danger-bg-color: #d74113 !default;
+$toast-danger-color: $toast-font-color !default;
+$toast-danger-title-color: $toast-danger-color !default;
+$toast-danger-icon-color: $toast-danger-color !default;
+$toast-danger-content-color: $toast-danger-color !default;
+$toast-danger-hover-bg-color: $toast-danger-bg-color !default;
+$toast-danger-hover-color: $toast-danger-color !default;
+$toast-danger-hover-box-shadow: 0 3px 6px 0 rgba($grey-black, .26) !default;
 //icon variabels
 
-$toast-close-icon: '\e7fc';
+$toast-close-icon: '\e7fc' !default;
 
-.e-toast {
-
-  .e-toast-close-icon::before {
-    content: $toast-close-icon;
+$toast-title-font-weight: bold !default;
+@include export-module('toast-material-icons') {
+  #{&}.e-toast {
+    .e-toast-close-icon::before {
+      content: $toast-close-icon;
+    }
   }
 }
+
 @include export-module('toast-layout') {
   /*! toast layout */
   // sass-lint:disable no-vendor-prefixes
@@ -275,6 +212,14 @@ $toast-close-icon: '\e7fc';
 
         .e-toast-content {
           padding: $toast-content-bgr-padding;
+
+          &:first-child {
+            padding: 0;
+          }
+
+          &:last-child {
+            padding-bottom: 0;
+          }
 
           + .e-toast-actions {
             padding: 0;
@@ -432,6 +377,14 @@ $toast-close-icon: '\e7fc';
           overflow: hidden;
           text-overflow: ellipsis;
 
+          &:first-child {
+            padding: 0;
+          }
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+
           > * {
             overflow: hidden;
             text-overflow: ellipsis;
@@ -442,11 +395,6 @@ $toast-close-icon: '\e7fc';
           font-size: $toast-title-font-nrml-size;
           font-weight: $toast-title-font-weight;
           letter-spacing: .5px;
-          white-space: nowrap;
-
-          > * {
-            white-space: nowrap;
-          }
         }
 
         .e-toast-content {
@@ -514,19 +462,15 @@ $toast-close-icon: '\e7fc';
     box-shadow: $toast-box-shadow;
     color: $toast-font-color;
 
-    @if $skin-name == 'bootstrap' {
-      border: 1px solid  $grey-cc;
-    }
-
-    @if $skin-name == 'highcontrast' {
-      border: 1px solid  $border-default;
+    @if $skin-name == 'bootstrap' or $skin-name == 'highcontrast' or $skin-name == 'bootstrap4' {
+      border: 1px solid  $toast-border-color;
     }
 
     &.e-toast-success {
       background-color: $toast-success-bg-color;
       color: $toast-success-color;
 
-      @if $skin-name == 'highcontrast' or $skin-name == 'bootstrap' {
+      @if $skin-name == 'highcontrast' or $skin-name == 'bootstrap' or $skin-name == 'bootstrap4' {
         border-color: $toast-success-border-color;
       }
 
@@ -547,7 +491,7 @@ $toast-close-icon: '\e7fc';
         box-shadow: $toast-success-hover-box-shadow;
         color: $toast-success-hover-color;
 
-        @if $skin-name == 'highcontrast' or $skin-name == 'bootstrap' {
+        @if $skin-name == 'highcontrast' or $skin-name == 'bootstrap' or $skin-name == 'bootstrap4' {
           border-color: $toast-success-hover-border-color;
         }
       }
@@ -557,7 +501,7 @@ $toast-close-icon: '\e7fc';
       background-color: $toast-info-bg-color;
       color: $toast-info-color;
 
-      @if $skin-name == 'highcontrast' or $skin-name == 'bootstrap' {
+      @if $skin-name == 'highcontrast' or $skin-name == 'bootstrap' or $skin-name == 'bootstrap4' {
         border-color: $toast-info-border-color;
       }
 
@@ -578,7 +522,7 @@ $toast-close-icon: '\e7fc';
         box-shadow: $toast-info-hover-box-shadow;
         color: $toast-info-hover-color;
 
-        @if $skin-name == 'highcontrast' or $skin-name == 'bootstrap' {
+        @if $skin-name == 'highcontrast' or $skin-name == 'bootstrap' or $skin-name == 'bootstrap4' {
           border-color: $toast-info-hover-border-color;
         }
       }
@@ -588,7 +532,7 @@ $toast-close-icon: '\e7fc';
       background-color: $toast-warning-bg-color;
       color: $toast-warning-color;
 
-      @if $skin-name == 'highcontrast' or $skin-name == 'bootstrap' {
+      @if $skin-name == 'highcontrast' or $skin-name == 'bootstrap' or $skin-name == 'bootstrap4' {
         border-color: $toast-warning-border-color;
       }
 
@@ -609,7 +553,7 @@ $toast-close-icon: '\e7fc';
         box-shadow: $toast-warning-hover-box-shadow;
         color: $toast-warning-hover-color;
 
-        @if $skin-name == 'highcontrast' or $skin-name == 'bootstrap' {
+        @if $skin-name == 'highcontrast' or $skin-name == 'bootstrap' or $skin-name == 'bootstrap4' {
           border-color: $toast-warning-hover-border-color;
         }
       }
@@ -640,7 +584,7 @@ $toast-close-icon: '\e7fc';
         box-shadow: $toast-danger-hover-box-shadow;
         color: $toast-danger-hover-color;
 
-        @if $skin-name == 'highcontrast' or $skin-name == 'bootstrap' {
+        @if $skin-name == 'highcontrast' or $skin-name == 'bootstrap' or $skin-name == 'bootstrap4' {
           border-color: $toast-danger-hover-border-color;
         }
       }
@@ -651,7 +595,7 @@ $toast-close-icon: '\e7fc';
       box-shadow: $toast-hover-box-shadow;
 
       @if $skin-name == 'highcontrast' {
-        border-color: $border-fg;
+        border-color: $toast-hover-border-color;
       }
     }
 
@@ -682,24 +626,24 @@ $toast-close-icon: '\e7fc';
       .e-toast-actions {
 
         .e-btn {
-          background-color: $btn-flat-bgcolor;
-          border-color: $btn-flat-border-color;
-          box-shadow: $btn-flat-box-shadow;
-          color:  $btn-flat-color;
+          background-color: $toast-btn-flat-bgcolor;
+          border-color: $toast-btn-flat-border-color;
+          box-shadow: $toast-btn-flat-box-shadow;
+          color:  $toast-btn-flat-color;
 
           &:hover {
-            background-color: $btn-flat-hover-bgcolor;
-            color:  $btn-flat-hover-color;
+            background-color: $toast-btn-flat-hover-bgcolor;
+            color:  $toast-btn-flat-hover-color;
           }
 
           &:focus {
-            background-color: $btn-flat-focus-bgcolor;
-            color:  $btn-flat-focus-color;
+            background-color: $toast-btn-flat-focus-bgcolor;
+            color:  $toast-btn-flat-focus-color;
           }
 
           &:active {
-            background-color: $btn-flat-active-bgcolor;
-            color:  $btn-flat-active-color;
+            background-color: $toast-btn-flat-active-bgcolor;
+            color:  $toast-btn-flat-active-color;
           }
         }
       }

@@ -1,20 +1,100 @@
 
-/*! TreeView's default definitions and variables */
+/*! TreeView's material theme wise override definitions and variables */
+// sass-lint:disable-all
+$treeview-skin-name: 'material' !default;
+$treeview-font-size: 13px !default;
+$treeview-icon-font-size: 10px !default;
+$treeview-image-font-size: 18px !default;
 
-$treeview-font-family: $font-family;
-$treeview-drag-icon-font-size: 12px;
-$treeview-drag-icon-padding: 6px;
+$treeview-big-font-size: 14px !default;
+$treeview-big-icon-font-size: 12px !default;
 
-$ripple-size: -7px;
-$ripple-height: 32px;
-$ripple-width: 32px;
+$treeview-icon-color: rgba($grey-light-font, .54) !default;
+$treeview-text-color: rgba($grey-light-font, .87) !default;
+$treeview-item-border-color: transparent !default;
+$treeview-item-active-bg: $grey-200 !default;
+$treeview-icon-active-color: rgba($grey-light-font, .54) !default;
+$treeview-text-active-color: $accent !default;
+$treeview-item-active-border-color: $grey-200 !default;
+$treeview-item-hover-bg: $grey-100 !default;
+$treeview-icon-hover-color: rgba($grey-light-font, .54) !default;
+$treeview-text-hover-color: rgba($grey-light-font, .87) !default;
+$treeview-item-hover-border-color: $grey-100 !default;
+$treeview-item-active-hover-bg: $grey-300 !default;
+$treeview-icon-active-hover-color: rgba($grey-light-font, .54) !default;
+$treeview-text-active-hover-color: $accent !default;
+$treeview-item-active-hover-border-color: $grey-300 !default;
+$treeview-text-disable-color: rgba($grey-light-font, .54) !default;
+$treeview-icon-disable-color: rgba($grey-light-font, .87) !default;
+$treeview-drag-line-bg: $accent !default;
+$treeview-drag-line-color: rgba($grey-light-font, .54) !default;
+$treeview-popup-bg-color: $grey-white !default;
+$treeview-popup-border-color: $grey-200 !default;
+$treeview-drop-count-bg: $accent !default;
+$treeview-drop-count-border: $accent-font !default;
+$treeview-drop-count-color: $accent-font !default;
+$treeview-drag-item-bg: $grey-200 !default;
+$treeview-drag-item-color: rgba($grey-light-font, .54) !default;
+$treeview-drag-icon-color: rgba($grey-light-font, .54) !default;
 
-// sass-lint:disable no-vendor-prefixes
+$treeview-item-height: 32px !default;
+$treeview-text-height: 30px !default;
+$treeview-input-height: 30px !default;
+$treeview-root-ul-padding: 0 0 0 24px !default;
+$treeview-rtl-root-ul-padding: 0 24px 0 0 !default;
+$treeview-child-ul-padding: 0 0 0 24px !default;
+$treeview-rtl-child-ul-padding: 0 24px 0 0 !default;
+$treeview-text-wrap-padding: 0 0 0 24px !default;
+$treeview-rtl-text-wrap-padding: 0 24px 0 0 !default;
+$treeview-icon-size: 24px !default;
+$treeview-icon-margin: 0 0 0 -24px !default;
+$treeview-rtl-icon-margin: 0 -24px 0 0 !default;
+$treeview-icon-padding: 7px !default;
+$treeview-text-padding: 0 5px !default;
+$treeview-text-margin: 0 !default;
+$treeview-image-size: 18px !default;
+$treeview-image-margin: 0 0 0 5px !default;
+$treeview-rtl-image-margin: 0 5px 0 0 !default;
+$treeview-input-padding: 0 7px !default;
+$treeview-image-text-padding: 0 10px !default;
+$treeview-icon-image-margin: 0 0 0 10px !default;
+$treeview-rtl-icon-image-margin: 0 10px 0 0 !default;
+$treeview-check-margin: 0 0 0 5px !default;
+$treeview-rtl-check-margin: 0 5px 0 0 !default;
+$treeview-check-text-padding: 0 10px !default;
+$treeview-check-image-margin: 0 0 0 12px !default;
+$treeview-rtl-check-image-margin: 0 12px 0 0 !default;
+$treeview-drop-count-border-size: 1px !default;
+$treeview-drop-count-font-size: 13px !default;
+
+$treeview-big-item-height: 40px !default;
+$treeview-big-text-height: 38px !default;
+$treeview-big-input-height: 38px !default;
+$treeview-big-text-padding: 0 10px !default;
+$treeview-big-input-padding: 0 9px !default;
+$treeview-big-icon-padding: 6px !default;
+$treeview-big-image-margin: 0 0 0 10px !default;
+$treeview-big-rtl-image-margin: 0 10px 0 0 !default;
+$treeview-big-icon-image-margin: 0 0 0 10px !default;
+$treeview-big-rtl-icon-image-margin: 0 10px 0 0 !default;
+$treeview-big-check-margin: 0 0 0 10px !default;
+$treeview-big-rtl-check-margin: 0 10px 0 0 !default;
+$treeview-big-check-image-margin: 0 0 0 16px !default;
+$treeview-big-rtl-check-image-margin: 0 16px 0 0 !default;
+
+$treeview-font-family: $font-family !default;
+$treeview-drag-icon-font-size: 12px !default;
+$treeview-drag-icon-padding: 6px !default;
+
+$ripple-size: -7px !default;
+$ripple-height: 32px !default;
+$ripple-width: 32px !default;
+
 #{&}.e-treeview {
 
   .e-list-item {
 
-    div.e-icons {
+    div.e-icons.interaction {
       -webkit-transition: -webkit-transform .3s ease-in-out;
       border-radius: 15px;
       transition: -webkit-transform .3s ease-in-out;
@@ -45,98 +125,14 @@ $ripple-width: 32px;
     }
   }
 }
-// sass-lint:enable no-vendor-prefixes
-/*! TreeView's material theme wise override definitions and variables */
-$treeview-skin-name: 'material';
-$treeview-font-size: 13px;
-$treeview-icon-font-size: 10px;
-$treeview-image-font-size: 18px;
-$treeview-expand-icon-content: '\e22f';
-
-$treeview-big-font-size: 14px;
-$treeview-big-icon-font-size: 12px;
-
-$treeview-icon-color: rgba($grey-light-font, .54);
-$treeview-text-color: rgba($grey-light-font, .87);
-$treeview-item-border-color: transparent;
-$treeview-item-active-bg: $grey-200;
-$treeview-icon-active-color: rgba($grey-light-font, .54);
-$treeview-text-active-color: $accent;
-$treeview-item-active-border-color: $grey-200;
-$treeview-item-hover-bg: $grey-100;
-$treeview-icon-hover-color: rgba($grey-light-font, .54);
-$treeview-text-hover-color: rgba($grey-light-font, .87);
-$treeview-item-hover-border-color: $grey-100;
-$treeview-item-active-hover-bg: $grey-300;
-$treeview-icon-active-hover-color: rgba($grey-light-font, .54);
-$treeview-text-active-hover-color: $accent;
-$treeview-item-active-hover-border-color: $grey-300;
-$treeview-text-disable-color: rgba($grey-light-font, .54);
-$treeview-icon-disable-color: rgba($grey-light-font, .87);
-$treeview-drag-line-bg: $accent;
-$treeview-drag-line-color: rgba($grey-light-font, .54);
-$treeview-popup-bg-color: $grey-white;
-$treeview-popup-border-color: $grey-200;
-$treeview-drop-count-bg: $accent;
-$treeview-drop-count-border: $accent-font;
-$treeview-drop-count-color: $accent-font;
-$treeview-drag-item-bg: $grey-200;
-$treeview-drag-item-color: rgba($grey-light-font, .54);
-$treeview-drag-icon-color: rgba($grey-light-font, .54);
-
-$treeview-item-height: 32px;
-$treeview-text-height: 30px;
-$treeview-input-height: 30px;
-$treeview-root-ul-padding: 0 0 0 24px;
-$treeview-rtl-root-ul-padding: 0 24px 0 0;
-$treeview-child-ul-padding: 0 0 0 24px;
-$treeview-rtl-child-ul-padding: 0 24px 0 0;
-$treeview-text-wrap-padding: 0 0 0 24px;
-$treeview-rtl-text-wrap-padding: 0 24px 0 0;
-$treeview-icon-size: 24px;
-$treeview-icon-margin: 0 0 0 -24px;
-$treeview-rtl-icon-margin: 0 -24px 0 0;
-$treeview-icon-padding: 7px;
-$treeview-text-padding: 0 5px;
-$treeview-text-margin: 0;
-$treeview-image-size: 18px;
-$treeview-image-margin: 0 0 0 5px;
-$treeview-rtl-image-margin: 0 5px 0 0;
-$treeview-input-padding: 0 7px;
-$treeview-image-text-padding: 0 10px;
-$treeview-icon-image-margin: 0 0 0 10px;
-$treeview-rtl-icon-image-margin: 0 10px 0 0;
-$treeview-check-margin: 0 0 0 5px;
-$treeview-rtl-check-margin: 0 5px 0 0;
-$treeview-check-text-padding: 0 10px;
-$treeview-check-image-margin: 0 0 0 12px;
-$treeview-rtl-check-image-margin: 0 12px 0 0;
-$treeview-drop-count-border-size: 1px;
-$treeview-drop-count-font-size: 13px;
-
-$treeview-big-item-height: 40px;
-$treeview-big-text-height: 38px;
-$treeview-big-input-height: 38px;
-$treeview-big-text-padding: 0 10px;
-$treeview-big-input-padding: 0 9px;
-$treeview-big-icon-padding: 6px;
-$treeview-big-image-margin: 0 0 0 10px;
-$treeview-big-rtl-image-margin: 0 10px 0 0;
-$treeview-big-icon-image-margin: 0 0 0 10px;
-$treeview-big-rtl-icon-image-margin: 0 10px 0 0;
-$treeview-big-check-margin: 0 0 0 10px;
-$treeview-big-rtl-check-margin: 0 10px 0 0;
-$treeview-big-check-image-margin: 0 0 0 16px;
-$treeview-big-rtl-check-image-margin: 0 16px 0 0;
-
-@include export-module('treeview-icons') {
+@include export-module('treeview-material-icons') {
   /*! TreeView icons */
   #{&}.e-treeview {
 
     .e-list-item {
 
       div.e-icons::before {
-        content: $treeview-expand-icon-content;
+        content: '\e22f';
       }
     }
 
@@ -171,6 +167,7 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
     }
   }
 }
+
 // sass-lint:disable no-vendor-prefixes
 @mixin user-select {
   -moz-user-select: none;
@@ -230,13 +227,25 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
   .e-bigger #{&}.e-treeview,
   #{&}.e-treeview.e-bigger {
 
+    @if $treeview-skin-name == 'bootstrap4' {
+      .e-ul,
+      .e-list-item .e-ul {
+        padding-left: 16px;
+      }
+    }
+
     .e-fullrow {
       height: $treeview-big-item-height;
     }
 
     .e-list-text {
       line-height: $treeview-big-text-height;
-      min-height: $treeview-big-text-height;
+      @if $treeview-skin-name != 'bootstrap4' {
+        min-height: $treeview-big-text-height;
+      }
+      @else if $treeview-skin-name == 'bootstrap4' {
+        min-height: 38px;
+      }
       padding: $treeview-big-text-padding;
 
       .e-input-group {
@@ -252,6 +261,11 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
 
     .e-checkbox-wrapper {
       margin: $treeview-big-check-margin;
+      @if $treeview-skin-name == 'bootstrap4' {
+        & + .e-list-text {
+          padding: $treeview-big-check-text-padding;
+        }
+      }
 
       & + .e-list-icon,
       & + .e-list-img {
@@ -262,6 +276,14 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
     .e-list-icon,
     .e-list-img {
       margin: $treeview-big-image-margin;
+      @if $treeview-skin-name == 'bootstrap4' {
+        font-size: $treeview-big-image-font-size;
+        }
+      @if $treeview-skin-name == 'bootstrap4' {
+        & + .e-list-text {
+          padding: $treeview-big-image-text-padding;
+        }
+      }
 
       & + .e-list-icon,
       & + .e-list-img {
@@ -269,12 +291,43 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
       }
     }
 
+    .e-icon-collapsible,
+    .e-icon-expandable {
+      @if $treeview-skin-name == 'bootstrap4' {
+        height: $treeview-big-icon-size;
+        margin: $treeview-big-icon-margin;
+        width: $treeview-big-icon-size;
+      }
+  }
+
     .e-icon-collapsible::before,
     .e-icon-expandable::before {
       padding: $treeview-big-icon-padding;
     }
 
+    &.e-drag-item {
+
+      @if $treeview-skin-name == 'bootstrap4' {
+
+        .e-icon-collapsible,
+        .e-icon-expandable {
+          font-size: $treeview-big-drag-icon-font-size;
+          padding: $treeview-big-drag-icon-padding;
+        }
+
+        .e-drop-count {
+          border: $treeview-big-drop-count-border-size solid;
+        }
+      }
+    }
+
     &.e-rtl {
+      @if $treeview-skin-name == 'bootstrap4' {
+        .e-icon-collapsible,
+        .e-icon-expandable {
+          margin: $treeview-big-rtl-icon-margin;
+        }
+      }
 
       .e-checkbox-wrapper {
         margin: $treeview-big-rtl-check-margin;
@@ -304,6 +357,7 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
     white-space: nowrap;
 
     & > .e-ul {
+      -webkit-overflow-scrolling: touch;
       overflow: auto;
     }
 
@@ -318,7 +372,12 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
 
     .e-list-item {
       list-style: none;
-      padding: 2px 0;
+      @if $treeview-skin-name == 'bootstrap4' {
+        padding: 4px 0;
+      }
+      @else {
+        padding: 2px 0;
+      }
 
       .e-ul {
         margin: 2px 0 -2px;
@@ -395,7 +454,12 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
       display: inline-block;
       line-height: $treeview-text-height;
       margin: $treeview-text-margin;
-      min-height: $treeview-text-height;
+      @if $treeview-skin-name != 'bootstrap4' {
+        min-height: $treeview-text-height;
+      }
+      @else if $treeview-skin-name == 'bootstrap4' {
+        min-height: 30px;
+      }
       padding: $treeview-text-padding;
       text-decoration: none;
       vertical-align: middle;
@@ -534,9 +598,16 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
       .e-text-content {
         float: left;
       }
+      @if $treeview-skin-name == 'bootstrap4' {
+        .e-icon-collapsible,
+        .e-icon-expandable {
+          margin:  $treeview-drag-icon-margin;
+        }
+      }
 
       .e-icon-collapsible::before,
       .e-icon-expandable::before {
+        font-size: $treeview-drag-icon-font-size;
         padding: $treeview-drag-icon-padding;
       }
 
@@ -545,10 +616,17 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
         border-radius: 15px;
         box-sizing: content-box;
         font-size: $treeview-drop-count-font-size;
-        line-height: normal;
+        @if $treeview-skin-name == 'bootstrap4' {
+          line-height: 1.5;
+          min-width: 10px;
+          padding: 0 5px;
+        }
+        @else {
+          line-height: normal;
+          min-width: 12px;
+          padding: 3px 5px 4px;
+        }
         margin-left: -12px;
-        min-width: 12px;
-        padding: 3px 5px 4px;
         position: absolute;
         text-align: center;
         top: -10px;
@@ -614,6 +692,13 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
           float: right;
         }
 
+        .e-icon-collapsible,
+        .e-icon-expandable {
+          @if $treeview-skin-name == 'bootstrap4' {
+            margin: $treeview-rtl-drag-margin;
+          }
+        }
+
         .e-drop-count {
           margin-right: -12px;
         }
@@ -659,13 +744,33 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
 
     .e-list-text {
       font-size: $treeview-big-font-size;
+
+      @if $treeview-skin-name == 'bootstrap4' {
+        color: $treeview-big-text-color;
+      }
     }
 
     .e-icon-collapsible::before,
     .e-icon-expandable::before {
       font-size: $treeview-big-icon-font-size;
+
+    }
+
+    &.e-drag-item {
+      .e-icon-collapsible,
+      .e-icon-expandable {
+        @if $treeview-skin-name == 'bootstrap4' {
+          padding: $treeview-big-drag-icon-padding;
     }
   }
+
+      .e-list-text {
+        @if $treeview-skin-name == 'bootstrap4' {
+          padding: $treeview-big-drag-text-padding;
+      }
+    }
+  }
+}
 
   #{&}.e-treeview {
     -webkit-tap-highlight-color: transparent;
@@ -736,6 +841,11 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
           border-color: $treeview-checkmark-border-color;
           color: $treeview-checkmark-color;
         }
+        @else if $treeview-skin-name == 'bootstrap4' {
+          background-color: $treeview-bootstrap4-checkmark-bgcolor;
+          border-color: $treeview-bootstrap4-checkmark-border-color;
+          color: $treeview-bootstrap4-checkmark-color;
+        }
       }
     }
 
@@ -775,9 +885,24 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
       border-color: $treeview-item-hover-border-color;
     }
 
-    .e-list-item.e-active > .e-fullrow {
-      background-color: $treeview-item-active-bg;
-      border-color: $treeview-item-active-border-color;
+    .e-list-item.e-active {
+      &> .e-fullrow {
+        background-color: $treeview-item-active-bg;
+        border-color: $treeview-item-active-border-color;
+      }
+
+      &.e-animation-active > .e-fullrow {
+        background-color: transparent;
+        border-color: transparent;
+      }
+
+      &.e-animation-active > .e-text-content {
+        color: $treeview-text-color;
+
+        .e-list-text {
+          color: $treeview-text-color;
+        }
+      }
     }
 
     .e-list-item.e-active.e-hover > .e-fullrow {
@@ -791,7 +916,8 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
 
     .e-list-item.e-disable {
 
-      .e-list-text {
+      > .e-text-content,
+      > .e-fullrow {
         color: $treeview-text-disable-color;
       }
 
@@ -807,6 +933,9 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
 
     .e-sibling::before {
       background: $treeview-drag-line-color;
+      @if $treeview-skin-name == 'bootstrap4' {
+        border: 1px;
+      }
     }
 
     .e-popup {
@@ -876,6 +1005,17 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
       .e-list-text {
         @include active-font-weight;
         color: $treeview-drag-item-color;
+        @if $treeview-skin-name == 'bootstrap4' {
+          padding: $treeview-drag-text-padding;
+      }
+    }
+
+      .e-text-content {
+        @if $treeview-skin-name == 'bootstrap4' {
+          -webkit-box-shadow: $treeview-drag-item-box-shadow;
+          border-radius: .5em;
+          box-shadow:  $treeview-drag-item-box-shadow;
+        }
       }
 
       .e-icons {
@@ -886,15 +1026,15 @@ $treeview-big-rtl-check-image-margin: 0 16px 0 0;
         background-color: $treeview-drop-count-bg;
         border-color: $treeview-drop-count-border;
         color: $treeview-drop-count-color;
-      }
     }
 
-    &.e-rtl {
+      &.e-rtl {
 
-      .e-sibling {
-        @include sibling-theme(right, left);
+        .e-sibling {
+          @include sibling-theme(right, left);
+        }
       }
-    }
   }
-  // sass-lint:enable no-vendor-prefixes
+    // sass-lint:enable no-vendor-prefixes
+  }
 }

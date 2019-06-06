@@ -1,240 +1,28 @@
 
+$ddl-input-font-size: 14px !default;
+$ddl-zero-value: 0 !default;
 
-$list-line-height: 36px;
-$header-font-weight: 600;
-$last-child-bottom-border: 0;
-$default-font-family: $font-family;
-$list-font-size: 15px;
-$list-border-size: 1px;
-$default-header-font-color: $default-font-color;
-$list-default-font-color: $default-font-color;
-$list-border-color: $default-border-color;
-$list-bg-color: $default-bg-color;
-$list-bottom-border: $list-border-size;
-$list-gradient-color: $default-gradient-color;
-$list-font-family: $default-font-family;
-$list-header-border-color: $header-border-color;
-$list-header-bg-color: $header-bg-color;
-$list-active-bg-color: $active-bg-color;
-$list-active-border-color: $active-border-color;
-$list-active-font-color: $active-font-color;
-$list-hover-bg-color: $hover-bg-color;
-$list-hover-border-color: $hover-border-color;
-$list-hover-font-color: $hover-font-color;
-$group-list-padding-left: 2em;
-$list-padding-right: 16px;
-$list-border-color: $grey-300;
-$list-gradient-color: $grey-white;
-$list-bg-color: $grey-white;
-$list-header-bg-color: $grey-50;
-$list-header-border-color: $grey-black;
-$nodata-font-color: $grey-black;
-$list-default-font-color: rgba($grey-light-font, .87);
-$list-active-border-color: $grey-white;
-$list-active-font-color: $accent;
-$list-active-bg-color: $grey-200;
-$list-hover-border-color: $grey-white;
-$list-hover-bg-color: $grey-200;
-$list-hover-font-color: rgba($grey-light-font, .87);
-$list-header-font-color: rgba($grey-light-font, .54);
-$list-font-size: 13px;
-$group-list-font-size: 13px;
-$list-font-family: $font-family;
-$list-border-size: 0;
-$default-header-font-color: rgba($grey-light-font, .54);
-$list-focus-color: $grey-50;
-$list-focus-border: 1px solid $grey-400;
-$group-list-padding-left: 2em;
-$list-header-padding-left: 16px;
-$list-text-indent: 16px;
-$list-padding-right: 16px;
-$bigger-list-header-font-size: 14px;
-
-@include export-module('dropdownbase-material') {
-  .e-dropdownbase .e-list-item .e-list-icon {
-    padding: 0 16px 0 0;
-  }
-}
-
-@include export-module('dropdownbase-layout') {
-  .e-bigger .e-dropdownbase,
-  .e-dropdownbase.e-bigger {
-    min-height: 45px;
-    @at-root {
-      & .e-list-item,
-      & .e-list-group-item,
-      & .e-fixed-head {
-        line-height: 48px;
-      }
-
-      & .e-list-item .e-list-icon {
-        font-size: 20px;
-      }
-    }
-  }
-
-  .e-dropdownbase {
-    display: block;
-    height: 100%;
-    min-height: 36px;
-    position: relative;
-    width: 100%;
-    @at-root {
-      & .e-list-parent {
-        margin: 0;
-        padding: 0;
-      }
-
-      & .e-list-group-item,
-      & .e-fixed-head {
-        cursor: default;
-      }
-
-      & .e-list-item {
-        cursor: pointer;
-        overflow: hidden;
-        position: relative;
-        text-overflow: ellipsis;
-        vertical-align: middle;
-        white-space: nowrap;
-        width: 100%;
-      }
-
-      & .e-list-item .e-list-icon {
-        font-size: 16px;
-        vertical-align: middle;
-      }
-
-      & .e-fixed-head {
-        position: absolute;
-        top: 0;.e-rtl & {
-          left: 33px;
-        }
-      }
-    }
-  }
-
-  .e-dropdownbase.e-content {
-    overflow: auto;
-    position: relative;
-  }
-
-  #{&}.e-popup.e-ddl .e-dropdownbase.e-nodata {
-    color: $nodata-font-color;
-    cursor: default;
-    font-family: $list-font-family;
-    font-size: 14px;
-    padding: 14px 16px;
-    text-align: center;
-  }
-
-  .e-rtl .e-dropdownbase.e-dd-group .e-list-item {
-    padding-right: $group-list-padding-left;
-  }
-
-  .e-dropdownbase.e-dd-group .e-list-item {
-    padding-left: $group-list-padding-left;
-    text-indent: 0;
-  }
-}
-@include export-module('dropdownbase-theme') {
-  .e-dropdownbase {
-    border-color: $list-border-color;
-    @at-root {
-      & .e-list-item {
-        background-color: $list-bg-color;
-        border-bottom: $list-bottom-border;
-        border-color: $list-gradient-color;
-        color: $list-default-font-color;
-        font-family: $list-font-family;
-        font-size: $list-font-size;
-        line-height: $list-line-height;
-        min-height: $list-line-height;
-        padding-right: $list-padding-right;
-        text-indent: $list-text-indent;
-      }
-
-      & .e-list-group-item,
-      .e-fixed-head {
-        background-color: $list-bg-color;
-        border-color: $list-gradient-color;
-        color: $list-header-font-color;
-        font-family: $list-font-family;
-        font-size: $group-list-font-size;
-        font-weight: $header-font-weight;
-        line-height: $list-line-height;
-        min-height: $list-line-height;
-        padding-left: $list-header-padding-left;
-        padding-right: $list-padding-right;
-      }
-
-      & .e-list-item.e-active,
-      & .e-list-item.e-active.e-hover {
-        background-color: $list-active-bg-color;
-        border-color: $list-active-border-color;
-        color: $list-active-font-color;
-       }
-
-      & .e-list-item.e-hover {
-        background-color: $list-hover-bg-color;
-        border-color: $list-hover-border-color;
-        color: $list-hover-font-color;
-      }
-
-      & .e-list-item:last-child {
-        border-bottom: $last-child-bottom-border;
-      }
-
-      & .e-list-item.e-item-focus {
-        background-color: $list-hover-bg-color;
-      }
-    }
-  }
-
-  .e-bigger .e-dropdownbase {
-    @at-root {
-      & .e-list-group-item,
-      & .e-fixed-head {
-        font-size: $bigger-list-header-font-size;
-      }
-    }
-  }
-}
-$input-font-size: 14px;
-$input-border: $border-size $border-type;
-$input-border-width: 1px;
-$input-font-family: $font-family;
-$zero-value: 0;
-$input-margin-bottom: $zero-value;
-$input-padding: 8px;
-$input-group-border-width: 1px;
-$bigger-list-font-size: 15px;
-$clear-icon-margin-right: 0;
-$default-border-color: $grey-300;
-$input-border: $border-size $border-type;
-$input-border-width: $zero-value $zero-value 1px $zero-value;
-$input-font-family: $font-family;
-$input-margin-bottom: 4px;
-$input-padding: 8px $zero-value 4px;
-$input-group-border-width: $zero-value;
-$active-font-color: $accent;
-$list-search-icon-padding: 12px 8px 8px;
-$list-filter-text-indent: 8px 16px 8px;
-$bigger-list-font-size: 14px;
-$list-box-shadow-color: rgba(0, 0, 0, .21);
-$filter-box-shadow-color: rgba(0, 0, 0, .3);
-$popup-background-color: $grey-white;
-$filter-border: 0;
-$filter-top-border: 0;
-$filter-padding: 0;
-$filter-box-shadow: 0 1.5px 5px -2px $filter-box-shadow-color;
-$filter-background-color: $grey-100;
-$clear-icon-margin-right: 66px;
-$back-icon-margin: 2.5px 10px 0 -52px;
-$back-icon-padding: 8px 16px;
-$search-icon-content: '\e993';
-$back-icon-content: '\e977';
-$ddl-icon-content: '\e969';
+$ddl-default-border-color: $grey-300 !default;
+$ddl-input-border: $border-size $border-type !default;
+$ddl-input-font-family: $font-family !default;
+$ddl-input-margin-bottom: 4px !default;
+$ddl-input-padding: 8px $ddl-zero-value 4px !default;
+$ddl-input-group-border-width: $ddl-zero-value !default;
+$ddl-active-font-color: $accent !default;
+$ddl-list-search-icon-padding: 12px 8px 8px !default;
+$ddl-list-filter-text-indent: 8px 16px 8px !default;
+$ddl-bigger-list-font-size: 14px !default;
+$ddl-list-box-shadow-color: rgba(0, 0, 0, .21) !default;
+$ddl-filter-box-shadow-color: rgba(0, 0, 0, .3) !default;
+$ddl-popup-background-color: $grey-white !default;
+$ddl-filter-border: 0 !default;
+$ddl-filter-top-border: 0 !default;
+$ddl-filter-padding: 0 !default;
+$ddl-filter-box-shadow: 0 1.5px 5px -2px $ddl-filter-box-shadow-color !default;
+$ddl-filter-background-color: $grey-100 !default;
+$ddl-clear-icon-margin-right: 66px !default;
+$ddl-back-icon-margin: 0 10px 0 -52px !default;
+$ddl-back-icon-padding: 8px 16px !default;
 
 @include export-module('dropdownlist-material') {
   .e-ddl.e-control-wrapper .e-ddl-icon::before {
@@ -248,7 +36,7 @@ $ddl-icon-content: '\e969';
   }
 
   .e-dropdownbase .e-list-item.e-active.e-hover {
-    color: $active-font-color;
+    color: $ddl-active-font-color;
   }
 
   .e-input-group:not(.e-disabled) .e-control#{&}.e-dropdownlist ~ .e-ddl-icon:active,
@@ -266,12 +54,12 @@ $ddl-icon-content: '\e969';
 
   .e-ddl#{&}.e-popup {
     border: 0;
-    box-shadow: 0 2px 3px 1px $list-box-shadow-color;
+    box-shadow: 0 2px 3px 1px $ddl-list-box-shadow-color;
     margin-top: 2px;
   }
 
   .e-bigger #{&}.e-popup.e-ddl-device-filter .e-input-group.e-input-focus:not(.e-success):not(.e-warning):not(.e-error) {
-    border-color: $default-border-color;
+    border-color: $ddl-default-border-color;
   }
 
   .e-bigger #{&}.e-popup.e-ddl-device-filter {
@@ -319,22 +107,22 @@ $ddl-icon-content: '\e969';
     border-bottom-width: 0;
   }
 }
-
-@include export-module('dropdownlist-icons') {
+@include export-module('dropdownlist-material-icons') {
   .e-ddl .e-search-icon::before {
-    content: $search-icon-content;
+    content: '\e993';
   }
 
   .e-ddl .e-back-icon::before {
-    content: $back-icon-content;
+    content: '\e977';
     font-size: 20px;
   }
 
   .e-ddl.e-input-group.e-control-wrapper .e-ddl-icon::before {
-    content: $ddl-icon-content;
+    content: '\e969';
     font-family: 'e-icons';
   }
 }
+
 @include export-module('dropdownlist-layout') {
   .e-bigger .e-input-group.e-ddl {
     & .e-input-filter,
@@ -346,7 +134,7 @@ $ddl-icon-content: '\e969';
   .e-bigger .e-ddl#{&}.e-popup {
     & .e-list-item,
     & .e-list-group-item {
-      font-size: $bigger-list-font-size;
+      font-size: $ddl-bigger-list-font-size;
     }
 
     & .e-input-group {
@@ -377,11 +165,11 @@ $ddl-icon-content: '\e969';
   }
 
   .e-bigger .e-ddl-device .e-input-group .e-clear-icon {
-    margin-right: $clear-icon-margin-right;
+    margin-right: $ddl-clear-icon-margin-right;
   }
 
   .e-ddl-device-filter .e-filter-parent {
-    background-color: $filter-background-color;
+    background-color: $ddl-filter-background-color;
   }
 
   // sass-lint:disable no-vendor-prefixes
@@ -395,11 +183,11 @@ $ddl-icon-content: '\e969';
   // sass-lint:enable no-vendor-prefixes
 
   .e-filter-parent {
-    border: $filter-border;
-    border-top-width: $filter-top-border;
-    box-shadow: $filter-box-shadow;
+    border: $ddl-filter-border;
+    border-top-width: $ddl-filter-top-border;
+    box-shadow: $ddl-filter-box-shadow;
     display: block;
-    padding: $filter-padding;
+    padding: $ddl-filter-padding;
   }
 
   .e-ddl.e-input-group:not(.e-disabled) {
@@ -416,26 +204,26 @@ $ddl-icon-content: '\e969';
    }
 
   .e-ddl#{&}.e-popup {
-    background: $popup-background-color;
-    border: 1px solid $default-border-color;
+    background: $ddl-popup-background-color;
+    border: 1px solid $ddl-default-border-color;
     position: absolute;
     @at-root {
       & .e-search-icon {
         margin: 0;
         opacity: .57;
-        padding: $list-search-icon-padding;
+        padding: $ddl-list-search-icon-padding;
       }
 
       & .e-filter-parent .e-back-icon {
-        margin: $back-icon-margin;
-        padding: $back-icon-padding;
+        margin: $ddl-back-icon-margin;
+        padding: $ddl-back-icon-padding;
         position: absolute;
       }
 
       &.e-rtl .e-filter-parent .e-input-group.e-control-wrapper .e-input-filter,
       & .e-filter-parent .e-input-filter,
       & .e-filter-parent .e-input-filter:focus {
-        padding: $list-filter-text-indent;
+        padding: $ddl-list-filter-text-indent;
       }
 
       & .e-input-group {
@@ -474,21 +262,22 @@ $ddl-icon-content: '\e969';
   .e-ddl.e-input-group input[readonly] ~ .e-clear-icon:not(.e-clear-icon-hide),
   .e-float-input input[readonly] ~ .e-clear-icon:not(.e-clear-icon-hide),
   .e-float-input.e-input-group input[readonly] ~ .e-clear-icon:not(.e-clear-icon-hide) {
-    display: block;
     opacity: 1;
   }
 
   .e-ddl.e-input-group {
     .e-input-value,
     .e-input-value:focus {
-      font-family: $input-font-family;
-      font-size: $input-font-size;
+      font-family: $ddl-input-font-family;
+      font-size: $ddl-input-font-size;
       height: auto;
-      margin: $zero-value;
+      margin: $ddl-zero-value;
       outline: none;
       width: 100%;
     }
 
+    input[readonly].e-input,
+    input[readonly],
     .e-dropdownlist {
       pointer-events: none;
     }
@@ -502,11 +291,11 @@ $ddl-icon-content: '\e969';
 }
 @include export-module('dropdownlist-theme') {
   #{&}.e-popup {
-    border-color: $default-border-color;
+    border-color: $ddl-default-border-color;
   }
 
   .e-float-input.e-input-group.e-ddl.e-control.e-icon-anim>.e-float-text,
   .e-float-input.e-input-focus.e-input-group.e-ddl.e-control.e-keyboard>.e-float-text {
-    color: $active-font-color;
+    color: $ddl-active-font-color;
   }
 }

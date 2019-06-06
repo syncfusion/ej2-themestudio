@@ -1,91 +1,42 @@
 
-$skin-name: 'material';
-$btn-margin: -1px;
-$btn-margin-left: 0;
-$btn-round-radius: 20px;
-$wrapper-border: 2px;
-$icon-font-size: 14px;
-$icon-font-size-bigger: 16px;
+$btn-grp-margin: -1px !default;
+$btn-grp-margin-left: 0 !default;
+$btn-grp-wrapper-border: 2px !default;
+$btn-grp-round-radius: 20px !default;
+$btn-grp-icon-font-size: 14px !default;
+$btn-grp-icon-font-size-bigger: 16px !default;
 
 //Normal Outline GroupButton
-$outline-hover-border-color: transparent;
-$outline-focus-border-color: transparent;
-$outline-active-border-color: transparent;
-$outline-focus-color: none;
+$btn-grp-outline-focus-border-color: transparent !default;
+$btn-grp-outline-focus-color: none !default;
 
 //Outline Primary
-$outline-primary-hover-border-color: transparent;
-$outline-primary-focus-border-color: transparent;
-$outline-primary-active-border-color: transparent;
-$outline-focus-primary-color: none;
+$btn-grp-outline-primary-focus-border-color: transparent !default;
+$btn-grp-outline-focus-primary-color: none !default;
 
 //Outline Success
-$outline-success-hover-border-color: transparent;
-$outline-success-focus-border-color: transparent;
-$outline-success-active-border-color: transparent;
-$outline-focus-success-color: none;
+$btn-grp-outline-success-focus-border-color: transparent !default;
+$btn-grp-outline-focus-success-color: none !default;
 
 //Outline Info
-$outline-info-hover-border-color: transparent;
-$outline-info-focus-border-color: transparent;
-$outline-info-active-border-color: transparent;
-$outline-focus-info-color: none;
+$btn-grp-outline-info-focus-border-color: transparent !default;
+$btn-grp-outline-focus-info-color: none !default;
 
 //Outline warning
-$outline-warning-hover-border-color: transparent;
-$outline-warning-focus-border-color: transparent;
-$outline-warning-active-border-color: transparent;
-$outline-focus-warning-color: none;
+$btn-grp-outline-warning-focus-border-color: transparent !default;
+$btn-grp-outline-focus-warning-color: none !default;
 
 //Outline danger
-$outline-danger-hover-border-color: transparent;
-$outline-danger-focus-border-color: transparent;
-$outline-danger-active-border-color: transparent;
-$outline-focus-danger-color: none;
-$skin-name: 'material';
-$btn-margin: -1px;
-$btn-margin-left: 0;
-$wrapper-border: 2px;
-$btn-round-radius: 20px;
-$icon-font-size: 14px;
-$icon-font-size-bigger: 16px;
-
-//Normal Outline GroupButton
-$outline-hover-border-color: transparent;
-$outline-focus-border-color: transparent;
-$outline-active-border-color: transparent;
-
-//Outline Primary
-$outline-primary-hover-border-color: transparent;
-$outline-primary-focus-border-color: transparent;
-$outline-primary-active-border-color: transparent;
-
-//Outline Success
-$outline-success-hover-border-color: transparent;
-$outline-success-focus-border-color: transparent;
-$outline-success-active-border-color: transparent;
-
-//Outline Info
-$outline-info-hover-border-color: transparent;
-$outline-info-focus-border-color: transparent;
-$outline-info-active-border-color: transparent;
-
-//Outline warning
-$outline-warning-hover-border-color: transparent;
-$outline-warning-focus-border-color: transparent;
-$outline-warning-active-border-color: transparent;
-
-//Outline danger
-$outline-danger-hover-border-color: transparent;
-$outline-danger-focus-border-color: transparent;
-$outline-danger-active-border-color: transparent;
+$btn-grp-outline-danger-focus-border-color: transparent !default;
+$btn-grp-outline-focus-danger-color: none !default;
 
 @include export-module('button-group-layout') {
 // sass-lint:disable-all
-  &.e-btn-group {
+  .e-btn-group,
+  .e-css.e-btn-group {
     display: -webkit-inline-flex;
     display: inline-flex;
-    border-radius: $wrapper-border;
+    border-radius: $btn-grp-wrapper-border;
     -webkit-flex-direction: row;
     flex-direction: row;
     position: relative;
@@ -103,7 +54,7 @@ $outline-danger-active-border-color: transparent;
     input {
       -moz-appearance: none;
       height: 1px;
-      margin: 0 0 0 $btn-margin;
+      margin: 0 0 0 $btn-grp-margin;
       opacity: 0;
       position: absolute;
       width: 1px;
@@ -117,13 +68,13 @@ $outline-danger-active-border-color: transparent;
     }
 
     .e-btn-icon {
-      font-size: $icon-font-size;
+      font-size: $btn-grp-icon-font-size;
     }
 
     // Sharp corner for sides individual Button and SplitButton
     &:not(.e-rtl):not(.e-vertical) {
       .e-btn {
-        margin-left: $btn-margin-left;
+        margin-left: $btn-grp-margin-left;
 
         &:not(:first-of-type):not(:last-of-type) {
           border-radius: 0;
@@ -182,7 +133,7 @@ $outline-danger-active-border-color: transparent;
     // RTL with Sharp corner combinations
     &.e-rtl {
       .e-btn {
-        margin-left: $btn-margin-left;
+        margin-left: $btn-grp-margin-left;
 
         &:not(:first-of-type):not(:last-of-type) {
           border-radius: 0;
@@ -244,13 +195,13 @@ $outline-danger-active-border-color: transparent;
       flex-direction: column;
 
       input {
-        margin: $btn-margin 0 0;
+        margin: $btn-grp-margin 0 0;
       }
 
       // Round corner
       .e-btn {
         &:not(.e-outline) {
-          margin-top: $btn-margin;
+          margin-top: $btn-grp-margin;
         }
 
         &:not(:first-of-type):not(:last-of-type) {
@@ -276,17 +227,17 @@ $outline-danger-active-border-color: transparent;
     // Rounded Corner
     &.e-round-corner:not(.e-vertical) {
       &:not(.e-rtl) {
-        border-radius: $btn-round-radius;
+        border-radius: $btn-grp-round-radius;
 
         .e-btn {
           &:first-of-type {
-            border-bottom-left-radius: $btn-round-radius;
-            border-top-left-radius: $btn-round-radius;
+            border-bottom-left-radius: $btn-grp-round-radius;
+            border-top-left-radius: $btn-grp-round-radius;
           }
 
           &:last-of-type {
-            border-bottom-right-radius: $btn-round-radius;
-            border-top-right-radius: $btn-round-radius;
+            border-bottom-right-radius: $btn-grp-round-radius;
+            border-top-right-radius: $btn-grp-round-radius;
           }
 
           &:last-of-type:not(:last-child) {
@@ -303,8 +254,8 @@ $outline-danger-active-border-color: transparent;
 
           &:first-child {
             .e-btn:first-child {
-              border-bottom-left-radius: $btn-round-radius;
-              border-top-left-radius: $btn-round-radius;
+              border-bottom-left-radius: $btn-grp-round-radius;
+              border-top-left-radius: $btn-grp-round-radius;
             }
 
             .e-btn:last-child {
@@ -320,8 +271,8 @@ $outline-danger-active-border-color: transparent;
             }
 
             .e-btn:last-child {
-              border-bottom-right-radius: $btn-round-radius;
-              border-top-right-radius: $btn-round-radius;
+              border-bottom-right-radius: $btn-grp-round-radius;
+              border-top-right-radius: $btn-grp-round-radius;
             }
           }
         }
@@ -329,17 +280,17 @@ $outline-danger-active-border-color: transparent;
 
       // Rounded corner with RTL
       &.e-rtl {
-        border-radius: $btn-round-radius;
+        border-radius: $btn-grp-round-radius;
 
         .e-btn {
           &:first-of-type {
-            border-bottom-right-radius: $btn-round-radius;
-            border-top-right-radius: $btn-round-radius;
+            border-bottom-right-radius: $btn-grp-round-radius;
+            border-top-right-radius: $btn-grp-round-radius;
           }
 
           &:last-of-type {
-            border-bottom-left-radius: $btn-round-radius;
-            border-top-left-radius: $btn-round-radius;
+            border-bottom-left-radius: $btn-grp-round-radius;
+            border-top-left-radius: $btn-grp-round-radius;
           }
 
           &:last-of-type:not(:last-child) {
@@ -357,9 +308,11 @@ $outline-danger-active-border-color: transparent;
   }
 
   .e-bigger .e-btn-group,
-  .e-bigger.e-btn-group {
+  .e-bigger.e-btn-group,
+  .e-bigger .e-css.e-btn-group,
+  .e-bigger.e-css.e-btn-group  {
     .e-btn-icon {
-      font-size: $icon-font-size-bigger;
+      font-size: $btn-grp-icon-font-size-bigger;
     }
   }
 }
@@ -399,63 +352,34 @@ $outline-danger-active-border-color: transparent;
   .e-btn:focus,
   input:focus+label.e-btn {
     &.e-outline {
-      border-color: $outline-focus-border-color;
-      outline-color: $outline-focus-color;
+      border-color: $btn-grp-outline-focus-border-color;
+      outline-color: $btn-grp-outline-focus-color;
 
       &.e-primary {
-        border-color: $outline-primary-focus-border-color;
-        outline-color: $outline-focus-primary-color;
+        border-color: $btn-grp-outline-primary-focus-border-color;
+        outline-color: $btn-grp-outline-focus-primary-color;
       }
 
       &.e-success {
-        border-color: $outline-success-focus-border-color;
-        outline-color: $outline-focus-success-color;
+        border-color: $btn-grp-outline-success-focus-border-color;
+        outline-color: $btn-grp-outline-focus-success-color;
       }
 
       &.e-info {
-        border-color: $outline-info-focus-border-color;
-        outline-color: $outline-focus-info-color;
+        border-color: $btn-grp-outline-info-focus-border-color;
+        outline-color: $btn-grp-outline-focus-info-color;
       }
 
       &.e-warning {
-        border-color: $outline-warning-focus-border-color;
-        outline-color: $outline-focus-warning-color;
+        border-color: $btn-grp-outline-warning-focus-border-color;
+        outline-color: $btn-grp-outline-focus-warning-color;
       }
 
       &.e-danger {
-        border-color: $outline-danger-focus-border-color;
-        outline-color: $outline-focus-danger-color;
+        border-color: $btn-grp-outline-danger-focus-border-color;
+        outline-color: $btn-grp-outline-focus-danger-color;
      }
    }
-  }
-
-  // Outline active and checked
-  .e-btn:active,
-  input:active+label.e-btn,
-  input:checked+label.e-btn {
-    &.e-outline {
-      border-color: $outline-active-border-color;
-
-      &.e-primary {
-        border-color: $outline-primary-active-border-color;
-      }
-
-      &.e-success {
-        border-color: $outline-success-active-border-color;
-      }
-
-      &.e-info {
-        border-color: $outline-info-active-border-color;
-      }
-
-      &.e-warning {
-        border-color: $outline-warning-active-border-color;
-      }
-
-      &.e-danger {
-        border-color: $outline-danger-active-border-color;
-      }
-    }
   }
 }
 
@@ -466,347 +390,363 @@ $outline-danger-active-border-color: transparent;
   color: $btn-disabled-color;
 }
 @include export-module('button-group-theme') {
-// sass-lint:disable-all
-  .e-btn-group {
-    &:not(.e-outline) {
-      box-shadow: $btn-box-shadow;
-    }
-
-    @if $skin-name == 'material' {
-      .e-btn {
+  // sass-lint:disable-all
+    .e-btn-group,
+    .e-css.e-btn-group {
+      &:not(.e-outline) {
+        box-shadow: $btn-box-shadow;
+      }
+  
+      @if $skin-name == 'material' or $skin-name == 'bootstrap4' {
+        .e-btn {
+          box-shadow: none;
+        }
+      }
+  
+      .e-btn:hover {
         box-shadow: none;
       }
-    }
-
-    .e-btn:hover {
-      box-shadow: none;
-    }
-
-    //Focus state for Normal and Outline GroupButton
-    .e-btn:focus,
-    input:focus+label.e-btn {
-      @include button-focus;
-      box-shadow: none;
-      outline-color: $outline-focus-color;
-      @if $skin-name == 'fabric' {
-        outline-offset: -2px;
+  
+      //Focus state for Normal and Outline GroupButton
+      .e-btn:focus,
+      input:focus+label.e-btn {
+        @include button-focus;
+        box-shadow: none;
+        outline-color: $btn-grp-outline-focus-color;
+        @if $skin-name == 'fabric' {
+          outline-offset: -2px;
+        }
+  
+        @if $skin-name == 'highcontrast' {
+          outline-offset: -4px;
+        }
+  
+        &.e-primary {
+          @include primary-focus;
+          box-shadow: none;
+          outline-color: $btn-grp-outline-focus-primary-color;
+          @if $skin-name == 'fabric' {
+            border-color: transparent;
+          }
+        }
+  
+        &.e-success {
+          @include success-focus;
+          box-shadow: none;
+          outline-color: $btn-grp-outline-focus-success-color;
+          @if $skin-name == 'fabric' {
+            border-color: transparent;
+          }
+        }
+  
+        &.e-info {
+          @include info-focus;
+          box-shadow: none;
+          outline-color: $btn-grp-outline-focus-info-color;
+          @if $skin-name == 'fabric' {
+            border-color: transparent;
+          }
+        }
+  
+        &.e-warning {
+          @include warning-focus;
+          box-shadow: none;
+          outline-color: $btn-grp-outline-focus-warning-color;
+          @if $skin-name == 'fabric' {
+            border-color: transparent;
+          }
+        }
+  
+        &.e-danger {
+          @include danger-focus;
+          box-shadow: none;
+          outline-color: $btn-grp-outline-focus-danger-color;
+          @if $skin-name == 'fabric' {
+            border-color: transparent;
+          }
+        }
+  
+        &.e-link {
+          @include link-focus;
+          background-color: transparent;
+          border-color: transparent;
+          box-shadow: none;
+          outline: none;
+        }
+  
+        &.e-outline {
+          @include outline-focus;
+          box-shadow: none;
+  
+          &.e-primary {
+            @include outline-primary-focus;
+            box-shadow: none;
+          }
+  
+          &.e-success {
+            @include outline-success-focus;
+            box-shadow: none;
+          }
+  
+          &.e-info {
+            @include outline-info-focus;
+              box-shadow: none;
+          }
+  
+          &.e-warning {
+            @include outline-warning-focus;
+            box-shadow: none;
+          }
+  
+          &.e-danger {
+            @include outline-danger-focus;
+            box-shadow: none;
+          }
+        }
       }
-
+  
+      //Active/Checked state for Normal and Outline GroupButton
+      .e-btn:active,
+      input:active+label.e-btn,
+      input:checked+label.e-btn {
+        @include button-active;
+        @if $skin-name != 'bootstrap' {
+          box-shadow: none;
+        }
+  
+        &.e-primary {
+          @include primary-active;
+          @if $skin-name != 'bootstrap' {
+            box-shadow: none;
+          }
+        }
+  
+        &.e-success {
+          @include success-active;
+          @if $skin-name != 'bootstrap' {
+            box-shadow: none;
+          }
+        }
+  
+        &.e-info {
+          @include info-active;
+          @if $skin-name != 'bootstrap' {
+            box-shadow: none;
+          }
+        }
+  
+        &.e-warning {
+          @include warning-active;
+          @if $skin-name != 'bootstrap' {
+            box-shadow: none;
+          }
+        }
+  
+        &.e-danger {
+          @include danger-active;
+          @if $skin-name != 'bootstrap' {
+            box-shadow: none;
+          }
+        }
+  
+        &.e-outline {
+          @include outline-active;
+          @if $skin-name != 'bootstrap' {
+            box-shadow: none;
+          }
+  
+          &.e-primary {
+            @include outline-primary-active;
+            @if $skin-name != 'bootstrap' {
+              box-shadow: none;
+            }
+          }
+  
+          &.e-success {
+            @include outline-success-active;
+            @if $skin-name != 'bootstrap' {
+              box-shadow: none;
+            }
+          }
+  
+          &.e-info {
+            @include outline-info-active;
+            @if $skin-name != 'bootstrap' {
+              box-shadow: none;
+            }
+          }
+  
+          &.e-warning {
+            @include outline-warning-active;
+            @if $skin-name != 'bootstrap' {
+              box-shadow: none;
+            }
+          }
+  
+          &.e-danger {
+            @include outline-danger-active;
+            @if $skin-name != 'bootstrap' {
+              box-shadow: none;
+            }
+          }
+        }
+      }
+  
+      //Disabled state for Normal and Outline GroupButton
+      .e-btn:disabled,
+      input:disabled+label.e-btn {
+        @include disabled;
+        @if $skin-name != 'bootstrap4' {
+          border-color: $btn-border-color;
+        }
+  
+        &.e-primary {
+          @include primary-disabled;
+          @if $skin-name != 'bootstrap4' {
+            border-color: $btn-primary-border-color;
+          }
+        }
+  
+        &.e-success {
+          @include success-disabled;
+          @if $skin-name != 'bootstrap4' {
+            border-color: $btn-success-border-color;
+          }
+        }
+  
+        &.e-info {
+          @include info-disabled;
+          @if $skin-name != 'bootstrap4' {
+            border-color: $btn-info-border-color;
+          }
+        }
+  
+        &.e-warning {
+          @include warning-disabled;
+          @if $skin-name != 'bootstrap4' {
+            border-color: $btn-warning-border-color;
+          }
+        }
+  
+        &.e-danger {
+          @include danger-disabled;
+          @if $skin-name != 'bootstrap4' {
+            border-color: $btn-danger-border-color;
+          }
+        }
+  
+        &.e-link {
+          @include link-disabled;
+          @if $skin-name != 'bootstrap4' {
+            border-color: $btn-link-border-color;
+          }
+        }
+  
+        &.e-outline {
+          @include outline-disabled;
+          border-color: $btn-outline-border-color;
+  
+          &.e-primary {
+            @include outline-primary-disabled;
+            border-color: $btn-primary-bgcolor;
+          }
+  
+          &.e-success {
+            @include outline-success-disabled;
+            border-color: $btn-success-bgcolor;
+          }
+  
+          &.e-info {
+            @include outline-info-disabled;
+            border-color: $btn-info-bgcolor;
+          }
+  
+          &.e-warning {
+            @include outline-warning-disabled;
+            border-color: $btn-warning-bgcolor;
+          }
+  
+          &.e-danger {
+            @include outline-danger-disabled;
+            border-color: $btn-danger-bgcolor;
+          }
+        }
+      }
+  
+      //Normal ButtonGroup layout for highcontrast theme
       @if $skin-name == 'highcontrast' {
-        outline-offset: -4px;
-      }
-
-      &.e-primary {
-        @include primary-focus;
-        box-shadow: none;
-        outline-color: $outline-focus-primary-color;
-        @if $skin-name == 'fabric' {
-          border-color: transparent;
-        }
-      }
-
-      &.e-success {
-        @include success-focus;
-        box-shadow: none;
-        outline-color: $outline-focus-success-color;
-        @if $skin-name == 'fabric' {
-          border-color: transparent;
-        }
-      }
-
-      &.e-info {
-        @include info-focus;
-        box-shadow: none;
-        outline-color: $outline-focus-info-color;
-        @if $skin-name == 'fabric' {
-          border-color: transparent;
-        }
-      }
-
-      &.e-warning {
-        @include warning-focus;
-        box-shadow: none;
-        outline-color: $outline-focus-warning-color;
-        @if $skin-name == 'fabric' {
-          border-color: transparent;
-        }
-      }
-
-      &.e-danger {
-        @include danger-focus;
-        box-shadow: none;
-        outline-color: $outline-focus-danger-color;
-        @if $skin-name == 'fabric' {
-          border-color: transparent;
-        }
-      }
-
-      &.e-link {
-        @include link-focus;
-        background-color: transparent;
-        border-color: transparent;
-        box-shadow: none;
-        outline: none;
-      }
-
-      &.e-outline {
-        @include outline-focus;
-        box-shadow: none;
-
-        &.e-primary {
-          @include outline-primary-focus;
-          box-shadow: none;
-        }
-
-        &.e-success {
-          @include outline-success-focus;
-          box-shadow: none;
-        }
-
-        &.e-info {
-          @include outline-info-focus;
-          box-shadow: none;
-        }
-
-        &.e-warning {
-          @include outline-warning-focus;
-          box-shadow: none;
-        }
-
-        &.e-danger {
-          @include outline-danger-focus;
-          box-shadow: none;
-        }
-      }
-    }
-
-    //Active/Checked state for Normal and Outline GroupButton
-    .e-btn:active,
-    input:active+label.e-btn,
-    input:checked+label.e-btn {
-      @include button-active;
-      @if $skin-name != 'bootstrap' {
-        box-shadow: none;
-      }
-
-      &.e-primary {
-        @include primary-active;
-        @if $skin-name != 'bootstrap' {
-          box-shadow: none;
-        }
-      }
-
-      &.e-success {
-        @include success-active;
-        @if $skin-name != 'bootstrap' {
-          box-shadow: none;
-        }
-      }
-
-      &.e-info {
-        @include info-active;
-        @if $skin-name != 'bootstrap' {
-          box-shadow: none;
-        }
-      }
-
-      &.e-warning {
-        @include warning-active;
-        @if $skin-name != 'bootstrap' {
-          box-shadow: none;
-        }
-      }
-
-      &.e-danger {
-        @include danger-active;
-        @if $skin-name != 'bootstrap' {
-          box-shadow: none;
-        }
-      }
-
-      &.e-outline {
-        @include outline-active;
-        @if $skin-name != 'bootstrap' {
-          box-shadow: none;
-        }
-
-        &.e-primary {
-          @include outline-primary-active;
-          @if $skin-name != 'bootstrap' {
-            box-shadow: none;
+        &:not(.e-vertical):not(.e-rtl) {
+          .e-btn {
+            @include apply-border;
           }
         }
-
-        &.e-success {
-          @include outline-success-active;
-          @if $skin-name != 'bootstrap' {
-            box-shadow: none;
+  
+        &.e-vertical:not(.e-rtl) {
+          .e-btn {
+            @include apply-border-vertical;
           }
         }
-
-        &.e-info {
-          @include outline-info-active;
-          @if $skin-name != 'bootstrap' {
-            box-shadow: none;
+  
+        .e-btn:hover {
+          border-color: $btn-border-color;
+  
+          &.e-primary {
+            border-color: $btn-primary-bgcolor;
           }
-        }
-
-        &.e-warning {
-          @include outline-warning-active;
-          @if $skin-name != 'bootstrap' {
-            box-shadow: none;
+  
+          &.e-success {
+            border-color: $btn-success-bgcolor;
           }
-        }
-
-        &.e-danger {
-          @include outline-danger-active;
-          @if $skin-name != 'bootstrap' {
-            box-shadow: none;
+  
+          &.e-info {
+            border-color: $btn-info-bgcolor;
+          }
+  
+          &.e-warning {
+            border-color: $btn-warning-bgcolor;
+          }
+  
+          &.e-danger {
+            border-color: $btn-danger-bgcolor;
           }
         }
       }
-    }
-
-    //Disabled state for Normal and Outline GroupButton
-    .e-btn:disabled,
-    input:disabled+label.e-btn {
-      @include disabled;
-      border-color: $btn-border-color;
-
-      &.e-primary {
-        @include primary-disabled;
-        border-color: $btn-primary-border-color;
-      }
-
-      &.e-success {
-        @include success-disabled;
-        border-color: $btn-success-border-color;
-      }
-
-      &.e-info {
-        @include info-disabled;
-        border-color: $btn-info-border-color;
-      }
-
-      &.e-warning {
-        @include warning-disabled;
-        border-color: $btn-warning-border-color;
-      }
-
-      &.e-danger {
-        @include danger-disabled;
-        border-color: $btn-danger-border-color;
-      }
-
-      &.e-link {
-        @include link-disabled;
-        border-color: $btn-link-border-color;
-      }
-
-      &.e-outline {
-        @include outline-disabled;
-        border-color: $btn-outline-border-color;
-
-        &.e-primary {
-          @include outline-primary-disabled;
-          border-color: $btn-primary-bgcolor;
+  
+      &:not(.e-vertical):not(.e-rtl) {// Outline GroupButton - Horizontal orientation
+        .e-outline {
+          @if $skin-name != 'bootstrap' {
+            @include apply-border;
+          }
         }
-
-        &.e-success {
-          @include outline-success-disabled;
-          border-color: $btn-success-bgcolor;
-        }
-
-        &.e-info {
-          @include outline-info-disabled;
-          border-color: $btn-info-bgcolor;
-        }
-
-        &.e-warning {
-          @include outline-warning-disabled;
-          border-color: $btn-warning-bgcolor;
-        }
-
-        &.e-danger {
-          @include outline-danger-disabled;
-          border-color: $btn-danger-bgcolor;
-        }
+        @include different-states;
       }
-    }
-
-    //Normal ButtonGroup layout for highcontrast theme
-    @if $skin-name == 'highcontrast' {
-      &:not(.e-vertical):not(.e-rtl) {
-        .e-btn {
-          @include apply-border;
-        }
-      }
-
-      &.e-vertical:not(.e-rtl) {
-        .e-btn {
+  
+      &.e-vertical:not(.e-rtl) {// Outline GroupButton - Vertical Orientation
+        .e-outline {
           @include apply-border-vertical;
         }
+        @include different-states;
       }
-
-      .e-btn:hover {
-        border-color: $btn-border-color;
-
-        &.e-primary {
-          border-color: $btn-primary-bgcolor;
-        }
-
-        &.e-success {
-          border-color: $btn-success-bgcolor;
-        }
-
-        &.e-info {
-          border-color: $btn-info-bgcolor;
-        }
-
-        &.e-warning {
-          border-color: $btn-warning-bgcolor;
-        }
-
-        &.e-danger {
-          border-color: $btn-danger-bgcolor;
-        }
-      }
-    }
-
-    &:not(.e-vertical):not(.e-rtl) {// Outline GroupButton - Horizontal orientation
-      .e-outline {
-        @if $skin-name != 'bootstrap' {
-          @include apply-border;
-        }
-      }
-      @include different-states;
-    }
-
-    &.e-vertical:not(.e-rtl) {// Outline GroupButton - Vertical Orientation
-      .e-outline {
-        @include apply-border-vertical;
-      }
-      @include different-states;
-    }
-
-    // RTL
-    &.e-rtl {
-      .e-btn {
-        @if $skin-name != 'bootstrap' {
-          &:not(:first-of-type):not(:last-of-type) {
-            border-left: transparent;
-            border-right: transparent;
-          }
-
-          &:first-of-type {
-            border-left: transparent;
-          }
-
-          &:last-of-type {
-            border-right: transparent;
+  
+      // RTL
+      &.e-rtl {
+        .e-btn {
+          @if $skin-name != 'bootstrap' {
+            &:not(:first-of-type):not(:last-of-type) {
+              border-left: transparent;
+              border-right: transparent;
+            }
+  
+            &:first-of-type {
+              border-left: transparent;
+            }
+  
+            &:last-of-type {
+              border-right: transparent;
+            }
           }
         }
       }
     }
   }
-}
+  

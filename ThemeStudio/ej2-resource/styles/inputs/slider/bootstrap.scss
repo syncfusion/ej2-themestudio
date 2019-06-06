@@ -1,158 +1,156 @@
 
-$skin-name: 'default';
-$skin-name: 'bootstrap';
-$slider-bg-color: $grey-white;
-$slider-disabled-bg-color: $grey-white;
-$slider-active-bg-color: $grey-white;
-$slider-disabled-opacity: .65;
-$slider-start-handle-border-size: 1px solid $grey-cc;
-$slider-border-radius: 4px;
-$slider-height: 10px;
-$slider-handle-border-size: 1px solid;
-$slider-handle-border-color: $grey-cc;
-$slider-handle-height: 16px;
-$slider-handle-width: 16px;
-$slider-handle-mobile-height: 18px;
-$slider-handle-mobile-width: 18px;
-$slider-handle-border-radius: 100%;
-$slider-button-icon-color: $grey-white;
-$slider-handle-top: -4px;
-$slider-handle-mobile-top: -4px;
-$slider-h-handle-margin: 0;
-$slider-h-handle-mobile-margin: 0;
-$rtl-slider-h-handle-margin: 0 -8px 0 0;
-$rtl-slider-h-handle-mobile-margin: 0;
-$slider-v-handle-margin: -8px;
-$slider-v-handle-mobile-margin: 0;
-$rtl-slider-v-handle-margin: 0;
-$rtl-slider-v-handle-mobile-margin: 0;
-$slider-range-bar-color: $brand-primary;
-$slider-range-bar-hover-color: $brand-primary;
-$slider-color: $grey-base;
-$slider-handle-color: $grey-white;
-$slider-handle-start-border-color: $grey-white;
-$slider-handle-focus-bg-color: rgba($grey-base, .24);
-$slider-tick-color: $grey-dark;
-$slider-button-border-color: $grey-light;
-$slider-button-bg-color: $grey-light;
-$slider-button-color-border: transparent;
-$slider-btn-focus-color:  $grey-dark;
-$slider-btn-focus-border-color: $grey-dark;
-$slider-btn-focus-after-color: $grey-dark;
-$slider-container-height: 10px;
-$slider-normal-handle-border-size: 1px solid;
-$slider-normal-handle-border-color:  $grey-cc;
-$slider-handle-bg-color: $grey-white;
-$slider-handle-hover-color: $grey-e6;
-$slider-disabled-handle-bg-color: $grey-white;
-$slider-disabled-handle-hover-color: $grey-cc;
-$slider-disabled-handle-normal-border-color: $grey-cc;
-$slider-disabled-normal-handle-border-color: $grey-cc;
-$slider-disabled-range-bar-color: $brand-primary;
-$slider-disabled-button-bg-color: $grey-light;
-$slider-hover-color: $grey-white;
-$slider-tooltip-padding: 2px 12px;
-$slider-start-transform: none;
-$slider-mid-transform: none;
-$slider-final-transform: none;
-$slider-handle-after-position: relative;
-$slider-handle-hover-start: scale(1);
-$slider-handle-hover-end: scale(1);
-$slider-start-handle-hover-end: scale(1);
-$slider-handle-normal-border-color: $grey-cc;
-$slider-handle-hover-border-color: $grey-cc;
-$tick-after-height: 5px;
-$tick-after-top: -9px;
-$largetick-before-top: -9px;
-$largetick-before-height: 8px;
-$largetick-after-height: 8px;
-$largetick-after-top: 9px;
-$tick-before-height: 5px;
-$tick-before-top: 6px;
-$slider-btn-container-height: 10px;
-$slider-horizontal-btn-icon-prev: '\e904';
-$slider-vertical-btn-icon-prev: '\e95d';
-$slider-horizontal-btn-icon-next: '\e895';
-$slider-vertical-btn-icon-next: '\e98a';
-$slider-vertical-width: 10px;
-$slider-border-radius-handle: 4px;
-$slider-border: 1px solid $grey-cc;
-$slider-btn-top: 0;
-$slider-btn-after-height: 0;
-$slider-btn-after-width: 0;
-$slider-btn-after-padding: 0;
-$slider-btn-margin-right: 2px;
-$slider-btn-margin-top: -1.5px;
-$slider-vertical-left: -4px;
-$slider-button-font-size: 9px;
-$slider-scale-font-family: $font-family;
-$slider-scale-font-size: 10px;
-$slider-mobile-scale-font-size: 12px;
+$slider-bg-color: $grey-white !default;
+$slider-disabled-bg-color: $grey-white !default;
+$slider-active-bg-color: $grey-white !default;
+$slider-disabled-opacity: .65 !default;
+$slider-start-handle-border-size: 1px solid $grey-cc !default;
+$slider-border-radius: 4px !default;
+$slider-height: 10px !default;
+$slider-handle-border-size: 1px solid !default;
+$slider-handle-border-color: $grey-cc !default;
+$slider-handle-height: 16px !default;
+$slider-handle-width: 16px !default;
+$slider-handle-mobile-height: 18px !default;
+$slider-handle-mobile-width: 18px !default;
+$slider-handle-border-radius: 100% !default;
+$slider-button-icon-color: $grey-white !default;
+$slider-handle-top: -4px !default;
+$slider-handle-mobile-top: -4px !default;
+$slider-h-handle-margin: 0 !default;
+$slider-h-handle-mobile-margin: 0 !default;
+$rtl-slider-h-handle-margin: 0 -8px 0 0 !default;
+$rtl-slider-h-handle-mobile-margin: 0 !default;
+$slider-v-handle-margin: -8px !default;
+$slider-v-handle-mobile-margin: 0 !default;
+$rtl-slider-v-handle-margin: 0 !default;
+$rtl-slider-v-handle-mobile-margin: 0 !default;
+$slider-range-bar-color: $brand-primary !default;
+$slider-range-bar-hover-color: $brand-primary !default;
+$slider-color: $grey-base !default;
+$slider-handle-color: $grey-white !default;
+$slider-handle-start-border-color: $grey-white !default;
+$slider-handle-focus-bg-color: rgba($grey-base, .24) !default;
+$slider-tick-color: $grey-dark !default;
+$slider-button-bg-color: $grey-light !default;
+$slider-button-color-border: transparent !default;
+$slider-btn-focus-color:  $grey-dark !default;
+$slider-btn-focus-border-color: $grey-dark !default;
+$slider-btn-focus-after-color: $grey-dark !default;
+$slider-container-height: 10px !default;
+$slider-normal-handle-border-size: 1px solid !default;
+$slider-normal-handle-border-color:  $grey-cc !default;
+$slider-handle-bg-color: $grey-white !default;
+$slider-handle-hover-color: $grey-e6 !default;
+$slider-disabled-handle-bg-color: $grey-white !default;
+$slider-disabled-handle-hover-color: $grey-cc !default;
+$slider-disabled-handle-normal-border-color: $grey-cc !default;
+$slider-disabled-normal-handle-border-color: $grey-cc !default;
+$slider-disabled-range-bar-color: $brand-primary !default;
+$slider-disabled-button-bg-color: $grey-light !default;
+$slider-hover-color: $grey-white !default;
+$slider-tooltip-padding: 2px 12px !default;
+$slider-start-transform: none !default;
+$slider-mid-transform: none !default;
+$slider-final-transform: none !default;
+$slider-handle-after-position: relative !default;
+$slider-handle-hover-start: scale(1) !default;
+$slider-handle-hover-end: scale(1) !default;
+$slider-start-handle-hover-end: scale(1) !default;
+$slider-handle-normal-border-color: $grey-cc !default;
+$slider-handle-hover-border-color: $grey-cc !default;
+$tick-after-height: 5px !default;
+$tick-after-top: -9px !default;
+$largetick-before-top: -9px !default;
+$largetick-before-height: 8px !default;
+$largetick-after-height: 8px !default;
+$largetick-after-top: 9px !default;
+$tick-before-height: 5px !default;
+$tick-before-top: 6px !default;
+$slider-btn-container-height: 10px !default;
+$slider-horizontal-btn-icon-prev: '\e904' !default;
+$slider-vertical-btn-icon-prev: '\e95d' !default;
+$slider-horizontal-btn-icon-next: '\e895' !default;
+$slider-vertical-btn-icon-next: '\e98a' !default;
+$slider-vertical-width: 10px !default;
+$slider-border-radius-handle: 4px !default;
+$slider-border: 1px solid $grey-cc !default;
+$slider-btn-top: 0 !default;
+$slider-btn-after-height: 0 !default;
+$slider-btn-after-width: 0 !default;
+$slider-btn-after-padding: 0 !default;
+$slider-btn-margin-right: 2px !default;
+$slider-btn-margin-top: -1.5px !default;
+$slider-vertical-left: -4px !default;
+$slider-button-font-size: 9px !default;
+$slider-scale-font-family: $font-family !default;
+$slider-scale-font-size: 10px !default;
+$slider-mobile-scale-font-size: 12px !default;
 $slider-scale-tick-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNYtmzZfwAG2gLyNpL4dgAAAABJRU5ErkJggg==');
-$slider-disabled-handle-color: $grey-white;
-$slider-disabled-handle-show: none;
-$slider-button-border-color: $grey-light;
-$slider-first-btn-margin: -.5px;
-$slider-second-btn-margin: -4.5px;
-$slider-button-size: 18px;
-$slider-button-horizon-padding: 0 38px;
-$slider-button-vertical-padding: 38px 0;
-$slider-scale-value-position-top: -16px;
-$slider-scale-value-position-bottom: -16px;
-$tick-after-left: 4px;
-$largetick-before-left: 1px;
-$tick-before-left: 19px;
-$largetick-after-left: 19px;
-$slider-scale-value-position-left: -36px;
-$slider-scale-value-position-right: -36px;
-$slider-scale-value-position-both-left: -18px;
-$slider-scale-value-position-both-right: -74px;
-$slider-vertical-btn-right: 0;
-$slider-horizon-prve-btn-left: 0;
-$slider-horizon-next-btn-left: 0;
-$slider-vertical-prve-btn-left: -1px;
-$slider-vertical-next-btn-left: 0;
-$slider-handle-start-top: calc(50% - 8px);
-$slider-handle-start-left: calc(50% - 8px);
-$slider-wrap-height: 26px;
-$slider-wrap-width: 26px;
-$slider-center-align: -5px;
-$slider-btn-center-align: -9px;
-$tick-both-top: -3px;
-$tick-both-left: 3px;
-$largetick-both-top: 0;
-$largetick-both-left: 0;
-$slider-range-height: $slider-container-height - 2px;
-$slider-range-width: $slider-vertical-width - 2px;
-$slider-range-border-radius: $slider-border-radius - 1px;
-$slider-first-btn-font-size: 6px;
-$slider-first-btn-height: 24px;
-$slider-first-btn-line-height: 20px;
-$slider-second-btn-margin-right: 0;
-$slider-second-btn-font-size: 6px;
-$slider-second-btn-height: 24px;
-$slider-second-btn-line-height: 20px;
-$slider-button-hover-transform: 0;
-$slider-cursor: pointer;
-$slider-handle-hover-cursor: pointer;
-$slider-handle-active-cursor: pointer;
-$slider-scale-top: 16px;
-$slider-scale-right: -15px;
-$slider-track-border-color: $grey-cc;
-$slider-tab-background: $grey-e6;
-$slider-handle-start-background: $grey-cc;
-$slider-tab-border-color: $input-border-focus;
-$slider-handle-active-bg-color: $grey-e6;
-$slider-handle-active-border-color: $grey-cc;
+$slider-disabled-handle-color: $grey-white !default;
+$slider-disabled-handle-show: none !default;
+$slider-button-border-color: $grey-light !default;
+$slider-first-btn-margin: -.5px !default;
+$slider-second-btn-margin: -4.5px !default;
+$slider-button-size: 18px !default;
+$slider-button-horizon-padding: 0 38px !default;
+$slider-button-vertical-padding: 38px 0 !default;
+$slider-scale-value-position-top: -16px !default;
+$slider-scale-value-position-bottom: -16px !default;
+$tick-after-left: 4px !default;
+$largetick-before-left: 1px !default;
+$tick-before-left: 19px !default;
+$largetick-after-left: 19px !default;
+$slider-scale-value-position-left: -36px !default;
+$slider-scale-value-position-right: -36px !default;
+$slider-scale-value-position-both-left: -18px !default;
+$slider-scale-value-position-both-right: -74px !default;
+$slider-vertical-btn-right: 0 !default;
+$slider-horizon-prve-btn-left: 0 !default;
+$slider-horizon-next-btn-left: 0 !default;
+$slider-vertical-prve-btn-left: -1px !default;
+$slider-vertical-next-btn-left: 0 !default;
+$slider-handle-start-top: calc(50% - 8px) !default;
+$slider-handle-start-left: calc(50% - 8px) !default;
+$slider-wrap-height: 26px !default;
+$slider-wrap-width: 26px !default;
+$slider-center-align: -5px !default;
+$slider-btn-center-align: -9px !default;
+$tick-both-top: -3px !default;
+$tick-both-left: 3px !default;
+$largetick-both-top: 0 !default;
+$largetick-both-left: 0 !default;
+$slider-range-height: $slider-container-height - 2px !default;
+$slider-range-width: $slider-vertical-width - 2px !default;
+$slider-range-border-radius: $slider-border-radius - 1px !default;
+$slider-first-btn-font-size: 6px !default;
+$slider-first-btn-height: 24px !default;
+$slider-first-btn-line-height: 20px !default;
+$slider-second-btn-margin-right: 0 !default;
+$slider-second-btn-font-size: 6px !default;
+$slider-second-btn-height: 24px !default;
+$slider-second-btn-line-height: 20px !default;
+$slider-button-hover-transform: 0 !default;
+$slider-cursor: pointer !default;
+$slider-handle-hover-cursor: pointer !default;
+$slider-handle-active-cursor: pointer !default;
+$slider-scale-top: 16px !default;
+$slider-scale-right: -15px !default;
+$slider-track-border-color: $grey-cc !default;
+$slider-tab-background: $grey-e6 !default;
+$slider-handle-start-background: $grey-cc !default;
+$slider-tab-border-color: $input-border-focus !default;
+$slider-handle-active-bg-color: $grey-e6 !default;
+$slider-handle-active-border-color: $grey-cc !default;
 $slider-button-hleft-bg-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAolBMVEUAAAD////////////////////////+/v7////+/v7////+/v7////+/v7////////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7///+y6E2hAAAANXRSTlMABAgMEBQYHCAkKCwwNEBESExUWFxkaGx0fICDh4ubn6Orr7O3u7/Hy8/T19vf4+fr7/P3+0e6nekAAAEFSURBVHjalZXJVgJBEASjnXHAEUQURZBFFAfZt+H/f82jedCXVpyjD1mvs4q/aR4uP1QJR7YUf1tgmYl/amEZXIRHLF31X7GUJ/E/fOB8I/46w5Hm4h9LLGPx63ssPQ08wNI+i/+GpdiLv/xH4IX4+waWqQa+w9LXwE9YOrX4ExzxCqzE3xVY3oMVGGrgHpYH9UdYWlqBuQ9cbLUCOY5UaeCS4INbPMVO19A1wdBVIli0CXhG+uIZYsui7uDJ1/Li0MRTHuXFKouOakZ0VMPwqLqBUckfiWzuTU7wNnwmgtdnDPFyxy7ouQ3hBeW50RW4SMSXrOdFg/chfCg8V1/RcjR+PXbfOBx/sErjBl8AAAAASUVORK5CYII=');
 $slider-button-hright-bg-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAnFBMVEUAAAD////////////////////////+/v7////////+/v7////+/v7+/v7////////+/v7+/v7+/v7////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7////uN4ajAAAAM3RSTlMABAgMEBQYHCAoLDA0ODxASExcYGRobHR8g4uTl5ufo6ert7u/w8fLz9fb3+Pn6+/z9/tbKk6UAAABBklEQVR42q2VyRKCAAxDQRBZVMAFcRdxVxD0///Nk2M8OCQz9tx3SJu0xrvWz09VXaO5rCMQN4cgOgUQB5Mg+g8glgZRoydUwhALAB4hAZg7IEqXIJwrECeLIIIKiIyRMUDhKUNMkYgZ4Vv0iM945AzExSYID4XnjEci9MiMEZ6i8CFDYDhqKhwnIAomHO5XOFoEEaLwFSNjjMInDLHEcESMR/ZA3D0mHDcgzhYBFBrQOqJtPWLbouhUjF6Mi9s09/uVdj7sC5rPbd5ZjvYmTuBMHNBQHFC31gbkFNqAzIN4wVfij0ikL6RH2S2lT6qfowwd0fv/SY2xfy6/BS0C17b42oLfjS/tEHrYzreszwAAAABJRU5ErkJggg==');
 $slider-button-vdown-bg-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAApVBMVEUAAAD////////////////////+/v7////+/v7////+/v7////+/v7+/v7////////+/v7+/v7+/v7////+/v7+/v7+/v7+/v7+/v7////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7////Ss6t3AAAANnRSTlMABAwQFBgcICQoLDA0OEBESExcYGRobHR8gIOHi4+Tl5ujq7O3u7/Dx8vP09fb3+Pn6+/z9/vRpbpFAAABHklEQVR4Ae3TW1PCMBAF4LOFgsj9ooCichcFoVBy/v9P0xGndktS8uT4wPeYmZPZnZPgf7h6EMCfjMF5Ad7CFUFuKvBUj0iQjNvw0jM8BcghLpMXMglwFuCCcMl0gJsb5KrtqAM8tJCje2Q2QDOAizwxAf6aBrAqLmgPcF2GRXVLV4D7Js50YqbBMM30ockjlRiNiMpELVKYU9lWgdIblfcSErcfVBZFfAkmVKIGfrRjKiPBST+zyB2+DakcO0g091TGAgRTKrsaUsprKq9h9mQZQjm7b0/lWZA1MHQyPVi0DnSI6rCqbGi1CuEQzGgxFrgNmWXu4WYp99BAPv18dFsOhblqy4OMdFt51Cc7duGttvMYXwmXHuMrIrj6Q58aX4DtQxE2xQAAAABJRU5ErkJggg==');
 $slider-button-vup-bg-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAApVBMVEUAAAD////////////////////+/v7////+/v7////+/v7////+/v7+/v7////////+/v7+/v7+/v7+/v7////+/v7+/v7+/v7+/v7////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7////4hhd5AAAANnRSTlMABAgMEBgcICQoLDA0OEBESExUXGBkbHR8gIOHi5Obn6Onq6+zt7u/x8vP09fb3+Pn6+/z9/tWLLgwAAABGElEQVR4Ae3UyXLyMBAE4NYvzPJDDARCyMKShbBAgo1wv/+jhSRVqhojqeRDqnLgu/nQh3GPBhd/mZ7PNSpobMhNA9HSjCd5F5FGBb8Vt4ihprRiBklWtGIG6WQU9i0EDY8sMX34qQkdxvBJlnR61nBqf9Bj24TDwNDr0EOZeqRg7PTuDmtvFHat8v+VHf5/p7ColRuUHV4bCg8KJ2pGIU/xQ91TMAO5hVYxwhf9SmHfhtXNKcz+Aa0dhWVSeknCug5DYaIg6CcKGcTncYgzYzkIRLwDh97BF1glcGpu3YGpgod+cQSKGwTcnQWyKwT1jQys6wizfcE2GGY3AnZHwuzOgcxShImtRuTRte8G1c56bYGKFC5+wyfN5oD6Q24erwAAAABJRU5ErkJggg==');
-$slider-limit-bar-horizontal-height: 8px;
-$slider-limit-bar-top: calc(50% - 4px);
-$slider-limit-bar-vertical-width: 8px;
-$slider-limit-bar-left: calc(50% - 4px);
-$slider-limit-bar-color: rgba($grey-base, .25);
+$slider-limit-bar-horizontal-height: 8px !default;
+$slider-limit-bar-top: calc(50% - 4px) !default;
+$slider-limit-bar-vertical-width: 8px !default;
+$slider-limit-bar-left: calc(50% - 4px) !default;
+$slider-limit-bar-color: rgba($grey-base, .25) !default;
+$slider-tick-font-color: $grey-light-font !default;
 
 
 @include export-module('slider-layout') {
@@ -160,7 +158,6 @@ $slider-limit-bar-color: rgba($grey-base, .25);
   // sass-lint:disable no-important
 
   .e-control-wrapper.e-slider-container.e-material-slider .e-slider .e-handle {
-
     &.e-material-handle {
       cursor: default;
       transition: transform .4s cubic-bezier(.25, .8, .25, 1);
@@ -169,7 +166,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
 
     &.e-tab-handle {
       &::after {
-        @if $skin-name == 'material' {
+        @if ($skin-name == 'material' or $skin-name == 'material-dark') {
           background-color: transparent;
         }
       }
@@ -177,7 +174,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
 
     &.e-handle-start.e-tab-handle {
       &::after {
-        @if $skin-name == 'material' {
+        @if ($skin-name == 'material' or $skin-name == 'material-dark') {
           background-color: transparent;
         }
       }
@@ -185,112 +182,93 @@ $slider-limit-bar-color: rgba($grey-base, .25);
   }
 
   .e-slider-tooltip.e-tooltip-wrap.e-popup {
-    @if $skin-name == 'material' {
+    @if ($skin-name == 'material' or $skin-name == 'material-dark') {
+      background-color: $slider-handle-bg-color;
+      border: 0;
+      border-radius: 8px;
+      // sass-lint:disable-all
+      cursor: -webkit-grab;
+      cursor: grab;
+      // sass-lint:enable-all
+      opacity: 1;
 
       &.e-popup.e-popup-close {
         display: block;
         opacity: 0;
       }
 
-      &.e-material-range {
-        background-color: $slider-handle-bg-color;
-        border: 0;
-        border-radius: 8px;
-        // sass-lint:disable-all
-        cursor: -webkit-grab;
-        cursor: grab;
-        // sass-lint:enable-all
-        opacity: 1;
-
-        &.e-material-tooltip-start {
-          background-color: $slider-handle-border-color;
-
-          .e-arrow-tip-inner {
-            color: $grey-black;
-            opacity: 0;
-          }
-
-          &.e-slider-horizontal-before {
-            .e-arrow-tip-outer {
-              border-top-color: $slider-handle-border-color;
-            }
-          }
-
-          &.e-slider-horizontal-after {
-            .e-arrow-tip-outer {
-              border-bottom-color: $slider-handle-border-color;
-            }
-          }
-
-          &.e-slider-vertical-before {
-            .e-arrow-tip-outer {
-              border-left-color: $slider-handle-border-color;
-            }
-          }
-
-          &.e-slider-vertical-after {
-            .e-arrow-tip-outer {
-              border-right-color: $slider-handle-border-color;
-            }
-          }
-        }
-
-        &.e-tooltip-active {
-          // sass-lint:disable-all
-          cursor: -webkit-grabbing;
-          cursor: grabbing;
-          // sass-lint:enable-all
-        }
-
-        .e-arrow-tip {
-          visibility: visible;
-        }
-
-        .e-tip-content {
-          background-color: transparent;
-          height: 16px;
-          overflow: hidden;
-          padding: 0 8px;
-          text-align: center;
-          top: calc(50% - 8px);
-          width: 100%;
-
-          &.e-material-tooltip-show {
-            color: $grey-white;
-          }
-
-          &.e-material-tooltip-hide {
-            color: transparent;
-          }
-        }
+      &.e-material-tooltip-start {
+        background-color: $slider-handle-border-color;
 
         .e-arrow-tip-inner {
-          color: $slider-handle-bg-color;
+          color: $grey-black;
+          opacity: 0;
         }
 
-        &.e-slider-horizontal-before {
-          .e-arrow-tip-outer {
-            border-top-color: $slider-handle-bg-color;
-          }
+        .e-arrow-tip-outer.e-tip-bottom {
+          border-top-color: $slider-handle-border-color;
         }
 
-        &.e-slider-horizontal-after {
-          .e-arrow-tip-outer {
-            border-bottom-color: $slider-handle-bg-color;
-          }
+        .e-arrow-tip-outer.e-tip-top {
+          border-bottom-color: $slider-handle-border-color;
         }
 
-        &.e-slider-vertical-before {
-          .e-arrow-tip-outer {
-            border-left-color: $slider-handle-bg-color;
-          }
+        .e-arrow-tip-outer.e-tip-right {
+          border-left-color: $slider-handle-border-color;
         }
 
-        &.e-slider-vertical-after {
-          .e-arrow-tip-outer {
-            border-right-color: $slider-handle-bg-color;
-          }
+        .e-arrow-tip-outer.e-tip-left {
+          border-right-color: $slider-handle-border-color;
         }
+      }
+
+      &.e-tooltip-active {
+        // sass-lint:disable-all
+        cursor: -webkit-grabbing;
+        cursor: grabbing;
+        // sass-lint:enable-all
+      }
+
+      .e-arrow-tip {
+        visibility: visible;
+      }
+
+      .e-tip-content {
+        background-color: transparent;
+        height: 16px;
+        overflow: hidden;
+        padding: 0 8px;
+        text-align: center;
+        top: calc(50% - 8px);
+        width: 100%;
+
+        &.e-material-tooltip-show {
+          color: $slider-material-tooltip-content-color;
+        }
+
+        &.e-material-tooltip-hide {
+          color: transparent;
+        }
+      }
+
+      .e-arrow-tip-inner {
+        color: $slider-handle-bg-color;
+      }
+
+      .e-arrow-tip-outer.e-tip-bottom {
+        border-top-color: $slider-handle-bg-color;
+      }
+
+      .e-arrow-tip-outer.e-tip-top {
+        border-bottom-color: $slider-handle-bg-color;
+      }
+
+      .e-arrow-tip-outer.e-tip-right {
+        border-left-color: $slider-handle-bg-color;
+      }
+
+      .e-arrow-tip-outer.e-tip-left {
+        border-right-color: $slider-handle-bg-color;
       }
 
       &.e-tooltip-wrap.e-popup.e-material-default {
@@ -355,7 +333,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
           width: 100%;
 
           &.e-material-tooltip-show {
-            color: $grey-white;
+            color: $slider-material-tooltip-content-color;
           }
 
           &.e-material-tooltip-hide {
@@ -364,9 +342,8 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         }
       }
     }
-
     @else {
-      @if $skin-name == 'highcontrast' {
+      @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
         background-color: $slider-active-handle-bg-color;
         border: 1px solid $slider-hover-handle-color;
       }
@@ -375,7 +352,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         padding: $slider-tooltip-padding;
         text-align: center;
 
-        @if $skin-name == 'highcontrast' {
+        @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
           color: $slider-button-icon-color;
         }
       }
@@ -383,7 +360,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
   }
 
   .e-bigger {
-    @if $skin-name != 'material' {
+    @if ($skin-name != 'material' and $skin-name != 'material-dark') {
       .e-slider-tooltip.e-tooltip-wrap.e-popup {
         .e-tip-content {
           padding: $slider-tooltip-padding;
@@ -396,7 +373,6 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         }
       }
     }
-
     @else {
       &.e-slider-tooltip.e-tooltip-wrap.e-popup {
         .e-tip-content {
@@ -414,9 +390,9 @@ $slider-limit-bar-color: rgba($grey-base, .25);
     }
   }
 
-  .e-bigger .e-control-wrapper.e-slider-container ,
+  .e-bigger .e-control-wrapper.e-slider-container,
   .e-control-wrapper.e-slider-container.e-bigger {
-    @if $skin-name != 'material' {
+    @if ($skin-name != 'material' and $skin-name != 'material-dark') {
       .e-slider {
         .e-handle {
           height: $slider-handle-mobile-height;
@@ -424,18 +400,93 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         }
       }
 
+      @if ($skin-name == 'bootstrap4') {
+        .e-slider-button {
+          height: 18px;
+          width: 18px;
+        }
+
+        &.e-vertical {
+          &.e-slider-btn {
+            padding: 34px 0;
+          }
+
+          .e-first-button {
+            margin-right: -9px;
+          }
+
+          .e-second-button {
+            margin-right: -9px;
+          }
+
+          .e-slider {
+            .e-slider-track {
+              left: calc(50% - 4px);
+              width: 8px;
+            }
+
+            .e-range {
+              left: calc(50% - 4px);
+              width: 8px;
+            }
+          }
+        }
+
+        &.e-horizontal .e-slider {
+          .e-limits {
+            height: 8px;
+            top: calc(50% - 4px);
+          }
+        }
+
+        &.e-vertical .e-slider {
+          .e-limits {
+            left: calc(50% - 4px);
+            width: 8px;
+          }
+        }
+      }
+
       &.e-horizontal {
+        @if ($skin-name == 'bootstrap4') {
+          &.e-slider-btn {
+            padding: 0 34px;
+          }
+
+          .e-slider-button {
+            height: $slider-handle-mobile-buttons-height;
+            margin-top: -9px;
+            width: $slider-handle-mobile-buttons-width;
+          }
+        }
+
         .e-slider {
+          @if ($skin-name == 'bootstrap4') {
+            .e-slider-track {
+              height: 8px;
+              top: calc(50% - 4px);
+            }
+
+            .e-range {
+              height: 8px;
+              top: calc(50% - 4px);
+            }
+          }
+
           .e-handle {
             margin-left: -9px;
             top: calc(50% - 9px);
+            @if($skin-name == 'bootstrap4') {
+              margin-left: $slider-handle-mobile-margin-left;
+              top: $slider-handle-mobile-handle-top;
+            }
           }
         }
 
         &.e-scale-both {
           .e-slider {
             .e-handle {
-              @if $skin-name == 'highcontrast' {
+              @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
                 margin-left: -9px;
                 top: calc(50% - 8px);
               }
@@ -449,15 +500,23 @@ $slider-limit-bar-color: rgba($grey-base, .25);
           .e-handle {
             left: calc(50% - 9px);
             margin-bottom: -9px;
+            @if $skin-name == 'bootstrap4' {
+              left: calc(50% - 8px);
+              margin-bottom: -8px;
+            }
           }
         }
 
         &.e-scale-both {
           .e-slider {
             .e-handle {
-              @if $skin-name == 'highcontrast' {
+              @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
                 left: calc(50% - 10px);
                 margin-bottom: -9px;
+              }
+              @if $skin-name == 'bootstrap4' {
+                left: calc(50% - 8px);
+                margin-bottom: -8px;
               }
             }
           }
@@ -502,13 +561,13 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         .e-slider {
           .e-handle {
             margin: $rtl-slider-h-handle-margin;
-            @if $skin-name == 'bootstrap' {
+            @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark' or $skin-name == 'bootstrap4') {
               top: calc(50% - 8px);
             }
-            @if $skin-name == 'fabric' or $skin-name == 'highcontrast' {
+            @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark' or $skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
               top: calc(50% - 8px);
             }
-            @if $skin-name == 'material' {
+            @if ($skin-name == 'material' or $skin-name == 'material-dark') {
               top: calc(50% - 6px);
             }
           }
@@ -517,26 +576,26 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         .e-scale {
           &.e-h-scale {
             .e-tick.e-first-tick {
-              @if $skin-name == 'material' {
+              @if ($skin-name == 'material' or $skin-name == 'material-dark') {
                 background-position-x: right;
               }
 
-              @if $skin-name == 'fabric' or $skin-name == 'highcontrast' {
+              @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark' or $skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
                 background-position: right center;
                 left: 0;
               }
 
-              @if $skin-name == 'bootstrap' {
+              @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark' or $skin-name == 'bootstrap4') {
                 background-position: right center;
                 left: 0;
               }
             }
 
             .e-tick.e-last-tick {
-              @if $skin-name == 'material' {
+              @if ($skin-name == 'material' or $skin-name == 'material-dark') {
                 background-position-x: left;
               }
-              @if $skin-name != 'material' {
+              @if ($skin-name != 'material' and $skin-name != 'material-dark') {
                 background-position: left center;
               }
             }
@@ -544,10 +603,10 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         }
 
         .e-slider-button {
-          @if $skin-name == 'fabric' or $skin-name == 'highcontrast' {
+          @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark' or $skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
             margin-top: -8px;
           }
-          @if $skin-name == 'bootstrap' {
+          @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark' or $skin-name == 'bootstrap4') {
             margin-top: -7px;
           }
         }
@@ -559,7 +618,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
     }
 
     &.e-disabled {
-      @if $skin-name == 'material' {
+      @if ($skin-name == 'material' or $skin-name == 'material-dark') {
         &.e-material-slider .e-slider .e-handle.e-handle-first {
           background-color: $grey-600;
         }
@@ -588,7 +647,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
               -ms-transform: scale(0);
               -webkit-transform: scale(0);
               background: transparent;
-              border: 7px solid $grey-white;
+              border: 7px solid $slider-material-tooltip-content-color;
               border-radius: 50%;
               box-sizing: border-box;
               content: '';
@@ -606,7 +665,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         }
       }
 
-      @if $skin-name == 'highcontrast' {
+      @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
         .e-slider {
           .e-range {
             background: $slider-disabled-bg-color;
@@ -629,7 +688,50 @@ $slider-limit-bar-color: rgba($grey-base, .25);
           &.e-handle-disable {
             display: $slider-disabled-handle-show;
           }
+        }
+      }
 
+      @if ($skin-name == 'bootstrap4') {
+        .e-slider {
+          .e-range {
+            background-color: $slider-disabled-range-color;
+          }
+
+          .e-handle {
+            background-color: $slider-disabled-handle-color;
+            border-color: $slider-disabled-handle-color;
+          }
+
+          .e-slider-track {
+            background-color: $slider-disabled-track-color;
+          }
+        }
+
+        .e-scale .e-tick {
+          .e-tick-value {
+            color: $slider-button-bg-color;
+          }
+        }
+
+        .e-slider-button {
+          background-color: $slider-disabled-bg-color;
+          border-color: $white;
+        }
+      }
+    }
+
+    @if ($skin-name == 'bootstrap4') {
+      &:not(.e-disabled) {
+        .e-slider-button {
+          &:hover {
+            background-color: darken($gray-600, 7.5%);
+            border-color: darken($gray-600, 10%);
+          }
+
+          &:active {
+            background-color: darken($gray-600, 10%);
+            border-color: darken($gray-600, 12%);
+          }
         }
       }
     }
@@ -637,7 +739,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
     &.e-horizontal {
       height: 48px;
       width: 100%;
-      @if $skin-name == 'material' {
+      @if ($skin-name == 'material' or $skin-name == 'material-dark') {
         .e-first-button {
           left: 0;
           margin-top: $slider-btn-center-align;
@@ -674,7 +776,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
           }
         }
       }
-      @else if $skin-name != 'highcontrast' {
+      @else if ($skin-name != 'highcontrast' and $skin-name != 'highcontrast-light') {
         .e-first-button {
           left: 0;
           margin-top: $slider-btn-center-align;
@@ -767,33 +869,41 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         left: 0;
         position: absolute;
         width: 100%;
-        @if $skin-name == 'material' {
+        @if ($skin-name == 'material' or $skin-name == 'material-dark') {
           background: $slider-handle-start-border-color;
           top: calc(50% - 1px);
         }
-        @if $skin-name == 'fabric' {
+        @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark') {
           background: $slider-track-color;
           top: calc(50% - 2px);
         }
-        @if $skin-name == 'highcontrast' {
+        @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
           background: $slider-track-color;
           border-radius: 4px;
           top: calc(50% - 4px);
         }
-        @if $skin-name == 'bootstrap' {
+        @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark') {
           background: $slider-handle-start-border-color;
           border: 1px solid $slider-track-border-color;
           border-radius: 4px;
           top: calc(50% - 5px);
         }
+        @if $skin-name == 'bootstrap4' {
+          background: $slider-handle-start-border-color;
+          border-radius: 6px;
+          top: calc(50% - 3px);
+        }
       }
 
       .e-handle {
-        @if $skin-name == 'material' {
+        @if ($skin-name == 'material' or $skin-name == 'material-dark') {
           margin-left: -6px;
           top: calc(50% - 6px);
         }
-
+        @else if ($skin-name == 'bootstrap4') {
+          margin-left: -7px;
+          top: calc(50% - 7px);
+        }
         @else {
           margin-left: -8px;
           top: calc(50% - 8px);
@@ -802,7 +912,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
 
       &.e-scale-both {
         .e-handle {
-          @if $skin-name == 'highcontrast' {
+          @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
             margin-left: -8px;
             top: calc(50% - 7px);
           }
@@ -810,7 +920,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
 
         .e-range {
           height: $slider-range-height;
-          @if $skin-name == 'highcontrast' {
+          @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
             top: calc(50% - 2px);
           }
         }
@@ -818,17 +928,20 @@ $slider-limit-bar-color: rgba($grey-base, .25);
 
       .e-range {
         height: $slider-range-height;
-        @if $skin-name == 'material' {
+        @if ($skin-name == 'material' or $skin-name == 'material-dark') {
           top: calc(50% - 1px);
         }
-        @if $skin-name == 'fabric' {
+        @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark') {
           top: calc(50% - 2px);
         }
-        @if $skin-name == 'highcontrast' {
+        @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
           top: calc(50% - 3px);
         }
-        @if $skin-name == 'bootstrap' {
+        @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark') {
           top: calc(50% - 4px);
+        }
+        @if ($skin-name == 'bootstrap4') {
+          top: calc(50% - 3px);
         }
       }
 
@@ -844,6 +957,9 @@ $slider-limit-bar-color: rgba($grey-base, .25);
       height: inherit;
       padding: 38px 0;
       width: 48px;
+      @if ($skin-name == 'bootstrap4') {
+        padding: 30px 0;
+      }
 
       .e-slider {
         height: 100%;
@@ -853,31 +969,36 @@ $slider-limit-bar-color: rgba($grey-base, .25);
       }
 
       .e-slider-track {
-        @if $skin-name == 'highcontrast' {
+        @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
           background: $slider-track-color;
         }
-        @if $skin-name != 'highcontrast' {
+        @if ($skin-name != 'highcontrast' and $skin-name != 'highcontrast-light') {
           background: $slider-handle-start-border-color;
         }
         bottom: 0;
         height: 100%;
         position: absolute;
-        @if $skin-name == 'fabric' {
+        @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark') {
           left: calc(50% - 2px);
           width: 4px;
         }
-        @if $skin-name == 'highcontrast' {
+        @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
           border-radius: 4px;
           left: calc(50% - 4px);
           width: 8px;
         }
-        @if $skin-name == 'bootstrap' {
+        @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark') {
           border: 1px solid $slider-track-border-color;
           border-radius: 3px;
           left: calc(50% - 5px);
           width: 10px;
         }
-        @if $skin-name == 'material' {
+        @if ($skin-name == 'bootstrap4') {
+          border-radius: 6px;
+          left: calc(50% - 3px);
+          width: 6px;
+        }
+        @if ($skin-name == 'material' or $skin-name == 'material-dark') {
           left: calc(50% - 1px);
           width: 2px;
         }
@@ -895,8 +1016,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         }
       }
 
-      @if $skin-name == 'material' {
-
+      @if ($skin-name == 'material' or $skin-name == 'material-dark') {
         .e-first-button {
           bottom: 0;
           margin-right: $slider-btn-center-align;
@@ -933,8 +1053,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
           }
         }
       }
-      @else if $skin-name != 'highcontrast' {
-
+      @else if ($skin-name != 'highcontrast' and $skin-name != 'highcontrast-light') {
         .e-first-button {
           bottom: 0;
           margin-right: $slider-btn-center-align;
@@ -1019,7 +1138,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         .e-slider {
           .e-handle {
             margin-bottom: $slider-v-handle-margin;
-            @if $skin-name == 'highcontrast' {
+            @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
               left: calc(50% - 9px);
             }
           }
@@ -1027,11 +1146,13 @@ $slider-limit-bar-color: rgba($grey-base, .25);
       }
 
       .e-slider {
-
         .e-handle {
           margin-bottom: $slider-v-handle-margin;
-          @if $skin-name == 'material' {
+          @if ($skin-name == 'material' or $skin-name == 'material-dark') {
             left: calc(50% - 6px);
+          }
+          @else if($skin-name == 'bootstrap4') {
+            left: calc(50% - 7px);
           }
           @else {
             left: calc(50% - 8px);
@@ -1039,19 +1160,23 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         }
 
         .e-range {
-          @if $skin-name == 'bootstrap' {
+          @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark') {
             left: calc(50% - 4px);
             width: 8px;
           }
-          @if $skin-name == 'fabric' {
-            left: calc(50% - 2px);
-            width: 4px;
-          }
-          @if $skin-name == 'highcontrast' {
+          @if ($skin-name == 'bootstrap4') {
             left: calc(50% - 3px);
             width: 6px;
           }
-          @if $skin-name == 'material' {
+          @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark') {
+            left: calc(50% - 2px);
+            width: 4px;
+          }
+          @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
+            left: calc(50% - 3px);
+            width: 6px;
+          }
+          @if ($skin-name == 'material' or $skin-name == 'material-dark') {
             left: calc(50% - 1px);
             width: 2px;
           }
@@ -1069,7 +1194,8 @@ $slider-limit-bar-color: rgba($grey-base, .25);
     .e-range {
       border-radius: $slider-range-border-radius;
       position: absolute;
-      transition: left 300ms ease-out, right 300ms ease-out, bottom 300ms ease-out, width 300ms ease-out, height 300ms ease-out;
+      transition: left 300ms ease-out, right 300ms ease-out, bottom 300ms ease-out, width 300ms ease-out,
+      height 300ms ease-out;
 
       &.e-drag-horizontal {
         cursor: ew-resize;
@@ -1101,13 +1227,13 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         z-index: 10;
 
         &.e-handle-active {
-          @if $skin-name == 'highcontrast' {
+          @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
             background-color: $slider-active-handle-bg-color;
             border-color: $slider-hover-handle-color;
           }
         }
 
-        @if $skin-name == 'material' {
+        @if ($skin-name == 'material' or $skin-name == 'material-dark') {
           // sass-lint:disable-all
           cursor: -webkit-grab;
           cursor: grab;
@@ -1148,7 +1274,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         }
 
         &.e-tab-handle {
-          @if $skin-name == 'material' {
+          @if ($skin-name == 'material' or $skin-name == 'material-dark') {
             &.e-handle-start::after {
               background-color: $slider-tab-background;
               opacity: .38;
@@ -1162,22 +1288,27 @@ $slider-limit-bar-color: rgba($grey-base, .25);
             }
           }
 
-          @if $skin-name == 'fabric' or $skin-name == 'highcontrast' {
+          @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark' or $skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
             border-color: $slider-tab-border-color;
           }
 
           // sass-lint:disable-all
-          @if $skin-name == 'bootstrap' {
+          @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark') {
             background-color: $slider-tab-background;
             border-color: $slider-tab-border-color;
-            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+          }
+          @if ($skin-name == 'bootstrap4') {
+            background-color: $slider-tab-background;
+            border-color: $slider-tab-border-color;
+            box-shadow: $slider-tab-active-box-shadow;
           }
           // sass-lint:enable-all
         }
       }
 
       .e-tab-track {
-        @if $skin-name == 'fabric' {
+        @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark') {
           background-color: $slider-tab-track-color;
         }
       }
@@ -1187,7 +1318,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
       &.e-scale {
         &.e-h-scale {
           .e-tick {
-            @if $skin-name != 'material' {
+            @if ($skin-name != 'material' and $skin-name != 'material-dark') {
               height: $tick-after-height;
               top: $tick-after-top;
             }
@@ -1199,7 +1330,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
           }
 
           .e-large {
-            @if $skin-name != 'material' {
+            @if ($skin-name != 'material' and $skin-name != 'material-dark') {
               height: $largetick-before-height;
               top: $largetick-before-top;
             }
@@ -1208,7 +1339,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
 
         &.e-v-scale {
           .e-tick {
-            @if $skin-name != 'material' {
+            @if ($skin-name != 'material' and $skin-name != 'material-dark') {
               left: $tick-after-left;
               width: $tick-after-height;
             }
@@ -1220,20 +1351,20 @@ $slider-limit-bar-color: rgba($grey-base, .25);
           }
 
           .e-large {
-            @if $skin-name != 'material' {
+            @if ($skin-name != 'material' and $skin-name != 'material-dark') {
               left: $largetick-before-left;
               width: $largetick-before-height;
             }
           }
+        }
       }
-    }
     }
 
     .e-tick-after {
       &.e-scale {
         &.e-h-scale {
           .e-tick {
-            @if $skin-name != 'material' {
+            @if ($skin-name != 'material' and $skin-name != 'material-dark') {
               height: $tick-before-height;
               top: $tick-before-top;
             }
@@ -1245,7 +1376,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
           }
 
           .e-large {
-            @if $skin-name != 'material' {
+            @if ($skin-name != 'material' and $skin-name != 'material-dark') {
               height: $largetick-after-height;
               top: $largetick-after-top;
             }
@@ -1254,7 +1385,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
 
         &.e-v-scale {
           .e-tick {
-            @if $skin-name != 'material' {
+            @if ($skin-name != 'material' and $skin-name != 'material-dark') {
               left: $tick-before-left;
               width: $tick-before-height;
             }
@@ -1266,7 +1397,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
           }
 
           .e-large {
-            @if $skin-name != 'material' {
+            @if ($skin-name != 'material' and $skin-name != 'material-dark') {
               left: $largetick-after-left;
               width: $largetick-after-height;
             }
@@ -1278,10 +1409,10 @@ $slider-limit-bar-color: rgba($grey-base, .25);
     &.e-scale-before {
       .e-scale {
         &.e-v-scale {
-          @if $skin-name == 'bootstrap' {
+          @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark' or $skin-name == 'bootstrap4') {
             right: 9px;
           }
-          @if $skin-name == 'fabric' or $skin-name == 'highcontrast' {
+          @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark' or $skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
             right: 9px;
           }
         }
@@ -1291,10 +1422,10 @@ $slider-limit-bar-color: rgba($grey-base, .25);
     &.e-scale-after {
       .e-scale {
         &.e-v-scale {
-          @if $skin-name == 'bootstrap' {
+          @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark' or $skin-name == 'bootstrap4') {
             right: 9px;
           }
-          @if $skin-name == 'fabric' or $skin-name == 'highcontrast' {
+          @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark' or $skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
             right: 9px;
           }
         }
@@ -1305,34 +1436,42 @@ $slider-limit-bar-color: rgba($grey-base, .25);
       &.e-scale {
         &.e-h-scale {
           .e-tick {
-            @if $skin-name == 'bootstrap' {
+            @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark') {
               height: calc(100% - 6px);
               top: -11px;
             }
-            @if $skin-name == 'fabric' {
+            @if ($skin-name == 'bootstrap4') {
+              height: 16px;
+              top: -8px;
+            }
+            @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark') {
               height: calc(100% - 3px);
               top: -12.5px;
             }
-            @if $skin-name == 'highcontrast' {
+            @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
               height: calc(100% - 6px);
               top: -12px;
             }
-            @if $skin-name == 'material' {
+            @if ($skin-name == 'material' or $skin-name == 'material-dark') {
               background-position: center;
               height: 99%;
             }
           }
 
           .e-large {
-            @if $skin-name == 'bootstrap' {
+            @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark') {
               height: 100%;
               top: -8px;
             }
-            @if $skin-name == 'fabric' or $skin-name == 'highcontrast' {
+            @if ($skin-name == 'bootstrap4') {
+              height: 22px;
+              top: -5px;
+            }
+            @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark' or $skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
               height: calc(100% + 3px);
               top: -9px;
             }
-            @if $skin-name == 'highcontrast' {
+            @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
               height: calc(100% + 2px);
               top: -8px;
             }
@@ -1341,32 +1480,41 @@ $slider-limit-bar-color: rgba($grey-base, .25);
 
         &.e-v-scale {
           .e-tick {
-            @if $skin-name == 'bootstrap' {
+            @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark') {
               background-position: center;
               width: 100%;
             }
-            @if $skin-name == 'material' {
+            @if ($skin-name == 'bootstrap4') {
+              background-position: center;
+              left: 6px;
+              width: calc(100% - 12px);
+            }
+            @if ($skin-name == 'material' or $skin-name == 'material-dark') {
               background-position: center;
               width: 100%;
             }
-            @if $skin-name == 'fabric' {
+            @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark') {
               left: 0;
               width: calc(100% - 2px);
             }
-            @if $skin-name == 'highcontrast' {
+            @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
               left: 2px;
               width: calc(100% - 6px);
+            }
           }
-        }
 
           .e-large {
-            @if $skin-name == 'bootstrap' {
+            @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark') {
               width: 100%;
             }
-            @if $skin-name == 'material' {
+            @if ($skin-name == 'bootstrap4') {
+              left: 3px;
+              width: calc(100% - 6px);
+            }
+            @if ($skin-name == 'material' or $skin-name == 'material-dark') {
               width: 100%;
             }
-            @if $skin-name == 'highcontrast' {
+            @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
               left: -2px;
               width: calc(100% + 3px);
             }
@@ -1388,16 +1536,16 @@ $slider-limit-bar-color: rgba($grey-base, .25);
       top: $slider-scale-top;
       width: 100%;
       z-index: 1;
-      @if $skin-name != 'material' {
+      @if ($skin-name != 'material' and $skin-name != 'material-dark') {
         font-size: $slider-scale-font-size;
         margin-top: $slider-center-align;
       }
 
-      @if $skin-name == 'highcontrast' {
+      @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
         z-index: -1;
       }
 
-      @if $skin-name == 'highcontrast' {
+      @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
         &.e-tick-both {
           top: 12px;
         }
@@ -1409,19 +1557,26 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         outline: none;
         position: relative;
         user-select: none;
-        @if $skin-name != 'material' {
+        @if ($skin-name != 'material' and $skin-name != 'material-dark') {
           background-position: center center;
         }
 
+        @if $skin-name == 'bootstrap4' {
+          &.e-large {
+            background-image: $slider-small-scale-tick-image;
+          }
+        }
+
         .e-tick-value {
+          color: $slider-tick-font-color;
           font-family: $slider-scale-font-family;
           font-size: $slider-scale-font-size;
           outline: none;
           position: absolute;
           user-select: none;
           white-space: nowrap;
-          @if $skin-name == 'highcontrast' {
-            color: $slider-tick-font-color;
+          @if $skin-name == 'bootstrap4' {
+            line-height: 1.5;
           }
         }
       }
@@ -1431,34 +1586,34 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         left: calc(50% - 14px);
         top: 0;
         width: 28px;
-        @if $skin-name == 'bootstrap' {
+        @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark' or $skin-name == 'bootstrap4') {
           margin-top: -2px;
         }
 
         .e-tick {
-          @if $skin-name == 'material' {
+          @if ($skin-name == 'material' or $skin-name == 'material-dark') {
             background-repeat: no-repeat;
           }
 
-          @if $skin-name != 'material' {
+          @if ($skin-name != 'material' and $skin-name != 'material-dark') {
             background-repeat: repeat-x;
           }
 
           &.e-first-tick {
-            @if $skin-name != 'material' {
+            @if ($skin-name != 'material' and $skin-name != 'material-dark') {
               background-position-y: center;
             }
-            @if $skin-name == 'material' {
+            @if ($skin-name == 'material' or $skin-name == 'material-dark') {
               background-position-y: top;
             }
           }
 
           &.e-last-tick {
-            @if $skin-name != 'material' {
+            @if ($skin-name != 'material' and $skin-name != 'material-dark') {
               background-position-y: bottom;
               margin-top: 2px;
             }
-            @if $skin-name == 'material' {
+            @if ($skin-name == 'material' or $skin-name == 'material-dark') {
               background-position-y: bottom;
             }
           }
@@ -1468,11 +1623,11 @@ $slider-limit-bar-color: rgba($grey-base, .25);
       &.e-h-scale {
         .e-tick {
           display: inline-block;
-          @if $skin-name == 'material' {
+          @if ($skin-name == 'material' or $skin-name == 'material-dark') {
             background-repeat: no-repeat;
           }
 
-          @if $skin-name != 'material' {
+          @if ($skin-name != 'material' and $skin-name != 'material-dark') {
             background-repeat: repeat-y;
             height: 100%;
             top: 0;
@@ -1497,19 +1652,19 @@ $slider-limit-bar-color: rgba($grey-base, .25);
           }
 
           &.e-first-tick {
-            @if $skin-name != 'material' {
+            @if ($skin-name != 'material' and $skin-name != 'material-dark') {
               background-position: left center;
             }
-            @if $skin-name == 'material' {
+            @if ($skin-name == 'material' or $skin-name == 'material-dark') {
               background-position-x: left;
             }
           }
 
           &.e-last-tick {
-            @if $skin-name != 'material' {
+            @if ($skin-name != 'material' and $skin-name != 'material-dark') {
               background-position: right center;
             }
-            @if $skin-name == 'material' {
+            @if ($skin-name == 'material' or $skin-name == 'material-dark') {
               background-position-x: right;
             }
           }
@@ -1520,16 +1675,16 @@ $slider-limit-bar-color: rgba($grey-base, .25);
     &.e-horizontal {
       &.e-scale-both {
         .e-scale {
-          @if $skin-name == 'fabric' {
+          @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark') {
             top: 12px;
           }
-          @if $skin-name == 'bootstrap' {
+          @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark' or $skin-name == 'bootstrap4') {
             top: 15px;
           }
         }
 
         .e-slider-track {
-          @if $skin-name == 'fabric' {
+          @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark') {
             border-color: $slider-track-border-color;
             border-radius: 1px;
             border-style: solid;
@@ -1538,7 +1693,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
             margin-top: -4px;
             top: calc(50% - 3px);
           }
-          @if $skin-name == 'highcontrast' {
+          @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
             border-color: $slider-tack-ticks-border-color;
             border-radius: 4px;
             border-style: solid;
@@ -1553,16 +1708,16 @@ $slider-limit-bar-color: rgba($grey-base, .25);
     &.e-vertical {
       &.e-scale-both {
         .e-scale {
-          @if $skin-name == 'fabric' {
+          @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark') {
             right: 12px;
           }
-          @if $skin-name == 'highcontrast' {
+          @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
             right: 11px;
           }
         }
 
         .e-slider-track {
-          @if $skin-name == 'fabric' {
+          @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark') {
             border-color: $slider-track-border-color;
             border-radius: 1px;
             border-style: solid;
@@ -1571,7 +1726,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
             margin-left: -7px;
             width: 14px;
           }
-          @if $skin-name == 'highcontrast' {
+          @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
             border-color: $slider-tack-ticks-border-color;
             border-radius: 1px;
             border-style: solid;
@@ -1583,7 +1738,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         }
 
         .e-range {
-          @if $skin-name == 'fabric' {
+          @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark') {
             margin-left: -1px;
           }
         }
@@ -1594,7 +1749,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
       &.e-vertical {
         .e-scale {
           &.e-h-scale {
-            @if $skin-name == 'fabric' or $skin-name == 'highcontrast' {
+            @if $skin-name == 'fabric' or $skin-name == 'fabric-dark' or $skin-name == 'highcontrast' or $skin-name == 'highcontrast-light' {
               margin-left: -7px;
             }
           }
@@ -1603,7 +1758,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
         &.e-small-size {
           .e-scale {
             &.e-h-scale {
-              @if $skin-name == 'fabric' or $skin-name == 'highcontrast' {
+              @if $skin-name == 'fabric' or $skin-name == 'fabric-dark' or $skin-name == 'highcontrast' or $skin-name == 'highcontrast-light' {
                 margin-left: -7px;
               }
             }
@@ -1617,7 +1772,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
     &.e-vertical {
       &.e-scale-both {
         .e-scale.e-v-scale {
-          @if $skin-name == 'bootstrap' {
+          @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark' or $skin-name == 'bootstrap4') {
             right: 10px;
           }
         }
@@ -1627,7 +1782,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
     .e-scale.e-v-scale {
       .e-tick {
         .e-tick-value {
-          @if $skin-name == 'material' {
+          @if ($skin-name == 'material' or $skin-name == 'material-dark') {
             &.e-tick-before {
               right: 26px;
             }
@@ -1654,10 +1809,20 @@ $slider-limit-bar-color: rgba($grey-base, .25);
             }
 
             &.e-tick-both {
-              right: 44px;
+              @if $skin-name == 'bootstrap4' {
+                right: 30px;
+              }
+              @else {
+                right: 44px;
+              }
 
               &:first-child {
-                left: 42px;
+                @if $skin-name == 'bootstrap4' {
+                  left: 30px;
+                }
+                @else {
+                  left: 42px;
+                }
               }
             }
           }
@@ -1668,22 +1833,21 @@ $slider-limit-bar-color: rgba($grey-base, .25);
 
   .e-control-wrapper.e-slider-container {
     .e-scale .e-tick {
-      @if $skin-name == 'material' {
+      @if ($skin-name == 'material' or $skin-name == 'material-dark') {
         visibility: hidden;
       }
 
       .e-tick-value {
-        @if $skin-name == 'material' {
+        @if ($skin-name == 'material' or $skin-name == 'material-dark') {
           visibility: visible;
         }
       }
-
     }
   }
 
   .e-control-wrapper.e-slider-container:hover {
     .e-scale .e-tick {
-      @if $skin-name == 'material' {
+      @if ($skin-name == 'material' or $skin-name == 'material-dark') {
         visibility: visible;
       }
     }
@@ -1691,32 +1855,34 @@ $slider-limit-bar-color: rgba($grey-base, .25);
 
   .e-control-wrapper.e-slider-container:active {
     .e-scale .e-tick {
-      @if $skin-name == 'material' {
+      @if ($skin-name == 'material' or $skin-name == 'material-dark') {
         visibility: visible;
       }
     }
   }
 
   .e-slider-hover .e-scale .e-tick {
-    @if $skin-name == 'material' {
+    @if ($skin-name == 'material' or $skin-name == 'material-dark') {
       visibility: visible;
     }
   }
 
   .e-control-wrapper.e-slider-container .e-slider {
     .e-handle.e-handle-active {
-      @if $skin-name == 'bootstrap' {
+      @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark' or $skin-name == 'bootstrap4') {
         background-color: $slider-handle-active-bg-color;
         border-color: $slider-handle-active-border-color;
       }
+      @if ($skin-name == 'bootstrap4') {
+        box-shadow: $slider-handle-active-box-shadow;
+      }
     }
   }
-
 }
 @include export-module('slider-theme') {
   /*! component theme */
   .e-control-wrapper.e-slider-container {
-    @if $skin-name == 'material' {
+    @if ($skin-name == 'material' or $skin-name == 'material-dark') {
       &.e-material-slider .e-slider .e-handle.e-handle-first {
         background: transparent;
         border-color: transparent;
@@ -1730,6 +1896,7 @@ $slider-limit-bar-color: rgba($grey-base, .25);
 
     .e-slider-button {
       background-color: $slider-button-bg-color;
+      border: 1px solid $slider-button-border-color;
       border-radius: 50%;
       box-sizing: border-box;
       cursor: pointer;
@@ -1738,34 +1905,33 @@ $slider-limit-bar-color: rgba($grey-base, .25);
       padding: 0;
       position: absolute;
       width: 18px;
-      @if $skin-name == 'highcontrast' {
-        border: 1px solid $slider-button-border-color;
-      }
-      @if $skin-name != 'highcontrast' {
-        border: 1px solid $slider-button-border-color;
+      @if $skin-name == 'bootstrap4' {
+        border: 0;
+        height: 16px;
+        width: 16px;
       }
     }
 
     .e-slider-button:hover {
-      @if $skin-name == 'highcontrast' {
+      @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
         background-color: $slider-range-bar-color;
         border-color: $slider-range-bar-color;
       }
 
       .e-button-icon::before {
-        @if $skin-name == 'highcontrast' {
+        @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
           color: $slider-button-icon-font-color;
         }
       }
     }
 
     .e-slider-button:active {
-      @if $skin-name == 'highcontrast' {
+      @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
         background-color: $slider-range-bar-color;
       }
 
       .e-button-icon::before {
-        @if $skin-name == 'highcontrast' {
+        @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
           color: $slider-button-icon-font-color;
         }
       }
@@ -1774,31 +1940,34 @@ $slider-limit-bar-color: rgba($grey-base, .25);
     .e-slider {
       .e-range {
         background-color: $slider-range-bar-color;
-        @if $skin-name == 'highcontrast' {
+        @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
           border-radius: 4px;
         }
       }
 
       .e-range.e-tab-range {
-        @if $skin-name == 'fabric' or $skin-name == 'highcontrast' {
+        @if $skin-name == 'fabric' or $skin-name == 'fabric-dark' or $skin-name == 'highcontrast' or $skin-name == 'highcontrast-light' {
           background-color: $slider-tab-range-color;
         }
       }
 
       .e-handle {
         background-color: $slider-handle-bg-color;
-        @if $skin-name == 'bootstrap' {
+        @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark') {
           border: 1px solid $slider-normal-handle-border-color;
         }
-        @if $skin-name == 'fabric' {
+        @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark') {
           border: 2px solid $slider-normal-handle-border-color;
         }
-        @if $skin-name == 'highcontrast' {
+        @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
           border: 2px solid $slider-normal-handle-border-color;
         }
-        @if $skin-name != 'bootstrap' {
+        @if $skin-name != 'bootstrap' and $skin-name != 'bootstrap-dark' {
           border-color: $slider-normal-handle-border-color;
         }
+        // @if $skin-name == 'bootstrap4' {
+        //   box-shadow: #fff 0px 0px 1px, rgba(#007bff, 0.25) 0px 0px 0px 3px;
+        // }
 
         &.e-material-tooltip {
           background-color: transparent;
@@ -1807,14 +1976,14 @@ $slider-limit-bar-color: rgba($grey-base, .25);
 
         &.e-handle-first {
           &:hover {
-            @if $skin-name == 'bootstrap' {
+            @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark') {
               background-color: $slider-handle-active-bg-color;
               border-color: $slider-handle-active-border-color;
             }
           }
 
           &:active {
-            @if $skin-name == 'bootstrap' {
+            @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark') {
               background-color: $slider-handle-active-bg-color;
               border-color: $slider-handle-active-border-color;
             }
@@ -1823,14 +1992,14 @@ $slider-limit-bar-color: rgba($grey-base, .25);
 
         &.e-handle-second {
           &:hover {
-            @if $skin-name == 'bootstrap' {
+            @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark') {
               background-color: $slider-handle-active-bg-color;
               border-color: $slider-handle-active-border-color;
             }
           }
 
           &:active {
-            @if $skin-name == 'bootstrap' {
+            @if ($skin-name == 'bootstrap' or $skin-name == 'bootstrap-dark') {
               background-color: $slider-handle-active-bg-color;
               border-color: $slider-handle-active-border-color;
             }
@@ -1841,13 +2010,13 @@ $slider-limit-bar-color: rgba($grey-base, .25);
 
     .e-slider {
       .e-handle:hover {
-        @if $skin-name == 'highcontrast' {
+        @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
           background-color: $slider-hover-handle-color;
         }
       }
 
       .e-handle:active {
-        @if $skin-name == 'highcontrast' {
+        @if ($skin-name == 'highcontrast' or $skin-name == 'highcontrast-light') {
           background-color: $slider-active-handle-bg-color;
         }
       }
@@ -1855,19 +2024,19 @@ $slider-limit-bar-color: rgba($grey-base, .25);
 
     &.e-slider-hover {
       .e-slider-track {
-        @if $skin-name != 'highcontrast' {
+        @if ($skin-name != 'highcontrast' and $skin-name != 'highcontrast-light' and $skin-name != 'bootstrap4') {
           background-color: $slider-hover-color;
         }
       }
 
       .e-range {
-        @if $skin-name != 'highcontrast' {
+        @if ($skin-name != 'highcontrast' and $skin-name != 'highcontrast-light' and $skin-name != 'bootstrap4') {
           background-color: $slider-range-bar-hover-color;
         }
       }
 
       .e-handle {
-        @if $skin-name != 'highcontrast' {
+        @if ($skin-name != 'highcontrast' and $skin-name != 'highcontrast-light' and $skin-name != 'bootstrap4') {
           border-color: $slider-handle-hover-border-color;
         }
       }
@@ -1878,19 +2047,19 @@ $slider-limit-bar-color: rgba($grey-base, .25);
 .e-control-wrapper.e-slider-container {
   &:not(.e-disabled):not(.e-read-only):active {
     .e-handle {
-      @if $skin-name == 'fabric' {
+      @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark') {
         border-color: $slider-tab-border-color;
       }
     }
 
     .e-range {
-      @if $skin-name == 'fabric' {
+      @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark') {
         background-color: $slider-tab-range-color;
       }
     }
 
     .e-slider-track {
-      @if $skin-name == 'fabric' {
+      @if ($skin-name == 'fabric' or $skin-name == 'fabric-dark') {
         background-color: $slider-tab-track-color;
       }
     }

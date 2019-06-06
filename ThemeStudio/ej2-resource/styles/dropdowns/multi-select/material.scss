@@ -1,352 +1,150 @@
 
+$ddl-chip-mobile-close-font: 16px !default;
 
-$list-line-height: 36px;
-$header-font-weight: 600;
-$last-child-bottom-border: 0;
-$default-font-family: $font-family;
-$list-font-size: 15px;
-$list-border-size: 1px;
-$default-header-font-color: $default-font-color;
-$list-default-font-color: $default-font-color;
-$list-border-color: $default-border-color;
-$list-bg-color: $default-bg-color;
-$list-bottom-border: $list-border-size;
-$list-gradient-color: $default-gradient-color;
-$list-font-family: $default-font-family;
-$list-header-border-color: $header-border-color;
-$list-header-bg-color: $header-bg-color;
-$list-active-bg-color: $active-bg-color;
-$list-active-border-color: $active-border-color;
-$list-active-font-color: $active-font-color;
-$list-hover-bg-color: $hover-bg-color;
-$list-hover-border-color: $hover-border-color;
-$list-hover-font-color: $hover-font-color;
-$group-list-padding-left: 2em;
-$list-padding-right: 16px;
-$list-border-color: $grey-300;
-$list-gradient-color: $grey-white;
-$list-bg-color: $grey-white;
-$list-header-bg-color: $grey-50;
-$list-header-border-color: $grey-black;
-$nodata-font-color: $grey-black;
-$list-default-font-color: rgba($grey-light-font, .87);
-$list-active-border-color: $grey-white;
-$list-active-font-color: $accent;
-$list-active-bg-color: $grey-200;
-$list-hover-border-color: $grey-white;
-$list-hover-bg-color: $grey-200;
-$list-hover-font-color: rgba($grey-light-font, .87);
-$list-header-font-color: rgba($grey-light-font, .54);
-$list-font-size: 13px;
-$group-list-font-size: 13px;
-$list-font-family: $font-family;
-$list-border-size: 0;
-$default-header-font-color: rgba($grey-light-font, .54);
-$list-focus-color: $grey-50;
-$list-focus-border: 1px solid $grey-400;
-$group-list-padding-left: 2em;
-$list-header-padding-left: 16px;
-$list-text-indent: 16px;
-$list-padding-right: 16px;
-$bigger-list-header-font-size: 14px;
-
-@include export-module('dropdownbase-material') {
-  .e-dropdownbase .e-list-item .e-list-icon {
-    padding: 0 16px 0 0;
+$ddl-multiselect-skin-name: 'material' !default;
+$ddl-delim-font-size: 14px !default;
+$ddl-rtl-wrapper: 0 2px 0 32px !default;
+$ddl-chip-mobile-bg: $primary !default;
+$ddl-chip-mobile-font: $primary-font !default;
+$ddl-list-box-shadow-color: rgba(0, 0, 0, .21) !default;
+$ddl-chip-bg-color:  $grey-200 !default;
+$ddl-chip-hover-bg-color: $grey-200 !default;
+$ddl-chip-hover-font-color: rgba($grey-light-font, .87) !default;
+$ddl-sel-hover-chip-bg-color:  $grey-600 !default;
+$ddl-sel-chip-hover-font-color: $grey-dark-font !default;
+$ddl-chip-font-color:  rgba($grey-light-font, .87) !default;
+$ddl-chip-close:  rgba($grey-light-font, .54) !default;
+$ddl-sel-chip-font-color: $grey-dark-font !default;
+$ddl-sel-chip-close: $grey-dark-font !default;
+$ddl-sel-chip-color: $grey-dark-font !default;
+$ddl-sel-chip-bg-color: $grey-600 !default;
+$ddl-popup-shadow-value: 0 2px 3px 1px $ddl-list-box-shadow-color !default;
+$ddl-remains-font-color: rgba($grey-light-font, .54) !default;
+$ddl-remains-padding-left: 16px !default;
+$ddl-chip-margin: 0 8px 6px 0 !default;
+$ddl-chip-margin-bigger: 0 8px 6px 0 !default;
+$ddl-chip-radius: 16px !default;
+$ddl-chip-content-padding: 0 4px 0 0 !default;
+$ddl-chip-mobile-content-padding: 8px 4px 8px 0 !default;
+$ddl-rtl-chip-mobile-content-padding: 8px 0 8px 4px !default;
+$ddl-chip-padding: 0 4px 0 8px !default;
+$ddl-chip-close-top: 0 !default;
+$ddl-chip-close-left: 0 !default;
+$ddl-chip-close-margin: 0 0 0 !default;
+$ddl-chip-close-square: 16px !default;
+$ddl-chip-hooker-square: 24px !default;
+$ddl-chip-close-font: 16px !default;
+$ddl-chip-height: 24px !default;
+$ddl-chip-mobile-height: 28px !default;
+$ddl-chip-collection-top: 0 !default;
+$ddl-input-height: 28px !default;
+$ddl-input-bigger-height: 34px !default;
+$ddl-input-mob-height: 30px !default;
+$ddl-control-height: 30px !default;
+$ddl-control-bigger-height: 36px !default;
+$ddl-delimviewheight: 28px !default;
+$ddl-delimviewheight-bigger: 34px !default;
+$ddl-closer-hooker-font: 10px !default;
+$ddl-chip-font-family: $font-family !default;
+$ddl-closer-margin-top: -3em !default;
+$ddl-closer-margin-top-bigger: -3em !default;
+$ddl-chip-mobile-radius: 2px !default;
+$ddl-chip-sel-mobile-height: 40px !default;
+$ddl-chip-selected-padding: 12px 4px 11px 0 !default;
+$ddl-chip-mobile-close-margin: 3px 0 0 !default;
+$ddl-chip-close-mob-margin: 8px 0 0 !default;
+$ddl-closer-hooker-top: 100% !default;
+$ddl-chip-hooker-right: 5px !default;
+$ddl-chip-mob-left: 0 !default;
+$ddl-chip-mob-padding: 0 0 0 16px !default;
+$ddl-chip-font-size: 13px !default;
+$ddl-rtl-chip-close-left: 0 !default;
+$ddl-rtl-chip-content-padding: 5px 4px !default;
+$ddl-rtl-mob-chip-content-padding: 8px 4px !default;
+$ddl-rtl-mob-chip-content-margin: 0 0 8px 8px !default;
+$ddl-rtl-mob-sel-chip-content-padding: 12px 4px !default;
+$ddl-rtl-chip-padding: 0 8px 0 4px !default;
+$ddl-rtl-mob-sel-chip-padding: 0 8px 0 4px !default;
+$ddl-rtl-mob-chip-padding: 0 4px 0 8px !default;
+$ddl-rtl-hooker-left: -4px !default;
+$ddl-chip-close-mob-top: 0 !default;
+$ddl-chip-close-mobile-top: 0 !default;
+$ddl-control-placholder-padding: 0 32px 0 0 !default;
+$ddl-overall-close-top: 6px !default;
+$ddl-overall-close-left: 6px !default;
+$ddl-sel-chip-close-mobile-top: 0 !default;
+$ddl-sel-chip-close-mobile-left: 12px !default;
+$ddl-chip-sel-mobile-close-height: 40px !default;
+$ddl-chip-sel-mobile-close-margin: 0 0 0 0 !default;
+$ddl-input-text-indent: 0 !default;
+$ddl-rtl-chip-sel-close-left: -12px !default;
+$ddl-popup-active-focus-bg-color: $grey-300 !default;
+$ddl-popup-active-focus-font-color: $accent !default;
+$ddl-popup-active-focus-border-color: transparent !default;
+$ddl-popup-active-focus-border-width: 1px !default;
+$ddl-popup-active-focus-shadow-item: none !default;
+$ddl-input-placeholder: rgba($grey-light-font, .42) !default;
+$ddl-popup-active-border-color: $grey-white !default;
+$ddl-popup-active-border-width: 1px !default;
+$ddl-delim-text-indent: 0 !default;
+$ddl-popup-normal-border-width: 1px !default;
+$ddl-check-right: 17px !default;
+$ddl-check-left: 12px !default;
+$ddl-bigger-select-all-height: 48px !default;
+$ddl-select-all-height: 36px !default;
+$ddl-back-icon-margin: 2.5px 10px 0 -52px !default;
+$ddl-back-icon-padding: 8px 16px !default;
+$ddl-filterbar-padding: 8px !default;
+$ddl-bigger-filterbar-padding: 4px 0 !default;
+$ddl-delimviewheight-check-bigger: 34px !default;
+$ddl-popup-reorder-border: rgba($grey-light-font, .12) !default;
+$ddl-check-right-margin: 10px !default;
+$ddl-bigger-check-right-margin: 12px !default;
+$ddl-selectall-font-size: 14px !default;
+$ddl-close-icon-left: 22px !default;
+$ddl-check-icon-top: 7px !default;
+$ddl-bigger-check-right: 17px !default;
+$ddl-multi-list-default-font-color: rgba($grey-light-font, .87) !default;
+$ddl-multi-list-hover-bg-color: $grey-200 !default;
+$ddl-delim-text-padding-right: 6px !default;
+$ddl-list-rtl-padding-right: 15px !default;
+$ddl-close-rtl-icon-left: 19px !default;
+$ddl-chip-close-rtl-left: -7px !default;
+$ddl-delim-font-color: $grey-light-font !default;
+$ddl-close-icon-color: $grey-light-font !default;
+@include export-module('multiselect-material-icons') {
+  .e-multiselect.e-input-group .e-ddl-icon::before {
+    content: '\e969';
+    font-family: 'e-icons';
   }
-}
 
-@include export-module('dropdownbase-layout') {
-  .e-bigger .e-dropdownbase,
-  .e-dropdownbase.e-bigger {
-    min-height: 45px;
-    @at-root {
-      & .e-list-item,
-      & .e-list-group-item,
-      & .e-fixed-head {
-        line-height: 48px;
-      }
-
-      & .e-list-item .e-list-icon {
-        font-size: 20px;
-      }
-    }
-  }
-
-  .e-dropdownbase {
-    display: block;
-    height: 100%;
-    min-height: 36px;
+  .e-multi-select-wrapper .e-chips .e-chips-close::before {
+    content: '\e7e9';
+    cursor: pointer;
+    left: $ddl-chip-close-left;
     position: relative;
-    width: 100%;
-    @at-root {
-      & .e-list-parent {
-        margin: 0;
-        padding: 0;
-      }
-
-      & .e-list-group-item,
-      & .e-fixed-head {
-        cursor: default;
-      }
-
-      & .e-list-item {
-        cursor: pointer;
-        overflow: hidden;
-        position: relative;
-        text-overflow: ellipsis;
-        vertical-align: middle;
-        white-space: nowrap;
-        width: 100%;
-      }
-
-      & .e-list-item .e-list-icon {
-        font-size: 16px;
-        vertical-align: middle;
-      }
-
-      & .e-fixed-head {
-        position: absolute;
-        top: 0;.e-rtl & {
-          left: 33px;
-        }
-      }
-    }
+    top: $ddl-chip-close-top;
   }
 
-  .e-dropdownbase.e-content {
-    overflow: auto;
+  .e-multi-select-wrapper .e-close-hooker::before {
+    content: '\e7a7';
+    cursor: pointer;
+    left: $ddl-overall-close-left;
     position: relative;
+    top: $ddl-overall-close-top;
   }
 
-  #{&}.e-popup.e-ddl .e-dropdownbase.e-nodata {
-    color: $nodata-font-color;
-    cursor: default;
-    font-family: $list-font-family;
-    font-size: 14px;
-    padding: 14px 16px;
-    text-align: center;
-  }
-
-  .e-rtl .e-dropdownbase.e-dd-group .e-list-item {
-    padding-right: $group-list-padding-left;
-  }
-
-  .e-dropdownbase.e-dd-group .e-list-item {
-    padding-left: $group-list-padding-left;
-    text-indent: 0;
+  .e-multiselect.e-input-group .e-ddl-disable-icon::before {
+    content: '';
   }
 }
-@include export-module('dropdownbase-theme') {
-  .e-dropdownbase {
-    border-color: $list-border-color;
-    @at-root {
-      & .e-list-item {
-        background-color: $list-bg-color;
-        border-bottom: $list-bottom-border;
-        border-color: $list-gradient-color;
-        color: $list-default-font-color;
-        font-family: $list-font-family;
-        font-size: $list-font-size;
-        line-height: $list-line-height;
-        min-height: $list-line-height;
-        padding-right: $list-padding-right;
-        text-indent: $list-text-indent;
-      }
 
-      & .e-list-group-item,
-      .e-fixed-head {
-        background-color: $list-bg-color;
-        border-color: $list-gradient-color;
-        color: $list-header-font-color;
-        font-family: $list-font-family;
-        font-size: $group-list-font-size;
-        font-weight: $header-font-weight;
-        line-height: $list-line-height;
-        min-height: $list-line-height;
-        padding-left: $list-header-padding-left;
-        padding-right: $list-padding-right;
-      }
-
-      & .e-list-item.e-active,
-      & .e-list-item.e-active.e-hover {
-        background-color: $list-active-bg-color;
-        border-color: $list-active-border-color;
-        color: $list-active-font-color;
-       }
-
-      & .e-list-item.e-hover {
-        background-color: $list-hover-bg-color;
-        border-color: $list-hover-border-color;
-        color: $list-hover-font-color;
-      }
-
-      & .e-list-item:last-child {
-        border-bottom: $last-child-bottom-border;
-      }
-
-      & .e-list-item.e-item-focus {
-        background-color: $list-hover-bg-color;
-      }
-    }
-  }
-
-  .e-bigger .e-dropdownbase {
-    @at-root {
-      & .e-list-group-item,
-      & .e-fixed-head {
-        font-size: $bigger-list-header-font-size;
-      }
-    }
-  }
-}
-$overall-close-icon: '\e7a7';
-$overall-close-top: 2px;
-$overall-close-left: 3px;
-$chip-mobile-radius: 2px;
-$chip-mobile-height: 40px;
-$chip-mobile-close-font: 16px;
-$multiselect-skin-name: 'material';
-$delim-font-size: 14px;
-$rtl-wrapper: 0 2px 0 32px;
-$chip-mobile-bg: $primary;
-$chip-mobile-font: $primary-font;
-$list-box-shadow-color: rgba(0, 0, 0, .21);
-$chip-bg-color:  $grey-200;
-$chip-hover-bg-color: $grey-200;
-$chip-hover-font-color: rgba($grey-light-font, .87);
-$sel-hover-chip-bg-color:  $grey-600;
-$sel-chip-hover-font-color: $grey-dark-font;
-$chip-font-color:  rgba($grey-light-font, .87);
-$chip-close:  rgba($grey-light-font, .54);
-$sel-chip-font-color: $grey-dark-font;
-$sel-chip-close: $grey-dark-font;
-$sel-chip-color: $grey-dark-font;
-$sel-chip-bg-color: $grey-600;
-$popup-shadow-value: 0 2px 3px 1px $list-box-shadow-color;
-$remains-font-color: rgba($grey-light-font, .54);
-$remains-padding-left: 16px;
-$chip-margin: 0 8px 6px 0;
-$chip-margin-bigger: 0 8px 6px 0;
-$chip-radius: 16px;
-$chip-content-padding: 0 4px 0 0;
-$chip-mobile-content-padding: 8px 4px 8px 0;
-$rtl-chip-mobile-content-padding: 8px 0 8px 4px;
-$chip-padding: 0 4px 0 8px;
-$chip-close-icon: '\e7e9';
-$chip-close-top: 0;
-$chip-close-left: 0;
-$chip-close-margin: 0 0 0;
-$chip-close-square: 16px;
-$chip-hooker-square: 24px;
-$chip-close-font: 16px;
-$chip-height: 24px;
-$chip-mobile-height: 28px;
-$chip-collection-top: 0;
-$input-height: 28px;
-$input-bigger-height: 34px;
-$input-mob-height: 30px;
-$control-height: 30px;
-$control-bigger-height: 36px;
-$delimviewheight: 28px;
-$delimviewheight-bigger: 34px;
-$closer-hooker-font: 10px;
-$chip-font-family: $font-family;
-$closer-margin-top: -3em;
-$closer-margin-top-bigger: -3em;
-$chip-mobile-radius: 2px;
-$chip-sel-mobile-height: 40px;
-$chip-selected-padding: 12px 4px 11px 0;
-$chip-mobile-close-margin: 3px 0 0;
-$chip-close-mob-margin: 8px 0 0;
-$closer-hooker-top: 100%;
-$chip-hooker-right: 5px;
-$chip-mob-left: 0;
-$chip-mob-padding: 0 0 0 16px;
-$chip-font-size: 13px;
-$rtl-chip-close-left: 0;
-$rtl-chip-content-padding: 5px 4px;
-$rtl-mob-chip-content-padding: 8px 4px;
-$rtl-mob-chip-content-margin: 0 0 8px 8px;
-$rtl-mob-sel-chip-content-padding: 12px 4px;
-$rtl-chip-padding: 0 8px 0 4px;
-$rtl-mob-sel-chip-padding: 0 8px 0 4px;
-$rtl-mob-chip-padding: 0 4px 0 8px;
-$rtl-hooker-left: -4px;
-$chip-close-mob-top: 0;
-$chip-close-mobile-top: 0;
-$control-placholder-padding: 0 32px 0 0;
-$overall-close-top: 6px;
-$overall-close-left: 6px;
-$sel-chip-close-mobile-top: 0;
-$sel-chip-close-mobile-left: 12px;
-$chip-sel-mobile-close-height: 40px;
-$chip-sel-mobile-close-margin: 0 0 0 0;
-$input-text-indent: 0;
-$rtl-chip-sel-close-left: -12px;
-$popup-active-focus-bg-color: $grey-300;
-$popup-active-focus-font-color: $accent;
-$popup-active-focus-border-color: transparent;
-$popup-active-focus-border-width: 1px;
-$popup-active-focus-shadow-item: none;
-$input-placeholder: rgba($grey-light-font, .42);
-$popup-active-border-color: $grey-white;
-$popup-active-border-width: 1px;
-$delim-text-indent: 0;
-$down-icon-content: '\e969';
-$popup-normal-border-width: 1px;
-$check-right: 17px;
-$check-left: 12px;
-$bigger-select-all-height: 48px;
-$select-all-height: 36px;
-$back-icon-margin: 2.5px 10px 0 -52px;
-$back-icon-padding: 8px 16px;
-$filterbar-padding: 8px;
-$bigger-filterbar-padding: 4px 0;
-$delimviewheight-check-bigger: 34px;
-$popup-reorder-border: rgba($grey-light-font, .12);
-$check-right-margin: 10px;
-$bigger-check-right-margin: 12px;
-$selectall-font-size: 14px;
-$close-icon-left: 22px;
-$ddl-check-icon-top: 7px;
-$bigger-check-right: 17px;
-$multi-list-default-font-color: rgba($grey-light-font, .87);
-$multi-list-hover-bg-color: $grey-200;
-$delim-text-padding-right: 6px;
-$list-rtl-padding-right: 15px;
-$close-rtl-icon-left: 19px;
-$chip-close-rtl-left: -7px;
-
-.e-multi-select-wrapper .e-close-hooker::before {
-  content: $overall-close-icon;
-  cursor: pointer;
-  left: $overall-close-left;
-  position: relative;
-  top: $overall-close-top;
-}
-
-.e-multi-select-wrapper .e-chips .e-chips-close::before {
-  content: $chip-close-icon;
-  cursor: pointer;
-  left: $chip-close-left;
-  position: relative;
-  top: $chip-close-top;
-}
-
-.e-multiselect.e-input-group .e-ddl-icon::before {
-  content: $down-icon-content;
-  font-family: 'e-icons';
-}
-
-.e-multiselect.e-input-group .e-ddl-disable-icon::before {
-  content: '';
-}
 .e-multi-select-wrapper {
+  box-sizing: border-box;
   cursor: text;
   line-height: normal;
-  min-height: $control-height;
-  padding: $control-placholder-padding;
+  min-height: $ddl-control-height;
+  padding: $ddl-control-placholder-padding;
   position: relative;
   user-select: none;
   width: 100%;
@@ -363,22 +161,30 @@ $chip-close-rtl-left: -7px;
 
   .e-delim-view {
     white-space: nowrap;
+
+    &.e-delim-values.e-delim-overflow,
+    &.e-delim-values.e-delim-total {
+      box-sizing: border-box;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   .e-chips.e-mob-chip.e-chip-selected .e-chips-close::before {
-    color: $chip-mobile-font;
-    font-size: $chip-close-font;
-    left: $sel-chip-close-mobile-left;
-    top: $sel-chip-close-mobile-top;
+    color: $ddl-chip-mobile-font;
+    font-size: $ddl-chip-close-font;
+    left: $ddl-sel-chip-close-mobile-left;
+    top: $ddl-sel-chip-close-mobile-top;
   }
 
   .e-chips.e-mob-chip.e-chip-selected .e-chipcontent {
-    background-color: $chip-mobile-bg;
-    color: $chip-mobile-font;
-    padding: $chip-selected-padding;
+    background-color: $ddl-chip-mobile-bg;
+    color: $ddl-chip-mobile-font;
+    padding: $ddl-chip-selected-padding;
   }
 
-  .e-searcher.e-zero-size {
+  .e-searcher.e-zero-size:not(.e-multiselect-box) {
     width: 0;
 
     input[type='text'] {
@@ -394,7 +200,7 @@ $chip-close-rtl-left: -7px;
 }
 
 .e-bigger .e-multi-select-wrapper {
-  min-height: $control-bigger-height;
+  min-height: $ddl-control-bigger-height;
 }
 
 .e-multi-select-wrapper.e-close-icon-hide {
@@ -409,6 +215,7 @@ $chip-close-rtl-left: -7px;
 .e-multi-select-wrapper .e-multi-hidden {
   border: 0;
   height: 0;
+  position: absolute;
   visibility: hidden;
   width: 0;
 }
@@ -417,22 +224,22 @@ $chip-close-rtl-left: -7px;
   align-items: center;
   display: inline-flex;
   float: left;
-  margin: $chip-margin;
+  margin: $ddl-chip-margin;
   max-width: 100%;
   overflow: hidden;
-  padding: $chip-padding;
+  padding: $ddl-chip-padding;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .e-bigger .e-multi-select-wrapper .e-chips {
-  margin: $chip-margin-bigger;
+  margin: $ddl-chip-margin-bigger;
 }
 
 .e-multi-select-wrapper .e-chips>.e-chipcontent {
   max-width: 100%;
   overflow: hidden;
-  padding: $chip-content-padding;
+  padding: $ddl-chip-content-padding;
   text-indent: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -447,12 +254,18 @@ $chip-close-rtl-left: -7px;
 
 .e-multi-select-wrapper .e-mob-chip.e-chips>.e-chipcontent,
 .e-bigger .e-multi-select-wrapper .e-chips>.e-chipcontent {
-  padding: $chip-mobile-content-padding;
+  padding: $ddl-chip-mobile-content-padding;
+}
+
+.e-bigger .e-multi-select-wrapper .e-chips>.e-chipcontent {
+  @if $ddl-multiselect-skin-name == 'bootstrap4' {
+    padding: $ddl-chip-bigger-content-padding;
+  }
 }
 
 #{&}.e-multiselect.e-rtl .e-multi-select-wrapper .e-mob-chip.e-chips>.e-chipcontent,
 .e-bigger #{&}.e-multiselect.e-rtl .e-multi-select-wrapper .e-chips>.e-chipcontent {
-  padding: $rtl-chip-mobile-content-padding;
+  padding: $ddl-rtl-chip-mobile-content-padding;
 }
 
 .e-multi-select-wrapper .e-chips-close {
@@ -460,62 +273,68 @@ $chip-close-rtl-left: -7px;
   display: flex;
   float: right;
   font-family: 'e-icons';
-  height: $chip-close-square;
-  margin: $chip-close-margin;
-  width: $chip-close-square;
+  height: $ddl-chip-close-square;
+  margin: $ddl-chip-close-margin;
+  width: $ddl-chip-close-square;
 }
 
 .e-multi-select-wrapper .e-mob-chip.e-chips .e-chips-close {
-  margin: $chip-mobile-close-margin;
+  margin: $ddl-chip-mobile-close-margin;
 }
 
 .e-multi-select-wrapper .e-chips-close.e-close-hooker {
   cursor: default;
-  font-size: $closer-hooker-font;
-  height: $chip-hooker-square;
-  margin-top: $closer-margin-top;
+  font-size: $ddl-closer-hooker-font;
+  height: $ddl-chip-hooker-square;
+  margin-top: $ddl-closer-margin-top;
   position: absolute;
-  right: $chip-hooker-right;
-  top: $closer-hooker-top;
-  width: $chip-hooker-square;
+  right: $ddl-chip-hooker-right;
+  top: $ddl-closer-hooker-top;
+  width: $ddl-chip-hooker-square;
 }
 
 .e-multiselect .e-down-icon .e-chips-close.e-close-hooker {
-  right: $close-icon-left;
+  right: $ddl-close-icon-left;
 }
 
 .e-bigger .e-multiselect .e-down-icon .e-chips-close.e-close-hooker {
-  @if $multiselect-skin-name == 'Fabric' or $multiselect-skin-name == 'highcontrast' {
+  @if $ddl-multiselect-skin-name == 'Fabric' or $ddl-multiselect-skin-name == 'highcontrast' {
     right: 38px;
   }
 }
 
 .e-bigger .e-multi-select-wrapper .e-chips-close.e-close-hooker {
-  margin-top: $closer-margin-top-bigger;
+  @if $ddl-multiselect-skin-name == 'bootstrap4' {
+    font-size: $ddl-closer-hooker-font-bigger;
+  }
+  margin-top: $ddl-closer-margin-top-bigger;
 }
 
 .e-multi-select-wrapper input[type='text'] {
   background: none;
   border: 0;
-  font-family: $chip-font-family;
-  font-size: $chip-font-size;
+  font-family: $ddl-chip-font-family;
+  font-size: $ddl-chip-font-size;
   font-weight: 400;
-  height: $input-height;
-  min-height: $input-height;
+  height: $ddl-input-height;
+  min-height: $ddl-input-height;
   outline: none;
   padding: 0;
-  text-indent: $input-text-indent;
+  text-indent: $ddl-input-text-indent;
 }
 
 .e-bigger .e-multi-select-wrapper input[type='text'],
 .e-multi-select-wrapper.e-mob-wrapper input[type='text'] {
-  height: $input-height;
-  min-height: $input-height;
+  height: $ddl-input-height;
+  min-height: $ddl-input-height;
 }
 
 .e-bigger .e-multi-select-wrapper input[type='text'] {
-  height: $input-bigger-height;
-  min-height: $input-bigger-height;
+  @if $ddl-multiselect-skin-name == 'bootstrap4' {
+    font-size: $ddl-chip-bigger-font-size;
+  }
+  height: $ddl-input-bigger-height;
+  min-height: $ddl-input-bigger-height;
 }
 
 // sass-lint:disable no-vendor-prefixes
@@ -530,17 +349,23 @@ $chip-close-rtl-left: -7px;
 }
 
 .e-multi-select-wrapper .e-delim-values {
-  font-family: $chip-font-family;
-  font-size: $delim-font-size;
-  line-height: $delimviewheight;
+  font-family: $ddl-chip-font-family;
+  font-size: $ddl-delim-font-size;
+  line-height: $ddl-delimviewheight;
   max-width: 100%;
-  padding-left: $delim-text-indent;
-  padding-right: $delim-text-padding-right;
+  padding-left: $ddl-delim-text-indent;
+  padding-right: $ddl-delim-text-padding-right;
   vertical-align: middle;
 }
 
 .e-bigger .e-multi-select-wrapper .e-delim-values {
-  line-height: $delimviewheight-bigger;
+  line-height: $ddl-delimviewheight-bigger;
+}
+
+.e-bigger .e-multi-select-wrapper .e-delim-values .e-remain {
+  @if $ddl-multiselect-skin-name == 'bootstrap4' {
+    padding-left: 12px;
+  }
 }
 
 .e-multi-select-list-wrapper .e-hide-listitem {
@@ -548,11 +373,11 @@ $chip-close-rtl-left: -7px;
 }
 
 .e-multi-select-wrapper .e-delim-values .e-remain {
-  color: $remains-font-color;
+  color: $ddl-remains-font-color;
   cursor: pointer;
   display: inline-block;
-  font-size: $chip-font-size;
-  padding-left: $remains-padding-left;
+  font-size: $ddl-chip-font-size;
+  padding-left: $ddl-remains-padding-left;
 }
 
 #{&}.e-multiselect.e-disabled .e-multi-select-wrapper,
@@ -561,19 +386,20 @@ $chip-close-rtl-left: -7px;
 }
 
 .e-multi-select-wrapper .e-chips.e-mob-chip.e-chip-selected .e-chips-close {
-  height: $chip-sel-mobile-height;
-  left: $chip-mob-left;
-  margin: $chip-sel-mobile-close-margin;
+  height: $ddl-chip-sel-mobile-height;
+  left: $ddl-chip-mob-left;
+  margin: $ddl-chip-sel-mobile-close-margin;
+  margin-left: auto;
   position: relative;
-  top: $chip-close-mob-top;
-  width: $chip-sel-mobile-height;
+  top: $ddl-chip-close-mob-top;
+  width: $ddl-chip-sel-mobile-height;
 }
 
 .e-multi-select-wrapper .e-chips.e-mob-chip.e-chip-selected {
   align-self: center;
-  box-shadow: $popup-shadow-value;
+  box-shadow: $ddl-popup-shadow-value;
   display: inline-flex;
-  padding: $chip-mob-padding;
+  padding: $ddl-chip-mob-padding;
   width: 92%;
 }
 
@@ -593,10 +419,10 @@ $chip-close-rtl-left: -7px;
   }
 
   .e-multi-select-wrapper {
-    padding: $rtl-wrapper;
+    padding: $ddl-rtl-wrapper;
 
     .e-chips.e-mob-chip.e-chip-selected .e-chips-close::before {
-      left: $rtl-chip-sel-close-left;
+      left: $ddl-rtl-chip-sel-close-left;
     }
 
     .e-chips.e-mob-chip.e-chip-selected .e-chips-close {
@@ -609,11 +435,11 @@ $chip-close-rtl-left: -7px;
 
     .e-chips {
       float: right;
-      margin: $rtl-mob-chip-content-margin;
-      padding: $rtl-chip-padding;
+      margin: $ddl-rtl-mob-chip-content-margin;
+      padding: $ddl-rtl-chip-padding;
 
       .e-chipcontent {
-        padding: $rtl-chip-content-padding;
+        padding: $ddl-rtl-chip-content-padding;
       }
 
       .e-chips-close {
@@ -621,54 +447,54 @@ $chip-close-rtl-left: -7px;
       }
 
       .e-chips-close::before {
-        left: $rtl-chip-close-left;
+        left: $ddl-rtl-chip-close-left;
       }
     }
 
     .e-chips.e-mob-chip {
-      padding: $rtl-mob-chip-padding;
+      padding: $ddl-rtl-mob-chip-padding;
 
       .e-chipcontent {
-        padding: $rtl-mob-chip-content-padding;
+        padding: $ddl-rtl-mob-chip-content-padding;
       }
     }
 
     .e-chips.e-mob-chip.e-chip-selected {
-      padding: $rtl-mob-sel-chip-padding;
+      padding: $ddl-rtl-mob-sel-chip-padding;
 
       .e-chipcontent {
-        padding: $rtl-mob-sel-chip-content-padding;
+        padding: $ddl-rtl-mob-sel-chip-content-padding;
       }
   }
 
     .e-chips-close.e-close-hooker {
-      left: $close-icon-left;
+      left: $ddl-close-icon-left;
       position: absolute;
       right: auto;
   }
 
     .e-close-hooker::before {
-      left: $rtl-hooker-left;
+      left: $ddl-rtl-hooker-left;
   }
 
     .e-delim-values .e-remain {
-      padding-right: $remains-padding-left;
+      padding-right: $ddl-remains-padding-left;
     }
 
   }
 }
 
 .e-multiselect.e-rtl .e-down-icon .e-chips-close.e-icon.e-close-hooker {
-  left: $close-rtl-icon-left;
+  left: $ddl-close-rtl-icon-left;
 }
 
 .e-multiselect.e-rtl .e-multi-select-wrapper.e-down-icon .e-close-hooker::before {
-  left: $chip-close-rtl-left;
+  left: $ddl-chip-close-rtl-left;
 }
 
 .e-popup.e-multi-select-list-wrapper .e-list-item .e-checkbox-wrapper {
   bottom: 1px;
-  margin-right: $check-right-margin;
+  margin-right: $ddl-check-right-margin;
   position: relative;
   text-indent: 0;
   vertical-align: middle;
@@ -676,7 +502,7 @@ $chip-close-rtl-left: -7px;
 
 .e-bigger .e-popup.e-multi-select-list-wrapper .e-list-item .e-checkbox-wrapper {
   bottom: 1px;
-  margin-right: $bigger-check-right-margin;
+  margin-right: $ddl-bigger-check-right-margin;
 }
 
 .e-popup.e-multi-select-list-wrapper.e-rtl .e-list-item .e-checkbox-wrapper {
@@ -689,35 +515,35 @@ $chip-close-rtl-left: -7px;
 }
 
 .e-popup.e-multi-select-list-wrapper.e-rtl .e-dropdownbase.e-rtl.e-dd-group .e-list-item {
-  padding-right: $list-rtl-padding-right;
+  padding-right: $ddl-list-rtl-padding-right;
 }
 
 .e-multi-select-list-wrapper .e-selectall-parent {
   cursor: pointer;
   display: block;
-  line-height: $select-all-height;
+  line-height: $ddl-select-all-height;
   overflow: hidden;
   position: relative;
-  text-indent: $check-right;
+  text-indent: $ddl-check-right;
   white-space: nowrap;
   width: 100%;
 }
 
 .e-multi-select-list-wrapper .e-selectall-parent .e-all-text {
-  color: $multi-list-default-font-color;
-  font-family: $chip-font-family;
-  font-size: $selectall-font-size;
+  color: $ddl-multi-list-default-font-color;
+  font-family: $ddl-chip-font-family;
+  font-size: $ddl-selectall-font-size;
 }
 
 .e-bigger .e-multi-select-list-wrapper .e-selectall-parent {
-  font-size: $chip-font-size;
-  line-height: $bigger-select-all-height;
-  text-indent: $bigger-check-right;
+  font-size: $ddl-chip-font-size;
+  line-height: $ddl-bigger-select-all-height;
+  text-indent: $ddl-bigger-check-right;
 }
 
 .e-multi-select-list-wrapper .e-selectall-parent .e-checkbox-wrapper {
   bottom: 1px;
-  margin-right: $check-right-margin;
+  margin-right: $ddl-check-right-margin;
   position: relative;
   text-indent: 0;
   vertical-align: middle;
@@ -725,18 +551,18 @@ $chip-close-rtl-left: -7px;
 
 .e-bigger .e-multi-select-list-wrapper .e-selectall-parent .e-checkbox-wrapper {
   bottom: 1px;
-  margin-right: $bigger-check-right-margin;
+  margin-right: $ddl-bigger-check-right-margin;
 }
 
 .e-multi-select-list-wrapper.e-rtl .e-selectall-parent .e-checkbox-wrapper {
-  margin-left: $check-left;
+  margin-left: $ddl-check-left;
   margin-right: 0;
 }
 
 .e-multiselect .e-input-group-icon.e-ddl-icon {
   float: right;
   margin-top: $ddl-check-icon-top;
-  @if $multiselect-skin-name == 'bootstrap' {
+  @if $ddl-multiselect-skin-name == 'bootstrap' {
     height: 36px;
     width: 36px;
   }
@@ -747,34 +573,35 @@ $chip-close-rtl-left: -7px;
 }
 
 .e-multiselect .e-ddl-icon::before {
-  @if $multiselect-skin-name == 'material' {
+  @if $ddl-multiselect-skin-name == 'material' {
     transform: rotate(0deg);
     transition: transform 300ms ease;
   }
 }
 
 .e-multiselect.e-icon-anim .e-ddl-icon::before {
-  @if $multiselect-skin-name == 'material' {
+  @if $ddl-multiselect-skin-name == 'material' {
     transform: rotate(180deg);
     transition: transform 300ms ease;
   }
 }
 
-.e-multiselect.e-checkbox .e-multi-select-wrapper {
+.e-multiselect.e-checkbox .e-multi-select-wrapper,
+.e-multiselect .e-multi-select-wrapper.e-down-icon {
   padding: 2px 0 0;
-  @if $multiselect-skin-name != 'material' {
+  @if $ddl-multiselect-skin-name != 'material' {
     padding: 0;
   }
 }
 
 .e-ddl.e-popup.e-multi-select-list-wrapper .e-filter-parent .e-input-filter,
 .e-ddl.e-popup.e-multi-select-list-wrapper .e-filter-parent .e-input-group.e-input-focus .e-input-filter {
-  padding: $filterbar-padding;
+  padding: $ddl-filterbar-padding;
 }
 
 .e-bigger .e-ddl.e-popup.e-multi-select-list-wrappe .e-filter-parent .e-input-filter,
 .e-bigger .e-ddl.e-popup.e-multi-select-list-wrapper .e-filter-parent .e-input-group.e-input-focus {
-  padding: $bigger-filterbar-padding;
+  padding: $ddl-bigger-filterbar-padding;
 }
 
 .e-ddl.e-popup.e-multi-select-list-wrapper .e-filter-parent .e-clear-icon,
@@ -783,14 +610,14 @@ $chip-close-rtl-left: -7px;
 }
 
 .e-ddl.e-popup.e-multi-select-list-wrapper .e-filter-parent .e-back-icon {
-  margin: $back-icon-margin;
-  padding: $back-icon-padding;
+  margin: $ddl-back-icon-margin;
+  padding: $ddl-back-icon-padding;
   position: absolute;
 }
 
 .e-bigger .e-checkbox .e-multi-select-wrapper .e-delim-values {
-  @if $multiselect-skin-name != 'highcontrast' {
-    line-height: $delimviewheight-check-bigger;
+  @if $ddl-multiselect-skin-name != 'highcontrast' {
+    line-height: $ddl-delimviewheight-check-bigger;
   }
 }
 
@@ -819,15 +646,15 @@ ejs-multiselect {
   display: block;
 }
 .e-multi-select-wrapper .e-chips.e-chip-selected .e-chips-close::before {
-  color: $sel-chip-close;
+  color: $ddl-sel-chip-close;
 }
 
 .e-multi-select-wrapper .e-chips.e-chip-selected {
-  background-color: $sel-chip-bg-color;
+  background-color: $ddl-sel-chip-bg-color;
 }
 
 .e-multi-select-wrapper .e-chips.e-chip-selected:hover {
-  background-color: $sel-hover-chip-bg-color;
+  background-color: $ddl-sel-hover-chip-bg-color;
 }
 
 #{&}.e-multiselect {
@@ -835,149 +662,170 @@ ejs-multiselect {
 }
 
 .e-multi-select-wrapper .e-chips>.e-chipcontent {
-  color: $chip-font-color;
-  font-family: $chip-font-family;
-  font-size: $chip-font-size;
+  color: $ddl-chip-font-color;
+  font-family: $ddl-chip-font-family;
+  font-size: $ddl-chip-font-size;
 }
 
 .e-multi-select-wrapper .e-chips.e-chip-selected>.e-chipcontent {
-  color: $sel-chip-font-color;
+  color: $ddl-sel-chip-font-color;
 }
 
 .e-multi-select-wrapper .e-chips.e-chip-selected>.e-chipcontent:hover {
-  color: $sel-chip-hover-font-color;
+  color: $ddl-sel-chip-hover-font-color;
 }
 
 .e-multi-select-wrapper .e-chips {
-  background-color: $chip-bg-color;
-  border-radius: $chip-radius;
-  height: $chip-height;
+  background-color: $ddl-chip-bg-color;
+  border-radius: $ddl-chip-radius;
+  height: $ddl-chip-height;
 }
 
 .e-multi-select-wrapper .e-chips:hover {
-  background-color: $chip-hover-bg-color;
+  background-color: $ddl-chip-hover-bg-color;
 }
 
 .e-multi-select-wrapper .e-chips>.e-chipcontent:hover {
-  color: $chip-hover-font-color;
+  color: $ddl-chip-hover-font-color;
 }
 
 .e-multi-select-wrapper .e-chips .e-chips-close::before {
-  color: $chip-close;
-  font-size: $chip-close-font;
+  color: $ddl-chip-close;
+  font-size: $ddl-chip-close-font;
+}
+
+.e-bigger .e-multi-select-wrapper .e-chips .e-chips-close::before {
+  @if $ddl-multiselect-skin-name == 'bootstrap4' {
+    font-size: $ddl-bigger-chip-close-font;
+  }
 }
 
 .e-multi-select-wrapper .e-chips.e-mob-chip.e-chip-selected {
-  background-color: $chip-mobile-bg;
-  border-radius: $chip-mobile-radius;
-  color: $chip-mobile-font;
-  display: block;
-  height: $chip-sel-mobile-height;
-  line-height: $chip-sel-mobile-height;
+  background-color: $ddl-chip-mobile-bg;
+  border-radius: $ddl-chip-mobile-radius;
+  color: $ddl-chip-mobile-font;
+  height: $ddl-chip-sel-mobile-height;
+  line-height: $ddl-chip-sel-mobile-height;
 }
 
 .e-multi-select-wrapper .e-chips.e-mob-chip.e-chip-selected .e-chipcontent {
-  color: $chip-mobile-font;
+  color: $ddl-chip-mobile-font;
 }
 
 .e-multi-select-wrapper .e-chips.e-mob-chip,
 .e-bigger .e-multi-select-wrapper .e-chips {
-  height: $chip-mobile-height;
+  height: $ddl-chip-mobile-height;
 }
 
 #{&}.e-popup.e-multi-select-list-wrapper {
-  box-shadow: $popup-shadow-value;
+  box-shadow: $ddl-popup-shadow-value;
   box-sizing: content-box;
   overflow: initial;
 }
 
 #{&}.e-popup.e-multi-select-list-wrapper .e-list-item.e-active {
-  border-bottom: $popup-active-border-width solid transparent;
-  border-left: $popup-active-border-width solid $popup-active-focus-bg-color;
-  border-right: $popup-active-border-width solid $popup-active-focus-bg-color;
-  border-top: $popup-active-border-width solid $popup-active-border-color;
+  border-bottom: $ddl-popup-active-border-width solid transparent;
+  border-left: $ddl-popup-active-border-width solid $ddl-popup-active-focus-bg-color;
+  border-right: $ddl-popup-active-border-width solid $ddl-popup-active-focus-bg-color;
+  border-top: $ddl-popup-active-border-width solid $ddl-popup-active-border-color;
 }
 
 #{&}.e-popup.e-multi-select-list-wrapper.e-checkbox .e-list-item.e-active {
   background-color: transparent;
   border-color: transparent;
-  color: $multi-list-default-font-color;
+  color: $ddl-multi-list-default-font-color;
 }
 
 #{&}.e-popup.e-multi-select-list-wrapper.e-checkbox .e-list-item.e-active.e-item-focus {
-  @if $multiselect-skin-name != 'highcontrast' {
-    color: $multi-list-default-font-color;
+  @if $ddl-multiselect-skin-name != 'highcontrast' {
+    color: $ddl-multi-list-default-font-color;
   }
 }
 
 #{&}.e-popup.e-multi-select-list-wrapper.e-checkbox .e-list-item.e-active.e-hover {
-  background-color: $multi-list-hover-bg-color;
+  background-color: $ddl-multi-list-hover-bg-color;
 }
 
 #{&}.e-popup.e-multi-select-list-wrapper .e-list-item.e-active:first-child {
-  border-bottom: $popup-active-border-width solid transparent;
-  border-top: $popup-active-border-width solid transparent;
+  border-bottom: $ddl-popup-active-border-width solid transparent;
+  border-top: $ddl-popup-active-border-width solid transparent;
 }
 
 #{&}.e-popup.e-multi-select-list-wrapper .e-list-item.e-active:last-child {
-  border-bottom: $popup-active-border-width solid transparent;
+  border-bottom: $ddl-popup-active-border-width solid transparent;
 }
 
 #{&}.e-popup.e-multi-select-list-wrapper .e-list-item.e-active.e-item-focus + li.e-active {
-  @if $multiselect-skin-name != 'highcontrast' {
-    border-top: $popup-active-border-width solid transparent;
+  @if $ddl-multiselect-skin-name != 'highcontrast' {
+    border-top: $ddl-popup-active-border-width solid transparent;
   }
 }
 
 #{&}.e-popup.e-multi-select-list-wrapper .e-list-item.e-active.e-item-focus {
-  background-color: $popup-active-focus-bg-color;
-  border: $popup-active-focus-border-width solid $popup-active-focus-border-color;
-  box-shadow: $popup-active-focus-shadow-item;
-  color: $popup-active-focus-font-color;
+  background-color: $ddl-popup-active-focus-bg-color;
+  border: $ddl-popup-active-focus-border-width solid $ddl-popup-active-focus-border-color;
+  box-shadow: $ddl-popup-active-focus-shadow-item;
+  color: $ddl-popup-active-focus-font-color;
 }
 
 #{&}.e-popup.e-multi-select-list-wrapper .e-list-item {
-  border: $popup-normal-border-width solid transparent;
+  border: $ddl-popup-normal-border-width solid transparent;
 }
 
 // sass-lint:disable no-vendor-prefixes
 .e-multi-select-wrapper input.e-dropdownbase:-moz-placeholder {
-  color: $input-placeholder;
+  color: $ddl-input-placeholder;
 }
 
 // sass-lint:disable no-vendor-prefixes
 .e-multi-select-wrapper input.e-dropdownbase::-moz-placeholder {
-  color: $input-placeholder;
+  color: $ddl-input-placeholder;
 }
 
 // sass-lint:disable no-vendor-prefixes
 .e-multi-select-wrapper input.e-dropdownbase:-ms-input-placeholder {
-  color: $input-placeholder;
+  color: $ddl-input-placeholder;
 }
 
 // sass-lint:disable no-vendor-prefixes
 .e-multi-select-wrapper input.e-dropdownbase::-webkit-input-placeholder {
-  color: $input-placeholder;
+  color: $ddl-input-placeholder;
 }
 
 .e-ul.e-reorder {
-  border-bottom: 1px solid $popup-reorder-border;
+  border-bottom: 1px solid $ddl-popup-reorder-border;
 }
 
 .e-multi-select-list-wrapper .e-selectall-parent {
-  border-bottom: 1px solid $popup-reorder-border;
+  border-bottom: 1px solid $ddl-popup-reorder-border;
 }
 
 .e-ddl.e-popup.e-multi-select-list-wrapper .e-list-item.e-active.e-item-focus .e-checkbox-wrapper .e-frame.e-check {
-  @if $multiselect-skin-name == 'highcontrast' {
-    background-color: $multi-checkmark-bgcolor;
-    border-color: $multi-checkmark-border-color;
-    color: $multi-checkmark-color;
+  @if $ddl-multiselect-skin-name == 'highcontrast' {
+    background-color: $ddl-multi-checkmark-bgcolor;
+    border-color: $ddl-multi-checkmark-border-color;
+    color: $ddl-multi-checkmark-color;
+  }
+  @if $ddl-multiselect-skin-name == 'bootstrap4' {
+    background-color: $ddl-multi-checkbox-bgcolor;
+    border-color: $ddl-multi-checkbox-border-color;
+    color: $ddl-multi-checkbox-color;
   }
 }
 
 .e-ddl.e-popup.e-multi-select-list-wrapper.e-checkbox .e-list-item.e-active:not(.e-item-focus):not(.e-hover) {
-  @if $multiselect-skin-name == 'highcontrast' {
+  @if $ddl-multiselect-skin-name == 'highcontrast' {
     background-color: $bg-base-0;
   }
+}
+
+.e-multi-select-wrapper .e-delim-values {
+  color: $ddl-chip-font-color;
+  @if $ddl-multiselect-skin-name == 'bootstrap4' {
+    color: $gray-900;
+  }
+}
+
+.e-multi-select-wrapper .e-chips-close.e-close-hooker {
+  color: $ddl-close-icon-color;
 }
