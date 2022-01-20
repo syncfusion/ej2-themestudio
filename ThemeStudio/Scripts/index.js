@@ -16,6 +16,7 @@ var checking = [];
 var curThemeName = 'material';
 var queryRegex = /\?+[^>]+/g;
 var googleAngRegex = /\&+[^>]+/g;
+var banana = 44;
 //var element = document.getElementById("controls");
 var themeProps = {
     material: {
@@ -356,6 +357,16 @@ var themeProps = {
     },
 }
 
+function filterChanged(event) {
+    document.querySelectorAll('.theme-prop-wrapper').forEach(function (el) {
+        if (event.target.value.length <= 0 || el.getAttribute('data-id').toLowerCase().indexOf(event.target.value.toLowerCase()) > -1 || el.querySelector('span').innerText.toLowerCase().indexOf(event.target.value.toLowerCase()) > -1 ) {
+            el.style.display = 'block';
+        } else {
+            el.style.display = 'none';
+        }
+    });
+}
+
 function loadJson() {
     getThemeColors();
     renderDialogs();
@@ -500,6 +511,19 @@ function renderRightPane() {
     colorpicker();
 }
 
+function loadThemeProperties(theme, callback) {
+    if (themeProps[theme]._varsLoaded) {
+        callback();
+    } else {
+        fetch('Home/themeProperties?theme=' + theme)
+            .then(response => response.json())
+            .then(data => {
+                Object.assign(themeProps[theme], data);
+                themeProps[theme]._varsLoaded = true;
+                callback();
+            });
+    }
+}
 
 function loadDefaultThemes(theme, isRightpanerender) {
     window.themes = theme;
@@ -512,8 +536,7 @@ function loadDefaultThemes(theme, isRightpanerender) {
     }
     var str = "";
     str = "?theme=" + theme;
-    history.replaceState({}, '', baseurl + str);
-
+    history.replaceState({}, '', baseurl + str);    
     curTheme = theme;
     themeColors = ej.base.extend({}, defaultVal, {}, true);
     var ajax = new ej.base.Ajax({
@@ -2089,8 +2112,15 @@ function exporting(boolean) {
     exportDialog.hide();
 }
 
-// Rendering theme properties elements
 function renderProperties(themeName) {
+    loadThemeProperties(themeName, function () {
+        _renderProperties(themeName);
+        colorpicker();
+    });
+}
+
+// Rendering theme properties elements
+function _renderProperties(themeName) {
     ej.base.enableRipple(false);
     if (themeName.indexOf('-') !== -1) {
         themeName = themeName.replace('-', "");
@@ -2101,7 +2131,11 @@ function renderProperties(themeName) {
         var keys = Object.keys(properties);
         document.getElementById('theme-properties').innerHTML = "";
         for (var i = 0; i < keys.length; i++) {
+            if (keys[i].startsWith('_')) {
+                break;
+            }
             var property = properties[keys[i]];
+            
             var wrapper = new ej.base.createElement('div', { className: 'theme-prop-wrapper', attrs: { 'data-id': property.id } });
             var labelElement = new ej.base.createElement('div', { className: 'f-left theme-property', innerHTML: '<span>' + keys[i] + '</span' });
             clrpkrWrapper = new ej.base.createElement('div', { className: 'f-right theme-value', innerHTML: `<input type="color" class="color-picker ${property.id}" />` });
@@ -2133,7 +2167,7 @@ function renderProperties(themeName) {
 
                 },
 
-                change: function (args) {
+                change: function (args) {                    
                     var element = this.element.closest('.theme-prop-wrapper');
                     var value = args.currentValue.rgba;
                     var colorEle = this.getWrapper().querySelector('.theme-color');
@@ -3220,8 +3254,5 @@ function renderRightPane1(theme) {
    
         
         renderProperties(theme);
-        
-    
-    // rendering theme mode light/dark
-    colorpicker();
+                
 }

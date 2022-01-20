@@ -104,13 +104,20 @@
 }
 
 .theme-body-left {
-    width: calc(100% - 280px);
+    width: 67%;
     height: 100%;
     padding: 10px;
 }
 
 .theme-body-right {
-    width: 280px;
+    width: 33%;
+    height: 100%;
+}
+
+.rightpanel {
+    position: fixed;
+    width: 32%;
+    border-left: 1px solid #CDCDCD;
     height: 100%;
 }
 
@@ -1921,12 +1928,6 @@ label {
 
 #theme-right {
     padding-left: 18px;
-}
-
-.rightpanel {
-    position: fixed;
-    border-left: 1px solid #CDCDCD;
-    height: 100%;
 }
 
 .themestudio-highcontrast #export-dialogs, .themestudio-highcontrast #import-dialogs {

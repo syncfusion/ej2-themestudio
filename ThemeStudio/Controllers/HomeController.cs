@@ -10,7 +10,8 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Text;
 using System.IO.Compression;
-using System.Web.Script.Serialization;
+using System.Web.ModelBinding;
+//using System.Web.Script.Serialization;
 using Newtonsoft.Json.Linq;
 
 namespace ThemeStudio.Controllers
@@ -107,7 +108,6 @@ namespace ThemeStudio.Controllers
         public string export(ThemeProperties exporting)
         {
             String timeStamp = "";
-            var sourcepath = "";
             var bytes = new byte[4];
             var rng = System.Security.Cryptography.RandomNumberGenerator.Create();
             rng.GetBytes(bytes);
@@ -117,7 +117,8 @@ namespace ThemeStudio.Controllers
             string changes = "";
             string theme = (exporting.GetType().GetProperty("theme").GetValue(exporting, null)) as string;
             string themes = theme;
-            
+
+
             string[] keys = (propertieskey as IEnumerable).Cast<object>().Select(x => x.ToString()).ToArray();
             for (var i = 0; i < keys.Length; i++)
             {
@@ -163,25 +164,6 @@ namespace ThemeStudio.Controllers
                     }
                     else
                     {
-                        //String searchfilename = "definition.scss";
-                        //String searchfilename1 = themes + "-definition.scss";
-                        //String searchfilename2 = themes + ".scss";
-                        //String sourcedirectories = basePath + "ej2-resources1/styles/" + deps[i] + "/definitions";
-                        //String[] files = Directory.GetFiles(sourcedirectories, searchfilename, SearchOption.AllDirectories);
-                        //foreach (String file in files)
-                        //{
-                        //    filecontents = filecontents + System.IO.File.ReadAllText(file);
-                        //}
-                        //String[] files1 = Directory.GetFiles(sourcedirectories, searchfilename1, SearchOption.AllDirectories);
-                        //foreach (String file in files1)
-                        //{
-                        //    filecontents = filecontents + System.IO.File.ReadAllText(file);
-                        //}
-                        //String[] files2 = Directory.GetFiles(sourcedirectories, searchfilename2, SearchOption.AllDirectories);
-                        //foreach (String file in files2)
-                        //{
-                        //    filecontents = filecontents + System.IO.File.ReadAllText(file);
-                        //}
                         String searchfilename = theme + ".scss";
                         String sourcedirectories = basePath + "ej2-resource/styles/" + deps[i] + "/";
                         String[] files = Directory.GetFiles(sourcedirectories, searchfilename, SearchOption.AllDirectories);
@@ -220,16 +202,15 @@ namespace ThemeStudio.Controllers
                 }
             }
 
-                
-            
-           
             timeStamp = GetTimestamp(DateTime.Now); // timestamp creation 
             //timeStamp = "checking";
             string compatiblity = (exporting.GetType().GetProperty("compatiblity").GetValue(exporting, null)) as string;
             string outputdir = basePath + "outputs/" + foldername + '-' + timeStamp +'-'+str+ "/";
             System.IO.Directory.CreateDirectory(outputdir);
-            System.IO.File.WriteAllText(outputdir + theme + ".scss", filecontents);
-            sourcepath = outputdir + theme + ".scss";
+            var sourcepath = outputdir + theme + ".scss";
+            System.IO.File.WriteAllText(sourcepath, filecontents);
+            filecontents = ScssReader.ConvertScssVariablesToCssVars(sourcepath, true);
+
             string result = sasscompiler(sourcepath);
             /* compatibility css */
             if (compatiblity == "True")
@@ -261,6 +242,8 @@ namespace ThemeStudio.Controllers
             return outputzip;
 
         }
+
+
         /* sass to css covert */
         public string sasscompiler(string sourcepath)
         {
@@ -272,11 +255,46 @@ namespace ThemeStudio.Controllers
             var result = sass.Compile();
             return result.Output;
         }
+
+        [HttpGet]
+        public string themeProperties([QueryString]string theme)
+        {
+            string basePath = System.AppDomain.CurrentDomain.BaseDirectory.ToString();
+            var path = basePath + "ej2-resource/styles/";
+
+            var l = System.IO.Directory.EnumerateFiles(path, $"{theme}.scss", SearchOption.AllDirectories);
+            var vars = ScssReader.ReadVariables(l).Where(v => v.Type == ScssVariableType.Color && v.Value.Length == 7).ToList();
+            var palette = vars.Select(v => v.Value).Where(v => v.StartsWith("#")).Distinct().ToArray();
+            var paletteStr = string.Join(",", palette.Select(s => $"\"{s}\""));
+
+            var builder = new StringBuilder();
+            builder.Append("{");
+            for (var index = 0; index < vars.Count; index++)
+            {
+                var variable = vars[index];
+                builder.Append("\"" + variable.Name.Replace("Color", "") + "\" :{");
+                builder.Append("\"id\": \"" + variable.Key.Replace("$", "") + "\",");
+                builder.Append("\"default\": \"" + variable.Value + "\",");
+                builder.Append("\"palettes\": [" + paletteStr + "]");
+                builder.Append("}");
+                if (index < vars.Count - 1)
+                {
+                    builder.Append(",");
+                }
+            }
+
+            builder.Append("}");
+            var jsonStr = builder.ToString();
+            return jsonStr;
+        }
+
+
         [GZipOrDeflate]
         public string loadtheme(ThemeProperties themes)
 
         {
             string theme = (themes.GetType().GetProperty("theme").GetValue(themes, null)) as string;
+
             string basePath = System.AppDomain.CurrentDomain.BaseDirectory.ToString();
             var path = basePath + "Content/ej2/" + theme + ".css";
             return System.IO.File.ReadAllText(path);

@@ -3,3 +3,8 @@
 ################################################################################
 
 /ThemeStudio/bin
+/packages
+/.vs/ThemeStudio
+/ThemeStudio/obj
+/ThemeStudio/outputs
+/ThemeStudio/outputzip
