@@ -1,0 +1,21 @@
+[
+    {
+      "outputFileName": "wwwroot/styles/index.min.css",
+      "inputFiles": [
+        "wwwroot/styles/index.css"
+      ]
+    },
+    {
+      "outputFileName": "wwwroot/scripts/index.min.js",
+      "inputFiles": [
+        "wwwroot/scripts/combine.js",
+        "wwwroot/scripts/datasource.js",
+        "wwwroot/scripts/index.js"
+      ],
+      "minify": {
+        "enabled": true,
+        "renameLocals": true
+      },
+      "sourceMap": false
+    }
+  ]

@@ -1,221 +1,433 @@
-﻿
+@{
+    bool blazor;
+#if BLAZOR
+blazor = true;
+#else
+    blazor = false;
+#endif
+}
+<style id="app-controls"></style>
 <style id="custom-theme"></style>
-<div class="theme-body-left-ovelay e-view" id="left-overlay">
+<div class="theme-body-left-overlay sf-view" id="left-overlay">
     <div class="sb-loading">
         <svg class="circular" height="40" width="40">
             <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
         </svg>
     </div>
 </div>
-<div id="theme-switcher-popup" class="sb-theme-popup e-popup-close">
-    <ul id="themelist" class="options" role="list">
-        <li class="active" id="material" role="listitem">
-            <span class="sb-theme-select theme-header-icon theme-icon-select"></span>
-            <span class="switch-text">Material</span>
+<div id="theme-switcher-popup" class="ts-theme-popup e-popup-close">
+    <ul id="theme-list" class="options" role="list">
+        <li class="active" id="material3" role="listitem">
+            <span class="sb-theme-select theme-header-icon theme-selection-icon"></span>
+            <span class="switch-text">Material 3</span>
         </li>
-        <li id="fabric" role="listitem">
-            <span class="sb-theme-select theme-header-icon theme-icon-select"></span>
-            <span class="switch-text">Fabric</span>
+        <li class="e-list" id="fluent" role="listitem">
+            <span class="sb-theme-select theme-header-icon theme-selection-icon"></span>
+            <span class="switch-text">Fluent</span>
         </li>
-        <li class="e-list" id="bootstrap" role="listitem">
-            <span class="sb-theme-select theme-header-icon theme-icon-select"></span>
-            <span class="switch-text">Bootstrap</span>
+        <li class="e-list" id="bootstrap5" role="listitem">
+            <span class="sb-theme-select theme-header-icon theme-selection-icon"></span>
+            <span class="switch-text">Bootstrap v5</span>
         </li>
         <li class="e-list" id="bootstrap4" role="listitem">
-            <span class="sb-theme-select theme-header-icon theme-icon-select"></span>
+            <span class="sb-theme-select theme-header-icon theme-selection-icon"></span>
             <span class="switch-text">Bootstrap v4</span>
         </li>
-        <li class="e-list" id="highcontrast">
-            <span class="sb-theme-select theme-header-icon theme-icon-select"></span>
-            <span class="switch-text">High Contrast</span>
+        <li class="e-list" id="bootstrap" role="listitem">
+            <span class="sb-theme-select theme-header-icon theme-selection-icon"></span>
+            <span class="switch-text">Bootstrap</span>
+        </li>
+        <li class="e-list" id="material" role="listitem">
+            <span class="sb-theme-select theme-header-icon theme-selection-icon"></span>
+            <span class="switch-text">Material</span>
+        </li>
+        <li class="e-list" id="tailwind" role="listitem">
+            <span class="sb-theme-select theme-header-icon theme-selection-icon"></span>
+            <span class="switch-text">Tailwind CSS</span>
+        </li>
+        <li id="fabric" role="listitem">
+            <span class="sb-theme-select theme-header-icon theme-selection-icon"></span>
+            <span class="switch-text">Fabric</span>
         </li>
         <li class="e-list" id="fusion" role="listitem">
-            <span class="sb-theme-select theme-header-icon theme-icon-select"></span>
+            <span class="sb-theme-select theme-header-icon theme-selection-icon"></span>
             <span class="switch-text">Fusion </span>
         </li>
-       
+        <li class="e-list" id="highcontrast">
+            <span class="sb-theme-select theme-header-icon theme-selection-icon"></span>
+            <span class="switch-text">High Contrast</span>
+        </li>
     </ul>
 </div>
-<div class="filterTemplate-wrapper theme-hide">
-    <div id="filterDialog"></div>
-
+<div class="filter-template-wrapper theme-hide">
+    <div id="filter-dialog"></div>
     <div id="filter-content-template" style="display:none">
         <div class="theme-filter-header">
-            <div class="theme-filter-selectall">
-                <input type="checkbox" id="filter-selectall" value="Select all">
+            <div class="theme-filter-select-all">
+                <input type="checkbox" id="filter-select-all" value="Select all">
             </div>
-
             <div class="form-group" id="filter-form-group">
-                <input id="f-search-ip" class="form-control form-control-sm" type="text" placeholder="Search" onkeyup="filterSearch(document.getElementById('f-search-ip').value)">
+                <input id="filter-search-input" class="form-control form-control-sm" type="text" placeholder="Search"
+                    onkeyup="filterSearch(document.getElementById('filter-search-input').value)">
             </div>
-
         </div>
         <div class="theme-filter-body">
-
-            <div class="cat-chbx">
-                <input type="checkbox" id="f-cat-grids" value="Grids">
+            <div class="category-checkbox">
+                <input type="checkbox" id="filter-category-grids" value="Grids">
             </div>
-            <div class="comp-chbx" data="f-cat-grids">
-                <input type="checkbox" id="comp-grid" value="Grid">
-                <input type="checkbox" id="comp-pivotview" value="PivotTable">
-                <input type="checkbox" id="comp-treegrid" value="Treegrid">
+            <div class="control-checkbox" data="filter-category-grids">
+                <input type="checkbox" id="comp-grid" value="DataGrid">
+                <input type="checkbox" id="comp-pivotview" value="Pivot Table">
+                <input type="checkbox" id="comp-treegrid" value="Tree Grid">
+                @if (!blazor)
+                {
+                    <input type="checkbox" id="comp-spreadsheet" value="Spreadsheet">
+                }
             </div>
-            <div class="theme-div-sep"></div>
-            <div class="cat-chbx">
-                <input type="checkbox" id="f-cat-calendar" value="Calendar">
+            <div class="div-seperator"></div>
+            <div class="category-checkbox">
+                <input type="checkbox" id="filter-category-calendar" value="Calendar">
             </div>
-            <div class="comp-chbx" data="f-cat-calendar">
+            <div class="control-checkbox" data="filter-category-calendar">
                 <input type="checkbox" id="comp-calendar" value="Calendar">
-                <input type="checkbox" id="comp-schedule" value="Schedule">
-                <input type="checkbox" id="comp-gantt" value="Gantt">
+                <input type="checkbox" id="comp-schedule" value="Scheduler">
+                <input type="checkbox" id="comp-gantt" value="Gantt Chart">
+                @if (blazor)
+                {
+                    <input type="checkbox" id="comp-datepicker" value="DatePicker">
+                    <input type="checkbox" id="comp-daterangepicker" value="DateRangePicker">
+                    <input type="checkbox" id="comp-datetimepicker" value="DateTimePicker">
+                    <input type="checkbox" id="comp-timepicker" value="TimePicker">
+                }
             </div>
-            <div class="theme-div-sep"></div>
-            <div class="cat-chbx">
-                <input type="checkbox" id="f-cat-editors" value="EDITORS">
+            <div class="div-seperator"></div>
+            @if (blazor)
+            {
+                <div class="category-checkbox">
+                    <input type="checkbox" id="filter-category-buttons" value="Buttons">
+                </div>
+                <div class="control-checkbox" data="filter-category-buttons">
+                    <input type="checkbox" id="comp-button" value="Button">
+                    <input type="checkbox" id="comp-button-group" value="Button Group">
+                    <input type="checkbox" id="comp-drop-down-button" value="Dropdown Menu">
+                    <input type="checkbox" id="comp-progress-button" value="Progress Button" />
+                    <input type="checkbox" id="comp-split-button" value="Split Button">
+                    <input type="checkbox" id="comp-chips" value="Chips">
+                    <input type="checkbox" id="comp-floating-action-button" value="Floating Action Button" />
+                    <input type="checkbox" id="comp-speed-dial" value="Speed Dial" />
+                </div>
+                <div class="div-seperator"></div>
+                <div class="category-checkbox">
+                    <input type="checkbox" id="filter-category-inputs" value="Inputs">
+                </div>
+                <div class="control-checkbox" data="filter-category-inputs">
+                    <input type="checkbox" id="comp-check-box" value="Checkbox">
+                    <input type="checkbox" id="comp-color-picker" value="Color Picker">
+                    <input type="checkbox" id="comp-uploader" value="File Upload">
+                    <input type="checkbox" id="comp-textbox" value="TextBox" />
+                    <input type="checkbox" id="comp-maskedtextbox" value="Input Mask">
+                    <input type="checkbox" id="comp-signature" value="Signature">
+                    <input type="checkbox" id="comp-numerictextbox" value="Numeric TextBox">
+                    <input type="checkbox" id="comp-radio-button" value="Radio Button">
+                    <input type="checkbox" id="comp-slider" value="Range Slider">
+                    <input type="checkbox" id="comp-switch" value="Toggle Switch Button">
+                </div>
+                <div class="div-seperator"></div>
+                <div class="category-checkbox">
+                    <input type="checkbox" id="filter-category-dropdowns" value="Dropdowns">
+                </div>
+                <div class="control-checkbox" data="filter-category-dropdowns">
+                    <input type="checkbox" id="comp-auto-complete" value="AutoComplete">
+                    <input type="checkbox" id="comp-combo-box" value="ComboBox">
+                    <input type="checkbox" id="comp-drop-down-list" value="Dropdown List">
+                    <input type="checkbox" id="comp-drop-down-tree" value="Dropdown Tree">
+                    <input type="checkbox" id="comp-list-box" value="ListBox">
+                    <input type="checkbox" id="comp-multi-select" value="MultiSelect Dropdown">
+                </div>
+                <div class="div-seperator"></div>
+                <div class="category-checkbox">
+                    <input type="checkbox" id="filter-category-editors" value="Editors">
+                </div>
+                <div class="control-checkbox" data="filter-category-editors">
+                    <input type="checkbox" id="comp-inplace-editor" value="In-place Editor">
+                    <input type="checkbox" id="comp-rich-text-editor" value="Rich Text Editor">
+                    <input type="checkbox" id="comp-document-editor" value="Word Processor">
+                    <input type="checkbox" id="comp-pdfviewer" value="PDF Viewer">
+                </div>
+            }
+            else
+            {
+                <div class="category-checkbox">
+                    <input type="checkbox" id="filter-category-editors" value="Editors">
+                </div>
+                <div class="control-checkbox" data="filter-category-editors">
+                    <input type="checkbox" id="comp-button" value="Button">
+                    <input type="checkbox" id="comp-radio-button" value="Radio Button">
+                    <input type="checkbox" id="comp-drop-down-button" value="Dropdown Menu">
+                    <input type="checkbox" id="comp-split-button" value="Split Button">
+                    <input type="checkbox" id="comp-button-group" value="Button Group">
+                    <input type="checkbox" id="comp-floating-action-button" value="Floating Action Button" />
+                    <input type="checkbox" id="comp-speed-dial" value="Speed Dial" />
+                    <input type="checkbox" id="comp-progress-button" value="Progress Button" />
+                    <input type="checkbox" id="comp-switch" value="Switch">
+                    <input type="checkbox" id="comp-drop-down-list" value="Dropdown List">
+                    <input type="checkbox" id="comp-drop-down-tree" value="Dropdown Tree">
+                    <input type="checkbox" id="comp-mention" value="Mention" >
+                    <input type="checkbox" id="comp-combo-box" value="ComboBox">
+                    <input type="checkbox" id="comp-auto-complete" value="AutoComplete">
+                    <input type="checkbox" id="comp-textbox" value="TextBox" />
+                    <input type="checkbox" id="comp-numerictextbox" value="Numeric TextBox">
+                    <input type="checkbox" id="comp-maskedtextbox" value="Input Mask">
+                    <input type="checkbox" id="comp-signature" value="Signature">
+                    <input type="checkbox" id="comp-rating" value="Rating">
+                    <input type="checkbox" id="comp-uploader" value="File Upload">
+                    <input type="checkbox" id="comp-multi-select" value="MultiSelect Dropdown">
+                    <input type="checkbox" id="comp-datepicker" value="DatePicker">
+                    <input type="checkbox" id="comp-daterangepicker" value="DateRangePicker">
+                    <input type="checkbox" id="comp-datetimepicker" value="DateTimePicker">
+                    <input type="checkbox" id="comp-timepicker" value="TimePicker">
+                    <input type="checkbox" id="comp-color-picker" value="Color Picker">
+                    <input type="checkbox" id="comp-slider" value="Slider">
+                    <input type="checkbox" id="comp-check-box" value="Checkbox">
+                    <input type="checkbox" id="comp-rich-text-editor" value="Rich Text Editor">
+                    <input type="checkbox" id="comp-image-editor" value="Image Editor">
+                    <input type="checkbox" id="comp-chips" value="Chips">
+                    <input type="checkbox" id="comp-inplace-editor" value="In-place Editor">
+                    <input type="checkbox" id="comp-list-box" value="ListBox">
+                    <input type="checkbox" id="comp-document-editor" value="Document Editor">
+                </div>
+            }
+            <div class="div-seperator"></div>
+            <div class="category-checkbox">
+                <input type="checkbox" id="filter-category-forms" value="Forms">
             </div>
-            <div class="comp-chbx" data="f-cat-editors">
-                <input type="checkbox" id="comp-button" value="Button">
-                <input type="checkbox" id="comp-radio-button" value="RadioButton">
-                <input type="checkbox" id="comp-drop-down-button" value="DropDownButton">
-                <input type="checkbox" id="comp-split-button" value="SplitButton">
-                <input type="checkbox" id="comp-button-group" value="ButtonGroup">
-                <input type="checkbox" id="comp-progress-button" value="ProgressButton" />
-                <input type="checkbox" id="comp-switch" value="Switch">
-                <input type="checkbox" id="comp-drop-down-list" value="DropDownList">
-                <input type="checkbox" id="comp-combo-box" value="ComboBox">
-                <input type="checkbox" id="comp-auto-complete" value="AutoComplete">
-                <input type="checkbox" id="comp-textbox" value="TextBox" />
-                <input type="checkbox" id="comp-numerictextbox" value="NumericTextBox">
-                <input type="checkbox" id="comp-maskedtextbox" value="MaskedTextBox">
-                <input type="checkbox" id="comp-uploader" value="Uploader">
-                <input type="checkbox" id="comp-multi-select" value="MultiSelect">
-                <input type="checkbox" id="comp-datepicker" value="DatePicker">
-                <input type="checkbox" id="comp-daterangepicker" value="DateRangePicker">
-                <input type="checkbox" id="comp-datetimepicker" value="DateTimePicker">
-                <input type="checkbox" id="comp-timepicker" value="TimePicker">
-                <input type="checkbox" id="comp-color-picker" value="ColorPicker">
-                <input type="checkbox" id="comp-slider" value="Slider">
-                <input type="checkbox" id="comp-check-box" value="CheckBox">
-                <input type="checkbox" id="comp-rich-text-editor" value="RichTextEditor">
-                <input type="checkbox" id="comp-chips" value="Chips">
-                <input type="checkbox" id="comp-inplace-editor" value="Inplace Editor">
-                <input type="checkbox" id="comp-list-box" value="List Box">
-            </div>
-            <div class="theme-div-sep"></div>
-            <div class="cat-chbx">
-                <input type="checkbox" id="f-cat-forums" value="Forums">
-            </div>
-            <div class="comp-chbx" data="f-cat-forums">
+            <div class="control-checkbox" data="filter-category-forms">
                 <input type="checkbox" id="comp-query-builder" value="Query Builder">
             </div>
-            <div class="theme-div-sep"></div>
-            <div class="cat-chbx">
-                <input type="checkbox" id="f-cat-layout" value="LAYOUT">
+            <div class="div-seperator"></div>
+            <div class="category-checkbox">
+                <input type="checkbox" id="filter-category-layout" value="Layout">
             </div>
-            <div class="comp-chbx" data="f-cat-layout">
+            <div class="control-checkbox" data="filter-category-layout">
                 <input type="checkbox" id="comp-dialog" value="Dialog">
+                <input type="checkbox" id="comp-card" value="Card" />
                 <input type="checkbox" id="comp-listview" value="ListView">
                 <input type="checkbox" id="comp-tooltip" value="Tooltip" />
                 <input type="checkbox" id="comp-splitter" value="Splitter" />
+                @if (!blazor)
+                {
+                    <input type="checkbox" id="comp-spinner" value="Spinner" />
+                }
+                <input type="checkbox" id="comp-dashboard-layout" value="Dashboard Layout" />
+                <input type="checkbox" id="comp-avatar" value="Avatar" />
             </div>
-            <div class="theme-div-sep"></div>
-            <div class="cat-chbx">
-                <input type="checkbox" id="f-cat-notification" value="NOTIFICATION">
+            <div class="div-seperator"></div>
+            <div class="category-checkbox">
+                <input type="checkbox" id="filter-category-notification" value="Notification">
             </div>
-            <div class="comp-chbx" data="f-cat-notification">
+            <div class="control-checkbox" data="filter-category-notification">
                 <input type="checkbox" id="comp-badge" value="Badge">
+                <input type="checkbox" id="comp-message" value="Message">
+                <input type="checkbox" id="comp-skeleton" value="Skeleton">
                 <input type="checkbox" id="comp-toast" value="Toast">
+                @if (blazor)
+                {
+                    <input type="checkbox" id="comp-spinner" value="Spinner" />
+                }
             </div>
-            <div class="theme-div-sep"></div>
-            <div class="cat-chbx">
-                <input type="checkbox" id="f-cat-navigation" value="NAVIGATION">
+            <div class="div-seperator"></div>
+            <div class="category-checkbox">
+                <input type="checkbox" id="filter-category-navigation" value="Navigation">
             </div>
-            <div class="comp-chbx" data="f-cat-navigation">
+            <div class="control-checkbox" data="filter-category-navigation">
                 <input type="checkbox" id="comp-treeview" value="TreeView">
                 <input type="checkbox" id="comp-toolbar" value="Toolbar">
-                <input type="checkbox" id="comp-tab" value="Tab">
+                <input type="checkbox" id="comp-tab" value="Tabs">
                 <input type="checkbox" id="comp-accordion" value="Accordion">
-                <input type="checkbox" id="comp-context-menu" value="ContextMenu" />
-                <input type="checkbox" id="comp-menu" value="Menu" />
-                <input type="checkbox" id="comp-file-manager" value="FileManager">
-
+                <input type="checkbox" id="comp-context-menu" value="Context Menu" />
+                <input type="checkbox" id="comp-menu" value="Menu Bar" />
+                <input type="checkbox" id="comp-file-manager" value="File Manager">
+                <input type="checkbox" id="comp-sidebar" value="SideBar">
+                <input type="checkbox" id="comp-breadcrumb" value="BreadCrumb">
+                <input type="checkbox" id="comp-carousel" value="Carousel">
+                <input type="checkbox" id="comp-appbar" value="AppBar">
+                <input type="checkbox" id="comp-ribbon" value="Ribbon">
             </div>
-            <div class="theme-div-sep"></div>
+            <div class="div-seperator"></div>
+            <div class="category-checkbox">
+                <input type="checkbox" id="filter-category-data-visualization" value="Data Visualization">
+            </div>
+            <div class="control-checkbox" data="filter-category-data-visualization">
+                <input type="checkbox" id="comp-kanban" value="Kanban">
+            </div>
+            <div class="div-seperator"></div>
+            @if (!blazor)
+            {
+                <div class="category-checkbox">
+                    <input type="checkbox" id="filter-category-viewer" value="Viewer">
+                </div>
+                <div class="control-checkbox" data="filter-category-viewer">
+                    <input type="checkbox" id="comp-pdfviewer" value="PDF Viewer">
+                </div>
+                <div class="div-seperator"></div>
+            }
+
+
         </div>
     </div>
 </div>
-
-<!-- Export Dialog -->
+<div id="info-toast"></div>
 <div id="export-dialog"></div>
-<!--Import Dialog-->
 <div id="import-dialog">
-    <div id="import-dialogs">
+    <div id="import-dialog-wrapper">
         <div class="header">
             <span class="header-content"> Import Theme </span>
             <div class="import-dialog-close" onclick="importing(false)"><span class="e-icons close-icon"></span></div>
         </div>
-
-        <input type='file' name="UploadFiles" id='fileuploads' />
+        <input type='file' name="UploadFiles" id='file-uploads' />
         <div class="export-icons">
             <div id="contents" style="display:none">
                 <span> Choose the settings.json file from the root folder of exported</span><br>
                 <span> theme folder.</span>
             </div>
-
         </div>
-
     </div>
     <div id="import-buttons">
-        <button type="button" class="btn btn-primary" id="import-Download" onclick="importing(true)">IMPORT</button>
+        <button type="button" class="btn btn-primary" id="import-settings" onclick="importing(true)">IMPORT</button>
         <button type="button" class="btn btn-default" id="import-cancel" onclick="importing(false)">CANCEL</button>
     </div>
-
 </div>
 
-<div class="theme-body e-view">
+<div class="theme-body sf-view">
     <div class="theme-body-left leftpanel f-left card-columns" tabindex="0" id="control-section">
-
-        <div id="controls" class="cont-container theme-hide">
-
+        <div id="controls" class="control-container theme-hide">
             <div id='control' class="col-container">
-
                 <div id="col-1" class="col">
-
-                    <div class="e-card  theme-comp cat-editors layout-card theme-comp" id="cat-editors">
-                        <div class="e-card-header theme-category-text">
-                            <div class="e-card-header-caption">
-                                <div class="e-card-header-title">Editors</div>
-                            </div>
-                        </div>
-                        <div class="e-card-content">
-                            <div class='control-area' id='textbox'>
-                                <span class="component-name">TextBox</span>
-                                <div class="e-float-input">
-                                    <input type="text" required="">
-                                    <span class="e-float-line"></span>
-                                    <label class="e-float-text">Label</label>
+                    @if (blazor)
+                    {
+                        <div class="e-card category-inputs layout-card" id="category-inputs">
+                            <div class="e-card-header theme-category-text">
+                                <div class="e-card-header-caption">
+                                    <div class="e-card-header-title">Inputs</div>
                                 </div>
                             </div>
-                            <div class='control-area' id='numerictextbox'>
-                                <span class="component-name"> NumericTextBox</span>
-                                <input id="component-numeric" type="text">
+                            <div class="e-card-content">
+                                <div class='control-area' id='textbox'>
+                                    <span class="control-name">TextBox</span>
+                                    <div class="e-float-input">
+                                        <input type="text" required="">
+                                        <span class="e-float-line"></span>
+                                        <label class="e-float-text">Label</label>
+                                    </div>
+                                </div>
+                                <div class='control-area' id='numerictextbox'>
+                                    <span class="control-name"> NumericTextBox</span>
+                                    <input id="sf-numeric-textbox" type="text">
+                                </div>
+                                <div class='control-area' id='maskedtextbox'>
+                                    <span class="control-name">MaskedTextBox</span>
+                                    <input id="sf-masked-textbox" type="text">
+                                </div>
+                                <div class='control-area' id='signature'>
+                                    <span class="control-name">Signature</span>
+                                    <canvas id="sf-signature"></canvas>
+                                </div>
+                                <div class='control-area' id='slider'>
+                                    <span class="control-name">Slider</span>
+                                    <div id="sf-slider"></div>
+                                </div>
                             </div>
-                            <div class='control-area' id='maskedtextbox'>
-                                <span class="component-name">MaskedTextBox</span>
-                                <input id="component-maskedtextbox" type="text">
+                        </div>
+                        <div class="e-card category-editors layout-card" id="category-editors">
+                            <div class="e-card-header theme-category-text">
+                                <div class="e-card-header-caption">
+                                    <div class="e-card-header-title">Editors</div>
+                                </div>
                             </div>
-                            <div class='control-area' id='slider'>
-                                <span class="component-name">Slider</span>
-                                <div id="component-slider"></div>
+                            <div class="e-card-content">
+                                <div class='control-area' id='inplace-editor'>
+                                    <span class="control-name">Inplace Editor</span>
+                                    <div id="sf-inplace-editor"></div>
+                                </div>
                             </div>
-                            <div class='control-area' id='inplace-editor'>
-                                <span class="component-name">Inplace Editor</span>
-                                <div id="component-inplace-editor"></div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="e-card category-editors layout-card" id="category-editors">
+                            <div class="e-card-header theme-category-text">
+                                <div class="e-card-header-caption">
+                                    <div class="e-card-header-title">Editors</div>
+                                </div>
+                            </div>
+                            <div class="e-card-content">
+                                <div class='control-area' id='textbox'>
+                                    <span class="control-name">TextBox</span>
+                                    <div class="e-float-input">
+                                        <input type="text" required="">
+                                        <span class="e-float-line"></span>
+                                        <label class="e-float-text">Label</label>
+                                    </div>
+                                </div>
+                                <div class='control-area' id='numerictextbox'>
+                                    <span class="control-name"> NumericTextBox</span>
+                                    <input id="sf-numeric-textbox" type="text">
+                                </div>
+                                <div class='control-area' id='maskedtextbox'>
+                                    <span class="control-name">MaskedTextBox</span>
+                                    <input id="sf-masked-textbox" type="text">
+                                </div>
+                                <div class='control-area' id='signature'>
+                                    <span class="control-name">Signature</span>
+                                    <canvas id="sf-signature"></canvas>
+                                </div>
+                                <div class='control-area' id='slider'>
+                                    <span class="control-name">Slider</span>
+                                    <div id="sf-slider"></div>
+                                </div>
+                                <div class='control-area' id='inplace-editor'>
+                                    <span class="control-name">Inplace Editor</span>
+                                    <div id="sf-inplace-editor"></div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <div class="e-card category-badge layout-card" id="rating">
+                        <div class="e-card-header theme-category-text">
+                            <div class="e-card-header-caption">
+                                <div class="e-card-header-title">Rating</div>
+                            </div>
+                        </div>
+                        <div class="e-card-content rating-icon-section">
+                            <div class="rating-sample-container">
+                                <div class="sf-rating-content">
+                                    <label>Basic</label><br/>
+                                    <input id='sf-rating1'>
+                                </div>
+                                <div class="sf-rating-content">
+                                    <label>Reset</label><br/>
+                                    <input id='sf-rating2'>
+                                </div>
+                                <div class="sf-rating-content">
+                                    <label>Single selection</label><br/>
+                                    <input id='sf-rating3'>
+                                </div>
+                                <div class="sf-rating-content">
+                                    <label>ReadOnly</label><br/>
+                                    <input id='sf-rating4'>
+                                </div>
+                                <div class="sf-rating-content">
+                                    <label>Disabled</label><br/>
+                                    <input id='sf-rating5'>
+                                </div>
+                                <div class="sf-rating-content">
+                                    <label>Item count</label><br/>
+                                    <input id='sf-rating6'>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="e-card  cat-buttons layout-card theme-comp" id="cat-button">
+                    <div class="e-card category-buttons layout-card" id="category-button">
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">Buttons</div>
@@ -223,64 +435,77 @@
                         </div>
                         <div class="e-card-content">
                             <div class='control-area' id='button'>
-                                <span class="component-name">Button</span>
+                                <span class="control-name">Button</span>
                                 <div class="row">
                                     <div class="col">
-                                        <button id="primarybtn">Primary</button>
+                                        <button id="sf-primary-button">Primary</button>
                                     </div>
                                     <div class="col">
-                                        <button id="normalbtn">Normal</button>
+                                        <button id="sf-normal-button">Normal</button>
                                     </div>
                                     <div class="col">
-                                        <button id="outlinebtn">Outline</button>
+                                        <button id="sf-outline-button">Outline</button>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <button id="successbtn">Success</button>
+                                        <button id="sf-success-button">Success</button>
                                     </div>
                                     <div class="col">
-                                        <button id="warningbtn">Warning</button>
+                                        <button id="sf-warning-button">Warning</button>
                                     </div>
                                     <div class="col">
-                                        <button id="togglebtn">Play</button>
+                                        <button id="sf-toggle-button">Play</button>
                                     </div>
                                 </div>
                             </div>
+                            <div class="control-area" id="floating-action-button">
+                                <span class="control-name">Floating Action Button</span>
+                                <div class="row">
+                                    <button id="sf-fab" title="Add"></button>
+                                    <button id="sf-fab1"></button>
+                                </div>
+                            </div>
+                            <div class="control-area" id="speed-dial">
+                                <span class="control-name">Speed Dial</span>
+                                <div class="row">
+                                    <button id="sf-speeddial" title="Edit"></button>
+                                    <button id="sf-speeddial1"></button>
+                                </div>
+                            </div>
                             <div class='control-area' id='drop-down-button'>
-                                <span class="component-name">DropDownButton</span>
+                                <span class="control-name">DropDownButton</span>
                                 <div class="row">
                                     <div class="col">
-                                        <button id="textbtn">Profile</button>
+                                        <button id="sf-drop-down-button">Profile</button>
                                     </div>
                                     <div class="col">
-                                        <button id="icontextbtn">Profile</button>
+                                        <button id="sf-drop-down-button-icon">Profile</button>
                                     </div>
                                     <div class="col">
-                                        <button id="custombtn">Profile</button>
+                                        <button id="sf-drop-down-button-custom">Profile</button>
                                     </div>
                                 </div>
                             </div>
                             <div class='control-area' id='split-button'>
-                                <span class="component-name">SplitButton</span>
+                                <span class="control-name">SplitButton</span>
                                 <div class="row">
-                                    <div class="col">
-                                        <button id="iconsplitbtn"></button>
+                                    <div class="col" style="padding-left: 20px;">
+                                        <button id="sf-split-button-icons"></button>
 
                                     </div>
                                     <div class="col">
-                                        <button id="textsplitbtn"></button>
+                                        <button id="sf-split-button-primary"></button>
                                     </div>
                                     <div class="col">
-                                        <button id="icontextsplitbtn"></button>
+                                        <button id="sf-split-button-context"></button>
                                     </div>
                                 </div>
                             </div>
                             <div class='control-area' id="button-group">
-                                <span class="component-name">ButtonGroup</span>
+                                <span class="control-name">ButtonGroup</span>
                                 <div class="frame">
-
-                                    <div class="grpbtn">
+                                    <div class="group-button">
                                         <div class="e-btn-group" role="group">
                                             <input type="radio" id="left" name="align" />
                                             <label class="e-btn" for="left">Left</label>
@@ -290,8 +515,7 @@
                                             <label class="e-btn" for="right">Right</label>
                                         </div>
                                     </div>
-
-                                    <div class="grpbtn">
+                                    <div class="group-button">
                                         <div class="e-btn-group e-outline" role="group">
                                             <input type="checkbox" id="bold" name="fontstyle" />
                                             <label class="e-btn e-outline e-primary" for="bold">Bold</label>
@@ -301,44 +525,38 @@
                                             <label class="e-btn e-outline e-primary" for="underline">Underline</label>
                                         </div>
                                     </div>
-
-
                                 </div>
                             </div>
                             <div class='control-area' id="progress-button">
-                                <span class="component-name">ProgressButton</span>
+                                <span class="control-name">ProgressButton</span>
                                 <div class="row">
                                     <div class="col">
-                                        <button id="spinleft"></button>
+                                        <button id="sf-progress-button-left"></button>
                                     </div>
 
                                     <div class="col">
-                                        <button id="spinright"></button>
+                                        <button id="sf-progress-button-right"></button>
                                     </div>
                                     <div class="col">
-                                        <button id="download"></button>
+                                        <button id="sf-progress-button-download"></button>
                                     </div>
-
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <button id="disabled"></button>
-                                    
-
+                                        <button id="sf-progress-button-disabled"></button>
                                     </div>
-                                </div>
                                 </div>
                             </div>
+                        </div>
                     </div>
-
-                    <div class="e-card cat-accordion layout-card theme-comp" id="accordion">
+                    <div class="e-card category-accordion layout-card" id="accordion">
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">Accordion</div>
                             </div>
                         </div>
                         <div class="e-card-content">
-                            <div id="Accordion_icon"></div>
+                            <div id="sf-accordion"></div>
                             <div id="athletics" style="display:none">
                                 <li>
                                     <span class="e-acrdn-icons e-content-icon marathon"></span> Marathon
@@ -346,117 +564,207 @@
                                 <li>
                                     <span class="e-acrdn-icons e-content-icon javelin"></span> Javelin Throw
                                 </li>
-                                @*<li>
-                        <span class="e-acrdn-icons e-content-icon discus"></span> Discus Throw
-                    </li>
-                    <li>
-                        <span class="e-acrdn-icons e-content-icon highjump"></span> High Jump
-                    </li>
-                    <li>
-                        <span class="e-acrdn-icons e-content-icon longjump"></span> Long Jump
-                    </li>*@
                             </div>
-                            <div id="water_games" style="display:none">
+                            <div id="water-games" style="display:none">
                                 <li>
                                     <span class="e-acrdn-icons e-content-icon dive"></span> Diving
                                 </li>
                                 <li>
                                     <span class="e-acrdn-icons e-content-icon swimming"></span> Swimming
                                 </li>
-                                @*<li>
-                        <span class="e-acrdn-icons e-content-icon marathan_swim"></span> Marathon Swimming
-                    </li>
-                    <li>
-                        <span class="e-acrdn-icons e-content-icon sync_swim"></span> Synchronized Swimming
-                    </li>
-                    <li>
-                        <span class="e-acrdn-icons e-content-icon waterpolo"></span> Water Polo
-                    </li>*@
                             </div>
-                            @*<div id="racing_games" style="display:none">
-                    <li>
-                        <span class="e-acrdn-icons e-content-icon cycle_BMX"></span> Cycling BMX
-                    </li>
-                    <li>
-                        <span class="e-acrdn-icons e-content-icon cycle_Mountain"></span> Cycling Mountain Bike
-                    </li>
-                    <li>
-                        <span class="e-acrdn-icons e-content-icon cycle"></span> Cycle Racing
-                    </li>
-                    <li>
-                        <span class="e-acrdn-icons e-content-icon sailing"></span> Sailing
-                    </li>
-                    <li>
-                        <span class="e-acrdn-icons e-content-icon rowing"></span> Rowing
-                    </li>
-                </div>
-                <div id="indoor_games" style="display:none">
-                    <li>
-                        <span class="e-acrdn-icons e-content-icon tennis"></span> Table Tennis
-                    </li>
-                    <li>
-                        <span class="e-acrdn-icons e-content-icon badminton"></span> Badminton
-                    </li>
-                    <li>
-                        <span class="e-acrdn-icons e-content-icon volleyball"></span> Volleyball
-                    </li>
-                    <li>
-                        <span class="e-acrdn-icons e-content-icon boxing"></span> Boxing
-                    </li>
-                    <li>
-                        <span class="e-acrdn-icons e-content-icon swimming_In"></span> Swimming
-                    </li>
-                </div>*@
                         </div>
                     </div>
-                    <div class="e-card cat-listview layout-card theme-comp" id="listview">
+                    <div class="e-card category-avatar layout-card theme-comp" id="avatar">
+                        <div class="e-card-header theme-category-text">
+                            <div class="e-card-header-caption">
+                                <div class="e-card-header-title">Avatar</div>
+                            </div>
+                        </div>
+                        <div class="e-card-content">
+                            <div id="Component-Avatar">
+                                <span class='e-avatar  e-avatar-xsmall image'></span>
+                                <span class='e-avatar  e-avatar-small image'></span>
+                                <span class='e-avatar  e-avatar image'></span>
+                                <span class='e-avatar  e-avatar-large image'></span>
+                                <span class='e-avatar  e-avatar-xlarge image'></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="e-card category-listview layout-card" id="listview">
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">ListView</div>
                             </div>
                         </div>
                         <div class="e-card-content">
-                            <div id="listview-def" tabindex="1">
-
+                            <div id="sf-listview" tabindex="1">
                             </div>
                         </div>
                     </div>
-
-                    <div class="e-card cat-treeview layout-card theme-comp" id="treeview">
+                    <div class="e-card category-treeview layout-card" id="treeview">
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">TreeView</div>
                             </div>
                         </div>
                         <div class="e-card-content">
-                            <div id="treeviewComponent"></div>
+                            <div id="sf-treeview"></div>
                         </div>
                     </div>
-                    <div class="e-card cat-treeview layout-card theme-comp" id="menu">
+                    <div class="e-card category-treeview layout-card" id="breadcrumb">
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
-                                <div class="e-card-header-title">Menu</div>
+                                <div class="e-card-header-title">BreadCrumb</div>
                             </div>
                         </div>
                         <div class="e-card-content">
-                            <ul id="MenuComponent"></ul>
+                            <ul id="sf-breadcrumb"></ul>
                         </div>
                     </div>
-
+                    <div class="e-card category-treeview layout-card" id="carousel">
+                        <div class="e-card-header theme-category-text">
+                            <div class="e-card-header-caption">
+                                <div class="e-card-header-title">Carousel</div>
+                            </div>
+                        </div>
+                        <div class="e-card-content" style="height:300px">
+                            <ul id="sf-carousel"></ul>
+                        </div>
+                    </div>
+                    <div class="e-card category-treeview layout-card" id="appbar">
+                        <div class="e-card-header theme-category-text">
+                            <div class="e-card-header-caption">
+                                <div class="e-card-header-title">AppBar</div>
+                            </div>
+                        </div>
+                        <div class="e-card-content">
+                            <div class="default-appbar-container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h5>Light</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <header id="lightAppBar">
+                                            <button id="lightButtonMenu"></button>
+                                            <span class="regular">EJ2 AppBar</span>
+                                            <div class="e-appbar-spacer"></div>
+                                            <button id="lightButtonLogin"></button>
+                                        </header>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h5>Dark</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <header id="darkAppBar">
+                                            <button id="darkButtonMenu"></button>
+                                            <span class="prominent">EJ2 AppBar</span>
+                                            <div class="e-appbar-spacer"></div>
+                                            <button id="darkButtonLogin"></button>
+                                        </header>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h5>Primary</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <header id="primaryAppBar">
+                                            <button id="primaryButtonMenu"></button>
+                                            <span class="dense">EJ2 AppBar</span>
+                                            <div class="e-appbar-spacer"></div>
+                                            <button id="primaryButtonLogin"></button>
+                                        </header>
+                                    </div>
+                                </div>
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="e-card category-ribbon layout-card" id="ribbon">
+                        <div class="e-card-header theme-category-text">
+                            <div class="e-card-header-caption">
+                                <div class="e-card-header-title">Ribbon</div>
+                            </div>
+                        </div>
+                        <div class="e-card-content">
+                            <div id="sf-ribbon"></div>
+                        </div>
+                    </div>
+                    <div class="e-card category-treeview layout-card" id="menu">
+                        <div class="e-card-header theme-category-text">
+                            <div class="e-card-header-caption">
+                                <div class="e-card-header-title">Menu Bar</div>
+                            </div>
+                        </div>
+                        <div class="e-card-content">
+                            <ul id="sf-menu"></ul>
+                        </div>
+                    </div>
+                    <div class="e-card category-treeview layout-card" id="spinner">
+                        <div class="e-card-header theme-category-text">
+                            <div class="e-card-header-caption">
+                                <div class="e-card-header-title">Spinner</div>
+                            </div>
+                        </div>
+                        <div class="e-card-content">
+                            <ul id="sf-spinner" style="height: 30px;"></ul>
+                        </div>
+                    </div>
+                    <div class="e-card category-card layout-card" id='card'>
+                        <div class="e-card-header theme-category-text">
+                            <div class="e-card-header-caption">
+                                <div class="e-card-header-title">Card</div>
+                            </div>
+                        </div>
+                        <div class="e-card-content">
+                            <div class='control-area'>
+                                <div tabindex="0" class="e-card" id="component-card">
+                                    <div class="e-card-header">
+                                        <div class="e-card-header-caption">
+                                            <div class="e-card-header-title">Debunking Five Data Science Myths</div>
+                                            <div class="e-card-sub-title">By John Doe | Jan 20, 2018 </div>
+                                        </div>
+                                    </div>
+                                    <div class="e-card-content">
+                                        Tech evangelists are currently pounding their pulpits about all things AI,
+                                        machine
+                                        learning, analytics&#x2014;anything that sounds
+                                        like the future and probably involves lots of numbers. Many of these topics can
+                                        be
+                                        grouped under
+                                        the intimidating term data science.
+                                    </div>
+                                    <div class="e-card-actions">
+                                        <button class="e-btn e-outline e-primary">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
                 <div id="col-2" class="col">
-                    <div class="e-card  cat-grids layout-card theme-comp two-column" id="grid">
+                    <div class="e-card category-grids layout-card two-column" id="grid">
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">Grid</div>
                             </div>
                         </div>
-                        <div class="e-card-content" style="min-height: 370px;height: 400px;overflow: auto">
-                            <div id='component-grid' class="theme-comp"></div>
+                        <div class="e-card-content">
+                            <div id='sf-grid' class=""></div>
                         </div>
                     </div>
-                    <div class="e-card  cat-colorpicker layout-card theme-comp " id='color-picker'>
+                    <div class="e-card category-colorpicker layout-card" id='color-picker'>
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">ColorPicker</div>
@@ -465,12 +773,11 @@
                         <div class="e-card-content">
                             <div id="colorpicker-control">
                                 <label>Choose a color</label>
-                                <input id="component-color-picker" type="color">
+                                <input id="sf-color-picker" type="color">
                             </div>
                         </div>
                     </div>
-
-                    <div class="e-card  cat-check-box layout-card theme-comp " id='check-box'>
+                    <div class="e-card category-check-box layout-card" id='check-box'>
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">CheckBox</div>
@@ -478,17 +785,17 @@
                         </div>
                         <div class="e-card-content">
                             <div class='control-area'>
-                                <input id="cb-componentchecked" type="checkbox">
+                                <input id="sf-check-box-checked" type="checkbox">
                             </div>
                             <div class="control-area">
-                                <input id="cb-componentunchecked" type="checkbox">
+                                <input id="sf-check-box-unchecked" type="checkbox">
                             </div>
                             <div class="control-area">
-                                <input id="cb-componentintermediate" type="checkbox">
+                                <input id="sf-check-box-intermediate" type="checkbox">
                             </div>
                         </div>
                     </div>
-                    <div class="e-card  cat-toolbar layout-card theme-comp two-column" id='toolbar'>
+                    <div class="e-card category-toolbar layout-card two-column" id='toolbar'>
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">ToolBar</div>
@@ -496,12 +803,12 @@
                         </div>
                         <div class="e-card-content">
                             <div class='control-area'>
-                                <div id="toolbar_default">
+                                <div id="sf-toolbar">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="e-card  cat-pickers layout-card theme-comp" id="cat-pickers">
+                    <div class="e-card category-pickers layout-card" id="category-pickers">
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">Date & TimePicker</div>
@@ -509,63 +816,102 @@
                         </div>
                         <div class="e-card-content">
                             <div class='control-area' id='datepicker'>
-                                <span class="component-name">DatePicker</span>
-                                <input id="component-datepicker" type="text">
+                                <span class="control-name">DatePicker</span>
+                                <input id="sf-datepicker" type="text">
                             </div>
                             <div class='control-area' id='timepicker'>
-                                <span class="component-name">TimePicker</span>
-                                <input id="component-timepicker" type="text">
+                                <span class="control-name">TimePicker</span>
+                                <input id="sf-timepicker" type="text">
                             </div>
                             <div class='control-area' id='datetimepicker'>
-                                <span class="component-name">DateTimePicker</span>
-                                <input id="component-datetimepicker" type="text">
+                                <span class="control-name">DateTimePicker</span>
+                                <input id="sf-datetimepicker" type="text">
                             </div>
                             <div class='control-area' id='daterangepicker'>
-                                <span class="component-name">DateRangePicker</span>
-                                <input id="component-daterangepicker" type="text">
+                                <span class="control-name">DateRangePicker</span>
+                                <input id="sf-daterangepicker" type="text">
                             </div>
-
                         </div>
                     </div>
-
-
-                    <div class="e-card cat-calendar layout-card theme-comp" id="calendar">
+                    <div class="e-card category-calendar layout-card" id="calendar">
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">Calendar</div>
                             </div>
                         </div>
                         <div class="e-card-content">
-                            <div id="component-calendar"></div>
+                            <div id="sf-calendar"></div>
                         </div>
                     </div>
-
-                    <div class="e-card  cat-tooltip layout-card theme-comp" id="tooltip">
+                    <div class="e-card category-tooltip layout-card" id="tooltip">
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">Tooltip</div>
                             </div>
                         </div>
                         <div class="e-card-content" id="tooltip">
-                            <button id="component-tooltip">Show Tooltip</button>
+                            <button id="sf-tooltip">Show Tooltip</button>
                         </div>
                     </div>
-                    <div class="e-card  cat-toast layout-card theme-comp" id="toast">
+                    <div class="e-card category-toast layout-card" id="toast">
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">Toast</div>
                             </div>
                         </div>
                         <div class="e-card-content">
-
-
-                            <button class="e-btn" id="toastBtnShow">Show Toast</button>
+                            <button class="e-btn" id="sf-toast-button">Show Toast</button>
                             <div id="element"></div>
-                            <div id="component-toast"></div>
-
+                            <div id="sf-toast"></div>
                         </div>
                     </div>
-                    <div class="e-card  cat-badge layout-card theme-comp" id="badge">
+                    <div class="e-card category-skeleton layout-card" id="skeleton">
+                        <div class="e-card-header theme-category-text">
+                            <div class="e-card-header-caption">
+                                <div class="e-card-header-title">Skeleton</div>
+                            </div>
+                        </div>
+                        <div class="e-card-content">
+                            <div id="skeletonContainer">
+                                <div class="skeletonrow">
+                                    <div class="skeletoncell">
+                                        <h5>Circle</h5>
+                                        <div id="sf-skeletonCircleSmall"></div>
+                                        <div id="sf-skeletonCircleMedium"></div>
+                                        <div id="sf-skeletonCircleLarge"></div>
+                                        <div id="sf-skeletonCircleLarger"></div>
+                                    </div>
+                                    <div class="skeletoncell">
+                                        <h5>Square</h5>
+                                        <div id="sf-skeletonSquareSmall"></div>
+                                        <div id="sf-skeletonSquareMedium"></div>
+                                        <div id="sf-skeletonSquareLarge"></div>
+                                        <div id="sf-skeletonSquareLarger"></div>
+                                    </div>
+                                </div>
+                                <div class="skeletonrow">
+                                    <div class="skeletoncell">
+                                        <h5>Text</h5>
+                                        <div id="sf-skeletonText"></div>
+                                        <div id="sf-skeletonTextMedium"></div>
+                                        <br />
+                                        <div id="sf-skeletonTextSmall"></div>
+                                        <br />
+                                        <div id="sf-skeletonTextMedium1"></div>
+                                        <br />
+                                        <div id="sf-skeletonTextSmall1"></div>
+                                    </div>
+                                    <div class="skeletoncell">
+                                        <h5>Rectangle</h5>
+                                        <div id="sf-skeletonRectangle"></div>
+                                        <div id="sf-skeletonRectangleMedium"></div>
+                                        <div id="sf-skeletonRectangleMediumRight" style="float:right;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="e-card category-badge layout-card" id="badge">
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">Badge</div>
@@ -575,42 +921,73 @@
                             <div class="badge-sample-container">
                                 <div class="badge-block-sample">
                                     <div class="badge-whatsapp badge-svg_icons"></div>
-                                    <span class="e-badge e-badge-primary e-badge-notification e-badge-overlap">99+</span>
+                                    <span
+                                        class="e-badge e-badge-primary e-badge-notification e-badge-overlap">99+</span>
                                 </div>
-
                                 <div class="badge-block-sample">
                                     <div class="badge-twitter badge-svg_icons"></div>
-                                    <span class="e-badge e-badge-secondary e-badge-circle e-badge-notification e-badge-overlap">66</span>
+                                    <span
+                                        class="e-badge e-badge-secondary e-badge-circle e-badge-notification e-badge-overlap">66</span>
                                 </div>
 
                                 <div class="badge-block-sample">
                                     <div class="badge-facebook badge-svg_icons"></div>
-                                    <span class="e-badge e-badge-primary e-badge-notification e-badge-overlap">99+</span>
+                                    <span
+                                        class="e-badge e-badge-primary e-badge-notification e-badge-overlap">99+</span>
                                 </div>
 
                                 <div class="badge-block-sample">
                                     <div class="badge-skype badge-svg_icons"></div>
-                                    <span class="e-badge e-badge-secondary e-badge-circle e-badge-notification e-badge-overlap">66</span>
+                                    <span
+                                        class="e-badge e-badge-secondary e-badge-circle e-badge-notification e-badge-overlap">66</span>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
-                    <div class="e-card cat-tab layout-card theme-comp two-column" id="tab">
+                    <div class="e-card category-badge layout-card" id="message">
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
-                                <div class="e-card-header-title">Tab</div>
+                                <div class="e-card-header-title">Message</div>
+                            </div>
+                        </div>
+                        <div class="e-card-content msg-icon-section">
+                            <div class="message-sample-container">
+                                <button id="sf-btn1"></button>
+                                <div id="sf-msg_default_icon"></div>
+                                <button id="sf-btn2"></button>
+                                <div id="sf-msg_info_icon"></div>
+                                <button id="sf-btn3"></button>
+                                <div id="sf-msg_success_icon"></div>
+                                <button id="sf-btn4"></button>
+                                <div id="sf-msg_warning_icon"></div>
+                                <button id="sf-btn5"></button>
+                                <div id="sf-msg_error_icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="e-card category-tab layout-card two-column" id="tab">
+                        <div class="e-card-header theme-category-text">
+                            <div class="e-card-header-caption">
+                                <div class="e-card-header-title">Tabs</div>
                             </div>
                         </div>
                         <div class="e-card-content">
-                            <div id="tabComponent"></div>
+                            <div id="sf-tab"></div>
+                        </div>
+                    </div>
+                    <div class="e-card category-tab layout-card two-column" id="chips">
+                        <div class="e-card-header theme-category-text">
+                            <div class="e-card-header-caption">
+                                <div class="e-card-header-title">Chips</div>
+                            </div>
+                        </div>
+                        <div class="e-card-content">
+                            <div id="sf-chips"></div>
                         </div>
                     </div>
                 </div>
-
                 <div id="col-3" class="col">
-                    <div class="e-card  cat-switch layout-card theme-comp" id='switch'>
+                    <div class="e-card category-switch layout-card" id='switch'>
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">Switch</div>
@@ -619,15 +996,16 @@
                         <div class="e-card-content">
                             <div>
                                 <label for="checked" style="padding: 10px 70px 10px 0"> USB Tethering </label>
-                                <input id="switch-checked" type="checkbox" />
+                                <input id="sf-switch-checked" type="checkbox" />
                             </div>
                             <div>
-                                <label for="unchecked" style="padding: 10px 24px 10px 0"> Portable Wi-Fi hotspot </label>
-                                <input id="switch-unchecked" type="checkbox" />
+                                <label for="unchecked" style="padding: 10px 24px 10px 0"> Portable Wi-Fi hotspot
+                                </label>
+                                <input id="sf-switch-unchecked" type="checkbox" />
                             </div>
                         </div>
                     </div>
-                    <div class="e-card  cat-radio-button layout-card theme-comp" id='radio-button'>
+                    <div class="e-card category-radio-button layout-card" id='radio-button'>
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">RadioButton</div>
@@ -635,18 +1013,17 @@
                         </div>
                         <div class="e-card-content">
                             <div class='control-area'>
-                                <input id="componentradio1" type="radio">
+                                <input id="sf-radio-button1" type="radio">
                             </div>
                             <div class="control-area">
-                                <input id="componentradio2" type="radio">
+                                <input id="sf-radio-button2" type="radio">
                             </div>
                             <div class="control-area">
-                                <input id="componentradio3" type="radio">
+                                <input id="sf-radio-button3" type="radio">
                             </div>
                         </div>
                     </div>
-
-                    <div class="e-card  cat-dropdowns layout-card theme-comp" id="cat-dropdown">
+                    <div class="e-card category-dropdowns layout-card" id="category-dropdown">
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">DropDowns</div>
@@ -654,12 +1031,12 @@
                         </div>
                         <div class="e-card-content">
                             <div class='control-area' id='auto-complete'>
-                                <span class="component-name">AutoComplete</span>
-                                <input id="component-autcomplete" type="text">
+                                <span class="control-name">AutoComplete</span>
+                                <input id="sf-auto-complete" type="text">
                             </div>
                             <div class='control-area' id='drop-down-list'>
-                                <span class="component-name">DropDownList</span>
-                                <select id="component-dropdownlist">
+                                <span class="control-name">DropDownList</span>
+                                <select id="sf-drop-down-list">
                                     <option value="Game1">American Football</option>
                                     <option value="Game2">Badminton</option>
                                     <option value="Game3">Basketball</option>
@@ -672,9 +1049,13 @@
                                     <option value="Game10">Tennis</option>
                                 </select>
                             </div>
+                            <div class='control-area' id='drop-down-tree'>
+                                <span class="control-name">DropDownTree</span>
+                                <input type="text" tabindex="1" id='sf-drop-down-tree' />
+                            </div>
                             <div class='control-area' id='multi-select'>
-                                <span class="component-name">MultiSelect</span>
-                                <select id="component-multiselect">
+                                <span class="control-name">MultiSelect</span>
+                                <select id="sf-multi-select">
                                     <option value="Game1">American Football</option>
                                     <option value="Game2">Badminton</option>
                                     <option value="Game3">Basketball</option>
@@ -688,16 +1069,31 @@
                                 </select>
                             </div>
                             <div class='control-area' id='combo-box'>
-                                <span class="component-name">ComboBox</span>
-                                <input type="text" id="component-combobox">
+                                <span class="control-name">ComboBox</span>
+                                <input type="text" id="sf-combo-box">
                             </div>
                             <div class='control-area' id='list-box'>
-                                <span class="component-name">List Box</span>
-                                <input  id="component-list-box">
+                                <span class="control-name">List Box</span>
+                                <input id="sf-list-box">
                             </div>
+                            @if(!blazor){
+                                <div class="control-area" id="mention">
+                                    <span class="control-name">Mention</span>
+                                    <div id="mention-controls">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <label class="default-size">Comments</label>
+                                                    <div id="commentsMention" placeHolder="Type @@ and tag user" ></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            }
                         </div>
                     </div>
-                    <div class="e-card cat-uploader layout-card theme-comp" id="uploader">
+                    <div class="e-card category-uploader layout-card" id="uploader">
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">Uploader</div>
@@ -705,46 +1101,102 @@
                         </div>
                         <div class="e-card-content" id='upload-area'>
                             <div class='control-area'>
-                                <input type="file" id="fileupload" name="UploadFiles">
+                                <input type="file" id="sf-uploader" name="UploadFiles">
                             </div>
                         </div>
-
                     </div>
-
-
-                    <div id="context-menu" class="e-card cat-contextmenu layout-card theme-comp">
+                    <div id="context-menu" class="e-card category-contextmenu layout-card">
                         <div class="e-card-header theme-category-text">
                             <div class="e-card-header-caption">
                                 <div class="e-card-header-title">ContextMenu</div>
                             </div>
                         </div>
                         <div class="e-card-content">
-                            <div id="contextmenuComponent"></div>
-                            <ul id="contextmenu"></ul>
+                            <div id="sf-context-menu-target">Right click/Touch hold to open the ContextMenu</div>
+                            <ul id="sf-context-menu"></ul>
                         </div>
                     </div>
-                    
-
                 </div>
-
             </div>
-
             <div id="two-column-control" class="two-columns col"></div>
-            <div id="big-control" class="cont-container">
-
-
-                <div class="e-card cat-tab layout-card theme-comp" id="schedule">
+            <div id="big-control" class="control-container">
+                <div class="e-card category-tab layout-card" id="schedule">
                     <div class="e-card-header theme-category-text">
                         <div class="e-card-header-caption">
-                            <div class="e-card-header-title">Schedule</div>
+                            <div class="e-card-header-title">Scheduler</div>
                         </div>
                     </div>
                     <div class="e-card-content">
-                        <div id="scheduleComponent"></div>
+                        <div id="sf-schedule"></div>
                     </div>
                 </div>
-
-                <div class="e-card cat-tab layout-card theme-comp" id="dialog">
+                @if (!blazor)
+                {
+                    <div class="e-card category-tab layout-card" id="spreadsheet">
+                        <div class="e-card-header theme-category-text">
+                            <div class="e-card-header-caption">
+                                <div class="e-card-header-title">Spreadsheet</div>
+                            </div>
+                        </div>
+                        <div class="e-card-content">
+                            <div id="sf-spreadsheet"></div>
+                        </div>
+                    </div>
+                }
+                <div class="e-card category-dashboard-layout layout-card " id="dashboard-layout">
+                    <div class="e-card-header theme-category-text">
+                        <div class="e-card-header-caption">
+                            <div class="e-card-header-title">Dashboard Layout</div>
+                        </div>
+                    </div>
+                    <div class="e-card-content">
+                        <div id="Component-Dashboardlayout">
+                            <div id="defaultLayout">
+                                <div id="one" class="e-panel" data-row="1" data-col="1" data-sizeX="2" data-sizeY="1"> 0
+                                </div>
+                                <div id="two" class="e-panel" data-row="0" data-col="0" data-sizeX="1.5" data-sizeY="2">
+                                    1 </div>
+                                <div id="three" class="e-panel" data-row="0" data-col="1" data-sizeX="2" data-sizeY="1">
+                                    2 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="e-card category-treeview layout-card" id="sidebar">
+                    <div class="e-card-header theme-category-text">
+                        <div class="e-card-header-caption">
+                            <div class="e-card-header-title">SideBar</div>
+                        </div>
+                    </div>
+                    <div class="e-card-content">
+                        <aside id="sf-sidebar">
+                            <div class="sub-title">
+                                Click the button to close the Sidebar.
+                            </div>
+                            <div class="center-align">
+                                <button id="close" class="e-btn close-btn">Close Sidebar</button>
+                            </div>
+                        </aside>
+                        <div>
+                            <div class="title">Main content</div>
+                            <div class="sub-title"> Click the button to open/close the Sidebar.</div>
+                            <div style="padding:20px" class="center-align">
+                                <button id="toggle" class="e-btn e-info">Toggle Sidebar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="e-card category-tab layout-card" id="kanban">
+                    <div class="e-card-header theme-category-text">
+                        <div class="e-card-header-caption">
+                            <div class="e-card-header-title">Kanban</div>
+                        </div>
+                    </div>
+                    <div class="e-card-content">
+                        <div id="sf-kanban"></div>
+                    </div>
+                </div>
+                <div class="e-card category-tab layout-card" id="dialog">
                     <div class="e-card-header theme-category-text">
                         <div class="e-card-header-caption">
                             <div class="e-card-header-title">Dialog</div>
@@ -752,27 +1204,37 @@
                     </div>
                     <div class="e-card-content">
                         <div class='dialog-overlay' id='theme-dialog-wrapper'>
-                            <button id="confirmBtn" class="dlgbtn" type="button">Open Dialog</button>
-                            <div id="dialogComponent"></div>
+                            <button id="sf-dialog-button" class="dlgbtn" type="button">Open Dialog</button>
+                            <div id="sf-dialog"></div>
                         </div>
-
                     </div>
                 </div>
-                <div class="e-card cat-tab layout-card theme-comp" id="rich-text-editor">
+                <div class="e-card category-tab layout-card" id="image-editor">
+                    <div class="e-card-header theme-category-text">
+                        <div class="e-card-header-caption">
+                            <div class="e-card-header-title">ImageEditor</div>
+                        </div>
+                    </div>
+                    <div class="e-card-content">
+                        <div class="e-img-editor-sample">
+                            <div id="sf-imageeditor"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="e-card category-tab layout-card" id="rich-text-editor">
                     <div class="e-card-header theme-category-text">
                         <div class="e-card-header-caption">
                             <div class="e-card-header-title">RichTextEditor</div>
                         </div>
                     </div>
                     <div class="e-card-content">
-                        <div id="Component-rich-text-editor">
+                        <div id="sf-rich-text-editor">
                             <p>
-                                The rich text editor component is WYSIWYG ("what you see is what you get") editor that provides the best user experience to create and update the content.
+                                The rich text editor component is WYSIWYG ("what you see is what you get") editor that
+                                provides the best user experience to create and update the content.
                                 Users can format their content using standard toolbar commands.
                             </p>
-
                             <p><b>Key features:</b></p>
-
                             <ul>
                                 <li>
                                     <p>Provides &lt;IFRAME&gt; and &lt;DIV&gt; modes</p>
@@ -808,115 +1270,115 @@
                         </div>
                     </div>
                 </div>
-                <div class="e-card cat-tab layout-card theme-comp" id="pivotview">
+                <div class="e-card category-tab layout-card" id="pivotview">
                     <div class="e-card-header theme-category-text">
                         <div class="e-card-header-caption">
                             <div class="e-card-header-title">Pivot Table</div>
                         </div>
                     </div>
                     <div class="e-card-content">
-                        <div id="Component-pivotview" style="height:100%;"></div>
+                        <div id="sf-pivotview" style="height:100%;"></div>
                     </div>
                 </div>
-                <div class="e-card cat-tab layout-card theme-comp" id="treegrid">
+                <div class="e-card category-tab layout-card" id="treegrid">
                     <div class="e-card-header theme-category-text">
                         <div class="e-card-header-caption">
                             <div class="e-card-header-title">Tree Grid</div>
                         </div>
                     </div>
                     <div class="e-card-content">
-                        <div id="Component-treegrid"></div>
+                        <div id="sf-treegrid"></div>
                     </div>
                 </div>
-                <div class="e-card cat-tab layout-card theme-comp" id="splitter">
+                <div class="e-card category-tab layout-card" id="splitter">
                     <div class="e-card-header theme-category-text">
                         <div class="e-card-header-caption">
                             <div class="e-card-header-title">Splitter</div>
                         </div>
                     </div>
                     <div class="e-card-content">
-                        <div id="Component-splitter">
+                        <div id="sf-splitter">
                             <div class="splitter-content">
-                                <div>Left pane<div id='panetext'>size: 25%</div><div id='panetext'>min: 60px</div></div>
+                                <div>Left pane<div id='panetext'>size: 25%</div>
+                                    <div id='panetext'>min: 60px</div>
+                                </div>
                             </div>
                             <div class="splitter-content">
-                                <span>Middle pane<div id='panetext'>size: 50%</div><div id='panetext'>min: 60px</div></span>
+                                <span>Middle pane<div id='panetext'>size: 50%</div>
+                                    <div id='panetext'>min: 60px</div>
+                                </span>
                             </div>
                             <div class="splitter-content">
-                                <span>Right pane<div id='panetext'>size: 25%</div><div id='panetext'>min: 60px</div></span>
+                                <span>Right pane<div id='panetext'>size: 25%</div>
+                                    <div id='panetext'>min: 60px</div>
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="e-card cat-tab layout-card theme-comp" id="query-builder">
+                <div class="e-card category-tab layout-card" id="query-builder">
                     <div class="e-card-header theme-category-text">
                         <div class="e-card-header-caption">
                             <div class="e-card-header-title">Query builder</div>
                         </div>
                     </div>
                     <div class="e-card-content">
-                        <div id="Component-query-builder"></div>
+                        <div id="sf-query-builder"></div>
                     </div>
                 </div>
-                <div class="e-card cat-tab layout-card theme-comp" id="chips">
+                <div class="e-card category-tab layout-card" id="gantt">
                     <div class="e-card-header theme-category-text">
                         <div class="e-card-header-caption">
-                            <div class="e-card-header-title">Chips</div>
+                            <div class="e-card-header-title">Gannt Chart</div>
                         </div>
                     </div>
                     <div class="e-card-content">
-                        <div id="Component-chips"></div>
+                        <div id="sf-gantt"></div>
                     </div>
                 </div>
-                @*<div class="e-card cat-tab layout-card theme-comp" id="diagram">
-        <div class="e-card-header theme-category-text">
-            <div class="e-card-header-caption">
-                <div class="e-card-header-title">Diagram</div>
-            </div>
-        </div>
-        <div class="e-card-content">
-            <div id="diagram-space" class="sb-mobile-diagram">
-                <div id="Component-diagram"></div>
-            </diV>
-            </div>
-        </div>*@
-                <div class="e-card cat-tab layout-card theme-comp" id="gantt">
-                    <div class="e-card-header theme-category-text">
-                        <div class="e-card-header-caption">
-                            <div class="e-card-header-title">Gannt</div>
-                        </div>
-                    </div>
-                    <div class="e-card-content">
-                        <div id="Component-gantt"></div>
-                    </div>
-                </div>
-                <div class="e-card cat-tab layout-card theme-comp" id="file-manager">
+                <div class="e-card category-tab layout-card" id="file-manager">
                     <div class="e-card-header theme-category-text">
                         <div class="e-card-header-caption">
                             <div class="e-card-header-title">File Manager</div>
                         </div>
                     </div>
                     <div class="e-card-content">
-                        <div id="Component-file-manager"></div>
+                        <div id="sf-file-manager"></div>
+                    </div>
+                </div>
+                <div class="e-card category-tab layout-card" id="pdfviewer">
+                    <div class="e-card-header theme-category-text">
+                        <div class="e-card-header-caption">
+                            <div class="e-card-header-title">PDF Viewer</div>
+                        </div>
+                    </div>
+                    <div class="e-card-content">
+                        <div id="Component-pdfviewer"></div>
+                    </div>
+                </div>
+                <div class="e-card category-tab layout-card" id="document-editor">
+                    <div class="e-card-header theme-category-text">
+                        <div class="e-card-header-caption">
+                            <div class="e-card-header-title">Document Editor</div>
+                        </div>
+                    </div>
+                    <div class="e-card-content">
+                        <div id="Component-documenteditor"></div>
                     </div>
                 </div>
             </div>
-
-
         </div>
-
-
-
     </div>
-
     <div class="theme-body-right f-right">
-        <div class="rightpanel theme-hide">
+        <div class="right-panel theme-hide">
             <div class="theme-switch">
                 <div class="theme-switch-label f-left" id="choose">Choose Theme</div>
                 <div class="f-right" id="theme-right">
-                    <button class="btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="line-height: 23px;">
-                        <span id="themeDropText">Material</span>
-                        <span class="theme-header-icon theme-icon-Dropdown theme-change-caret" style="float:right"></span>
+                    <button class="btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="true" style="line-height: 23px;">
+                        <span id="themeDropText">Material3</span>
+                        <span class="theme-header-icon theme-switcher-dropdown-icon theme-change-caret"
+                            style="float:right"></span>
                     </button>
                 </div>
             </div>
@@ -929,8 +1391,32 @@
                     <input id="dark" type="radio" />
                 </div>
             </div>
+            <div class="bv4-advanced-mode">
+                <div class="bv4-advanced-mode-label f-left">
+                    Advanced Editing Mode
+                </div>
+                <div class="bv4-advanced-modes f-right">
+                    <input id="advanced-mode-check" type="checkbox" />
+                </div>
+            </div>
+            <div class="tailwind-advanced-mode">
+                <div class="tailwind-advanced-mode-label f-left">
+                    Advanced Editing Mode
+                </div>
+                <div class="tailwind-advanced-modes f-right">
+                    <input id="tailwind-advanced-mode-check" type="checkbox" />
+                </div>
+            </div>
             <div id="theme-properties" class="themeproperties"></div>
+            <div id="bv4-theme-properties" class="bv4themeproperties">
+                <div id="normal-mode" class="normalmode"></div>
+                <div id="advanced-mode" class="advanced-mode"></div>
+            </div>
+            <div id="tailwind-theme-properties" class="tailwindthemeproperties">
+                <div id="normal-mode" class="normalmode"></div>
+                <div id="advanced-mode" class="advanced-mode"></div>
+            </div>
         </div>
     </div>
 </div>
-<a id="downloadlink" style="display:none"></a>
+<a id="download-link" style="display:none"></a>

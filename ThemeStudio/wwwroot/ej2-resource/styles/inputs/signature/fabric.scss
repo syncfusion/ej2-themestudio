@@ -1,0 +1,19 @@
+$signature-border: 1px solid !default;
+$signature-border-color: $neutral-light !default;
+$signature-background-color: $theme-dark-font !default;
+
+@include export-module('signature-layout') {
+  .e-signature {
+    border: $signature-border;
+  }
+}
+
+
+@include export-module('signature-theme') {
+  .e-signature {
+    background-color: $signature-background-color;
+    border: $signature-border;
+    border-color: $signature-border-color;
+  }
+}
+
