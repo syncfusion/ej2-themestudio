@@ -1,0 +1,17 @@
+{
+  "name": "scss-node-services",
+  "version": "1.0.0",
+  "description": "Node.js RestFul web services for SCSS to CSS conversion",
+  "main": "index.js",
+  "author": "Syncfusion Inc.",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "sass": "1.51.0",
+    "shelljs": "^0.8.2",
+    "zip-a-folder": "^1.1.5"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

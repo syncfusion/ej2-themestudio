@@ -1,0 +1,321 @@
+
+
+$skin-name: 'bootstrap-dark';
+
+//layout variables
+$diagram-border-stroke-width: 2;
+$diagram-lane-border-stroke-width: 2;
+$diagram-highlighter-border-stroke-width: 2;
+$diagram-symbolpalette-shape-radius: 4px;
+$diagram-ruler-font-size: 10px;
+$diagram-tooltip: none;
+
+//normal
+$diagram-resize-handle-disable-color: $grey-cc;
+$diagram-border-stroke-disabled: $grey-cc;
+$diagram-resize-handle-disable-stroke: $brand-primary-font;
+$diagram-rotate-handle-color: $brand-primary;
+$diagram-bezier-handle-color: $brand-primary-font;
+
+$diagram-symbolpalette-hover: lighten($grey-cc, 5%);
+$diagram-symbolpalette-selected: $grey-cc;
+
+$diagram-ruler-color: $grey-dark-font;
+$diagram-ruler-marker-stroke: $brand-primary;
+$diagram-ruler-marker-background-color: $grey;
+$diagram-ruler-label-fill: lighten($grey-cc, 10%);
+$diagram-ruler-tick-stroke: $grey-f8;
+
+//end normal
+
+//primary
+$diagram-endpoint-handle-color: $brand-primary-font;
+$diagram-endpoint-handle-connected-border: $brand-primary-font;
+$diagram-endpoint-handle-connected-color: $brand-primary;
+
+$diagram-resize-handle-color: $brand-primary;
+$diagram-resize-handle-stroke: $brand-primary;
+$diagram-border-stroke: $brand-primary-darken-10;
+
+$diagram-bezier-line-color: $brand-primary;
+
+$palette-background-color: lighten($grey-cc, 20%);
+
+$diagram-highlighter-stroke: $brand-primary;
+$diagram-selected-region-stroke: $brand-primary;
+$diagram-pivot-line-stroke: $brand-primary;
+
+$diagram-helper-stroke: $brand-primary;
+
+$diagram-text-edit-selection-color: $brand-primary-font;
+$diagram-text-edit-selection-background: $brand-primary;
+
+$diagram-background-color: $brand-primary-font;
+
+$diagram-editbox-background: $brand-primary-font;
+$diagram-editbox-fontcolor: $gray-base;
+
+$diagram-border-strokes: $brand-primary-darken-10;
+$diagram-lane-border-strokes: $brand-primary;
+
+$diagram-multiselect-stroke: $diagram-resize-handle-stroke;
+
+//end primary
+
+.e-icons {
+  font-family: 'e-icons';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: $font-weight;
+  line-height: 1;
+  text-transform: none;
+}
+
+@include export-module('diagram-bootstrap-icons') {
+  .e-diagram-menu {
+    .e-bringforward::before{ content: '\e5a1'; }
+    .e-bringfront::before{ content: '\e5a2'; }
+    .e-sendback::before{ content: '\e5a3'; }
+    .e-sendbackward::before{ content: '\e5a4'; }
+    .e-delete::before{ content: '\e94a'; }
+    .e-ungroup::before{ content: '\e5a6'; }
+    .e-group::before{ content: '\e5a7'; }
+    .e-undo::before{ content: '\e341'; }
+    .e-redo::before{ content: '\e354'; }
+    .e-copy::before{ content: '\e33d'; }
+    .e-cut::before{ content: '\e33b'; }
+    .e-save::before{ content: '\ebc2'; }
+    .e-paste::before{ content: '\e355'; }
+    .e-zoomin::before{ content: '\e349'; }
+    .e-italic::before{ content: '\e35a'; }
+    .e-close::before{ content: '\ea7b'; }
+    .e-pan::before{ content: '\ebcb'; }
+    .e-bold::before{ content: '\e339'; }
+    .e-underline::before{ content: '\e343'; }
+    .e-zoomout::before{ content: '\e351'; }
+    .e-export::before{ content: '\e702'; }
+    .e-print::before{ content: '\e34b'; }
+    .e-order::before{ content: '\e4a4'; }
+  }
+
+  .e-symbolpalette {
+    .e-clear-searchtext::before{ content: '\e60e'; }
+  }
+}
+
+@include export-module('diagram-theme') {
+
+  .e-diagram {
+    background-color: $diagram-background-color;
+    display: block;
+  }
+
+  .e-symbolpalette {
+    display: block;
+  }
+
+  .e-overview {
+    display: block;
+  }
+
+  .e-content-placeholder.e-diagram.e-placeholder-diagram {
+    background-size: 100% 100%;
+    max-height: 500px;
+    max-width: 500px;
+  }
+
+  .e-content-placeholder.e-symbolpalette.e-placeholder-symbolpalette {
+    background-size: 100% 100%;
+    max-height: 200px;
+    max-width: 200px;
+  }
+
+  .e-diagram-endpoint-handle {
+    fill: $diagram-endpoint-handle-color;
+    stroke: $diagram-resize-handle-stroke;
+  }
+
+  .e-diagram-endpoint-handle.e-connected {
+    fill: $diagram-endpoint-handle-connected-color;
+    stroke: $diagram-endpoint-handle-connected-border;
+  }
+
+  .e-diagram-endpoint-handle.e-disabled {
+    fill: $diagram-resize-handle-disable-color;
+    opacity: 1;
+    stroke: $diagram-resize-handle-disable-stroke;
+  }
+
+  .e-diagram-bezier-control-handle.e-disabled {
+    fill: $diagram-resize-handle-disable-color;
+    opacity: 1;
+    stroke: $diagram-resize-handle-disable-stroke;
+  }
+
+  /* stylelint-disable */
+  .e-diagram-bezier-handle.e-source.e-disabled {
+    opacity: 1 !important;
+  }
+
+  .e-diagram-bezier-handle.e-target.e-disabled {
+    opacity: 1 !important;
+  }
+
+  .e-diagram-bezier-control-handle {
+    fill: $diagram-bezier-handle-color;
+    stroke: $diagram-resize-handle-stroke;
+  }
+
+  .e-diagram-bezier-segment-handle {
+    fill: $diagram-bezier-handle-color;
+    stroke: $diagram-resize-handle-stroke;
+  }
+
+  .e-symbolpalette .e-acrdn-content {
+    background-color: $palette-background-color !important;
+  }
+
+  /* stylelint-enable */
+
+  .e-diagram-bezier-control-line {
+    stroke: $diagram-bezier-line-color;
+  }
+
+  .e-diagram-resize-handle {
+    fill: $diagram-resize-handle-color;
+    stroke: $diagram-endpoint-handle-color;
+
+    @if ($skin-name =='tailwind' or $skin-name =='tailwind-dark' or $skin-name =='bootstrap5' or $skin-name =='material' or $skin-name =='fabric-dark' or $skin-name =='fabric' or $skin-name =='highcontrast' or $skin-name =='bootstrap' or $skin-name =='bootstrap-dark' or $skin-name =='bootstrap4' or $skin-name =='FluentUI' or $skin-name =='material3') {
+      stroke: $diagram-endpoint-handle-color;
+    }
+  }
+
+  .e-diagram-helper {
+    stroke: $diagram-helper-stroke;
+  }
+
+  .e-diagram-resize-handle.e-disabled {
+    fill: $diagram-resize-handle-disable-color;
+    opacity: 1;
+    stroke: $diagram-resize-handle-disable-stroke;
+  }
+
+  .e-diagram-rotate-handle {
+    fill: $diagram-rotate-handle-color;
+    stroke: $diagram-resize-handle-stroke;
+  }
+
+  .e-diagram-selector {
+    stroke: $diagram-border-stroke;
+  }
+
+  .e-diagram-selector.e-disabled {
+    opacity: 1;
+    stroke: $diagram-border-stroke-disabled;
+  }
+
+  .e-diagram-selector.e-thick-border {
+    stroke: $diagram-border-strokes;
+    stroke-width: $diagram-border-stroke-width;
+  }
+
+  .e-diagram-selector.e-thick-border.e-diagram-lane {
+    stroke: $diagram-lane-border-strokes;
+    stroke-width: $diagram-lane-border-stroke-width;
+  }
+
+  .e-diagram-highlighter {
+    stroke: $diagram-highlighter-stroke;
+    stroke-width: $diagram-highlighter-border-stroke-width;
+  }
+
+  .e-diagram-selected-region {
+    stroke: $diagram-selected-region-stroke;
+  }
+
+  .e-diagram-pivot-line {
+    stroke: $diagram-pivot-line-stroke;
+  }
+
+  .e-symbolpalette .e-symbol-hover:hover {
+    background: $diagram-symbolpalette-hover;
+    border-radius: $diagram-symbolpalette-shape-radius;
+  }
+
+  .e-symbolpalette .e-symbol-selected {
+    background: $diagram-symbolpalette-selected;
+    border-radius: $diagram-symbolpalette-shape-radius;
+  }
+
+  .e-diagram-tooltip {
+    pointer-events: $diagram-tooltip;
+  }
+
+  .e-diagram .e-ruler {
+    background: $diagram-ruler-marker-background-color;
+    color: $diagram-ruler-color;
+    font-size: $diagram-ruler-font-size;
+  }
+
+  .e-diagram .e-ruler-overlap {
+    background: $diagram-ruler-marker-background-color;
+  }
+
+  .e-diagram .e-d-ruler-marker {
+    stroke: $diagram-ruler-marker-stroke;
+  }
+
+  .e-diagram .e-diagram-text-edit {
+    background: $diagram-editbox-background;
+    border-color: $diagram-bezier-line-color;
+    border-style: dashed;
+    border-width: 1px;
+    box-sizing: content-box;
+    color: $diagram-editbox-fontcolor;
+    min-width: 50px;
+  }
+
+  .e-diagram-text-edit::selection {
+    background: $diagram-text-edit-selection-background;
+    color: $diagram-text-edit-selection-color;
+  }
+
+  .e-ruler-tick-label {
+    fill: $diagram-ruler-label-fill;
+  }
+
+  .e-ruler-tick {
+    stroke: $diagram-ruler-tick-stroke;
+  }
+
+  .e-menu-item e-blankicon {
+    padding-left: 28px;
+  }
+
+  .e-diagram-selection-indicator {
+    stroke: $diagram-multiselect-stroke;
+  }
+
+  .e-diagram-selection-line {
+    stroke: $diagram-multiselect-stroke;
+  }
+
+  /* stylelint-disable */
+  .e-diagram-rotate {
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsSAAALEgHS3X78AAAA60lEQVQ4jZ1SwQ2DMBAzlfLJI2KEjJAVukG7ARsxQkfoKHQDugHdgOoqh14oCaGWIpSTudzZRg2MdYOxrq0il2Csm411o7Eu5GinTN0D6AGMAGZVux9p1LGBrHIF0LD+4l3ql70thDABSFZYaeTJ6UqNWhL3ELhyyhUR98TcwI06Lk1aNonO1NocqGWy/6zOcGCq6OjiSCw22/wUfEzL8ND2P9duFXBmHMDvWVN7CliFkkGe69VM5RmVLDqG7ZMPOroWP5BTle5WjR6dkQayutyLqU6gsiU/ypHMiI41yf+CE01qov+R0egXAN5x6jng51I3yAAAAABJRU5ErkJggg==), auto !important;
+  }
+
+  .e-symbolpalette-hidden {
+    display: none !important;
+  }
+
+  .e-symbolpalette-search-hidden {
+    display: none !important;
+  }
+
+  .e-diagramTooltip-content {
+    width: auto !important;
+    height: auto !important;
+  }
+}
+ /* stylelint-enable */
